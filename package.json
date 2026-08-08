@@ -1,4 +1,7 @@
 {
+  "scripts": {
+    "build": "echo 'Static site, no build needed'"
+  },
   "dependencies": {
     "bootstrap-icons": "^1.13.1"
   }
