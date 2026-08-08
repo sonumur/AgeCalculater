@@ -1,0 +1,277 @@
+header {
+    background-color: rgb(221, 221, 255);
+    padding: 10px;
+    margin: -10px;
+    padding-left: 200px;
+    padding-right: 220px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+}
+
+.icon {
+    padding: 10px;
+    display: flex;
+    gap: 30px;
+    font-size: 20px;
+}
+
+header img {
+    width: 190px;
+    height: 50px;
+}
+
+main {
+    background-color: rgb(243, 243, 255);
+    padding: 20px;
+    margin: -10px;
+    font-family: Arial;
+}
+
+.card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    word-spacing: 5px;
+}
+
+.card-box {
+    width: 500px;
+    height: 500px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.card-box h2 {
+    color: #007bff;
+}
+
+.card-calculater h1 {
+    color: #007bff;
+}
+
+.banner-card {
+    display: flex;
+    justify-content: center;
+}
+
+.banner-card img{
+    padding: 20px;
+    width: 1020px;
+    height: 300px;
+    border-radius: 40px;
+}
+
+.card-calculater {
+    background-color: rgb(255, 255, 255);
+    padding: 70px;
+    text-align: center;
+    border-radius: 20px;
+    box-shadow: 10px 10px 20px rgb(191, 191, 191);
+    min-width: 400px;
+    transition: all 0.3s ease;
+}
+
+.card-calculater:hover {
+    box-shadow: 15px 15px 30px rgba(191, 191, 191, 0.5);
+    transform: translateY(-5px);
+}
+
+.card-calculater h1 {
+    color: #007bff;
+    margin-bottom: 30px;
+    font-size: 28px;
+}
+
+.card-calculater form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+}
+
+.card-calculater label {
+    font-weight: bold;
+    color: #555;
+    font-size: 16px;
+}
+
+.card-calculater input {
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    width: 250px;
+    transition: border-color 0.3s;
+}
+
+.card-calculater input:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+}
+
+.card-calculater button {
+    padding: 12px 40px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.card-calculater button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+.card-calculater button:active {
+    transform: scale(0.98);
+}
+
+.birthday-section {
+    padding: 30px;
+    font-family: Arial;
+    display: flex;
+    flex-direction: column;
+    margin: 20px auto;
+    gap: 5px;
+    margin-right: 215px;
+    margin-left: 215px;
+    color: rgb(143, 143, 143);
+}
+
+.birthday-section span {
+    font-size: 50px;
+    color: #007bff;
+}
+
+.birthday-section p {
+    color: rgb(105, 105, 105);
+    text-align: left;
+    width: 100%;
+}
+
+.birthday-section img{
+    margin: 10px auto;
+    width: 1000px;
+    height: 400px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+
+footer {
+    background-color: black;
+    color: white;
+    padding: 10px;
+    margin: -10px;
+    font-family: Arial;
+    text-align: center;
+}
+
+footer span {
+    margin: 15px;
+}
+
+footer a {
+    margin: 15px;
+    color: #7300ff;
+}
+
+/* Modal Popup Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.modal-content {
+    background-color: white;
+    margin: auto;
+    padding: 40px;
+    border-radius: 15px;
+    width: 90%;
+    max-width: 500px;
+    top: 50%;
+    position: relative;
+    transform: translateY(-50%);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+    animation: slideUp 0.3s ease;
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(-150%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(-50%);
+        opacity: 1;
+    }
+}
+
+.close {
+    color: #999;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+}
+
+#modalResult h3 {
+    color: #007bff;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+#modalResult p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.8;
+    margin: 10px 0;
+}
+
+#modalResult strong {
+    color: #333;
+    font-weight: bold;
+}
+
+.about-us {
+    padding: 20px
+}
+
+.dmca {
+    padding: 20px;
+}
+
+.terms-section {
+    padding: 20px;
+}
