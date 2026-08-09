@@ -1,48 +1,59 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
+    background-color: rgb(243, 243, 255);
+    color: #333;
+}
+
 header {
     background-color: rgb(221, 221, 255);
-    padding: 10px;
-    margin: -10px;
-    padding-left: 200px;
-    padding-right: 220px;
+    padding: 10px 20px;
     display: flex;
-    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
     justify-content: space-between;
-    
+    gap: 15px;
 }
 
 .icon {
     padding: 10px;
     display: flex;
-    gap: 30px;
+    gap: 20px;
     font-size: 20px;
 }
 
 header img {
-    width: 190px;
+    width: auto;
+    max-width: 100%;
     height: 50px;
 }
 
 main {
-    background-color: rgb(243, 243, 255);
+    background-image: linear-gradient( 45deg, rgb(205, 205, 255), white, rgb(205, 205, 255), white, rgb(205, 205, 255), white, rgb(205, 205, 255), white, rgb(205, 205, 255), white, rgb(205, 205, 255), white, rgb(205, 205, 255), white, rgb(205, 205, 255), white);
     padding: 20px;
-    margin: -10px;
-    font-family: Arial;
 }
 
 .card {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
-    word-spacing: 5px;
+    align-items: flex-start;
+    gap: 20px;
 }
 
 .card-box {
-    width: 500px;
-    height: 500px;
-
+    width: 100%;
+    max-width: 500px;
+    min-height: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding: 20px;
 }
 
 .card-box h2 {
@@ -60,18 +71,20 @@ main {
 
 .banner-card img{
     padding: 20px;
-    width: 1020px;
-    height: 300px;
+    width: 100%;
+    max-width: 1020px;
+    height: auto;
     border-radius: 40px;
 }
 
 .card-calculater {
     background-color: rgb(255, 255, 255);
-    padding: 70px;
+    padding: 50px 30px;
     text-align: center;
     border-radius: 20px;
     box-shadow: 10px 10px 20px rgb(191, 191, 191);
-    min-width: 400px;
+    width: 100%;
+    max-width: 500px;
     transition: all 0.3s ease;
 }
 
@@ -104,7 +117,8 @@ main {
     border: 2px solid #ddd;
     border-radius: 8px;
     font-size: 16px;
-    width: 250px;
+    width: 100%;
+    max-width: 300px;
     transition: border-color 0.3s;
 }
 
@@ -136,19 +150,17 @@ main {
 }
 
 .birthday-section {
-    padding: 30px;
-    font-family: Arial;
+    padding: 30px 20px;
     display: flex;
     flex-direction: column;
     margin: 20px auto;
-    gap: 5px;
-    margin-right: 215px;
-    margin-left: 215px;
+    gap: 20px;
+    max-width: 1040px;
     color: rgb(143, 143, 143);
 }
 
 .birthday-section span {
-    font-size: 50px;
+    font-size: 42px;
     color: #007bff;
 }
 
@@ -160,19 +172,17 @@ main {
 
 .birthday-section img{
     margin: 10px auto;
-    width: 1000px;
-    height: 400px;
+    width: 100%;
+    max-width: 1000px;
+    height: auto;
     border-radius: 10px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
-
 footer {
     background-color: black;
     color: white;
-    padding: 10px;
-    margin: -10px;
-    font-family: Arial;
+    padding: 20px 15px;
     text-align: center;
 }
 
@@ -181,8 +191,10 @@ footer span {
 }
 
 footer a {
-    margin: 15px;
+    display: inline-block;
+    margin: 8px 12px;
     color: #7300ff;
+    text-decoration: none;
 }
 
 /* Modal Popup Styles */
@@ -257,6 +269,70 @@ footer a {
     color: #555;
     line-height: 1.8;
     margin: 10px 0;
+}
+
+@media (max-width: 1024px) {
+    .banner-card img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .birthday-section {
+        padding: 25px 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .card {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card-box,
+    .card-calculater {
+        max-width: 100%;
+    }
+
+    .card-calculater {
+        padding: 30px 20px;
+    }
+
+    .card-calculater input {
+        width: 100%;
+    }
+
+    .birthday-section span {
+        font-size: 36px;
+    }
+}
+
+@media (max-width: 600px) {
+    header {
+        padding: 15px 12px;
+    }
+
+    .card-calculater {
+        padding: 24px 16px;
+    }
+
+    .banner-card img {
+        border-radius: 25px;
+    }
+
+    .birthday-section {
+        padding: 20px 15px;
+        margin: 15px;
+    }
+
+    footer a {
+        margin: 8px 6px;
+        font-size: 14px;
+    }
 }
 
 #modalResult strong {
