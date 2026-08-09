@@ -356,3 +356,9 @@ footer a {
     padding: 20px;
     margin-bottom: 290px;
 }
+
+.ad-banner-728 {
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+}
