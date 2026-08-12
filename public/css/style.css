@@ -40,11 +40,12 @@ main {
 
 .card {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
     gap: 20px;
 }
+
 
 .card-box {
     width: 100%;
@@ -54,9 +55,10 @@ main {
     flex-direction: column;
     justify-content: center;
     padding: 20px;
+    text-align: center;
 }
 
-.card-box h2 {
+h2 {
     color: #007bff;
 }
 
@@ -361,4 +363,44 @@ footer a {
     padding: 10px;
     display: flex;
     justify-content: center;
+}
+
+/* Calculators Grid Styles */
+.calculators-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+.calc-card {
+    background-color: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.calc-card:hover {
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    transform: translateY(-5px);
+}
+.calc-card h3 {
+    color: #007bff;
+    margin-top: 0;
+    font-size: 24px;
+}
+.calc-card p {
+    color: #666;
+    margin: 10px 0 0 0;
+}
+.calc-card .emoji {
+    font-size: 40px;
+    margin-bottom: 15px;
 }
