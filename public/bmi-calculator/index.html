@@ -3,68 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Free online BMI calculator. Calculate your Body Mass Index instantly. Check if you are underweight, normal weight, overweight, or obese.">
-    <meta name="keywords" content="bmi calculator, bmi calculator online, body mass index calculator, health calculator">
+    <meta name="description" content="Free online BMI calculator. Calculate your Body Mass Index instantly.">
     <title>BMI Calculator – Calculate Your Body Mass Index Online</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="icon" href="../images/favicon.svg">
+    <style>
+        .bmi-page { background: #f8f9ff; padding: 48px 32px 64px; font-family: Inter, Arial, sans-serif; color: #0b1c30; }
+        .bmi-page * { box-sizing: border-box; }.bmi-shell { max-width: 1280px; margin: 0 auto; }.bmi-intro { margin-bottom: 32px; }.bmi-intro h1 { margin: 0 0 8px; font: 600 clamp(2rem,4vw,2.5rem)/1.2 "Hanken Grotesk",Inter,sans-serif; letter-spacing: -.02em; }.bmi-intro p { max-width: 720px; margin: 0; color: #424656; font-size: 1rem; line-height: 1.55; }
+        .bmi-layout { display: grid; grid-template-columns: minmax(300px,5fr) minmax(420px,7fr); gap: 24px; align-items: start; }.bmi-form-card,.bmi-info-card { border: 1px solid rgba(194,198,217,.28); border-radius: 16px; background: #fff; box-shadow: 0 4px 20px rgba(15,23,42,.04); }.bmi-form-card { padding: 32px; }.bmi-card-title { display:flex; align-items:center; gap:10px; margin:0 0 28px; padding-bottom:12px; border-bottom:1px solid #c2c6d9; font:600 1.25rem/1.4 "Hanken Grotesk",Inter,sans-serif; }.bmi-card-title i { color:#004cca; font-size:1.35rem; }
+        .unit-toggle { display:grid; grid-template-columns:1fr 1fr; gap:4px; padding:4px; margin-bottom:20px; border:1px solid #dce4f2; border-radius:9px; background:#f8f9ff; }.unit-toggle button { border:0; border-radius:6px; padding:11px 8px; background:transparent; color:#545f73; font:600 .95rem/1.25 Inter,sans-serif; cursor:pointer; }.unit-toggle button.is-active { background:#0054d8; color:#fff; box-shadow:0 1px 2px rgba(0,0,0,.14); }
+        .bmi-field { display:block; margin:0 0 18px; color:#424656; font-size:.9rem; font-weight:600; }.bmi-field span { display:block; margin-bottom:7px; }.bmi-input-wrap { position:relative; }.bmi-input-wrap input { width:100%; height:62px; padding:12px 56px 12px 19px; border:1px solid #aebbd2; border-radius:10px; outline:0; color:#0b1c30; background:#fff; font:400 1.05rem Inter,sans-serif; }.bmi-input-wrap input:focus { border-color:#0054d8; box-shadow:0 0 0 3px rgba(0,98,255,.15); }.bmi-input-wrap em { position:absolute; top:50%; right:19px; transform:translateY(-50%); color:#424656; font-style:normal; font-weight:500; }.bmi-actions { display:flex; gap:8px; padding-top:20px; }.bmi-actions button { min-height:56px; border:0; border-radius:9px; font:600 1rem Inter,sans-serif; cursor:pointer; }#calculateButton { flex:1; color:#fff; background:#0054d8; box-shadow:0 2px 5px rgba(0,76,202,.2); }#calculateButton:hover { background:#004cca; }#resetButton { padding:0 24px; color:#004cca; background:transparent; }#resetButton:hover { background:#f0f7ff; }
+        .bmi-results { display:grid; gap:24px; }.bmi-score-card { position:relative; overflow:hidden; padding:40px; border:1px solid #d6e4ff; border-radius:16px; background:#f0f7ff; }.bmi-score-card::after { position:absolute; top:-70px; right:-40px; width:210px; height:210px; border-radius:50%; background:#dbe8ff; content:""; }.score-top { position:relative; z-index:1; display:flex; align-items:center; justify-content:space-between; gap:32px; }.score-caption { margin:0 0 10px; color:#424656; font-size:.9rem; font-weight:700; letter-spacing:.08em; }#bmiScore { color:#0054d8; font:700 clamp(3rem,6vw,4rem)/1 "Hanken Grotesk",Inter,sans-serif; font-variant-numeric:tabular-nums; }.status-box { min-width:245px; padding:23px 18px; border:1px solid #b9e9d9; border-radius:15px; background:#fff; text-align:center; box-shadow:0 2px 4px rgba(15,23,42,.04); }#bmiStatus { display:flex; justify-content:center; align-items:center; gap:9px; color:#10b981; font:600 1.35rem "Hanken Grotesk",Inter,sans-serif; }#bmiStatus i { font-size:1.45rem; }.status-box p { margin:7px 0 0; color:#545f73; font-size:.85rem; }.gauge { position:relative; z-index:1; margin-top:40px; padding-top:20px; border-top:1px solid #dbe8ff; }.gauge-labels { display:flex; justify-content:space-between; margin-bottom:9px; color:#545f73; font-size:.8rem; }.gauge-bar { display:grid; grid-template-columns:25fr 35fr 20fr 20fr; height:15px; overflow:hidden; border-radius:999px; }.gauge-bar span:nth-child(1){background:#7ba9eb}.gauge-bar span:nth-child(2){background:#10b981}.gauge-bar span:nth-child(3){background:#f4b23e}.gauge-bar span:nth-child(4){background:#c8474c}.indicator-track { position:relative; height:17px; }.gauge-pin { position:absolute; top:5px; left:45%; width:14px; height:14px; transform:translateX(-50%); border:3px solid #fff; border-radius:50%; background:#0054d8; box-shadow:0 1px 3px rgba(0,0,0,.25); transition:left .25s ease; }
+        .bmi-info-grid { display:grid; grid-template-columns:1fr 1fr; gap:24px; }.bmi-info-card { display:flex; gap:13px; padding:20px; }.info-icon { display:grid; flex:0 0 59px; place-items:center; width:59px; height:59px; border-radius:10px; background:#d9e7ff; color:#426ea8; font-size:1.35rem; }.info-icon.analysis { color:#0054d8; background:#e2edff; }.bmi-info-card h2 { margin:2px 0 6px; font-size:.98rem; line-height:1.25; }.bmi-info-card p { margin:0; color:#59657b; font-size:.85rem; line-height:1.36; }.bmi-info-card strong { color:#0b1c30; font-size:1.05rem; }.bmi-info-card small { display:block; margin-top:8px; color:#737687; font-size:.78rem; }
+        @media (max-width:850px){.bmi-page{padding:32px 20px 48px}.bmi-layout{grid-template-columns:1fr}.bmi-score-card{padding:30px}}@media (max-width:560px){.bmi-page{padding:28px 16px 40px}.bmi-form-card,.bmi-score-card{padding:24px 20px}.score-top,.bmi-info-grid{display:grid;grid-template-columns:1fr}.score-top{text-align:center}.bmi-info-grid{gap:16px}.bmi-actions{flex-wrap:wrap}#resetButton{flex:1}.status-box{width:100%}.bmi-intro p{font-size:.95rem}}
+    </style>
 </head>
 <body>
     <header>
-        <a href="../index.html" title="Home">
-            <img src="../images/pepstudio.png" alt="Home">
-        </a>
-        <div class="icon">
-            <a href="https://www.linkedin.com/in/sonu-murmu-60479a268/">
-                <i class="bi bi-linkedin"></i>
-            </a>
-            <a href="https://www.instagram.com/sonu_murm_/">
-                <i class="bi bi-instagram"></i>
-            </a>
-        </div>
+        <a href="../index.html" title="Home"><img src="../images/pepstudio.png" alt="Home"></a>
+        <div class="icon"><a href="https://www.linkedin.com/in/sonu-murmu-60479a268/"><i class="bi bi-linkedin"></i></a><a href="https://www.instagram.com/sonu_murm_/"><i class="bi bi-instagram"></i></a></div>
     </header>
-    <main>
-        <div class="card">
-            <div class="card-box">
-                <h2>
-                    <u>BMI Calculator</u>
-                </h2>
-                <p>Calculate your Body Mass Index (BMI) instantly. Get personalized health insights and recommendations based on your BMI results.</p>
+    <main class="bmi-page">
+        <div class="bmi-shell">
+            <div class="bmi-intro"><h1>BMI Calculator</h1><p>Calculate your Body Mass Index (BMI) to determine if you are at a healthy weight for your height. This tool provides instant feedback and health status indicators.</p></div>
+            <div class="bmi-layout">
+                <section class="bmi-form-card" aria-labelledby="input-title"><h2 class="bmi-card-title" id="input-title"><i class="bi bi-calculator-fill" aria-hidden="true"></i>Input Measurements</h2><form id="bmiForm"><div class="unit-toggle" aria-label="Measurement units"><button type="button" class="is-active" aria-pressed="true">Metric (kg/cm)</button><button type="button" aria-pressed="false">Imperial (lb/in)</button></div><label class="bmi-field" for="height"><span id="heightLabel">Height (cm)</span><div class="bmi-input-wrap"><input type="number" id="height" name="height" placeholder="e.g. 175" step="0.1" min="1" required><em id="heightUnit">cm</em></div></label><label class="bmi-field" for="weight"><span id="weightLabel">Weight (kg)</span><div class="bmi-input-wrap"><input type="number" id="weight" name="weight" placeholder="e.g. 70" step="0.1" min="1" required><em id="weightUnit">kg</em></div></label><div class="bmi-actions"><button id="calculateButton" type="submit">Calculate BMI</button><button id="resetButton" type="reset">Reset</button></div></form></section>
+                <section class="bmi-results" aria-live="polite"><div class="bmi-score-card"><div class="score-top"><div><p class="score-caption">YOUR BMI SCORE</p><div id="bmiScore">22.9</div></div><div class="status-box"><div id="bmiStatus"><i class="bi bi-check-circle-fill" aria-hidden="true"></i><span>Normal</span></div><p>Health Status</p></div></div><div class="gauge"><div class="gauge-labels"><span>15</span><span>18.5</span><span>25</span><span>30</span><span>40+</span></div><div class="gauge-bar"><span></span><span></span><span></span><span></span></div><div class="indicator-track"><span class="gauge-pin" id="gaugePin"></span></div></div></div><div class="bmi-info-grid"><article class="bmi-info-card"><div class="info-icon"><i class="bi bi-person-badge" aria-hidden="true"></i></div><div><h2>Healthy Weight Range</h2><p><strong id="weightRange">56.7 kg - 76.3 kg</strong></p><small id="rangeBasis">Based on height 175 cm</small></div></article><article class="bmi-info-card"><div class="info-icon analysis"><i class="bi bi-graph-up-arrow" aria-hidden="true"></i></div><div><h2>Analysis</h2><p id="bmiAnalysis">Your BMI is within the healthy range. Maintaining a balanced diet and regular exercise will help you stay in this category.</p></div></article></div></section>
             </div>
-        
-            <section class="card-calculater">
-                <h1>BMI Calculator</h1>
-                <form id="bmiForm">
-                    <label for="height">Height (cm):</label>
-                    <input type="number" id="height" name="height" placeholder="Enter height in cm" step="0.1" required>
-                    
-                    <label for="weight">Weight (kg):</label>
-                    <input type="number" id="weight" name="weight" placeholder="Enter weight in kg" step="0.1" required>
-                    
-                    <button type="submit">Calculate BMI</button>
-                </form>
-            </section> 
-        </div> 
-    </main>
-
-    <div id="resultModal" class="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <div id="modalResult"></div>
         </div>
-    </div>
-
+    </main>
     <footer>
         <a href="../about-us.html">About Us</a>
         <a href="../contact-us.html">Contact Us</a>
         <a href="../privacy-policy.html">Privacy Policy</a>
         <a href="../terms-of-service.html">Terms of Service</a>
         <a href="../dmca.html">DMCA</a>
-        <br>
-        <span>&copy; 2026 pepstudio ❤️. All rights reserved.</span>
+        <br><span>&copy; 2026 pepstudio ❤️. All rights reserved.</span>
     </footer>
-
     <script src="../js/bmi-calculator.js"></script>
 </body>
 </html>

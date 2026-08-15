@@ -9,6 +9,259 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="icon" href="../images/favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* Age calculator redesign — scoped so the shared header, footer and page content stay unchanged. */
+        .age-calculator-page {
+            min-height: 100vh;
+            background: #f8f9ff !important;
+        }
+        .age-tool {
+            max-width: 1280px;
+            margin: 0 auto 28px;
+            padding: clamp(24px, 4vw, 52px);
+            border-radius: 18px;
+            background: #f8f9ff;
+            color: #0b1c30;
+            font-family: Inter, Arial, sans-serif;
+        }
+        .age-tool__intro {
+            margin-bottom: 36px;
+        }
+        .age-tool__intro h1 {
+            margin: 0 0 10px;
+            color: #0b1c30;
+            font-family: "Hanken Grotesk", Inter, Arial, sans-serif;
+            font-size: clamp(2.25rem, 5vw, 3.5rem);
+            line-height: 1.1;
+        }
+        .age-tool__intro p {
+            margin: 0;
+            color: #424656;
+            font-size: 1.1rem;
+        }
+        .age-tool__grid {
+            display: grid;
+            grid-template-columns: minmax(300px, .85fr) minmax(0, 1.2fr);
+            gap: 28px;
+        }
+        .age-tool__form, .age-stat {
+            border: 1px solid #c2c6d9;
+            border-radius: 16px;
+            background: #fff;
+            box-shadow: 0 4px 20px rgba(15, 23, 42, .04);
+        }
+        .age-tool__form {
+            padding: clamp(24px, 4vw, 40px);
+        }
+        .age-tool__form-title {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            margin: 0 0 30px;
+            font-family: "Hanken Grotesk", Inter, Arial, sans-serif;
+            font-size: 1.35rem;
+        }
+        .age-tool__icon {
+            display: grid;
+            width: 52px;
+            height: 52px;
+            place-items: center;
+            border-radius: 12px;
+            background: #f0f7ff;
+            color: #0062ff;
+            font-size: 1.45rem;
+        }
+        .age-tool label {
+            display: block;
+            margin-bottom: 9px;
+            color: #424656;
+            font-size: .95rem;
+            font-weight: 700;
+        }
+        .age-tool__field {
+            margin-bottom: 24px;
+        }
+        .age-tool__date-fields {
+            display: grid;
+            grid-template-columns: 1fr 1.15fr 1fr;
+            gap: 12px;
+        }
+        .age-tool select, .age-tool input {
+            width: 100%;
+            min-height: 54px;
+            padding: 0 14px;
+            border: 1px solid #c2c6d9;
+            border-radius: 9px;
+            background: #f8f9ff;
+            color: #0b1c30;
+            font: inherit;
+        }
+        .age-tool select:focus, .age-tool input:focus {
+            outline: 3px solid #b4c5ff;
+            border-color: #0062ff;
+        }
+        .age-tool__actions {
+            display: flex;
+            gap: 14px;
+            margin-top: 34px;
+        }
+        .age-tool button {
+            min-height: 55px;
+            border-radius: 9px;
+            font: 700 1rem Inter, Arial, sans-serif;
+            cursor: pointer;
+        }
+        .age-tool__calculate {
+            flex: 1;
+            border: 0;
+            background: #0062ff;
+            color: #fff;
+        }
+        .age-tool__calculate:hover {
+            background: #004cca;
+        }
+        .age-tool__reset {
+            padding: 0 24px;
+            border: 1px solid #c2c6d9;
+            background: #fff;
+            color: #424656;
+        }
+        .age-tool__results {
+            display: grid;
+            align-content: start;
+            gap: 28px;
+        }
+        .age-result {
+            position: relative;
+            overflow: hidden;
+            padding: clamp(24px, 4vw, 40px);
+            border: 1px solid #c7dcff;
+            border-radius: 16px;
+            background: #f0f7ff;
+        }
+        .age-result::after {
+            position: absolute;
+            right: -60px;
+            top: -60px;
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            background: #dbe9ff;
+            content: "";
+        }
+        .age-result__label, .age-stat__label {
+            position: relative;
+            z-index: 1;
+            margin: 0 0 20px;
+            color: #586377;
+            font-size: .9rem;
+            font-weight: 700;
+            letter-spacing: .12em;
+            text-transform: uppercase;
+        }
+        .age-result__values {
+            position: relative;
+            z-index: 1;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 18px;
+        }
+        .age-result__value {
+            display: flex;
+            align-items: baseline;
+            gap: 7px;
+        }
+        .age-result__value strong {
+            color: #0062ff;
+            font-family: "Hanken Grotesk", Inter, Arial, sans-serif;
+            font-size: clamp(2.8rem, 5vw, 4rem);
+            line-height: 1;
+        }
+        .age-result__value span {
+            color: #424656;
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+        .age-tool__stats {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 28px;
+        }
+        .age-stat {
+            min-height: 156px;
+            padding: 27px 30px;
+        }
+        .age-stat__heading {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 23px;
+            color: #586377;
+            font-weight: 700;
+        }
+        .age-stat__heading i {
+            color: #0062ff;
+            font-size: 1.35rem;
+        }
+        .age-stat--birthday .age-stat__heading i {
+            color: #f59e0b;
+        }
+        .age-stat__number {
+            margin: 0;
+            color: #0b1c30;
+            font-family: "Hanken Grotesk", Inter, Arial, sans-serif;
+            font-size: 2.4rem;
+            font-weight: 600;
+            line-height: 1;
+            font-variant-numeric: tabular-nums;
+        }
+        .age-stat__number small {
+            color: #424656;
+            font-family: Inter, Arial, sans-serif;
+            font-size: 1rem;
+            font-weight: 500;
+        }
+        .age-tool__message {
+            min-height: 20px;
+            margin: 18px 0 0;
+            color: #ba1a1a;
+            font-size: .9rem;
+        }
+        @media (max-width: 900px) {
+            .age-tool__grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        @media (max-width: 520px) {
+            .age-tool {
+                padding: 24px 16px;
+            }
+            .age-tool__date-fields, .age-tool__stats {
+                grid-template-columns: 1fr;
+            }
+            .age-tool__actions {
+                flex-direction: column;
+            }
+            .age-tool__reset {
+                width: 100%;
+            }
+        }
+        .howToUse-AgeCalculator {
+            padding: 30px 20px;
+            display: flex;
+            flex-direction: column;
+            margin: 20px auto;
+            gap: 20px;
+            max-width: 1040px;
+            color: rgb(143, 143, 143);
+            border-bottom: 2px solid rgb(0, 89, 255);
+        }
+    </style>
+
 </head>
 <body>
     <header>
@@ -26,24 +279,53 @@
             </a>
         </div>
     </header>
-    <main>
-        <div class="card">
-            <div class="card-box">
-                <h2>
-                    <u>Precision Age Tracker</u>
-                </h2>
-                <p>Enter your birth date to instantly calculate your exact age in years, months, and days. Our high-performance utility provides immediate, accurate results.</p>
-            </div>
-        
-            <section class="card-calculater">
+    <main class="age-calculator-page">
+        <div class="age-tool">
+            <div class="age-tool__intro">
                 <h1>Age Calculator</h1>
-                <form id="ageForm">
-                    <label for="birthDate">Enter your birth date:</label>
-                    <input type="date" id="birthDate" name="birthDate" required>
-                    <button type="submit">Calculate Age</button>
+                <p>Calculate your exact age in years, months, and days.</p>
+            </div>
+            <div class="age-tool__grid">
+            <section class="age-tool__form" aria-labelledby="age-form-title">
+                <h2 class="age-tool__form-title" id="age-form-title"><span class="age-tool__icon"><i class="bi bi-calendar3"></i></span>Details</h2>
+                <form id="ageForm" novalidate>
+                    <div class="age-tool__field">
+                        <label for="birthDay">Date of Birth</label>
+                        <div class="age-tool__date-fields">
+                            <select id="birthDay" aria-label="Birth day" required><option value="">Day</option></select>
+                            <select id="birthMonth" aria-label="Birth month" required><option value="">Month</option></select>
+                            <select id="birthYear" aria-label="Birth year" required><option value="">Year</option></select>
+                        </div>
+                    </div>
+                    <div class="age-tool__field">
+                        <label for="ageAtDate">Age at Date (Optional)</label>
+                        <input type="date" id="ageAtDate" name="ageAtDate">
+                    </div>
+                    <div class="age-tool__actions">
+                        <button class="age-tool__calculate" type="submit">Calculate Age</button>
+                        <button class="age-tool__reset" type="reset">Reset</button>
+                    </div>
+                    <p id="ageMessage" class="age-tool__message" aria-live="polite"></p>
                 </form>
-            </section> 
-        </div> 
+            </section>
+            <section class="age-tool__results" aria-live="polite" aria-label="Age calculation result">
+                <div class="age-result">
+                    <p class="age-result__label">Exact Age</p>
+                    <div class="age-result__values">
+                        <div class="age-result__value"><strong id="resultYears">—</strong><span>Years</span></div>
+                        <div class="age-result__value"><strong id="resultMonths">—</strong><span>Months</span></div>
+                        <div class="age-result__value"><strong id="resultDays">—</strong><span>Days</span></div>
+                    </div>
+                </div>
+                <div class="age-tool__stats">
+                    <article class="age-stat"><div class="age-stat__heading"><i class="bi bi-calendar3"></i>Total Days</div><p class="age-stat__number" id="totalDays">—</p></article>
+                    <article class="age-stat"><div class="age-stat__heading"><i class="bi bi-calendar-week"></i>Total Weeks</div><p class="age-stat__number" id="totalWeeks">—</p></article>
+                    <article class="age-stat"><div class="age-stat__heading"><i class="bi bi-calendar2-event"></i>Total Months</div><p class="age-stat__number" id="totalMonths">—</p></article>
+                    <article class="age-stat age-stat--birthday"><div class="age-stat__heading"><i class="bi bi-cake2"></i>Next Birthday</div><p class="age-stat__number"><span id="nextBirthday">—</span> <small>Days</small></p></article>
+                </div>
+            </section>
+            </div>
+        </div>
         
         <div class="ad-banner-728">
             <!-----Ads-Adsterra-banner-728*9-->
@@ -64,6 +346,47 @@
         </div>
     </main>
 
+    <!---------Content of how to use Calculator-->
+    <section class="howToUse-AgeCalculator">
+        <img src="../images/howToUse-calculator.png">
+        <span>How Does the Age Calculator Work?</span>
+        <p>Our age calculator compares your date of birth with today's date to calculate the difference between the two dates. It automatically handles different month lengths and leap years to provide an accurate age calculation.</p>
+        <p>How to Calculate Your Age</p>
+        <ul>
+            <li>Enter your date of birth.</li>
+            <li>Select or confirm the current date.</li>
+            <li>Click the Calculate Age button.</li>
+            <li>Your exact age will be displayed instantly.</li>
+        </ul>
+        <p>The result can show your age in years, months, and days, making it easier to understand exactly how much time has passed since your birth date.</p>
+        <p>What Can You Calculate?</p>
+        <p>Our Age Calculator can help you find:</p>
+        <ul>
+            <li>Your age in years, months, and days</li>
+            <li>Total number of months you have lived</li>
+            <li>Total number of days since your birth</li>
+            <li>Total hours, minutes, and seconds based on the calculated period</li>
+            <li>Your upcoming birthday information</li>
+        </ul>
+        <p>Why Use an Online Age Calculator?</p>
+        <p>Calculating your exact age manually can be confusing because months have different numbers of days and leap years can affect the calculation. An online age calculator performs these calculations automatically and gives you the result in seconds.
+        <br>Whether you are checking your age for a form, application, birthday planning, or simply want to know how many days you have been alive, this calculator provides a quick and convenient solution.</p>
+        <p>Accurate Age Calculation</p>
+        <p>The calculator uses your date of birth and the selected current date to determine the difference between the two dates. Instead of manually counting months and days, you can get the result instantly with a simple date input.</p>
+        <p>Age Calculator for Different Purposes</p>
+        <p>An age calculator can be useful in many everyday situations, including:</p>
+        <ul>
+            <li>Checking your current age</li>
+            <li>Preparing forms and applications</li>
+            <li>Planning birthday celebrations</li>
+            <li>Checking age requirements</li>
+            <li>Calculating the time between two dates</li>
+            <li>Educational and personal calculations</li>
+        </ul>
+    </section>
+
+
+    <!--------Birthday content section-->
     <section class="birthday-section">
         <img src="../images/pexels-nicky-7159595.jpg" alt="birthday">
         <span>Birthday Meaning and Celebration<br></span>

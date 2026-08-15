@@ -3,14 +3,203 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Free online percentage calculator. Calculate percentage, percentage increase/decrease, and more instantly.">
-    <meta name="keywords" content="percentage calculator, percentage increase calculator, percentage decrease calculator, online calculator">
+    <meta name="description" content="Free online percentage calculator. Calculate percentages, percentage increase, percentage decrease, and percentage differences instantly with high precision.">
+    <meta name="keywords" content="percentage calculator, percentage increase calculator, percentage decrease calculator, online calculator, percentage difference">
     <title>Percentage Calculator – Calculate Percentages Online</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@600;700&family=Inter:wght@400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="icon" href="../images/favicon.svg">
+    <style>
+        html, body {
+            background: #f8f9ff !important;
+            background-color: #f8f9ff !important;
+            background-image: none !important;
+        }
+        main, main.pct-calculator-page {
+            background: #f8f9ff !important;
+            background-color: #f8f9ff !important;
+            background-image: none !important;
+            padding: 48px 32px 64px !important;
+            font-family: Inter, Arial, sans-serif;
+            color: #0b1c30;
+        }
+        .pct-calculator-shell {
+            max-width: 1280px;
+            margin: 0 auto;
+        }
+        @media (max-width: 768px) {
+            main, main.pct-calculator-page {
+                padding: 32px 16px 48px !important;
+            }
+        }
+    </style>
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "tertiary-fixed": "#e0e3e5",
+                    "surface-container-low": "#eff4ff",
+                    "secondary-container": "#d5e0f8",
+                    "secondary-fixed": "#d8e3fb",
+                    "surface-container-highest": "#d3e4fe",
+                    "on-error-container": "#93000a",
+                    "primary-fixed": "#dbe1ff",
+                    "on-tertiary": "#ffffff",
+                    "on-background": "#0b1c30",
+                    "error-container": "#ffdad6",
+                    "on-primary": "#ffffff",
+                    "warning-amber": "#F59E0B",
+                    "on-secondary-fixed-variant": "#3c475a",
+                    "error": "#ba1a1a",
+                    "on-tertiary-fixed": "#191c1e",
+                    "on-surface": "#0b1c30",
+                    "surface-container-high": "#dce9ff",
+                    "tertiary": "#54585a",
+                    "on-surface-variant": "#424656",
+                    "primary-container": "#0062ff",
+                    "inverse-on-surface": "#eaf1ff",
+                    "surface-bright": "#f8f9ff",
+                    "surface-dim": "#cbdbf5",
+                    "surface-tint": "#0053da",
+                    "tertiary-container": "#6d7072",
+                    "primary-fixed-dim": "#b4c5ff",
+                    "on-secondary": "#ffffff",
+                    "on-primary-fixed-variant": "#003ea8",
+                    "inverse-surface": "#213145",
+                    "surface-container": "#e5eeff",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-variant": "#d3e4fe",
+                    "outline-variant": "#c2c6d9",
+                    "success-green": "#10B981",
+                    "secondary": "#545f73",
+                    "surface": "#f8f9ff",
+                    "surface-blue": "#F0F7FF",
+                    "on-tertiary-container": "#f3f5f7",
+                    "on-secondary-fixed": "#111c2d",
+                    "on-tertiary-fixed-variant": "#444749",
+                    "on-primary-container": "#f3f3ff",
+                    "inverse-primary": "#b4c5ff",
+                    "on-secondary-container": "#586377",
+                    "on-primary-fixed": "#00174b",
+                    "tertiary-fixed-dim": "#c4c7c9",
+                    "outline": "#737687",
+                    "on-error": "#ffffff",
+                    "background": "#f8f9ff",
+                    "primary": "#004cca",
+                    "secondary-fixed-dim": "#bcc7de"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "margin-desktop": "32px",
+                    "container-max": "1280px",
+                    "stack-sm": "8px",
+                    "stack-lg": "32px",
+                    "margin-mobile": "16px",
+                    "gutter": "24px",
+                    "stack-md": "16px"
+            },
+            "fontFamily": {
+                    "display-lg": [
+                            "Hanken Grotesk"
+                    ],
+                    "caption": [
+                            "Inter"
+                    ],
+                    "headline-lg": [
+                            "Hanken Grotesk"
+                    ],
+                    "headline-md": [
+                            "Hanken Grotesk"
+                    ],
+                    "label-sm": [
+                            "Inter"
+                    ],
+                    "headline-lg-mobile": [
+                            "Hanken Grotesk"
+                    ],
+                    "body-lg": [
+                            "Inter"
+                    ],
+                    "body-md": [
+                            "Inter"
+                    ]
+            },
+            "fontSize": {
+                    "display-lg": [
+                            "48px",
+                            {
+                                    "lineHeight": "56px",
+                                    "letterSpacing": "-0.02em",
+                                    "fontWeight": "700"
+                            }
+                    ],
+                    "caption": [
+                            "12px",
+                            {
+                                    "lineHeight": "16px",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "headline-lg": [
+                            "32px",
+                            {
+                                    "lineHeight": "40px",
+                                    "fontWeight": "600"
+                            }
+                    ],
+                    "headline-md": [
+                            "20px",
+                            {
+                                    "lineHeight": "28px",
+                                    "fontWeight": "600"
+                            }
+                    ],
+                    "label-sm": [
+                            "14px",
+                            {
+                                    "lineHeight": "20px",
+                                    "letterSpacing": "0.01em",
+                                    "fontWeight": "600"
+                            }
+                    ],
+                    "headline-lg-mobile": [
+                            "24px",
+                            {
+                                    "lineHeight": "32px",
+                                    "fontWeight": "600"
+                            }
+                    ],
+                    "body-lg": [
+                            "18px",
+                            {
+                                    "lineHeight": "28px",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "body-md": [
+                            "16px",
+                            {
+                                    "lineHeight": "24px",
+                                    "fontWeight": "400"
+                            }
+                    ]
+            }
+          }
+        }
+      }
+    </script>
 </head>
-<body>
+<body style="background: #f8f9ff !important; background-image: none !important;">
     <header>
         <a href="../index.html" title="Home">
             <img src="../images/pepstudio.png" alt="Home">
@@ -24,36 +213,107 @@
             </a>
         </div>
     </header>
-    <main>
-        <div class="card">
-            <div class="card-box">
-                <h2>
-                    <u>Percentage Calculator</u>
-                </h2>
-                <p>Calculate percentages, percentage increase, percentage decrease, and more. Get instant results with our accurate percentage calculator.</p>
-            </div>
-        
-            <section class="card-calculater">
-                <h1>Percentage Calculator</h1>
-                <form id="percentageForm">
-                    <label for="part">Part Value:</label>
-                    <input type="number" id="part" name="part" placeholder="Enter part value" step="any" required>
-                    
-                    <label for="total">Total Value:</label>
-                    <input type="number" id="total" name="total" placeholder="Enter total value" step="any" required>
-                    
-                    <button type="submit">Calculate Percentage</button>
-                </form>
-            </section> 
-        </div> 
-    </main>
 
-    <div id="resultModal" class="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <div id="modalResult"></div>
+    <main class="pct-calculator-page flex-grow w-full antialiased" style="background: #f8f9ff !important; background-image: none !important;">
+        <div class="pct-calculator-shell">
+            <!-- Page Header -->
+            <div class="mb-8 text-center md:text-left">
+                <h1 class="font-display-lg text-display-lg text-primary mb-2">Percentage Calculator</h1>
+                <p class="font-body-lg text-body-lg text-secondary max-w-2xl">Calculate percentages, percentage increase or decrease, and percentage differences instantly with precision.</p>
+            </div>
+
+            <!-- Main Layout Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+                <!-- Left Column: Selection & Inputs -->
+                <div class="col-span-1 md:col-span-6 flex flex-col gap-4">
+                    <div class="bg-surface-container-lowest rounded-[16px] shadow-[0_4px_20px_rgba(15,23,42,0.04)] hover:shadow-[0_8px_30px_rgba(15,23,42,0.08)] transition-shadow duration-300 p-6 md:p-8 flex flex-col h-full border border-outline-variant/30">
+                        <div class="flex items-center gap-3 mb-6">
+                            <span class="material-symbols-outlined text-primary text-[24px]" data-icon="percent">percent</span>
+                            <h2 class="font-headline-md text-headline-md text-on-surface">Calculation Mode</h2>
+                        </div>
+
+                        <!-- Mode Selector Tabs -->
+                        <div class="mb-6">
+                            <label class="block font-label-sm text-label-sm text-secondary mb-2">Select Type</label>
+                            <div class="grid grid-cols-3 gap-2" id="pctModeTabs">
+                                <button type="button" data-mode="basic" class="pct-mode-btn flex flex-col items-center justify-center p-3 bg-surface-blue text-primary border border-primary/20 rounded-lg transition-colors active">
+                                    <span class="material-symbols-outlined mb-1 text-[20px]" data-icon="pin">pin</span>
+                                    <span class="font-caption text-caption">Basic %</span>
+                                </button>
+                                <button type="button" data-mode="change" class="pct-mode-btn flex flex-col items-center justify-center p-3 bg-surface text-secondary border border-outline-variant/50 rounded-lg hover:bg-surface-blue hover:text-primary transition-colors">
+                                    <span class="material-symbols-outlined mb-1 text-[20px]" data-icon="trending_up">trending_up</span>
+                                    <span class="font-caption text-caption">% Change</span>
+                                </button>
+                                <button type="button" data-mode="difference" class="pct-mode-btn flex flex-col items-center justify-center p-3 bg-surface text-secondary border border-outline-variant/50 rounded-lg hover:bg-surface-blue hover:text-primary transition-colors">
+                                    <span class="material-symbols-outlined mb-1 text-[20px]" data-icon="difference">difference</span>
+                                    <span class="font-caption text-caption">% Diff</span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Dynamic Inputs Form -->
+                        <form id="percentageForm" onsubmit="return false;" class="flex flex-col gap-4 flex-grow">
+                            <!-- Input 1 -->
+                            <div class="flex flex-col">
+                                <label id="labelInput1" class="font-label-sm text-label-sm text-secondary mb-1" for="input1">Part Value (X)</label>
+                                <input id="input1" name="part" class="w-full rounded-lg border-outline-variant text-on-surface font-body-md focus:border-primary focus:ring-2 focus:ring-primary/20 p-3 border" placeholder="Enter part value" type="number" step="any" value="25" />
+                            </div>
+
+                            <!-- Input 2 -->
+                            <div class="flex flex-col">
+                                <label id="labelInput2" class="font-label-sm text-label-sm text-secondary mb-1" for="input2">Total Value (Y)</label>
+                                <input id="input2" name="total" class="w-full rounded-lg border-outline-variant text-on-surface font-body-md focus:border-primary focus:ring-2 focus:ring-primary/20 p-3 border" placeholder="Enter total value" type="number" step="any" value="200" />
+                            </div>
+
+                            <!-- Form Actions -->
+                            <div class="mt-8 pt-4 flex gap-4">
+                                <button id="calculateBtn" type="button" class="flex-1 bg-primary-container text-on-primary font-label-sm text-label-sm py-3 px-4 rounded-lg hover:bg-primary transition-colors flex justify-center items-center gap-2">
+                                    <span class="material-symbols-outlined text-[18px]" data-icon="calculate">calculate</span>
+                                    Calculate
+                                </button>
+                                <button id="resetBtn" type="button" class="flex-1 bg-transparent text-primary font-label-sm text-label-sm py-3 px-4 rounded-lg border border-primary/20 hover:bg-surface-blue transition-colors">
+                                    Reset
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Right Column: Results & Analysis -->
+                <div class="col-span-1 md:col-span-6 flex flex-col gap-4">
+                    <div class="bg-surface-container-lowest rounded-[16px] shadow-[0_4px_20px_rgba(15,23,42,0.04)] hover:shadow-[0_8px_30px_rgba(15,23,42,0.08)] transition-shadow duration-300 p-6 md:p-8 flex flex-col h-full border border-outline-variant/30">
+                        <div class="flex items-center gap-3 mb-6">
+                            <span class="material-symbols-outlined text-primary text-[24px]" data-icon="analytics">analytics</span>
+                            <h2 class="font-headline-md text-headline-md text-on-surface">Calculation Result</h2>
+                        </div>
+
+                        <!-- Highlight Result Card -->
+                        <div class="bg-surface-blue rounded-xl p-8 flex flex-col items-center justify-center mb-6 border border-primary/10 flex-grow min-h-[160px]">
+                            <span id="resultSubtitle" class="font-label-sm text-label-sm text-secondary uppercase tracking-wider mb-2">25 is what % of 200</span>
+                            <div class="flex items-baseline gap-2 flex-wrap justify-center text-center">
+                                <span id="resultMainValue" class="font-display-lg text-[40px] md:text-[56px] font-bold leading-none text-primary tabular-nums tracking-tight">12.5%</span>
+                            </div>
+                        </div>
+
+                        <!-- Calculation Formula & Breakdown -->
+                        <div class="mb-6 p-4 bg-surface rounded-lg border border-outline-variant/30">
+                            <h3 class="font-label-sm text-label-sm text-secondary mb-2">Formula &amp; Steps</h3>
+                            <p id="formulaStep" class="font-body-md text-body-md text-on-surface-variant font-mono text-sm leading-relaxed">
+                                (25 / 200) × 100 = 12.5%
+                            </p>
+                        </div>
+
+                        <!-- Quick Reference List -->
+                        <div>
+                            <h3 id="quickRefTitle" class="font-label-sm text-label-sm text-secondary mb-4 border-b border-outline-variant/30 pb-2">Common Percentages of Total (200)</h3>
+                            <ul id="quickRefList" class="flex flex-col gap-3">
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
+    </main>
 
     <footer>
         <a href="../about-us.html">About Us</a>
