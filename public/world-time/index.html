@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Free online world time converter. Check current time in different time zones across the world. Fast, accurate, and easy to use.">
     <meta name="keywords" content="world time, time zone converter, current time, international time, time zone, clock, world clock">
+    <link rel="canonical" href="https://pepstudio.io/world-time/">
+    <meta property="og:title" content="World Time – Check Current Time in Different Time Zones">
+    <meta property="og:description" content="Free online World Time Clock. View live local time for major global cities and convert time zones instantly for international meetings and travel.">
+    <meta property="og:type" content="website">
     <title>World Time – Check Current Time in Different Time Zones</title>
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@600;700&family=Inter:wght@400;500;600;700&display=swap">
@@ -290,6 +294,151 @@
             <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="timezoneGrid">
                 <!-- Cities generated dynamically by JS -->
             </section>
+
+            <div style="max-width: 1100px; margin: 40px auto 20px; padding: 0 16px; font-family: Inter, Arial, sans-serif; color: #0b1c30;">
+                <!-- Intro Section -->
+                <section style="background: #fff; border: 1px solid #c2c6d9; border-radius: 16px; padding: 32px; margin-bottom: 24px; box-shadow: 0 4px 20px rgba(15, 23, 42, 0.04);">
+                    <h2 style="font-family: 'Hanken Grotesk', sans-serif; font-size: 1.5rem; margin-top: 0; margin-bottom: 16px; color: #0b1c30; display: flex; align-items: center; gap: 10px;">
+                        <i class="bi bi-globe" style="color: #0054d8;"></i>
+                        What is a World Time Clock & How Does It Work?
+                    </h2>
+                    <p style="color: #424656; font-size: 1.05rem; line-height: 1.6; margin: 0;">
+                        Welcome to the Pepstudio World Time Clock—a dynamic, real-time global clock and timezone converter designed for international business, remote teams, travelers, and global families! Tracking time across different continents and time zones can be confusing due to Coordinated Universal Time (UTC) offsets, Daylight Saving Time (DST) changes, and international date line boundaries. Our interactive World Time dashboard displays live local time alongside a curated grid of major global financial capitals including London, New York, Tokyo, Paris, Sydney, and Dubai. With our built-in time comparison slider, you can offset hours into the future or past to easily coordinate cross-border meetings, schedule international calls, or plan travel itineraries without time zone confusion.
+                    </p>
+                </section>
+
+                <!-- How It Works Section -->
+                <section style="background: #fff; border: 1px solid #c2c6d9; border-radius: 16px; padding: 32px; margin-bottom: 24px; box-shadow: 0 4px 20px rgba(15, 23, 42, 0.04);">
+                    <h2 style="font-family: 'Hanken Grotesk', sans-serif; font-size: 1.5rem; margin-top: 0; margin-bottom: 12px; color: #0b1c30; display: flex; align-items: center; gap: 10px;">
+                        <i class="bi bi-gear-fill" style="color: #0054d8;"></i>
+                        How Our Global Timezone Engine Works
+                    </h2>
+                    <p style="color: #424656; margin-bottom: 20px; font-size: 0.95rem;">Our world clock algorithm syncs with high-precision time standards across all global regions:</p>
+                    
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px;">
+                        <div style="background: #f0f7ff; border: 1px solid #c7dcff; border-radius: 12px; padding: 20px;">
+                            <div style="font-weight: 700; color: #0054d8; margin-bottom: 8px; font-size: 1.1rem;">1. UTC Master Clock</div>
+                            <p style="color: #424656; font-size: 0.9rem; margin: 0; line-height: 1.5;">Anchors all calculations to Coordinated Universal Time (UTC) using JavaScript's native Intl.DateTimeFormat API.</p>
+                        </div>
+                        <div style="background: #f0f7ff; border: 1px solid #c7dcff; border-radius: 12px; padding: 20px;">
+                            <div style="font-weight: 700; color: #0054d8; margin-bottom: 8px; font-size: 1.1rem;">2. Dynamic IANA Offsets</div>
+                            <p style="color: #424656; font-size: 0.9rem; margin: 0; line-height: 1.5;">Resolves exact regional time rules (e.g. America/New_York, Asia/Tokyo) and handles Daylight Saving Time automatically.</p>
+                        </div>
+                        <div style="background: #f0f7ff; border: 1px solid #c7dcff; border-radius: 12px; padding: 20px;">
+                            <div style="font-weight: 700; color: #0054d8; margin-bottom: 8px; font-size: 1.1rem;">3. Interactive Offset Slider</div>
+                            <p style="color: #424656; font-size: 0.9rem; margin: 0; line-height: 1.5;">Modifies the active timestamp by adding or subtracting hours to show future or past time across all city cards in real-time.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- FAQ Section -->
+                <section style="background: #fff; border: 1px solid #c2c6d9; border-radius: 16px; padding: 32px; margin-bottom: 24px; box-shadow: 0 4px 20px rgba(15, 23, 42, 0.04);">
+                    <h2 style="font-family: 'Hanken Grotesk', sans-serif; font-size: 1.5rem; margin-top: 0; margin-bottom: 20px; color: #0b1c30; display: flex; align-items: center; gap: 10px;">
+                        <i class="bi bi-question-circle-fill" style="color: #0054d8;"></i>
+                        Frequently Asked Questions
+                    </h2>
+                    
+                    <div style="display: flex; flex-direction: column; gap: 16px;">
+                        <div style="border: 1px solid #e2e8f0; border-radius: 12px; padding: 20px; background: #f8f9ff;">
+                            <h3 style="font-size: 1.05rem; font-weight: 700; margin: 0 0 8px; color: #0b1c30;">What is the difference between UTC and GMT?</h3>
+                            <p style="color: #424656; font-size: 0.95rem; margin: 0; line-height: 1.5;">UTC (Coordinated Universal Time) is the atomic time standard used worldwide, while GMT (Greenwich Mean Time) is a time zone based on the prime meridian. In practice, both share the exact same time.</p>
+                        </div>
+
+                        <div style="border: 1px solid #e2e8f0; border-radius: 12px; padding: 20px; background: #f8f9ff;">
+                            <h3 style="font-size: 1.05rem; font-weight: 700; margin: 0 0 8px; color: #0b1c30;">How does this World Clock handle Daylight Saving Time (DST)?</h3>
+                            <p style="color: #424656; font-size: 0.95rem; margin: 0; line-height: 1.5;">Our clock automatically updates for Daylight Saving Time changes in real-time based on official IANA timezone database rules for each individual city.</p>
+                        </div>
+
+                        <div style="border: 1px solid #e2e8f0; border-radius: 12px; padding: 20px; background: #f8f9ff;">
+                            <h3 style="font-size: 1.05rem; font-weight: 700; margin: 0 0 8px; color: #0b1c30;">How do I compare time zones for cross-border meetings?</h3>
+                            <p style="color: #424656; font-size: 0.95rem; margin: 0; line-height: 1.5;">Use our "Compare Offset" slider to shift time forward or backward by hours. All city cards will instantly update to show what time it will be in each location.</p>
+                        </div>
+
+                        <div style="border: 1px solid #e2e8f0; border-radius: 12px; padding: 20px; background: #f8f9ff;">
+                            <h3 style="font-size: 1.05rem; font-weight: 700; margin: 0 0 8px; color: #0b1c30;">What is the International Date Line?</h3>
+                            <p style="color: #424656; font-size: 0.95rem; margin: 0; line-height: 1.5;">The International Date Line is an imaginary line located near 180° longitude. Crossing it westwards adds 24 hours (one day forward), while crossing eastwards subtracts 24 hours (one day back).</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Fun Facts / World Time Trivia -->
+                <section style="background: linear-gradient(135deg, #eff6ff 0%, #f0fdf4 100%); border: 1px solid #bfdbfe; border-radius: 16px; padding: 32px; margin-bottom: 24px;">
+                    <h2 style="font-family: 'Hanken Grotesk', sans-serif; font-size: 1.5rem; margin-top: 0; margin-bottom: 20px; color: #0b1c30; display: flex; align-items: center; gap: 10px;">
+                        <i class="bi bi-lightbulb-fill" style="color: #f59e0b;"></i>
+                        Fun Facts & World Time Trivia
+                    </h2>
+                    
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px;">
+                        <div style="background: rgba(255,255,255,0.85); padding: 16px; border-radius: 12px; border: 1px solid #dbeafe;">
+                            <h3 style="font-size: 0.95rem; font-weight: 700; margin: 0 0 6px; color: #0b1c30;">First Nation in New Year</h3>
+                            <p style="font-size: 0.88rem; color: #424656; margin: 0;">The island nation of Kiribati sits in UTC+14, making it the very first country on Earth to welcome the New Year!</p>
+                        </div>
+
+                        <div style="background: rgba(255,255,255,0.85); padding: 16px; border-radius: 12px; border: 1px solid #dbeafe;">
+                            <h3 style="font-size: 0.95rem; font-weight: 700; margin: 0 0 6px; color: #0b1c30;">45-Minute Time Zones</h3>
+                            <p style="font-size: 0.88rem; color: #424656; margin: 0;">Nepal uses UTC+5:45—one of only three places in the world with a 45-minute fractional timezone offset!</p>
+                        </div>
+
+                        <div style="background: rgba(255,255,255,0.85); padding: 16px; border-radius: 12px; border: 1px solid #dbeafe;">
+                            <h3 style="font-size: 0.95rem; font-weight: 700; margin: 0 0 6px; color: #0b1c30;">China's Single Time Zone</h3>
+                            <p style="font-size: 0.88rem; color: #424656; margin: 0;">Despite spanning 5 geographical time zones, China officially operates on one single nationwide timezone: Beijing Time (UTC+8).</p>
+                        </div>
+
+                        <div style="background: rgba(255,255,255,0.85); padding: 16px; border-radius: 12px; border: 1px solid #dbeafe;">
+                            <h3 style="font-size: 0.95rem; font-weight: 700; margin: 0 0 6px; color: #0b1c30;">Space Station Time</h3>
+                            <p style="font-size: 0.88rem; color: #424656; margin: 0;">Astronauts aboard the International Space Station see 16 sunrises a day and operate strictly on UTC time!</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Related Tools Grid -->
+                <section style="background: #fff; border: 1px solid #c2c6d9; border-radius: 16px; padding: 32px; margin-bottom: 24px; box-shadow: 0 4px 20px rgba(15, 23, 42, 0.04);">
+                    <h2 style="font-family: 'Hanken Grotesk', sans-serif; font-size: 1.5rem; margin-top: 0; margin-bottom: 8px; color: #0b1c30; display: flex; align-items: center; gap: 10px;">
+                        <i class="bi bi-grid-3x3-gap-fill" style="color: #0054d8;"></i>
+                        Explore More Pepstudio Utility Tools
+                    </h2>
+                    <p style="color: #424656; margin-bottom: 20px; font-size: 0.95rem;">Check out our other fast, free, and accurate online calculation tools:</p>
+
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 16px;">
+                        <a href="../age-calculator/index.html" style="text-decoration: none; display: flex; flex-direction: column; align-items: center; gap: 8px; padding: 16px; border: 1px solid #e2e8f0; border-radius: 12px; background: #f8f9ff; color: #0b1c30; transition: all 0.2s ease;">
+                            <i class="bi bi-calendar3" style="font-size: 1.5rem; color: #0054d8;"></i>
+                            <span style="font-size: 0.88rem; font-weight: 600;">Age Calculator</span>
+                        </a>
+
+                        <a href="../bmi-calculator/index.html" style="text-decoration: none; display: flex; flex-direction: column; align-items: center; gap: 8px; padding: 16px; border: 1px solid #e2e8f0; border-radius: 12px; background: #f8f9ff; color: #0b1c30; transition: all 0.2s ease;">
+                            <i class="bi bi-heart-pulse-fill" style="font-size: 1.5rem; color: #0054d8;"></i>
+                            <span style="font-size: 0.88rem; font-weight: 600;">BMI Calculator</span>
+                        </a>
+
+                        <a href="../emi-calculator/index.html" style="text-decoration: none; display: flex; flex-direction: column; align-items: center; gap: 8px; padding: 16px; border: 1px solid #e2e8f0; border-radius: 12px; background: #f8f9ff; color: #0b1c30; transition: all 0.2s ease;">
+                            <i class="bi bi-calculator-fill" style="font-size: 1.5rem; color: #0054d8;"></i>
+                            <span style="font-size: 0.88rem; font-weight: 600;">EMI Calculator</span>
+                        </a>
+
+                        <a href="../love-calculator/index.html" style="text-decoration: none; display: flex; flex-direction: column; align-items: center; gap: 8px; padding: 16px; border: 1px solid #e2e8f0; border-radius: 12px; background: #f8f9ff; color: #0b1c30; transition: all 0.2s ease;">
+                            <i class="bi bi-suit-heart-fill" style="font-size: 1.5rem; color: #e11d48;"></i>
+                            <span style="font-size: 0.88rem; font-weight: 600;">Love Calculator</span>
+                        </a>
+
+                        <a href="../percentage-calculator/index.html" style="text-decoration: none; display: flex; flex-direction: column; align-items: center; gap: 8px; padding: 16px; border: 1px solid #e2e8f0; border-radius: 12px; background: #f8f9ff; color: #0b1c30; transition: all 0.2s ease;">
+                            <i class="bi bi-percent" style="font-size: 1.5rem; color: #0054d8;"></i>
+                            <span style="font-size: 0.88rem; font-weight: 600;">Percentage Calc</span>
+                        </a>
+
+                        <a href="../unit-converter/index.html" style="text-decoration: none; display: flex; flex-direction: column; align-items: center; gap: 8px; padding: 16px; border: 1px solid #e2e8f0; border-radius: 12px; background: #f8f9ff; color: #0b1c30; transition: all 0.2s ease;">
+                            <i class="bi bi-arrow-left-right" style="font-size: 1.5rem; color: #0054d8;"></i>
+                            <span style="font-size: 0.88rem; font-weight: 600;">Unit Converter</span>
+                        </a>
+                    </div>
+                </section>
+
+                <!-- Disclaimer -->
+                <section style="background: #f1f5f9; border: 1px solid #cbd5e1; border-radius: 12px; padding: 16px; text-align: center;">
+                    <p style="margin: 0; font-size: 0.85rem; color: #475569; line-height: 1.4;">
+                        <strong style="color: #0f172a;">Accuracy Disclaimer:</strong> This World Time clock is updated continuously using standardized timezone algorithms. For flight scheduling, satellite coordination, or legal deadlines, always verify times with official regional transport authorities.
+                    </p>
+                </section>
+            </div>
         </div>
     </main>
 

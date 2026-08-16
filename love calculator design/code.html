@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Love Calculator | pepstudio.io</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-tertiary-fixed-variant": "#444749",
+                      "on-surface": "#0b1c30",
+                      "on-secondary": "#ffffff",
+                      "on-primary-container": "#f3f3ff",
+                      "on-primary-fixed": "#00174b",
+                      "outline": "#737687",
+                      "surface-dim": "#cbdbf5",
+                      "on-secondary-container": "#586377",
+                      "surface-bright": "#f8f9ff",
+                      "background": "#f8f9ff",
+                      "tertiary-container": "#6d7072",
+                      "primary-fixed-dim": "#b4c5ff",
+                      "on-background": "#0b1c30",
+                      "primary": "#004cca",
+                      "surface-container-highest": "#d3e4fe",
+                      "error": "#ba1a1a",
+                      "outline-variant": "#c2c6d9",
+                      "inverse-on-surface": "#eaf1ff",
+                      "success-green": "#10B981",
+                      "on-surface-variant": "#424656",
+                      "surface-container-low": "#eff4ff",
+                      "surface-variant": "#d3e4fe",
+                      "secondary-fixed-dim": "#bcc7de",
+                      "on-tertiary": "#ffffff",
+                      "tertiary-fixed": "#e0e3e5",
+                      "secondary-container": "#d5e0f8",
+                      "on-tertiary-container": "#f3f5f7",
+                      "warning-amber": "#F59E0B",
+                      "error-container": "#ffdad6",
+                      "surface-container-high": "#dce9ff",
+                      "tertiary-fixed-dim": "#c4c7c9",
+                      "surface-blue": "#F0F7FF",
+                      "on-secondary-fixed-variant": "#3c475a",
+                      "surface-tint": "#0053da",
+                      "primary-container": "#0062ff",
+                      "tertiary": "#54585a",
+                      "on-secondary-fixed": "#111c2d",
+                      "secondary": "#545f73",
+                      "inverse-primary": "#b4c5ff",
+                      "primary-fixed": "#dbe1ff",
+                      "on-tertiary-fixed": "#191c1e",
+                      "surface": "#f8f9ff",
+                      "inverse-surface": "#213145",
+                      "on-primary": "#ffffff",
+                      "on-error": "#ffffff",
+                      "surface-container": "#e5eeff",
+                      "on-error-container": "#93000a",
+                      "surface-container-lowest": "#ffffff",
+                      "secondary-fixed": "#d8e3fb",
+                      "on-primary-fixed-variant": "#003ea8"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "margin-desktop": "32px",
+                      "margin-mobile": "16px",
+                      "container-max": "1280px",
+                      "stack-sm": "8px",
+                      "stack-lg": "32px",
+                      "stack-md": "16px",
+                      "gutter": "24px"
+              },
+              "fontFamily": {
+                      "body-md": [
+                              "Inter"
+                      ],
+                      "headline-lg-mobile": [
+                              "Hanken Grotesk"
+                      ],
+                      "label-sm": [
+                              "Inter"
+                      ],
+                      "headline-lg": [
+                              "Hanken Grotesk"
+                      ],
+                      "display-lg": [
+                              "Hanken Grotesk"
+                      ],
+                      "caption": [
+                              "Inter"
+                      ],
+                      "body-lg": [
+                              "Inter"
+                      ],
+                      "headline-md": [
+                              "Hanken Grotesk"
+                      ]
+              },
+              "fontSize": {
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "24px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-lg-mobile": [
+                              "24px",
+                              {
+                                      "lineHeight": "32px",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "label-sm": [
+                              "14px",
+                              {
+                                      "lineHeight": "20px",
+                                      "letterSpacing": "0.01em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "headline-lg": [
+                              "32px",
+                              {
+                                      "lineHeight": "40px",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "display-lg": [
+                              "48px",
+                              {
+                                      "lineHeight": "56px",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "caption": [
+                              "12px",
+                              {
+                                      "lineHeight": "16px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "body-lg": [
+                              "18px",
+                              {
+                                      "lineHeight": "28px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-md": [
+                              "20px",
+                              {
+                                      "lineHeight": "28px",
+                                      "fontWeight": "600"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-family: 'Material Symbols Outlined';
+            font-weight: normal;
+            font-style: normal;
+            font-size: 24px;
+            line-height: 1;
+            letter-spacing: normal;
+            text-transform: none;
+            display: inline-block;
+            white-space: nowrap;
+            word-wrap: normal;
+            direction: ltr;
+            -webkit-font-feature-settings: 'liga';
+            -webkit-font-smoothing: antialiased;
+        }
+        
+        .shadow-level-1 {
+            box-shadow: 0 4px 20px rgba(15, 23, 42, 0.04);
+        }
+        .shadow-level-2 {
+            box-shadow: 0 8px 30px rgba(15, 23, 42, 0.08);
+        }
+        .hover-elevate {
+            transition: all 0.3s ease;
+        }
+        .hover-elevate:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px rgba(15, 23, 42, 0.08);
+        }
+        .input-glow:focus {
+            box-shadow: 0 0 0 2px rgba(0, 98, 255, 0.2);
+            border-color: #0062ff;
+        }
+        
+        /* Custom animation for results */
+        @keyframes fillUp {
+            from { height: 0%; opacity: 0; }
+            to { height: 100%; opacity: 1; }
+        }
+        .result-bar-animate {
+            animation: fillUp 1.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+        }
+    </style>
+</head>
+<body class="bg-background min-h-screen flex flex-col font-body-md text-on-surface">
+<!-- TopNavBar -->
+<header class="bg-surface-container-lowest shadow-sm docked full-width top-0 w-full z-50">
+<div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 max-w-container-max mx-auto w-full">
+<!-- Brand -->
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary" data-icon="calculate" data-weight="fill" style="font-variation-settings: 'FILL' 1;">calculate</span>
+<span class="font-headline-md text-headline-md font-bold text-primary">pepstudio.io</span>
+</div>
+<!-- Navigation (Desktop) -->
+<nav class="hidden md:flex gap-6">
+<a class="text-primary border-b-2 border-primary pb-1 font-body-md text-body-md hover:text-primary-container transition-colors duration-200 opacity-80" href="#">Calculators</a>
+<a class="text-secondary hover:text-primary font-body-md text-body-md hover:text-primary-container transition-colors duration-200" href="#">Converters</a>
+<a class="text-secondary hover:text-primary font-body-md text-body-md hover:text-primary-container transition-colors duration-200" href="#">Tools</a>
+<a class="text-secondary hover:text-primary font-body-md text-body-md hover:text-primary-container transition-colors duration-200" href="#">Resources</a>
+</nav>
+<!-- Actions -->
+<div class="flex items-center gap-4">
+<button class="hidden md:flex items-center justify-center p-2 rounded-full text-secondary hover:text-primary transition-colors">
+<span class="material-symbols-outlined" data-icon="search">search</span>
+</button>
+<button class="font-label-sm text-label-sm bg-primary-container text-on-primary rounded-lg px-4 py-2 hover:opacity-90 transition-opacity">
+                    Sign In
+                </button>
+<button class="md:hidden p-2 text-secondary">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+</div>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="flex-grow w-full max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-stack-lg grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- Page Header -->
+<div class="col-span-1 md:col-span-12 mb-stack-md text-center">
+<h1 class="font-headline-lg-mobile md:font-display-lg text-headline-lg-mobile md:text-display-lg text-on-surface mb-stack-sm">Love Calculator</h1>
+<p class="font-body-lg text-body-lg text-secondary max-w-2xl mx-auto">Discover your compatibility percentage based on the ancient numerical alignment of names. A precise utility for a complex metric.</p>
+</div>
+<!-- Left Column: Input Card -->
+<section class="col-span-1 md:col-span-7 flex flex-col gap-stack-lg">
+<!-- Calculator Card -->
+<div class="bg-gradient-to-b from-pink-50 to-white rounded-2xl shadow-level-2 p-8 md:p-10 border border-pink-100 relative overflow-hidden flex flex-col items-center">
+<div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-pink-200 via-pink-400 to-pink-200"></div>
+<div class="flex flex-col items-center mb-8 text-center">
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-2">Check Compatibility</h2>
+<p class="font-body-md text-secondary">Enter both names to calculate the precision alignment metric.</p>
+</div>
+<form class="flex flex-col items-center gap-10 w-full" id="love-form">
+<div class="flex flex-col md:flex-row items-center justify-between w-full gap-6 md:gap-8">
+<div class="flex flex-col gap-2 w-full flex-1">
+<label class="font-label-sm text-label-sm text-on-surface-variant text-center" for="name1">Your Name</label>
+<input class="font-headline-lg-mobile text-headline-lg-mobile text-center rounded-xl border-2 border-pink-100 px-4 py-4 bg-white text-on-surface focus:outline-none focus:border-pink-300 focus:ring-4 focus:ring-pink-50 transition-all w-full placeholder:text-outline-variant/50" id="name1" placeholder="e.g., Alex" required="" type="text"/>
+</div>
+<div class="flex-shrink-0 relative my-4 md:my-0">
+<div class="absolute inset-0 bg-pink-100 rounded-full blur-xl opacity-60"></div>
+<span class="material-symbols-outlined text-pink-500 text-[64px] relative z-10 drop-shadow-sm hover:scale-110 transition-transform duration-300" data-icon="favorite" data-weight="fill" style="font-variation-settings: 'FILL' 1;">favorite</span>
+</div>
+<div class="flex flex-col gap-2 w-full flex-1">
+<label class="font-label-sm text-label-sm text-on-surface-variant text-center" for="name2">Partner's Name</label>
+<input class="font-headline-lg-mobile text-headline-lg-mobile text-center rounded-xl border-2 border-pink-100 px-4 py-4 bg-white text-on-surface focus:outline-none focus:border-pink-300 focus:ring-4 focus:ring-pink-50 transition-all w-full placeholder:text-outline-variant/50" id="name2" placeholder="e.g., Jordan" required="" type="text"/>
+</div>
+</div>
+<div class="flex flex-col items-center gap-4 w-full mt-2">
+<button class="font-label-sm text-label-sm bg-primary-container text-on-primary rounded-full px-10 py-4 hover:opacity-90 hover:shadow-md transition-all flex justify-center items-center gap-2 text-lg" type="submit">
+                            Calculate Love
+                            <span class="material-symbols-outlined text-[20px]" data-icon="arrow_forward">arrow_forward</span>
+</button>
+<button class="font-label-sm text-label-sm text-secondary bg-transparent px-4 py-2 rounded-lg hover:bg-surface-container-low transition-colors" type="button">
+                            Clear
+                        </button>
+</div>
+</form>
+</div>
+<!-- Optional Method Info Card -->
+<div class="bg-surface-container-lowest rounded-xl shadow-level-1 p-6 border border-outline-variant/30 flex gap-4 items-start">
+<span class="material-symbols-outlined text-tertiary mt-1" data-icon="info">info</span>
+<div>
+<h3 class="font-label-sm text-label-sm text-on-surface mb-1">Algorithm Precision</h3>
+<p class="font-caption text-caption text-secondary">Our calculation utilizes a proprietary alphanumeric hashing algorithm based on historical name-matching matrices, delivering a consistent metric for any given pair of strings.</p>
+</div>
+</div>
+</section>
+<!-- Right Column: Results & Info -->
+<section class="col-span-1 md:col-span-5 flex flex-col gap-stack-lg">
+<!-- Results Canvas -->
+<div class="bg-surface-blue rounded-xl shadow-level-1 p-8 border border-outline-variant/30 min-h-[300px] flex flex-col items-center justify-center relative overflow-hidden transition-all duration-500" id="results-card">
+<!-- Empty State -->
+<div class="flex flex-col items-center text-center z-10" id="empty-state">
+<div class="w-16 h-16 rounded-full bg-surface-container-lowest flex items-center justify-center mb-4 shadow-sm">
+<span class="material-symbols-outlined text-secondary" data-icon="bar_chart">bar_chart</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-2">Awaiting Input</h3>
+<p class="font-body-md text-body-md text-secondary">Enter both names in the calculator to generate your compatibility metric.</p>
+</div>
+<!-- Active State (Hidden initially) -->
+<div class="hidden flex-col items-center w-full z-10" id="active-state">
+<p class="font-label-sm text-label-sm text-secondary uppercase tracking-wider mb-2">Compatibility Index</p>
+<div class="text-[72px] font-display-lg text-primary-container leading-none mb-4 tabular-nums" id="percentage-display">
+                        0%
+                    </div>
+<div class="flex items-center gap-2 mb-6">
+<span class="font-body-md text-body-md text-on-surface font-medium" id="res-name1">Name 1</span>
+<span class="material-symbols-outlined text-tertiary text-sm" data-icon="close">close</span>
+<span class="font-body-md text-body-md text-on-surface font-medium" id="res-name2">Name 2</span>
+</div>
+<div class="w-full bg-surface-container-highest rounded-full h-2 mb-4 overflow-hidden">
+<div class="bg-primary-container h-full w-0 transition-all duration-1000 ease-out rounded-full" id="progress-bar"></div>
+</div>
+<p class="font-body-md text-body-md text-secondary text-center" id="result-message">Calculating alignment trajectory...</p>
+</div>
+<!-- Background visual element for results -->
+<div class="absolute bottom-0 left-0 w-full h-1/3 bg-gradient-to-t from-primary/5 to-transparent z-0 pointer-events-none"></div>
+</div>
+<!-- Fun Facts Sidebar -->
+<div class="bg-surface-container-lowest rounded-xl shadow-level-1 p-6 border border-outline-variant/30">
+<h3 class="font-headline-md text-headline-md text-on-surface mb-4 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary" data-icon="insights">insights</span>
+                    Data Insights
+                </h3>
+<ul class="flex flex-col gap-4">
+<li class="flex gap-3 items-start">
+<div class="w-2 h-2 rounded-full bg-primary mt-2 shrink-0"></div>
+<p class="font-body-md text-body-md text-secondary"><strong class="text-on-surface font-medium">Statistical Norms:</strong> The median compatibility score globally hovers around 62%, indicating moderate alignment is standard.</p>
+</li>
+<li class="flex gap-3 items-start">
+<div class="w-2 h-2 rounded-full bg-primary mt-2 shrink-0"></div>
+<p class="font-body-md text-body-md text-secondary"><strong class="text-on-surface font-medium">String Length Variance:</strong> Discrepancies in name length do not statistically diminish the underlying hash correlation.</p>
+</li>
+<li class="flex gap-3 items-start">
+<div class="w-2 h-2 rounded-full bg-primary mt-2 shrink-0"></div>
+<p class="font-body-md text-body-md text-secondary"><strong class="text-on-surface font-medium">High Margin Outliers:</strong> Scores above 90% occur in less than 4% of randomized trials, denoting rare structural symmetry.</p>
+</li>
+</ul>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-low w-full mt-auto">
+<div class="flex flex-col md:flex-row justify-between items-center px-margin-mobile md:px-margin-desktop py-stack-lg max-w-container-max mx-auto w-full gap-4">
+<div class="font-headline-md text-headline-md font-bold text-on-surface">
+                pepstudio.io
+            </div>
+<div class="font-caption text-caption text-secondary">
+                © 2024 pepstudio.io. Precision in every calculation.
+            </div>
+<nav class="flex gap-4">
+<a class="font-caption text-caption text-secondary hover:underline transition-all" href="#">Privacy Policy</a>
+<a class="font-caption text-caption text-secondary hover:underline transition-all" href="#">Terms of Service</a>
+<a class="font-caption text-caption text-secondary hover:underline transition-all" href="#">Cookie Policy</a>
+<a class="font-caption text-caption text-secondary hover:underline transition-all" href="#">Contact Us</a>
+</nav>
+</div>
+</footer>
+<script>
+        document.getElementById('love-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const name1 = document.getElementById('name1').value.trim();
+            const name2 = document.getElementById('name2').value.trim();
+            
+            if(!name1 || !name2) return;
+
+            // Simple deterministic fake calculation
+            const combined = (name1.toLowerCase() + name2.toLowerCase()).replace(/\s/g, '');
+            let score = 0;
+            for(let i=0; i<combined.length; i++) {
+                score += combined.charCodeAt(i);
+            }
+            const percentage = (score % 60) + 40; // Ensure score is between 40 and 99 for better UX
+
+            // UI Updates
+            document.getElementById('empty-state').classList.add('hidden');
+            const activeState = document.getElementById('active-state');
+            activeState.classList.remove('hidden');
+            activeState.classList.add('flex');
+            
+            document.getElementById('res-name1').textContent = name1;
+            document.getElementById('res-name2').textContent = name2;
+            
+            const display = document.getElementById('percentage-display');
+            const bar = document.getElementById('progress-bar');
+            const message = document.getElementById('result-message');
+            
+            // Reset
+            display.textContent = '0%';
+            bar.style.width = '0%';
+            message.textContent = 'Calculating alignment...';
+
+            // Animate
+            setTimeout(() => {
+                bar.style.width = percentage + '%';
+                
+                let current = 0;
+                const interval = setInterval(() => {
+                    current += 2;
+                    if(current >= percentage) {
+                        current = percentage;
+                        clearInterval(interval);
+                        
+                        if(percentage > 85) message.textContent = "High structural symmetry detected.";
+                        else if(percentage > 60) message.textContent = "Moderate alignment trajectory.";
+                        else message.textContent = "Standard variance observed.";
+                    }
+                    display.textContent = current + '%';
+                }, 20);
+            }, 100);
+        });
+
+        // Clear button logic
+        document.querySelector('button[type="button"]').addEventListener('click', () => {
+            document.getElementById('love-form').reset();
+            document.getElementById('empty-state').classList.remove('hidden');
+            const activeState = document.getElementById('active-state');
+            activeState.classList.add('hidden');
+            activeState.classList.remove('flex');
+            document.getElementById('progress-bar').style.width = '0%';
+            document.getElementById('percentage-display').textContent = '0%';
+        });
+    </script>
+</body></html>

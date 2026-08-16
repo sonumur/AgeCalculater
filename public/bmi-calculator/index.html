@@ -3,7 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Free online BMI calculator. Calculate your Body Mass Index instantly.">
+    <meta name="description" content="Free online BMI calculator. Calculate your Body Mass Index instantly. Check if you are underweight, normal weight, overweight, or obese using metric or imperial units.">
+    <meta name="keywords" content="bmi calculator, body mass index calculator, bmi calculator online, healthy weight calculator, bmi calculator metric, bmi calculator imperial">
+    <link rel="canonical" href="https://pepstudio.io/bmi-calculator/">
+    <meta property="og:title" content="BMI Calculator – Calculate Your Body Mass Index Online">
+    <meta property="og:description" content="Free online BMI calculator. Calculate your Body Mass Index instantly. Check if you are underweight, normal weight, overweight, or obese.">
+    <meta property="og:type" content="website">
     <title>BMI Calculator – Calculate Your Body Mass Index Online</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -33,6 +38,151 @@
             <div class="bmi-layout">
                 <section class="bmi-form-card" aria-labelledby="input-title"><h2 class="bmi-card-title" id="input-title"><i class="bi bi-calculator-fill" aria-hidden="true"></i>Input Measurements</h2><form id="bmiForm"><div class="unit-toggle" aria-label="Measurement units"><button type="button" class="is-active" aria-pressed="true">Metric (kg/cm)</button><button type="button" aria-pressed="false">Imperial (lb/in)</button></div><label class="bmi-field" for="height"><span id="heightLabel">Height (cm)</span><div class="bmi-input-wrap"><input type="number" id="height" name="height" placeholder="e.g. 175" step="0.1" min="1" required><em id="heightUnit">cm</em></div></label><label class="bmi-field" for="weight"><span id="weightLabel">Weight (kg)</span><div class="bmi-input-wrap"><input type="number" id="weight" name="weight" placeholder="e.g. 70" step="0.1" min="1" required><em id="weightUnit">kg</em></div></label><div class="bmi-actions"><button id="calculateButton" type="submit">Calculate BMI</button><button id="resetButton" type="reset">Reset</button></div></form></section>
                 <section class="bmi-results" aria-live="polite"><div class="bmi-score-card"><div class="score-top"><div><p class="score-caption">YOUR BMI SCORE</p><div id="bmiScore">22.9</div></div><div class="status-box"><div id="bmiStatus"><i class="bi bi-check-circle-fill" aria-hidden="true"></i><span>Normal</span></div><p>Health Status</p></div></div><div class="gauge"><div class="gauge-labels"><span>15</span><span>18.5</span><span>25</span><span>30</span><span>40+</span></div><div class="gauge-bar"><span></span><span></span><span></span><span></span></div><div class="indicator-track"><span class="gauge-pin" id="gaugePin"></span></div></div></div><div class="bmi-info-grid"><article class="bmi-info-card"><div class="info-icon"><i class="bi bi-person-badge" aria-hidden="true"></i></div><div><h2>Healthy Weight Range</h2><p><strong id="weightRange">56.7 kg - 76.3 kg</strong></p><small id="rangeBasis">Based on height 175 cm</small></div></article><article class="bmi-info-card"><div class="info-icon analysis"><i class="bi bi-graph-up-arrow" aria-hidden="true"></i></div><div><h2>Analysis</h2><p id="bmiAnalysis">Your BMI is within the healthy range. Maintaining a balanced diet and regular exercise will help you stay in this category.</p></div></article></div></section>
+            </div>
+
+            <div style="max-width: 1100px; margin: 40px auto 20px; padding: 0 16px; font-family: Inter, Arial, sans-serif; color: #0b1c30;">
+                <!-- Intro Section -->
+                <section style="background: #fff; border: 1px solid #c2c6d9; border-radius: 16px; padding: 32px; margin-bottom: 24px; box-shadow: 0 4px 20px rgba(15, 23, 42, 0.04);">
+                    <h2 style="font-family: 'Hanken Grotesk', sans-serif; font-size: 1.5rem; margin-top: 0; margin-bottom: 16px; color: #0b1c30; display: flex; align-items: center; gap: 10px;">
+                        <i class="bi bi-heart-pulse-fill" style="color: #0054d8;"></i>
+                        What is a BMI Calculator & How Does It Work?
+                    </h2>
+                    <p style="color: #424656; font-size: 1.05rem; line-height: 1.6; margin: 0;">
+                        Welcome to the Pepstudio BMI Calculator—a fast, reliable, and user-friendly tool designed to evaluate your body mass relative to your height! Body Mass Index (BMI) is an internationally recognized biometric standard used by healthcare professionals and fitness enthusiasts worldwide to categorize individuals into Underweight, Normal weight, Overweight, or Obese categories. Whether you prefer metric units (kilograms and centimeters) or imperial measurements (pounds and inches), our calculator provides instant results with visual health gauge feedback and personalized weight range analysis. Understanding your BMI is an essential first step toward maintaining healthy weight management and wellness goals. Input your measurements above and calculate your BMI in seconds!
+                    </p>
+                </section>
+
+                <!-- How It Works Section -->
+                <section style="background: #fff; border: 1px solid #c2c6d9; border-radius: 16px; padding: 32px; margin-bottom: 24px; box-shadow: 0 4px 20px rgba(15, 23, 42, 0.04);">
+                    <h2 style="font-family: 'Hanken Grotesk', sans-serif; font-size: 1.5rem; margin-top: 0; margin-bottom: 12px; color: #0b1c30; display: flex; align-items: center; gap: 10px;">
+                        <i class="bi bi-gear-fill" style="color: #0054d8;"></i>
+                        How Our BMI Calculation Algorithm Works
+                    </h2>
+                    <p style="color: #424656; margin-bottom: 20px; font-size: 0.95rem;">BMI calculations combine biometric formulas with standardized World Health Organization (WHO) health parameters:</p>
+                    
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px;">
+                        <div style="background: #f0f7ff; border: 1px solid #c7dcff; border-radius: 12px; padding: 20px;">
+                            <div style="font-weight: 700; color: #0054d8; margin-bottom: 8px; font-size: 1.1rem;">1. Standardized Formula</div>
+                            <p style="color: #424656; font-size: 0.9rem; margin: 0; line-height: 1.5;">Calculates BMI via weight(kg) / height(m)² for metric, or [weight(lb) × 703] / height(in)² for imperial units.</p>
+                        </div>
+                        <div style="background: #f0f7ff; border: 1px solid #c7dcff; border-radius: 12px; padding: 20px;">
+                            <div style="font-weight: 700; color: #0054d8; margin-bottom: 8px; font-size: 1.1rem;">2. WHO Classification</div>
+                            <p style="color: #424656; font-size: 0.9rem; margin: 0; line-height: 1.5;">Classifies scores into Underweight (&lt;18.5), Normal (18.5–24.9), Overweight (25–29.9), and Obese (30+).</p>
+                        </div>
+                        <div style="background: #f0f7ff; border: 1px solid #c7dcff; border-radius: 12px; padding: 20px;">
+                            <div style="font-weight: 700; color: #0054d8; margin-bottom: 8px; font-size: 1.1rem;">3. Target Weight Span</div>
+                            <p style="color: #424656; font-size: 0.9rem; margin: 0; line-height: 1.5;">Derives your ideal healthy weight interval (18.5 × height² to 24.9 × height²) tailored to your precise height.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- FAQ Section -->
+                <section style="background: #fff; border: 1px solid #c2c6d9; border-radius: 16px; padding: 32px; margin-bottom: 24px; box-shadow: 0 4px 20px rgba(15, 23, 42, 0.04);">
+                    <h2 style="font-family: 'Hanken Grotesk', sans-serif; font-size: 1.5rem; margin-top: 0; margin-bottom: 20px; color: #0b1c30; display: flex; align-items: center; gap: 10px;">
+                        <i class="bi bi-question-circle-fill" style="color: #0054d8;"></i>
+                        Frequently Asked Questions
+                    </h2>
+                    
+                    <div style="display: flex; flex-direction: column; gap: 16px;">
+                        <div style="border: 1px solid #e2e8f0; border-radius: 12px; padding: 20px; background: #f8f9ff;">
+                            <h3 style="font-size: 1.05rem; font-weight: 700; margin: 0 0 8px; color: #0b1c30;">What is considered a healthy BMI score?</h3>
+                            <p style="color: #424656; font-size: 0.95rem; margin: 0; line-height: 1.5;">According to WHO guidelines, a BMI score between 18.5 and 24.9 falls within the normal or healthy weight category for adults.</p>
+                        </div>
+
+                        <div style="border: 1px solid #e2e8f0; border-radius: 12px; padding: 20px; background: #f8f9ff;">
+                            <h3 style="font-size: 1.05rem; font-weight: 700; margin: 0 0 8px; color: #0b1c30;">Is BMI accurate for athletes and bodybuilders?</h3>
+                            <p style="color: #424656; font-size: 0.95rem; margin: 0; line-height: 1.5;">BMI measures total body mass and does not distinguish between muscle tissue and body fat. Athletes with high muscle density may score in the "overweight" range despite having low body fat.</p>
+                        </div>
+
+                        <div style="border: 1px solid #e2e8f0; border-radius: 12px; padding: 20px; background: #f8f9ff;">
+                            <h3 style="font-size: 1.05rem; font-weight: 700; margin: 0 0 8px; color: #0b1c30;">How often should I check my BMI?</h3>
+                            <p style="color: #424656; font-size: 0.95rem; margin: 0; line-height: 1.5;">Checking your BMI every few weeks or months is sufficient for monitoring general weight trends alongside dietary changes and exercise routines.</p>
+                        </div>
+
+                        <div style="border: 1px solid #e2e8f0; border-radius: 12px; padding: 20px; background: #f8f9ff;">
+                            <h3 style="font-size: 1.05rem; font-weight: 700; margin: 0 0 8px; color: #0b1c30;">What is the difference between Metric and Imperial BMI?</h3>
+                            <p style="color: #424656; font-size: 0.95rem; margin: 0; line-height: 1.5;">Both unit systems produce the exact same numerical BMI value. The imperial formula multiplies by a conversion constant of 703 to equate pounds/inches with kilograms/meters.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Fun Facts / Body Trivia -->
+                <section style="background: linear-gradient(135deg, #eff6ff 0%, #f0fdf4 100%); border: 1px solid #bfdbfe; border-radius: 16px; padding: 32px; margin-bottom: 24px;">
+                    <h2 style="font-family: 'Hanken Grotesk', sans-serif; font-size: 1.5rem; margin-top: 0; margin-bottom: 20px; color: #0b1c30; display: flex; align-items: center; gap: 10px;">
+                        <i class="bi bi-lightbulb-fill" style="color: #f59e0b;"></i>
+                        Fun Facts & Health Trivia
+                    </h2>
+                    
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px;">
+                        <div style="background: rgba(255,255,255,0.85); padding: 16px; border-radius: 12px; border: 1px solid #dbeafe;">
+                            <h3 style="font-size: 0.95rem; font-weight: 700; margin: 0 0 6px; color: #0b1c30;">Historical Invention</h3>
+                            <p style="font-size: 0.88rem; color: #424656; margin: 0;">The BMI formula was created in 1832 by Belgian mathematician Adolphe Quetelet and was originally named the "Quetelet Index".</p>
+                        </div>
+
+                        <div style="background: rgba(255,255,255,0.85); padding: 16px; border-radius: 12px; border: 1px solid #dbeafe;">
+                            <h3 style="font-size: 0.95rem; font-weight: 700; margin: 0 0 6px; color: #0b1c30;">Muscle Density</h3>
+                            <p style="font-size: 0.88rem; color: #424656; margin: 0;">Muscle tissue is about 18% denser than fat tissue, which is why two people of identical weight can look remarkably different!</p>
+                        </div>
+
+                        <div style="background: rgba(255,255,255,0.85); padding: 16px; border-radius: 12px; border: 1px solid #dbeafe;">
+                            <h3 style="font-size: 0.95rem; font-weight: 700; margin: 0 0 6px; color: #0b1c30;">Daily Weight Swings</h3>
+                            <p style="font-size: 0.88rem; color: #424656; margin: 0;">Human weight naturally fluctuates by 1 to 2.5 kg (2–5 lbs) throughout a single day due to hydration and food intake.</p>
+                        </div>
+
+                        <div style="background: rgba(255,255,255,0.85); padding: 16px; border-radius: 12px; border: 1px solid #dbeafe;">
+                            <h3 style="font-size: 0.95rem; font-weight: 700; margin: 0 0 6px; color: #0b1c30;">Global Average</h3>
+                            <p style="font-size: 0.88rem; color: #424656; margin: 0;">The worldwide average adult BMI is approximately 24.3, sitting right near the upper limit of the healthy range!</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Related Tools Grid -->
+                <section style="background: #fff; border: 1px solid #c2c6d9; border-radius: 16px; padding: 32px; margin-bottom: 24px; box-shadow: 0 4px 20px rgba(15, 23, 42, 0.04);">
+                    <h2 style="font-family: 'Hanken Grotesk', sans-serif; font-size: 1.5rem; margin-top: 0; margin-bottom: 8px; color: #0b1c30; display: flex; align-items: center; gap: 10px;">
+                        <i class="bi bi-grid-3x3-gap-fill" style="color: #0054d8;"></i>
+                        Explore More Pepstudio Utility Tools
+                    </h2>
+                    <p style="color: #424656; margin-bottom: 20px; font-size: 0.95rem;">Check out our other fast, free, and accurate online calculation tools:</p>
+
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 16px;">
+                        <a href="../age-calculator/index.html" style="text-decoration: none; display: flex; flex-direction: column; align-items: center; gap: 8px; padding: 16px; border: 1px solid #e2e8f0; border-radius: 12px; background: #f8f9ff; color: #0b1c30; transition: all 0.2s ease;">
+                            <i class="bi bi-calendar3" style="font-size: 1.5rem; color: #0054d8;"></i>
+                            <span style="font-size: 0.88rem; font-weight: 600;">Age Calculator</span>
+                        </a>
+
+                        <a href="../emi-calculator/index.html" style="text-decoration: none; display: flex; flex-direction: column; align-items: center; gap: 8px; padding: 16px; border: 1px solid #e2e8f0; border-radius: 12px; background: #f8f9ff; color: #0b1c30; transition: all 0.2s ease;">
+                            <i class="bi bi-calculator-fill" style="font-size: 1.5rem; color: #0054d8;"></i>
+                            <span style="font-size: 0.88rem; font-weight: 600;">EMI Calculator</span>
+                        </a>
+
+                        <a href="../love-calculator/index.html" style="text-decoration: none; display: flex; flex-direction: column; align-items: center; gap: 8px; padding: 16px; border: 1px solid #e2e8f0; border-radius: 12px; background: #f8f9ff; color: #0b1c30; transition: all 0.2s ease;">
+                            <i class="bi bi-suit-heart-fill" style="font-size: 1.5rem; color: #e11d48;"></i>
+                            <span style="font-size: 0.88rem; font-weight: 600;">Love Calculator</span>
+                        </a>
+
+                        <a href="../percentage-calculator/index.html" style="text-decoration: none; display: flex; flex-direction: column; align-items: center; gap: 8px; padding: 16px; border: 1px solid #e2e8f0; border-radius: 12px; background: #f8f9ff; color: #0b1c30; transition: all 0.2s ease;">
+                            <i class="bi bi-percent" style="font-size: 1.5rem; color: #0054d8;"></i>
+                            <span style="font-size: 0.88rem; font-weight: 600;">Percentage Calc</span>
+                        </a>
+
+                        <a href="../unit-converter/index.html" style="text-decoration: none; display: flex; flex-direction: column; align-items: center; gap: 8px; padding: 16px; border: 1px solid #e2e8f0; border-radius: 12px; background: #f8f9ff; color: #0b1c30; transition: all 0.2s ease;">
+                            <i class="bi bi-arrow-left-right" style="font-size: 1.5rem; color: #0054d8;"></i>
+                            <span style="font-size: 0.88rem; font-weight: 600;">Unit Converter</span>
+                        </a>
+
+                        <a href="../world-time/index.html" style="text-decoration: none; display: flex; flex-direction: column; align-items: center; gap: 8px; padding: 16px; border: 1px solid #e2e8f0; border-radius: 12px; background: #f8f9ff; color: #0b1c30; transition: all 0.2s ease;">
+                            <i class="bi bi-globe" style="font-size: 1.5rem; color: #0054d8;"></i>
+                            <span style="font-size: 0.88rem; font-weight: 600;">World Time</span>
+                        </a>
+                    </div>
+                </section>
+
+                <!-- Disclaimer -->
+                <section style="background: #f1f5f9; border: 1px solid #cbd5e1; border-radius: 12px; padding: 16px; text-align: center;">
+                    <p style="margin: 0; font-size: 0.85rem; color: #475569; line-height: 1.4;">
+                        <strong style="color: #0f172a;">Medical Disclaimer:</strong> This BMI Calculator is designed strictly for general educational and wellness reference. BMI is a population-level screening metric and does not constitute medical diagnosis. Always consult a licensed healthcare professional for medical advice or personalized health evaluations.
+                    </p>
+                </section>
             </div>
         </div>
     </main>
