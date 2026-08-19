@@ -1,17 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Free online EMI calculator. Calculate your monthly EMI instantly with our easy-to-use EMI calculator. Plan home loans, car loans, and personal loans.">
-    <meta name="keywords" content="emi calculator, emi calculator online, loan emi calculator, home loan emi calculator, car emi calculator">
+    <meta name="description"
+        content="Free online EMI calculator. Calculate your monthly EMI instantly with our easy-to-use EMI calculator. Plan home loans, car loans, and personal loans.">
+    <meta name="keywords"
+        content="emi calculator, emi calculator online, loan emi calculator, home loan emi calculator, car emi calculator">
     <link rel="canonical" href="https://pepstudio.xyz/emi-calculator/">
     <meta property="og:title" content="EMI Calculator – Calculate Monthly EMI Online">
-    <meta property="og:description" content="Free online EMI calculator. Instantly calculate your monthly loan EMI, total interest, and repayment schedule for home, car, or personal loans.">
+    <meta property="og:description"
+        content="Free online EMI calculator. Instantly calculate your monthly loan EMI, total interest, and repayment schedule for home, car, or personal loans.">
     <meta property="og:type" content="website">
     <title>EMI Calculator – Calculate Monthly EMI Online</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@600;700&family=Inter:wght@400;500;600&display=swap">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@600;700&family=Inter:wght@400;500;600&display=swap">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="icon" href="../images/favicon.svg">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
@@ -21,38 +26,45 @@
             margin: 40px auto;
             padding: 0 20px;
         }
+
         .emi-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 40px;
             align-items: start;
         }
+
         .emi-inputs {
             background: white;
             padding: 30px;
             border-radius: 15px;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
         }
+
         .emi-results {
             background: white;
             padding: 30px;
             border-radius: 15px;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
         }
+
         .input-group {
             margin-bottom: 30px;
         }
+
         .input-label {
             font-weight: bold;
             color: #333;
             margin-bottom: 15px;
             display: block;
         }
+
         .slider-wrapper {
             display: flex;
             gap: 15px;
             align-items: center;
         }
+
         .slider-input {
             width: 100%;
             height: 8px;
@@ -61,6 +73,7 @@
             outline: none;
             -webkit-appearance: none;
         }
+
         .slider-input::-webkit-slider-thumb {
             -webkit-appearance: none;
             appearance: none;
@@ -71,6 +84,7 @@
             cursor: pointer;
             box-shadow: 0 2px 5px rgba(0, 123, 255, 0.4);
         }
+
         .slider-input::-moz-range-thumb {
             width: 20px;
             height: 20px;
@@ -80,6 +94,7 @@
             border: none;
             box-shadow: 0 2px 5px rgba(0, 123, 255, 0.4);
         }
+
         .value-display {
             background: #f5f5f5;
             padding: 8px 12px;
@@ -89,6 +104,7 @@
             font-weight: bold;
             color: #007bff;
         }
+
         .range-labels {
             display: flex;
             justify-content: space-between;
@@ -96,104 +112,342 @@
             color: #999;
             margin-top: 8px;
         }
+
         .result-item {
             margin-bottom: 25px;
             padding-bottom: 20px;
             border-bottom: 1px solid #eee;
         }
+
         .result-item:last-child {
             border-bottom: none;
         }
+
         .result-label {
             color: #666;
             font-size: 14px;
             margin-bottom: 5px;
         }
+
         .result-value {
             font-size: 28px;
             font-weight: bold;
             color: #007bff;
         }
+
         .chart-container {
             position: relative;
             height: 300px;
             margin-top: 30px;
         }
+
         @media (max-width: 768px) {
             .emi-grid {
                 grid-template-columns: 1fr;
                 gap: 20px;
             }
+
             .result-value {
                 font-size: 24px;
             }
         }
+
         /* EMI calculator design */
-        .emi-container > h1,
-        .emi-container > .emi-grid {
+        .emi-container>h1,
+        .emi-container>.emi-grid {
             display: none;
         }
 
-        .emi-page { padding: 48px 20px; background: #f8f9ff; color: #0b1c30; font-family: Inter, Arial, sans-serif; }
-        .emi-container { max-width: 1280px; margin: 0 auto; }
-        .emi-intro { max-width: 700px; margin: 0 auto 32px; text-align: center; }
-        .emi-intro h1 { margin: 0 0 8px; font: 700 clamp(2rem, 4vw, 3rem)/1.15 'Hanken Grotesk', sans-serif; letter-spacing: -.02em; }
-        .emi-intro p { margin: 0; color: #424656; font-size: 1.125rem; line-height: 1.55; }
+        .emi-page {
+            padding: 48px 20px;
+            background: #f8f9ff;
+            color: #0b1c30;
+            font-family: Inter, Arial, sans-serif;
+        }
 
-        .emi-design-grid { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: 24px; align-items: stretch; }
-        .emi-design-card { padding: 32px; border-radius: 16px; background: #fff; box-shadow: 0 4px 20px rgba(15, 23, 42, .04); }
-        .emi-design-title { display: flex; align-items: center; gap: 12px; margin: 0 0 32px; font: 600 1.25rem/1.4 'Hanken Grotesk', sans-serif; }
-        .emi-design-icon { display: grid; place-items: center; width: 28px; color: #004cca; font-size: 1.5rem; }
+        .emi-container {
+            max-width: 1280px;
+            margin: 0 auto;
+        }
 
-        .emi-design-form, .emi-design-field { display: grid; }
-        .emi-design-form { gap: 16px; }
-        .emi-design-field { gap: 6px; }
-        .emi-design-field label, .emi-design-tenure-label { color: #424656; font-size: .875rem; font-weight: 600; }
-        .emi-design-control { position: relative; }
-        .emi-design-prefix, .emi-design-suffix { position: absolute; top: 50%; transform: translateY(-50%); color: #424656; pointer-events: none; }
-        .emi-design-prefix { left: 14px; }
-        .emi-design-suffix { right: 14px; }
-        .emi-design-field input { width: 100%; min-height: 44px; padding: 10px 14px; border: 1px solid #c2c6d9; border-radius: 8px; color: #0b1c30; font: 400 1rem/1.5 Inter, sans-serif; }
-        .emi-design-field input.has-prefix { padding-left: 32px; }
-        .emi-design-field input.has-suffix { padding-right: 32px; }
-        .emi-design-field input:focus { outline: none; border-color: #004cca; box-shadow: 0 0 0 2px rgba(0, 76, 202, .18); }
+        .emi-intro {
+            max-width: 700px;
+            margin: 0 auto 32px;
+            text-align: center;
+        }
 
-        .emi-design-tenure, .emi-design-actions { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
-        .emi-design-toggle { display: inline-flex; padding: 4px; border-radius: 8px; background: #e5eeff; }
-        .emi-design-toggle button { padding: 5px 12px; border: 0; border-radius: 5px; background: transparent; color: #424656; font: 600 .875rem/1.25 Inter, sans-serif; cursor: pointer; }
-        .emi-design-toggle button.active { background: #fff; color: #0b1c30; box-shadow: 0 1px 3px rgba(15, 23, 42, .18); }
-        .emi-design-actions { margin-top: 8px; padding-top: 16px; border-top: 1px solid #c2c6d9; }
-        .emi-design-button { border: 0; border-radius: 8px; padding: 12px 24px; background: #004cca; color: #fff; font: 600 .875rem/1.25 Inter, sans-serif; cursor: pointer; }
-        .emi-design-button:hover { background: #003ea8; }
-        .emi-design-reset, .emi-design-reset:hover { background: transparent; color: #004cca; }
-        .emi-design-reset { padding-left: 0; }
+        .emi-intro h1 {
+            margin: 0 0 8px;
+            font: 700 clamp(2rem, 4vw, 3rem)/1.15 'Hanken Grotesk', sans-serif;
+            letter-spacing: -.02em;
+        }
 
-        .emi-design-highlight { margin-bottom: 32px; padding: 24px; border: 1px solid rgba(0, 76, 202, .1); border-radius: 12px; background: #f0f7ff; text-align: center; }
-        .emi-design-highlight p, .emi-design-result p { margin: 0 0 8px; color: #424656; font-size: .875rem; font-weight: 600; }
-        .emi-design-highlight strong { color: #004cca; font: 700 clamp(2.25rem, 4vw, 3rem)/1.15 'Hanken Grotesk', sans-serif; letter-spacing: -.02em; }
-        .emi-design-results { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; margin-bottom: 24px; }
-        .emi-design-result { padding: 16px; border: 1px solid #c2c6d9; border-radius: 8px; background: #f8f9ff; }
-        .emi-design-result strong { color: #0b1c30; font: 600 1.25rem/1.4 'Hanken Grotesk', sans-serif; font-variant-numeric: tabular-nums; }
+        .emi-intro p {
+            margin: 0;
+            color: #424656;
+            font-size: 1.125rem;
+            line-height: 1.55;
+        }
 
-        .emi-design-chart { position: relative; width: min(250px, 100%); aspect-ratio: 1; margin: auto; }
-        .emi-design-chart canvas { width: 100% !important; height: 100% !important; }
-        .emi-design-chart-center { position: absolute; inset: 0; display: grid; place-content: center; pointer-events: none; text-align: center; }
-        .emi-design-chart-center span { color: #424656; font-size: .75rem; }
-        .emi-design-chart-center strong { font-size: .875rem; }
+        .emi-design-grid {
+            display: grid;
+            grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+            gap: 24px;
+            align-items: stretch;
+        }
+
+        .emi-design-card {
+            padding: 32px;
+            border-radius: 16px;
+            background: #fff;
+            box-shadow: 0 4px 20px rgba(15, 23, 42, .04);
+        }
+
+        .emi-design-title {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin: 0 0 32px;
+            font: 600 1.25rem/1.4 'Hanken Grotesk', sans-serif;
+        }
+
+        .emi-design-icon {
+            display: grid;
+            place-items: center;
+            width: 28px;
+            color: #004cca;
+            font-size: 1.5rem;
+        }
+
+        .emi-design-form,
+        .emi-design-field {
+            display: grid;
+        }
+
+        .emi-design-form {
+            gap: 16px;
+        }
+
+        .emi-design-field {
+            gap: 6px;
+        }
+
+        .emi-design-field label,
+        .emi-design-tenure-label {
+            color: #424656;
+            font-size: .875rem;
+            font-weight: 600;
+        }
+
+        .emi-design-control {
+            position: relative;
+        }
+
+        .emi-design-prefix,
+        .emi-design-suffix {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #424656;
+            pointer-events: none;
+        }
+
+        .emi-design-prefix {
+            left: 14px;
+        }
+
+        .emi-design-suffix {
+            right: 14px;
+        }
+
+        .emi-design-field input {
+            width: 100%;
+            min-height: 44px;
+            padding: 10px 14px;
+            border: 1px solid #c2c6d9;
+            border-radius: 8px;
+            color: #0b1c30;
+            font: 400 1rem/1.5 Inter, sans-serif;
+        }
+
+        .emi-design-field input.has-prefix {
+            padding-left: 32px;
+        }
+
+        .emi-design-field input.has-suffix {
+            padding-right: 32px;
+        }
+
+        .emi-design-field input:focus {
+            outline: none;
+            border-color: #004cca;
+            box-shadow: 0 0 0 2px rgba(0, 76, 202, .18);
+        }
+
+        .emi-design-tenure,
+        .emi-design-actions {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+        }
+
+        .emi-design-toggle {
+            display: inline-flex;
+            padding: 4px;
+            border-radius: 8px;
+            background: #e5eeff;
+        }
+
+        .emi-design-toggle button {
+            padding: 5px 12px;
+            border: 0;
+            border-radius: 5px;
+            background: transparent;
+            color: #424656;
+            font: 600 .875rem/1.25 Inter, sans-serif;
+            cursor: pointer;
+        }
+
+        .emi-design-toggle button.active {
+            background: #fff;
+            color: #0b1c30;
+            box-shadow: 0 1px 3px rgba(15, 23, 42, .18);
+        }
+
+        .emi-design-actions {
+            margin-top: 8px;
+            padding-top: 16px;
+            border-top: 1px solid #c2c6d9;
+        }
+
+        .emi-design-button {
+            border: 0;
+            border-radius: 8px;
+            padding: 12px 24px;
+            background: #004cca;
+            color: #fff;
+            font: 600 .875rem/1.25 Inter, sans-serif;
+            cursor: pointer;
+        }
+
+        .emi-design-button:hover {
+            background: #003ea8;
+        }
+
+        .emi-design-reset,
+        .emi-design-reset:hover {
+            background: transparent;
+            color: #004cca;
+        }
+
+        .emi-design-reset {
+            padding-left: 0;
+        }
+
+        .emi-design-highlight {
+            margin-bottom: 32px;
+            padding: 24px;
+            border: 1px solid rgba(0, 76, 202, .1);
+            border-radius: 12px;
+            background: #f0f7ff;
+            text-align: center;
+        }
+
+        .emi-design-highlight p,
+        .emi-design-result p {
+            margin: 0 0 8px;
+            color: #424656;
+            font-size: .875rem;
+            font-weight: 600;
+        }
+
+        .emi-design-highlight strong {
+            color: #004cca;
+            font: 700 clamp(2.25rem, 4vw, 3rem)/1.15 'Hanken Grotesk', sans-serif;
+            letter-spacing: -.02em;
+        }
+
+        .emi-design-results {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 16px;
+            margin-bottom: 24px;
+        }
+
+        .emi-design-result {
+            padding: 16px;
+            border: 1px solid #c2c6d9;
+            border-radius: 8px;
+            background: #f8f9ff;
+        }
+
+        .emi-design-result strong {
+            color: #0b1c30;
+            font: 600 1.25rem/1.4 'Hanken Grotesk', sans-serif;
+            font-variant-numeric: tabular-nums;
+        }
+
+        .emi-design-chart {
+            position: relative;
+            width: min(250px, 100%);
+            aspect-ratio: 1;
+            margin: auto;
+        }
+
+        .emi-design-chart canvas {
+            width: 100% !important;
+            height: 100% !important;
+        }
+
+        .emi-design-chart-center {
+            position: absolute;
+            inset: 0;
+            display: grid;
+            place-content: center;
+            pointer-events: none;
+            text-align: center;
+        }
+
+        .emi-design-chart-center span {
+            color: #424656;
+            font-size: .75rem;
+        }
+
+        .emi-design-chart-center strong {
+            font-size: .875rem;
+        }
 
         @media (max-width: 768px) {
-            .emi-page { padding: 32px 16px; }
-            .emi-design-grid { grid-template-columns: 1fr; }
-            .emi-design-card { padding: 24px; }
-            .emi-design-title { margin-bottom: 24px; }
+            .emi-page {
+                padding: 32px 16px;
+            }
+
+            .emi-design-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .emi-design-card {
+                padding: 24px;
+            }
+
+            .emi-design-title {
+                margin-bottom: 24px;
+            }
         }
 
         @media (max-width: 420px) {
-            .emi-intro p { font-size: 1rem; }
-            .emi-design-results { grid-template-columns: 1fr; }
+            .emi-intro p {
+                font-size: 1rem;
+            }
+
+            .emi-design-results {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
+
 <body>
     <header>
         <a href="../index.html" title="Home">
@@ -211,21 +465,86 @@
     <main class="emi-page">
         <div class="emi-container">
             <section class="emi-design" aria-label="EMI calculator">
-                <div class="emi-intro"><h1>EMI Calculator</h1><p>Calculate your monthly loan repayments for home, car, or personal loans. Plan your finances with precision.</p></div>
+                <div class="emi-intro">
+                    <h1>EMI Calculator</h1>
+                    <p>Calculate your monthly loan repayments for home, car, or personal loans. Plan your finances with
+                        precision.</p>
+                </div>
+
+                <div class="ad-banner-728">
+                    <!-----Ads-Adsterra-banner-728*9-->
+                    <script>
+                        atOptions = {
+                            'key': 'a52b907f52996847430b5a5c211f2320',
+                            'format': 'iframe',
+                            'height': 90,
+                            'width': 728,
+                            'params': {}
+                        };
+                    </script>
+                    <script
+                        src="https://www.highperformanceformat.com/a52b907f52996847430b5a5c211f2320/invoke.js"></script>
+                </div>
+
                 <div class="emi-design-grid">
-                    <section class="emi-design-card"><h2 class="emi-design-title"><span class="emi-design-icon" aria-hidden="true">₹</span>Loan Details</h2><form class="emi-design-form" id="emiDesignForm"><div class="emi-design-field"><label for="emiPrincipal">Loan Amount</label><div class="emi-design-control"><span class="emi-design-prefix">₹</span><input class="has-prefix" id="emiPrincipal" type="number" min="1" step="1000" value="2500000" required></div></div><div class="emi-design-field"><label for="emiRate">Interest Rate (p.a.)</label><div class="emi-design-control"><input class="has-suffix" id="emiRate" type="number" min="0" step="0.1" value="7.75" required><span class="emi-design-suffix">%</span></div></div><div class="emi-design-field"><div class="emi-design-tenure"><label class="emi-design-tenure-label" for="emiTenure">Loan Tenure</label><div class="emi-design-toggle"><button class="active" id="emiYears" type="button">Yr</button><button id="emiMonths" type="button">Mo</button></div></div><input id="emiTenure" type="number" min="1" step="1" value="20" required></div><div class="emi-design-actions"><button class="emi-design-button emi-design-reset" id="emiReset" type="button">Reset</button><button class="emi-design-button" type="submit">Calculate</button></div></form></section>
-                    <section class="emi-design-card"><h2 class="emi-design-title"><span class="emi-design-icon" aria-hidden="true">◔</span>Repayment Summary</h2><div class="emi-design-highlight"><p>Monthly EMI</p><strong id="emiDesignResult">₹17,910</strong></div><div class="emi-design-results"><div class="emi-design-result"><p>Total Interest Payable</p><strong id="emiDesignInterest">₹0</strong></div><div class="emi-design-result"><p>Total Payment (Prin + Int)</p><strong id="emiDesignTotal">₹0</strong></div></div><div class="emi-design-chart"><canvas id="emiDesignChart"></canvas><div class="emi-design-chart-center"><span>Principal</span><strong id="emiDesignPrincipalPercent">0%</strong></div></div></section>
+                    <section class="emi-design-card">
+                        <h2 class="emi-design-title"><span class="emi-design-icon" aria-hidden="true">₹</span>Loan
+                            Details</h2>
+                        <form class="emi-design-form" id="emiDesignForm">
+                            <div class="emi-design-field"><label for="emiPrincipal">Loan Amount</label>
+                                <div class="emi-design-control"><span class="emi-design-prefix">₹</span><input
+                                        class="has-prefix" id="emiPrincipal" type="number" min="1" step="1000"
+                                        value="2500000" required></div>
+                            </div>
+                            <div class="emi-design-field"><label for="emiRate">Interest Rate (p.a.)</label>
+                                <div class="emi-design-control"><input class="has-suffix" id="emiRate" type="number"
+                                        min="0" step="0.1" value="7.75" required><span
+                                        class="emi-design-suffix">%</span></div>
+                            </div>
+                            <div class="emi-design-field">
+                                <div class="emi-design-tenure"><label class="emi-design-tenure-label"
+                                        for="emiTenure">Loan Tenure</label>
+                                    <div class="emi-design-toggle"><button class="active" id="emiYears"
+                                            type="button">Yr</button><button id="emiMonths" type="button">Mo</button>
+                                    </div>
+                                </div><input id="emiTenure" type="number" min="1" step="1" value="20" required>
+                            </div>
+                            <div class="emi-design-actions"><button class="emi-design-button emi-design-reset"
+                                    id="emiReset" type="button">Reset</button><button class="emi-design-button"
+                                    type="submit">Calculate</button></div>
+                        </form>
+                    </section>
+                    <section class="emi-design-card">
+                        <h2 class="emi-design-title"><span class="emi-design-icon" aria-hidden="true">◔</span>Repayment
+                            Summary</h2>
+                        <div class="emi-design-highlight">
+                            <p>Monthly EMI</p><strong id="emiDesignResult">₹17,910</strong>
+                        </div>
+                        <div class="emi-design-results">
+                            <div class="emi-design-result">
+                                <p>Total Interest Payable</p><strong id="emiDesignInterest">₹0</strong>
+                            </div>
+                            <div class="emi-design-result">
+                                <p>Total Payment (Prin + Int)</p><strong id="emiDesignTotal">₹0</strong>
+                            </div>
+                        </div>
+                        <div class="emi-design-chart"><canvas id="emiDesignChart"></canvas>
+                            <div class="emi-design-chart-center"><span>Principal</span><strong
+                                    id="emiDesignPrincipalPercent">0%</strong></div>
+                        </div>
+                    </section>
                 </div>
             </section>
-            
+
             <div class="emi-grid">
                 <div class="emi-inputs">
                     <h2 style="color: #007bff; margin-top: 0;">Loan Details</h2>
-                    
+
                     <div class="input-group">
                         <label class="input-label">Loan Amount</label>
                         <div class="slider-wrapper">
-                            <input type="range" id="principal" class="slider-input" min="100000" max="10000000" step="10000" value="2500000">
+                            <input type="range" id="principal" class="slider-input" min="100000" max="10000000"
+                                step="10000" value="2500000">
                             <div class="value-display" id="principalDisplay">₹ 25,00,000</div>
                         </div>
                         <div class="range-labels">
@@ -249,7 +568,8 @@
                     <div class="input-group">
                         <label class="input-label">Interest Rate (% P.A.)</label>
                         <div class="slider-wrapper">
-                            <input type="range" id="rate" class="slider-input" min="0.5" max="15" step="0.1" value="7.75">
+                            <input type="range" id="rate" class="slider-input" min="0.5" max="15" step="0.1"
+                                value="7.75">
                             <div class="value-display" id="rateDisplay">7.75 %</div>
                         </div>
                         <div class="range-labels">
@@ -261,7 +581,7 @@
 
                 <div class="emi-results">
                     <h2 style="color: #007bff; margin-top: 0;">Loan Breakdown</h2>
-                    
+
                     <div class="result-item">
                         <div class="result-label">Monthly EMI</div>
                         <div class="result-value" id="emiResult">₹ 17,910</div>
@@ -289,137 +609,206 @@
             </div>
 
             <!-- SEO Content & Utility Sections -->
-            <div style="max-width: 1100px; margin: 40px auto 20px; padding: 0 16px; font-family: Inter, Arial, sans-serif; color: #0b1c30;">
+            <div
+                style="max-width: 1100px; margin: 40px auto 20px; padding: 0 16px; font-family: Inter, Arial, sans-serif; color: #0b1c30;">
                 <!-- Intro Section -->
-                <section style="background: #fff; border: 1px solid #c2c6d9; border-radius: 16px; padding: 32px; margin-bottom: 24px; box-shadow: 0 4px 20px rgba(15, 23, 42, 0.04);">
-                    <h2 style="font-family: 'Hanken Grotesk', sans-serif; font-size: 1.5rem; margin-top: 0; margin-bottom: 16px; color: #0b1c30; display: flex; align-items: center; gap: 10px;">
+                <section
+                    style="background: #fff; border: 1px solid #c2c6d9; border-radius: 16px; padding: 32px; margin-bottom: 24px; box-shadow: 0 4px 20px rgba(15, 23, 42, 0.04);">
+                    <h2
+                        style="font-family: 'Hanken Grotesk', sans-serif; font-size: 1.5rem; margin-top: 0; margin-bottom: 16px; color: #0b1c30; display: flex; align-items: center; gap: 10px;">
                         <i class="bi bi-calculator-fill" style="color: #4f46e5;"></i>
                         What is an EMI Calculator & How Does It Work?
                     </h2>
                     <p style="color: #424656; font-size: 1.05rem; line-height: 1.6; margin: 0;">
-                        Welcome to the Pepstudio EMI Calculator—a powerful, fast, and transparent financial planning tool designed to help you calculate your Equated Monthly Installment (EMI) for home loans, car loans, personal loans, or education financing! Planning a loan requires clear insight into your monthly repayment schedule, interest burden, and total loan payout. By entering your principal loan amount, annual interest rate, and loan tenure, our calculator instantly delivers an accurate breakdown of your monthly EMI, total interest payable, and overall loan cost. Complete with an interactive breakdown chart, our tool allows you to simulate various interest rates and tenure options so you can choose the optimal repayment plan for your budget.
+                        Welcome to the Pepstudio EMI Calculator—a powerful, fast, and transparent financial planning
+                        tool designed to help you calculate your Equated Monthly Installment (EMI) for home loans, car
+                        loans, personal loans, or education financing! Planning a loan requires clear insight into your
+                        monthly repayment schedule, interest burden, and total loan payout. By entering your principal
+                        loan amount, annual interest rate, and loan tenure, our calculator instantly delivers an
+                        accurate breakdown of your monthly EMI, total interest payable, and overall loan cost. Complete
+                        with an interactive breakdown chart, our tool allows you to simulate various interest rates and
+                        tenure options so you can choose the optimal repayment plan for your budget.
                     </p>
                 </section>
 
                 <!-- How It Works Section -->
-                <section style="background: #fff; border: 1px solid #c2c6d9; border-radius: 16px; padding: 32px; margin-bottom: 24px; box-shadow: 0 4px 20px rgba(15, 23, 42, 0.04);">
-                    <h2 style="font-family: 'Hanken Grotesk', sans-serif; font-size: 1.5rem; margin-top: 0; margin-bottom: 12px; color: #0b1c30; display: flex; align-items: center; gap: 10px;">
+                <section
+                    style="background: #fff; border: 1px solid #c2c6d9; border-radius: 16px; padding: 32px; margin-bottom: 24px; box-shadow: 0 4px 20px rgba(15, 23, 42, 0.04);">
+                    <h2
+                        style="font-family: 'Hanken Grotesk', sans-serif; font-size: 1.5rem; margin-top: 0; margin-bottom: 12px; color: #0b1c30; display: flex; align-items: center; gap: 10px;">
                         <i class="bi bi-gear-fill" style="color: #4f46e5;"></i>
                         How Our EMI Amortization Algorithm Works
                     </h2>
-                    <p style="color: #424656; margin-bottom: 20px; font-size: 0.95rem;">EMI calculation uses the standard reducing balance loan amortization formula:</p>
-                    
+                    <p style="color: #424656; margin-bottom: 20px; font-size: 0.95rem;">EMI calculation uses the
+                        standard reducing balance loan amortization formula:</p>
+
                     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px;">
-                        <div style="background: #eef2ff; border: 1px solid #c7d2fe; border-radius: 12px; padding: 20px;">
-                            <div style="font-weight: 700; color: #4f46e5; margin-bottom: 8px; font-size: 1.1rem;">1. Standard Amortization Formula</div>
-                            <p style="color: #424656; font-size: 0.9rem; margin: 0; line-height: 1.5;">Computes EMI = [P × r × (1+r)ⁿ] / [(1+r)ⁿ - 1], where P is Principal, r is monthly rate, and n is total months.</p>
+                        <div
+                            style="background: #eef2ff; border: 1px solid #c7d2fe; border-radius: 12px; padding: 20px;">
+                            <div style="font-weight: 700; color: #4f46e5; margin-bottom: 8px; font-size: 1.1rem;">1.
+                                Standard Amortization Formula</div>
+                            <p style="color: #424656; font-size: 0.9rem; margin: 0; line-height: 1.5;">Computes EMI = [P
+                                × r × (1+r)ⁿ] / [(1+r)ⁿ - 1], where P is Principal, r is monthly rate, and n is total
+                                months.</p>
                         </div>
-                        <div style="background: #eef2ff; border: 1px solid #c7d2fe; border-radius: 12px; padding: 20px;">
-                            <div style="font-weight: 700; color: #4f46e5; margin-bottom: 8px; font-size: 1.1rem;">2. Monthly Rate & Tenure</div>
-                            <p style="color: #424656; font-size: 0.9rem; margin: 0; line-height: 1.5;">Converts annual interest into a monthly interest factor (Annual Rate / 12 / 100) and converts years into months.</p>
+                        <div
+                            style="background: #eef2ff; border: 1px solid #c7d2fe; border-radius: 12px; padding: 20px;">
+                            <div style="font-weight: 700; color: #4f46e5; margin-bottom: 8px; font-size: 1.1rem;">2.
+                                Monthly Rate & Tenure</div>
+                            <p style="color: #424656; font-size: 0.9rem; margin: 0; line-height: 1.5;">Converts annual
+                                interest into a monthly interest factor (Annual Rate / 12 / 100) and converts years into
+                                months.</p>
                         </div>
-                        <div style="background: #eef2ff; border: 1px solid #c7d2fe; border-radius: 12px; padding: 20px;">
-                            <div style="font-weight: 700; color: #4f46e5; margin-bottom: 8px; font-size: 1.1rem;">3. Total Payout & Interest</div>
-                            <p style="color: #424656; font-size: 0.9rem; margin: 0; line-height: 1.5;">Derives Total Payable = EMI × Months, and Total Interest = Total Payable - Principal, rendered on the chart.</p>
+                        <div
+                            style="background: #eef2ff; border: 1px solid #c7d2fe; border-radius: 12px; padding: 20px;">
+                            <div style="font-weight: 700; color: #4f46e5; margin-bottom: 8px; font-size: 1.1rem;">3.
+                                Total Payout & Interest</div>
+                            <p style="color: #424656; font-size: 0.9rem; margin: 0; line-height: 1.5;">Derives Total
+                                Payable = EMI × Months, and Total Interest = Total Payable - Principal, rendered on the
+                                chart.</p>
                         </div>
                     </div>
                 </section>
 
                 <!-- FAQ Section -->
-                <section style="background: #fff; border: 1px solid #c2c6d9; border-radius: 16px; padding: 32px; margin-bottom: 24px; box-shadow: 0 4px 20px rgba(15, 23, 42, 0.04);">
-                    <h2 style="font-family: 'Hanken Grotesk', sans-serif; font-size: 1.5rem; margin-top: 0; margin-bottom: 20px; color: #0b1c30; display: flex; align-items: center; gap: 10px;">
+                <section
+                    style="background: #fff; border: 1px solid #c2c6d9; border-radius: 16px; padding: 32px; margin-bottom: 24px; box-shadow: 0 4px 20px rgba(15, 23, 42, 0.04);">
+                    <h2
+                        style="font-family: 'Hanken Grotesk', sans-serif; font-size: 1.5rem; margin-top: 0; margin-bottom: 20px; color: #0b1c30; display: flex; align-items: center; gap: 10px;">
                         <i class="bi bi-question-circle-fill" style="color: #4f46e5;"></i>
                         Frequently Asked Questions
                     </h2>
-                    
+
                     <div style="display: flex; flex-direction: column; gap: 16px;">
-                        <div style="border: 1px solid #e2e8f0; border-radius: 12px; padding: 20px; background: #f8f9ff;">
-                            <h3 style="font-size: 1.05rem; font-weight: 700; margin: 0 0 8px; color: #0b1c30;">What does EMI stand for and how is it calculated?</h3>
-                            <p style="color: #424656; font-size: 0.95rem; margin: 0; line-height: 1.5;">EMI stands for Equated Monthly Installment—a fixed payment amount made by a borrower to a lender at a specified date each calendar month.</p>
+                        <div
+                            style="border: 1px solid #e2e8f0; border-radius: 12px; padding: 20px; background: #f8f9ff;">
+                            <h3 style="font-size: 1.05rem; font-weight: 700; margin: 0 0 8px; color: #0b1c30;">What does
+                                EMI stand for and how is it calculated?</h3>
+                            <p style="color: #424656; font-size: 0.95rem; margin: 0; line-height: 1.5;">EMI stands for
+                                Equated Monthly Installment—a fixed payment amount made by a borrower to a lender at a
+                                specified date each calendar month.</p>
                         </div>
 
-                        <div style="border: 1px solid #e2e8f0; border-radius: 12px; padding: 20px; background: #f8f9ff;">
-                            <h3 style="font-size: 1.05rem; font-weight: 700; margin: 0 0 8px; color: #0b1c30;">How does loan tenure affect my monthly EMI and total interest?</h3>
-                            <p style="color: #424656; font-size: 0.95rem; margin: 0; line-height: 1.5;">A longer tenure reduces your monthly EMI amount, but significantly increases the total interest paid over the life of the loan. A shorter tenure increases monthly payments but saves substantial money in interest.</p>
+                        <div
+                            style="border: 1px solid #e2e8f0; border-radius: 12px; padding: 20px; background: #f8f9ff;">
+                            <h3 style="font-size: 1.05rem; font-weight: 700; margin: 0 0 8px; color: #0b1c30;">How does
+                                loan tenure affect my monthly EMI and total interest?</h3>
+                            <p style="color: #424656; font-size: 0.95rem; margin: 0; line-height: 1.5;">A longer tenure
+                                reduces your monthly EMI amount, but significantly increases the total interest paid
+                                over the life of the loan. A shorter tenure increases monthly payments but saves
+                                substantial money in interest.</p>
                         </div>
 
-                        <div style="border: 1px solid #e2e8f0; border-radius: 12px; padding: 20px; background: #f8f9ff;">
-                            <h3 style="font-size: 1.05rem; font-weight: 700; margin: 0 0 8px; color: #0b1c30;">Can I use this EMI Calculator for home loans, car loans, and personal loans?</h3>
-                            <p style="color: #424656; font-size: 0.95rem; margin: 0; line-height: 1.5;">Yes! The mathematical amortization formula applies universally to any fixed-rate reducing balance loan including mortgages, auto loans, and personal loans.</p>
+                        <div
+                            style="border: 1px solid #e2e8f0; border-radius: 12px; padding: 20px; background: #f8f9ff;">
+                            <h3 style="font-size: 1.05rem; font-weight: 700; margin: 0 0 8px; color: #0b1c30;">Can I use
+                                this EMI Calculator for home loans, car loans, and personal loans?</h3>
+                            <p style="color: #424656; font-size: 0.95rem; margin: 0; line-height: 1.5;">Yes! The
+                                mathematical amortization formula applies universally to any fixed-rate reducing balance
+                                loan including mortgages, auto loans, and personal loans.</p>
                         </div>
 
-                        <div style="border: 1px solid #e2e8f0; border-radius: 12px; padding: 20px; background: #f8f9ff;">
-                            <h3 style="font-size: 1.05rem; font-weight: 700; margin: 0 0 8px; color: #0b1c30;">What is reducing balance interest vs flat interest rate?</h3>
-                            <p style="color: #424656; font-size: 0.95rem; margin: 0; line-height: 1.5;">Our calculator uses reducing balance interest, where interest is calculated only on the remaining unpaid principal balance each month rather than the initial loan amount.</p>
+                        <div
+                            style="border: 1px solid #e2e8f0; border-radius: 12px; padding: 20px; background: #f8f9ff;">
+                            <h3 style="font-size: 1.05rem; font-weight: 700; margin: 0 0 8px; color: #0b1c30;">What is
+                                reducing balance interest vs flat interest rate?</h3>
+                            <p style="color: #424656; font-size: 0.95rem; margin: 0; line-height: 1.5;">Our calculator
+                                uses reducing balance interest, where interest is calculated only on the remaining
+                                unpaid principal balance each month rather than the initial loan amount.</p>
                         </div>
                     </div>
                 </section>
 
                 <!-- Fun Facts / Financial Trivia -->
-                <section style="background: linear-gradient(135deg, #eff6ff 0%, #f0fdf4 100%); border: 1px solid #bfdbfe; border-radius: 16px; padding: 32px; margin-bottom: 24px;">
-                    <h2 style="font-family: 'Hanken Grotesk', sans-serif; font-size: 1.5rem; margin-top: 0; margin-bottom: 20px; color: #0b1c30; display: flex; align-items: center; gap: 10px;">
+                <section
+                    style="background: linear-gradient(135deg, #eff6ff 0%, #f0fdf4 100%); border: 1px solid #bfdbfe; border-radius: 16px; padding: 32px; margin-bottom: 24px;">
+                    <h2
+                        style="font-family: 'Hanken Grotesk', sans-serif; font-size: 1.5rem; margin-top: 0; margin-bottom: 20px; color: #0b1c30; display: flex; align-items: center; gap: 10px;">
                         <i class="bi bi-lightbulb-fill" style="color: #f59e0b;"></i>
                         Fun Facts & Financial Trivia
                     </h2>
-                    
+
                     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px;">
-                        <div style="background: rgba(255,255,255,0.85); padding: 16px; border-radius: 12px; border: 1px solid #dbeafe;">
-                            <h3 style="font-size: 0.95rem; font-weight: 700; margin: 0 0 6px; color: #0b1c30;">Origin of Amortization</h3>
-                            <p style="font-size: 0.88rem; color: #424656; margin: 0;">The word "amortization" stems from Old French and Latin meaning "to kill or extinguish" a debt gradually over time!</p>
+                        <div
+                            style="background: rgba(255,255,255,0.85); padding: 16px; border-radius: 12px; border: 1px solid #dbeafe;">
+                            <h3 style="font-size: 0.95rem; font-weight: 700; margin: 0 0 6px; color: #0b1c30;">Origin of
+                                Amortization</h3>
+                            <p style="font-size: 0.88rem; color: #424656; margin: 0;">The word "amortization" stems from
+                                Old French and Latin meaning "to kill or extinguish" a debt gradually over time!</p>
                         </div>
 
-                        <div style="background: rgba(255,255,255,0.85); padding: 16px; border-radius: 12px; border: 1px solid #dbeafe;">
-                            <h3 style="font-size: 0.95rem; font-weight: 700; margin: 0 0 6px; color: #0b1c30;">The Rule of 72</h3>
-                            <p style="font-size: 0.88rem; color: #424656; margin: 0;">To estimate how many years it takes for an investment to double, simply divide 72 by your annual interest rate!</p>
+                        <div
+                            style="background: rgba(255,255,255,0.85); padding: 16px; border-radius: 12px; border: 1px solid #dbeafe;">
+                            <h3 style="font-size: 0.95rem; font-weight: 700; margin: 0 0 6px; color: #0b1c30;">The Rule
+                                of 72</h3>
+                            <p style="font-size: 0.88rem; color: #424656; margin: 0;">To estimate how many years it
+                                takes for an investment to double, simply divide 72 by your annual interest rate!</p>
                         </div>
 
-                        <div style="background: rgba(255,255,255,0.85); padding: 16px; border-radius: 12px; border: 1px solid #dbeafe;">
-                            <h3 style="font-size: 0.95rem; font-weight: 700; margin: 0 0 6px; color: #0b1c30;">Prepayment Power</h3>
-                            <p style="font-size: 0.88rem; color: #424656; margin: 0;">Making just one additional EMI payment toward principal per year can shave off 3 to 4 years from a 20-year mortgage!</p>
+                        <div
+                            style="background: rgba(255,255,255,0.85); padding: 16px; border-radius: 12px; border: 1px solid #dbeafe;">
+                            <h3 style="font-size: 0.95rem; font-weight: 700; margin: 0 0 6px; color: #0b1c30;">
+                                Prepayment Power</h3>
+                            <p style="font-size: 0.88rem; color: #424656; margin: 0;">Making just one additional EMI
+                                payment toward principal per year can shave off 3 to 4 years from a 20-year mortgage!
+                            </p>
                         </div>
 
-                        <div style="background: rgba(255,255,255,0.85); padding: 16px; border-radius: 12px; border: 1px solid #dbeafe;">
-                            <h3 style="font-size: 0.95rem; font-weight: 700; margin: 0 0 6px; color: #0b1c30;">Interest Inversion</h3>
-                            <p style="font-size: 0.88rem; color: #424656; margin: 0;">During the early years of a long-term loan, up to 70–80% of each monthly EMI goes toward interest rather than principal reduction.</p>
+                        <div
+                            style="background: rgba(255,255,255,0.85); padding: 16px; border-radius: 12px; border: 1px solid #dbeafe;">
+                            <h3 style="font-size: 0.95rem; font-weight: 700; margin: 0 0 6px; color: #0b1c30;">Interest
+                                Inversion</h3>
+                            <p style="font-size: 0.88rem; color: #424656; margin: 0;">During the early years of a
+                                long-term loan, up to 70–80% of each monthly EMI goes toward interest rather than
+                                principal reduction.</p>
                         </div>
                     </div>
                 </section>
 
                 <!-- Related Tools Grid -->
-                <section style="background: #fff; border: 1px solid #c2c6d9; border-radius: 16px; padding: 32px; margin-bottom: 24px; box-shadow: 0 4px 20px rgba(15, 23, 42, 0.04);">
-                    <h2 style="font-family: 'Hanken Grotesk', sans-serif; font-size: 1.5rem; margin-top: 0; margin-bottom: 8px; color: #0b1c30; display: flex; align-items: center; gap: 10px;">
+                <section
+                    style="background: #fff; border: 1px solid #c2c6d9; border-radius: 16px; padding: 32px; margin-bottom: 24px; box-shadow: 0 4px 20px rgba(15, 23, 42, 0.04);">
+                    <h2
+                        style="font-family: 'Hanken Grotesk', sans-serif; font-size: 1.5rem; margin-top: 0; margin-bottom: 8px; color: #0b1c30; display: flex; align-items: center; gap: 10px;">
                         <i class="bi bi-grid-3x3-gap-fill" style="color: #4f46e5;"></i>
                         Explore More Pepstudio Utility Tools
                     </h2>
-                    <p style="color: #424656; margin-bottom: 20px; font-size: 0.95rem;">Check out our other fast, free, and accurate online calculation tools:</p>
+                    <p style="color: #424656; margin-bottom: 20px; font-size: 0.95rem;">Check out our other fast, free,
+                        and accurate online calculation tools:</p>
 
                     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 16px;">
-                        <a href="../age-calculator/index.html" style="text-decoration: none; display: flex; flex-direction: column; align-items: center; gap: 8px; padding: 16px; border: 1px solid #e2e8f0; border-radius: 12px; background: #f8f9ff; color: #0b1c30; transition: all 0.2s ease;">
+                        <a href="../age-calculator/index.html"
+                            style="text-decoration: none; display: flex; flex-direction: column; align-items: center; gap: 8px; padding: 16px; border: 1px solid #e2e8f0; border-radius: 12px; background: #f8f9ff; color: #0b1c30; transition: all 0.2s ease;">
                             <i class="bi bi-calendar3" style="font-size: 1.5rem; color: #4f46e5;"></i>
                             <span style="font-size: 0.88rem; font-weight: 600;">Age Calculator</span>
                         </a>
 
-                        <a href="../bmi-calculator/index.html" style="text-decoration: none; display: flex; flex-direction: column; align-items: center; gap: 8px; padding: 16px; border: 1px solid #e2e8f0; border-radius: 12px; background: #f8f9ff; color: #0b1c30; transition: all 0.2s ease;">
+                        <a href="../bmi-calculator/index.html"
+                            style="text-decoration: none; display: flex; flex-direction: column; align-items: center; gap: 8px; padding: 16px; border: 1px solid #e2e8f0; border-radius: 12px; background: #f8f9ff; color: #0b1c30; transition: all 0.2s ease;">
                             <i class="bi bi-heart-pulse-fill" style="font-size: 1.5rem; color: #4f46e5;"></i>
                             <span style="font-size: 0.88rem; font-weight: 600;">BMI Calculator</span>
                         </a>
 
-                        <a href="../love-calculator/index.html" style="text-decoration: none; display: flex; flex-direction: column; align-items: center; gap: 8px; padding: 16px; border: 1px solid #e2e8f0; border-radius: 12px; background: #f8f9ff; color: #0b1c30; transition: all 0.2s ease;">
+                        <a href="../love-calculator/index.html"
+                            style="text-decoration: none; display: flex; flex-direction: column; align-items: center; gap: 8px; padding: 16px; border: 1px solid #e2e8f0; border-radius: 12px; background: #f8f9ff; color: #0b1c30; transition: all 0.2s ease;">
                             <i class="bi bi-suit-heart-fill" style="font-size: 1.5rem; color: #e11d48;"></i>
                             <span style="font-size: 0.88rem; font-weight: 600;">Love Calculator</span>
                         </a>
 
-                        <a href="../percentage-calculator/index.html" style="text-decoration: none; display: flex; flex-direction: column; align-items: center; gap: 8px; padding: 16px; border: 1px solid #e2e8f0; border-radius: 12px; background: #f8f9ff; color: #0b1c30; transition: all 0.2s ease;">
+                        <a href="../percentage-calculator/index.html"
+                            style="text-decoration: none; display: flex; flex-direction: column; align-items: center; gap: 8px; padding: 16px; border: 1px solid #e2e8f0; border-radius: 12px; background: #f8f9ff; color: #0b1c30; transition: all 0.2s ease;">
                             <i class="bi bi-percent" style="font-size: 1.5rem; color: #4f46e5;"></i>
                             <span style="font-size: 0.88rem; font-weight: 600;">Percentage Calc</span>
                         </a>
 
-                        <a href="../unit-converter/index.html" style="text-decoration: none; display: flex; flex-direction: column; align-items: center; gap: 8px; padding: 16px; border: 1px solid #e2e8f0; border-radius: 12px; background: #f8f9ff; color: #0b1c30; transition: all 0.2s ease;">
+                        <a href="../unit-converter/index.html"
+                            style="text-decoration: none; display: flex; flex-direction: column; align-items: center; gap: 8px; padding: 16px; border: 1px solid #e2e8f0; border-radius: 12px; background: #f8f9ff; color: #0b1c30; transition: all 0.2s ease;">
                             <i class="bi bi-arrow-left-right" style="font-size: 1.5rem; color: #4f46e5;"></i>
                             <span style="font-size: 0.88rem; font-weight: 600;">Unit Converter</span>
                         </a>
 
-                        <a href="../world-time/index.html" style="text-decoration: none; display: flex; flex-direction: column; align-items: center; gap: 8px; padding: 16px; border: 1px solid #e2e8f0; border-radius: 12px; background: #f8f9ff; color: #0b1c30; transition: all 0.2s ease;">
+                        <a href="../world-time/index.html"
+                            style="text-decoration: none; display: flex; flex-direction: column; align-items: center; gap: 8px; padding: 16px; border: 1px solid #e2e8f0; border-radius: 12px; background: #f8f9ff; color: #0b1c30; transition: all 0.2s ease;">
                             <i class="bi bi-globe" style="font-size: 1.5rem; color: #4f46e5;"></i>
                             <span style="font-size: 0.88rem; font-weight: 600;">World Time</span>
                         </a>
@@ -427,16 +816,21 @@
                 </section>
 
                 <!-- Disclaimer -->
-                <section style="background: #f1f5f9; border: 1px solid #cbd5e1; border-radius: 12px; padding: 16px; text-align: center;">
+                <section
+                    style="background: #f1f5f9; border: 1px solid #cbd5e1; border-radius: 12px; padding: 16px; text-align: center;">
                     <p style="margin: 0; font-size: 0.85rem; color: #475569; line-height: 1.4;">
-                        <strong style="color: #0f172a;">Financial Disclaimer:</strong> This EMI Calculator is provided for illustrative and estimation purposes only. Actual loan EMIs, interest rates, and processing fees may vary depending on lender policies, credit scores, and taxes. Consult your bank or financial advisor for official loan terms.
+                        <strong style="color: #0f172a;">Financial Disclaimer:</strong> This EMI Calculator is provided
+                        for illustrative and estimation purposes only. Actual loan EMIs, interest rates, and processing
+                        fees may vary depending on lender policies, credit scores, and taxes. Consult your bank or
+                        financial advisor for official loan terms.
                     </p>
                 </section>
             </div>
         </div>
     </main>
 
-        <script async="async" data-cfasync="false" src="https://pl30906368.effectivecpmnetwork.com/8a2d1571ba90f6bbccb31ff901a105a7/invoke.js"></script>
+    <script async="async" data-cfasync="false"
+        src="https://pl30906368.effectivecpmnetwork.com/8a2d1571ba90f6bbccb31ff901a105a7/invoke.js"></script>
     <div id="container-8a2d1571ba90f6bbccb31ff901a105a7"></div>
     <footer class="site-footer">
         <div class="footer-container">
@@ -445,10 +839,13 @@
                     <a href="../index.html" class="footer-logo" title="pepstudio.xyz Home">
                         <img src="../images/pepstudio.png" alt="pepstudio.xyz logo">
                     </a>
-                    <p class="footer-tagline">Your all-in-one suite of 100% free online calculator & utility tools. Fast, accurate, and easy to use.</p>
+                    <p class="footer-tagline">Your all-in-one suite of 100% free online calculator & utility tools.
+                        Fast, accurate, and easy to use.</p>
                     <div class="footer-social">
-                        <a href="https://www.linkedin.com/in/sonu-murmu-60479a268/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
-                        <a href="https://www.instagram.com/sonu_murm_/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/sonu-murmu-60479a268/" target="_blank"
+                            rel="noopener noreferrer" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                        <a href="https://www.instagram.com/sonu_murm_/" target="_blank" rel="noopener noreferrer"
+                            aria-label="Instagram"><i class="bi bi-instagram"></i></a>
                     </div>
                 </div>
 
@@ -507,4 +904,5 @@
 
     <script src="../js/emi-calculator.js"></script>
 </body>
+
 </html>

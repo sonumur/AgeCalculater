@@ -1,13 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Free online age calculator. Enter your birth date to instantly find your exact age in years, months, and days. Fast, accurate, and easy to use.">
-    <meta name="keywords" content="data of birth calculator, age calculator by date of birth, age calculator google, date of birth calculator year, age calculator by date of birth free online, age calculator formula, date of birth calculator year in india, decimal age calculator, age calculator, age calculator online">
+    <meta name="description"
+        content="Free online age calculator. Enter your birth date to instantly find your exact age in years, months, and days. Fast, accurate, and easy to use.">
+    <meta name="keywords"
+        content="data of birth calculator, age calculator by date of birth, age calculator google, date of birth calculator year, age calculator by date of birth free online, age calculator formula, date of birth calculator year in india, decimal age calculator, age calculator, age calculator online">
     <link rel="canonical" href="https://pepstudio.xyz/age-calculator/">
     <meta property="og:title" content="Age Calculator – Calculate Your Age by Date of Birth Online">
-    <meta property="og:description" content="Free online age calculator. Instantly find your exact age in years, months, and days. Handles leap years perfectly.">
+    <meta property="og:description"
+        content="Free online age calculator. Instantly find your exact age in years, months, and days. Handles leap years perfectly.">
     <meta property="og:type" content="website">
     <title>Age Calculator – Calculate Your Age by Date of Birth Online</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.css">
@@ -15,7 +19,9 @@
     <link rel="icon" href="../images/favicon.svg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@600;700&family=Inter:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
 
     <style>
         /* Age calculator redesign — scoped so the shared header, footer and page content stay unchanged. */
@@ -23,6 +29,7 @@
             min-height: 100vh;
             background: #f8f9ff !important;
         }
+
         .age-tool {
             max-width: 1280px;
             margin: 0 auto 28px;
@@ -32,9 +39,11 @@
             color: #0b1c30;
             font-family: Inter, Arial, sans-serif;
         }
+
         .age-tool__intro {
             margin-bottom: 36px;
         }
+
         .age-tool__intro h1 {
             margin: 0 0 10px;
             color: #0b1c30;
@@ -42,25 +51,31 @@
             font-size: clamp(2.25rem, 5vw, 3.5rem);
             line-height: 1.1;
         }
+
         .age-tool__intro p {
             margin: 0;
             color: #424656;
             font-size: 1.1rem;
         }
+
         .age-tool__grid {
             display: grid;
             grid-template-columns: minmax(300px, .85fr) minmax(0, 1.2fr);
             gap: 28px;
         }
-        .age-tool__form, .age-stat {
+
+        .age-tool__form,
+        .age-stat {
             border: 1px solid #c2c6d9;
             border-radius: 16px;
             background: #fff;
             box-shadow: 0 4px 20px rgba(15, 23, 42, .04);
         }
+
         .age-tool__form {
             padding: clamp(24px, 4vw, 40px);
         }
+
         .age-tool__form-title {
             display: flex;
             align-items: center;
@@ -69,6 +84,7 @@
             font-family: "Hanken Grotesk", Inter, Arial, sans-serif;
             font-size: 1.35rem;
         }
+
         .age-tool__icon {
             display: grid;
             width: 52px;
@@ -79,6 +95,7 @@
             color: #0062ff;
             font-size: 1.45rem;
         }
+
         .age-tool label {
             display: block;
             margin-bottom: 9px;
@@ -86,15 +103,19 @@
             font-size: .95rem;
             font-weight: 700;
         }
+
         .age-tool__field {
             margin-bottom: 24px;
         }
+
         .age-tool__date-fields {
             display: grid;
             grid-template-columns: 1fr 1.15fr 1fr;
             gap: 12px;
         }
-        .age-tool select, .age-tool input {
+
+        .age-tool select,
+        .age-tool input {
             width: 100%;
             min-height: 54px;
             padding: 0 14px;
@@ -104,41 +125,50 @@
             color: #0b1c30;
             font: inherit;
         }
-        .age-tool select:focus, .age-tool input:focus {
+
+        .age-tool select:focus,
+        .age-tool input:focus {
             outline: 3px solid #b4c5ff;
             border-color: #0062ff;
         }
+
         .age-tool__actions {
             display: flex;
             gap: 14px;
             margin-top: 34px;
         }
+
         .age-tool button {
             min-height: 55px;
             border-radius: 9px;
             font: 700 1rem Inter, Arial, sans-serif;
             cursor: pointer;
         }
+
         .age-tool__calculate {
             flex: 1;
             border: 0;
             background: #0062ff;
             color: #fff;
         }
+
         .age-tool__calculate:hover {
             background: #004cca;
         }
+
         .age-tool__reset {
             padding: 0 24px;
             border: 1px solid #c2c6d9;
             background: #fff;
             color: #424656;
         }
+
         .age-tool__results {
             display: grid;
             align-content: start;
             gap: 28px;
         }
+
         .age-result {
             position: relative;
             overflow: hidden;
@@ -147,6 +177,7 @@
             border-radius: 16px;
             background: #f0f7ff;
         }
+
         .age-result::after {
             position: absolute;
             right: -60px;
@@ -157,7 +188,9 @@
             background: #dbe9ff;
             content: "";
         }
-        .age-result__label, .age-stat__label {
+
+        .age-result__label,
+        .age-stat__label {
             position: relative;
             z-index: 1;
             margin: 0 0 20px;
@@ -167,6 +200,7 @@
             letter-spacing: .12em;
             text-transform: uppercase;
         }
+
         .age-result__values {
             position: relative;
             z-index: 1;
@@ -174,31 +208,37 @@
             flex-wrap: wrap;
             gap: 18px;
         }
+
         .age-result__value {
             display: flex;
             align-items: baseline;
             gap: 7px;
         }
+
         .age-result__value strong {
             color: #0062ff;
             font-family: "Hanken Grotesk", Inter, Arial, sans-serif;
             font-size: clamp(2.8rem, 5vw, 4rem);
             line-height: 1;
         }
+
         .age-result__value span {
             color: #424656;
             font-size: 1.1rem;
             font-weight: 600;
         }
+
         .age-tool__stats {
             display: grid;
             grid-template-columns: repeat(2, minmax(0, 1fr));
             gap: 28px;
         }
+
         .age-stat {
             min-height: 156px;
             padding: 27px 30px;
         }
+
         .age-stat__heading {
             display: flex;
             align-items: center;
@@ -207,13 +247,16 @@
             color: #586377;
             font-weight: 700;
         }
+
         .age-stat__heading i {
             color: #0062ff;
             font-size: 1.35rem;
         }
+
         .age-stat--birthday .age-stat__heading i {
             color: #f59e0b;
         }
+
         .age-stat__number {
             margin: 0;
             color: #0b1c30;
@@ -223,37 +266,46 @@
             line-height: 1;
             font-variant-numeric: tabular-nums;
         }
+
         .age-stat__number small {
             color: #424656;
             font-family: Inter, Arial, sans-serif;
             font-size: 1rem;
             font-weight: 500;
         }
+
         .age-tool__message {
             min-height: 20px;
             margin: 18px 0 0;
             color: #ba1a1a;
             font-size: .9rem;
         }
+
         @media (max-width: 900px) {
             .age-tool__grid {
                 grid-template-columns: 1fr;
             }
         }
+
         @media (max-width: 520px) {
             .age-tool {
                 padding: 24px 16px;
             }
-            .age-tool__date-fields, .age-tool__stats {
+
+            .age-tool__date-fields,
+            .age-tool__stats {
                 grid-template-columns: 1fr;
             }
+
             .age-tool__actions {
                 flex-direction: column;
             }
+
             .age-tool__reset {
                 width: 100%;
             }
         }
+
         .howToUse-AgeCalculator {
             padding: 30px 20px;
             display: flex;
@@ -267,6 +319,7 @@
     </style>
 
 </head>
+
 <body>
     <header>
         <a href="../index.html" title="Home">
@@ -289,62 +342,82 @@
                 <h1>Age Calculator</h1>
                 <p>Calculate your exact age in years, months, and days.</p>
             </div>
+
+            <div class="ad-banner-728">
+                <!-----Ads-Adsterra-banner-728*9-->
+                <script>
+                    atOptions = {
+                        'key': 'a52b907f52996847430b5a5c211f2320',
+                        'format': 'iframe',
+                        'height': 90,
+                        'width': 728,
+                        'params': {}
+                    };
+                </script>
+                <script src="https://www.highperformanceformat.com/a52b907f52996847430b5a5c211f2320/invoke.js"></script>
+            </div>
+
             <div class="age-tool__grid">
-            <section class="age-tool__form" aria-labelledby="age-form-title">
-                <h2 class="age-tool__form-title" id="age-form-title"><span class="age-tool__icon"><i class="bi bi-calendar3"></i></span>Details</h2>
-                <form id="ageForm" novalidate>
-                    <div class="age-tool__field">
-                        <label for="birthDay">Date of Birth</label>
-                        <div class="age-tool__date-fields">
-                            <select id="birthDay" aria-label="Birth day" required><option value="">Day</option></select>
-                            <select id="birthMonth" aria-label="Birth month" required><option value="">Month</option></select>
-                            <select id="birthYear" aria-label="Birth year" required><option value="">Year</option></select>
+                <section class="age-tool__form" aria-labelledby="age-form-title">
+                    <h2 class="age-tool__form-title" id="age-form-title"><span class="age-tool__icon"><i
+                                class="bi bi-calendar3"></i></span>Details</h2>
+                    <form id="ageForm" novalidate>
+                        <div class="age-tool__field">
+                            <label for="birthDay">Date of Birth</label>
+                            <div class="age-tool__date-fields">
+                                <select id="birthDay" aria-label="Birth day" required>
+                                    <option value="">Day</option>
+                                </select>
+                                <select id="birthMonth" aria-label="Birth month" required>
+                                    <option value="">Month</option>
+                                </select>
+                                <select id="birthYear" aria-label="Birth year" required>
+                                    <option value="">Year</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="age-tool__field">
+                            <label for="ageAtDate">Age at Date (Optional)</label>
+                            <input type="date" id="ageAtDate" name="ageAtDate">
+                        </div>
+                        <div class="age-tool__actions">
+                            <button class="age-tool__calculate" type="submit">Calculate Age</button>
+                            <button class="age-tool__reset" type="reset">Reset</button>
+                        </div>
+                        <p id="ageMessage" class="age-tool__message" aria-live="polite"></p>
+                    </form>
+                </section>
+                <section class="age-tool__results" aria-live="polite" aria-label="Age calculation result">
+                    <div class="age-result">
+                        <p class="age-result__label">Exact Age</p>
+                        <div class="age-result__values">
+                            <div class="age-result__value"><strong id="resultYears">—</strong><span>Years</span></div>
+                            <div class="age-result__value"><strong id="resultMonths">—</strong><span>Months</span></div>
+                            <div class="age-result__value"><strong id="resultDays">—</strong><span>Days</span></div>
                         </div>
                     </div>
-                    <div class="age-tool__field">
-                        <label for="ageAtDate">Age at Date (Optional)</label>
-                        <input type="date" id="ageAtDate" name="ageAtDate">
+                    <div class="age-tool__stats">
+                        <article class="age-stat">
+                            <div class="age-stat__heading"><i class="bi bi-calendar3"></i>Total Days</div>
+                            <p class="age-stat__number" id="totalDays">—</p>
+                        </article>
+                        <article class="age-stat">
+                            <div class="age-stat__heading"><i class="bi bi-calendar-week"></i>Total Weeks</div>
+                            <p class="age-stat__number" id="totalWeeks">—</p>
+                        </article>
+                        <article class="age-stat">
+                            <div class="age-stat__heading"><i class="bi bi-calendar2-event"></i>Total Months</div>
+                            <p class="age-stat__number" id="totalMonths">—</p>
+                        </article>
+                        <article class="age-stat age-stat--birthday">
+                            <div class="age-stat__heading"><i class="bi bi-cake2"></i>Next Birthday</div>
+                            <p class="age-stat__number"><span id="nextBirthday">—</span> <small>Days</small></p>
+                        </article>
                     </div>
-                    <div class="age-tool__actions">
-                        <button class="age-tool__calculate" type="submit">Calculate Age</button>
-                        <button class="age-tool__reset" type="reset">Reset</button>
-                    </div>
-                    <p id="ageMessage" class="age-tool__message" aria-live="polite"></p>
-                </form>
-            </section>
-            <section class="age-tool__results" aria-live="polite" aria-label="Age calculation result">
-                <div class="age-result">
-                    <p class="age-result__label">Exact Age</p>
-                    <div class="age-result__values">
-                        <div class="age-result__value"><strong id="resultYears">—</strong><span>Years</span></div>
-                        <div class="age-result__value"><strong id="resultMonths">—</strong><span>Months</span></div>
-                        <div class="age-result__value"><strong id="resultDays">—</strong><span>Days</span></div>
-                    </div>
-                </div>
-                <div class="age-tool__stats">
-                    <article class="age-stat"><div class="age-stat__heading"><i class="bi bi-calendar3"></i>Total Days</div><p class="age-stat__number" id="totalDays">—</p></article>
-                    <article class="age-stat"><div class="age-stat__heading"><i class="bi bi-calendar-week"></i>Total Weeks</div><p class="age-stat__number" id="totalWeeks">—</p></article>
-                    <article class="age-stat"><div class="age-stat__heading"><i class="bi bi-calendar2-event"></i>Total Months</div><p class="age-stat__number" id="totalMonths">—</p></article>
-                    <article class="age-stat age-stat--birthday"><div class="age-stat__heading"><i class="bi bi-cake2"></i>Next Birthday</div><p class="age-stat__number"><span id="nextBirthday">—</span> <small>Days</small></p></article>
-                </div>
-            </section>
+                </section>
             </div>
         </div>
-        
-        <div class="ad-banner-728">
-            <!-----Ads-Adsterra-banner-728*9-->
-            <script>
-                atOptions = {
-                    'key' : 'f05aa1f525135d3b34537d431fa55055',
-                    'format' : 'iframe',
-                    'height' : 90,
-                    'width' : 728,
-                    'params' : {}
-                };
-            </script>
-            <script src="https://www.highperformanceformat.com/f05aa1f525135d3b34537d431fa55055/invoke.js"></script>
-        </div>
-        
+
         <div class="banner-card">
             <img src="../images/banner.png">
         </div>
@@ -354,7 +427,9 @@
     <section class="howToUse-AgeCalculator">
         <img src="../images/howToUse-calculator.png">
         <span>How Does the Age Calculator Work?</span>
-        <p>Our age calculator compares your date of birth with today's date to calculate the difference between the two dates. It automatically handles different month lengths and leap years to provide an accurate age calculation.</p>
+        <p>Our age calculator compares your date of birth with today's date to calculate the difference between the two
+            dates. It automatically handles different month lengths and leap years to provide an accurate age
+            calculation.</p>
         <p>How to Calculate Your Age</p>
         <ul>
             <li>Enter your date of birth.</li>
@@ -362,7 +437,8 @@
             <li>Click the Calculate Age button.</li>
             <li>Your exact age will be displayed instantly.</li>
         </ul>
-        <p>The result can show your age in years, months, and days, making it easier to understand exactly how much time has passed since your birth date.</p>
+        <p>The result can show your age in years, months, and days, making it easier to understand exactly how much time
+            has passed since your birth date.</p>
         <p>What Can You Calculate?</p>
         <p>Our Age Calculator can help you find:</p>
         <ul>
@@ -373,10 +449,16 @@
             <li>Your upcoming birthday information</li>
         </ul>
         <p>Why Use an Online Age Calculator?</p>
-        <p>Calculating your exact age manually can be confusing because months have different numbers of days and leap years can affect the calculation. An online age calculator performs these calculations automatically and gives you the result in seconds.
-        <br>Whether you are checking your age for a form, application, birthday planning, or simply want to know how many days you have been alive, this calculator provides a quick and convenient solution.</p>
+        <p>Calculating your exact age manually can be confusing because months have different numbers of days and leap
+            years can affect the calculation. An online age calculator performs these calculations automatically and
+            gives you the result in seconds.
+            <br>Whether you are checking your age for a form, application, birthday planning, or simply want to know how
+            many days you have been alive, this calculator provides a quick and convenient solution.
+        </p>
         <p>Accurate Age Calculation</p>
-        <p>The calculator uses your date of birth and the selected current date to determine the difference between the two dates. Instead of manually counting months and days, you can get the result instantly with a simple date input.</p>
+        <p>The calculator uses your date of birth and the selected current date to determine the difference between the
+            two dates. Instead of manually counting months and days, you can get the result instantly with a simple date
+            input.</p>
         <p>Age Calculator for Different Purposes</p>
         <p>An age calculator can be useful in many everyday situations, including:</p>
         <ul>
@@ -416,143 +498,201 @@
         <p>Explore Your Birth Date</p>
         <ul>
             <li>Curious minds love uncovering the story behind their birth date</li>
-            <li>Every birth date connects to a zodiac sign, notable birthdays of famous personalities, historical milestones, and interesting trivia</li>
+            <li>Every birth date connects to a zodiac sign, notable birthdays of famous personalities, historical
+                milestones, and interesting trivia</li>
             <li>Learning these birth-date facts adds an extra layer of excitement to your special day</li>
         </ul>
     </section>
 
     <!-- SEO Content & Utility Sections -->
-    <div style="max-width: 1100px; margin: 40px auto 20px; padding: 0 16px; font-family: Inter, Arial, sans-serif; color: #0b1c30;">
+    <div
+        style="max-width: 1100px; margin: 40px auto 20px; padding: 0 16px; font-family: Inter, Arial, sans-serif; color: #0b1c30;">
         <!-- Intro Section -->
-        <section style="background: #fff; border: 1px solid #c2c6d9; border-radius: 16px; padding: 32px; margin-bottom: 24px; box-shadow: 0 4px 20px rgba(15, 23, 42, 0.04);">
-            <h2 style="font-family: 'Hanken Grotesk', sans-serif; font-size: 1.5rem; margin-top: 0; margin-bottom: 16px; color: #0b1c30; display: flex; align-items: center; gap: 10px;">
+        <section
+            style="background: #fff; border: 1px solid #c2c6d9; border-radius: 16px; padding: 32px; margin-bottom: 24px; box-shadow: 0 4px 20px rgba(15, 23, 42, 0.04);">
+            <h2
+                style="font-family: 'Hanken Grotesk', sans-serif; font-size: 1.5rem; margin-top: 0; margin-bottom: 16px; color: #0b1c30; display: flex; align-items: center; gap: 10px;">
                 <i class="bi bi-calendar-check" style="color: #0062ff;"></i>
                 What is an Age Calculator & How Does It Work?
             </h2>
             <p style="color: #424656; font-size: 1.05rem; line-height: 1.6; margin: 0;">
-                Welcome to the Pepstudio Age Calculator—a fast, free, and accurate tool designed to determine your exact chronological age down to the precise year, month, and day! Whether you are filling out official documents, planning an upcoming birthday milestone, or simply curious about how many total days, weeks, or months you have been alive, our calculator delivers instant results with mathematical precision. By calculating the exact calendar difference between your date of birth and any selected target date, our tool seamlessly handles complex date math including leap years, varying month lengths, and time offsets. It is clean, user-friendly, and completely free to use. Enter your birth date above and discover your detailed age breakdown today!
+                Welcome to the Pepstudio Age Calculator—a fast, free, and accurate tool designed to determine your exact
+                chronological age down to the precise year, month, and day! Whether you are filling out official
+                documents, planning an upcoming birthday milestone, or simply curious about how many total days, weeks,
+                or months you have been alive, our calculator delivers instant results with mathematical precision. By
+                calculating the exact calendar difference between your date of birth and any selected target date, our
+                tool seamlessly handles complex date math including leap years, varying month lengths, and time offsets.
+                It is clean, user-friendly, and completely free to use. Enter your birth date above and discover your
+                detailed age breakdown today!
             </p>
         </section>
 
         <!-- How It Works Section -->
-        <section style="background: #fff; border: 1px solid #c2c6d9; border-radius: 16px; padding: 32px; margin-bottom: 24px; box-shadow: 0 4px 20px rgba(15, 23, 42, 0.04);">
-            <h2 style="font-family: 'Hanken Grotesk', sans-serif; font-size: 1.5rem; margin-top: 0; margin-bottom: 12px; color: #0b1c30; display: flex; align-items: center; gap: 10px;">
+        <section
+            style="background: #fff; border: 1px solid #c2c6d9; border-radius: 16px; padding: 32px; margin-bottom: 24px; box-shadow: 0 4px 20px rgba(15, 23, 42, 0.04);">
+            <h2
+                style="font-family: 'Hanken Grotesk', sans-serif; font-size: 1.5rem; margin-top: 0; margin-bottom: 12px; color: #0b1c30; display: flex; align-items: center; gap: 10px;">
                 <i class="bi bi-gear-fill" style="color: #0062ff;"></i>
                 How Our Age Calculation Algorithm Works
             </h2>
-            <p style="color: #424656; margin-bottom: 20px; font-size: 0.95rem;">Calculating exact age involves more than simple subtraction because month lengths and leap years vary. Here is how our algorithm computes precision results:</p>
-            
+            <p style="color: #424656; margin-bottom: 20px; font-size: 0.95rem;">Calculating exact age involves more than
+                simple subtraction because month lengths and leap years vary. Here is how our algorithm computes
+                precision results:</p>
+
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px;">
                 <div style="background: #f0f7ff; border: 1px solid #c7dcff; border-radius: 12px; padding: 20px;">
-                    <div style="font-weight: 700; color: #0062ff; margin-bottom: 8px; font-size: 1.1rem;">1. Calendar Date Math</div>
-                    <p style="color: #424656; font-size: 0.9rem; margin: 0; line-height: 1.5;">Computes the raw delta between year, month, and day components of your birth date and the reference date.</p>
+                    <div style="font-weight: 700; color: #0062ff; margin-bottom: 8px; font-size: 1.1rem;">1. Calendar
+                        Date Math</div>
+                    <p style="color: #424656; font-size: 0.9rem; margin: 0; line-height: 1.5;">Computes the raw delta
+                        between year, month, and day components of your birth date and the reference date.</p>
                 </div>
                 <div style="background: #f0f7ff; border: 1px solid #c7dcff; border-radius: 12px; padding: 20px;">
-                    <div style="font-weight: 700; color: #0062ff; margin-bottom: 8px; font-size: 1.1rem;">2. Dynamic Month Lengths</div>
-                    <p style="color: #424656; font-size: 0.9rem; margin: 0; line-height: 1.5;">Automatically adjusts for 28, 29, 30, or 31-day months when borrowing days during subtraction.</p>
+                    <div style="font-weight: 700; color: #0062ff; margin-bottom: 8px; font-size: 1.1rem;">2. Dynamic
+                        Month Lengths</div>
+                    <p style="color: #424656; font-size: 0.9rem; margin: 0; line-height: 1.5;">Automatically adjusts for
+                        28, 29, 30, or 31-day months when borrowing days during subtraction.</p>
                 </div>
                 <div style="background: #f0f7ff; border: 1px solid #c7dcff; border-radius: 12px; padding: 20px;">
-                    <div style="font-weight: 700; color: #0062ff; margin-bottom: 8px; font-size: 1.1rem;">3. Leap Year Accuracy</div>
-                    <p style="color: #424656; font-size: 0.9rem; margin: 0; line-height: 1.5;">Factors in quadrennial leap years (February 29th) to ensure day count precision across decades.</p>
+                    <div style="font-weight: 700; color: #0062ff; margin-bottom: 8px; font-size: 1.1rem;">3. Leap Year
+                        Accuracy</div>
+                    <p style="color: #424656; font-size: 0.9rem; margin: 0; line-height: 1.5;">Factors in quadrennial
+                        leap years (February 29th) to ensure day count precision across decades.</p>
                 </div>
             </div>
         </section>
 
         <!-- FAQ Section -->
-        <section style="background: #fff; border: 1px solid #c2c6d9; border-radius: 16px; padding: 32px; margin-bottom: 24px; box-shadow: 0 4px 20px rgba(15, 23, 42, 0.04);">
-            <h2 style="font-family: 'Hanken Grotesk', sans-serif; font-size: 1.5rem; margin-top: 0; margin-bottom: 20px; color: #0b1c30; display: flex; align-items: center; gap: 10px;">
+        <section
+            style="background: #fff; border: 1px solid #c2c6d9; border-radius: 16px; padding: 32px; margin-bottom: 24px; box-shadow: 0 4px 20px rgba(15, 23, 42, 0.04);">
+            <h2
+                style="font-family: 'Hanken Grotesk', sans-serif; font-size: 1.5rem; margin-top: 0; margin-bottom: 20px; color: #0b1c30; display: flex; align-items: center; gap: 10px;">
                 <i class="bi bi-question-circle-fill" style="color: #0062ff;"></i>
                 Frequently Asked Questions
             </h2>
-            
+
             <div style="display: flex; flex-direction: column; gap: 16px;">
                 <div style="border: 1px solid #e2e8f0; border-radius: 12px; padding: 20px; background: #f8f9ff;">
-                    <h3 style="font-size: 1.05rem; font-weight: 700; margin: 0 0 8px; color: #0b1c30;">How accurate is this online Age Calculator?</h3>
-                    <p style="color: #424656; font-size: 0.95rem; margin: 0; line-height: 1.5;">Our Age Calculator is 100% accurate. It uses exact Gregorian calendar algorithms that correctly account for leap years, leap centuries, and varying month lengths.</p>
+                    <h3 style="font-size: 1.05rem; font-weight: 700; margin: 0 0 8px; color: #0b1c30;">How accurate is
+                        this online Age Calculator?</h3>
+                    <p style="color: #424656; font-size: 0.95rem; margin: 0; line-height: 1.5;">Our Age Calculator is
+                        100% accurate. It uses exact Gregorian calendar algorithms that correctly account for leap
+                        years, leap centuries, and varying month lengths.</p>
                 </div>
 
                 <div style="border: 1px solid #e2e8f0; border-radius: 12px; padding: 20px; background: #f8f9ff;">
-                    <h3 style="font-size: 1.05rem; font-weight: 700; margin: 0 0 8px; color: #0b1c30;">How does the calculator handle leap years?</h3>
-                    <p style="color: #424656; font-size: 0.95rem; margin: 0; line-height: 1.5;">Leap years add an extra day (February 29) every four years. Our algorithm automatically factors in these leap days when calculating your total days and weeks lived.</p>
+                    <h3 style="font-size: 1.05rem; font-weight: 700; margin: 0 0 8px; color: #0b1c30;">How does the
+                        calculator handle leap years?</h3>
+                    <p style="color: #424656; font-size: 0.95rem; margin: 0; line-height: 1.5;">Leap years add an extra
+                        day (February 29) every four years. Our algorithm automatically factors in these leap days when
+                        calculating your total days and weeks lived.</p>
                 </div>
 
                 <div style="border: 1px solid #e2e8f0; border-radius: 12px; padding: 20px; background: #f8f9ff;">
-                    <h3 style="font-size: 1.05rem; font-weight: 700; margin: 0 0 8px; color: #0b1c30;">Can I calculate my age on a specific future or past date?</h3>
-                    <p style="color: #424656; font-size: 0.95rem; margin: 0; line-height: 1.5;">Yes! Use the "Age at Date" optional field to select any historical or future date to find out how old you were or will be on that specific day.</p>
+                    <h3 style="font-size: 1.05rem; font-weight: 700; margin: 0 0 8px; color: #0b1c30;">Can I calculate
+                        my age on a specific future or past date?</h3>
+                    <p style="color: #424656; font-size: 0.95rem; margin: 0; line-height: 1.5;">Yes! Use the "Age at
+                        Date" optional field to select any historical or future date to find out how old you were or
+                        will be on that specific day.</p>
                 </div>
 
                 <div style="border: 1px solid #e2e8f0; border-radius: 12px; padding: 20px; background: #f8f9ff;">
-                    <h3 style="font-size: 1.05rem; font-weight: 700; margin: 0 0 8px; color: #0b1c30;">What is the difference between age in years vs total days?</h3>
-                    <p style="color: #424656; font-size: 0.95rem; margin: 0; line-height: 1.5;">Age in years measures completed annual calendar revolutions around the sun, while total days measures the absolute continuous number of 24-hour periods lived since your birth date.</p>
+                    <h3 style="font-size: 1.05rem; font-weight: 700; margin: 0 0 8px; color: #0b1c30;">What is the
+                        difference between age in years vs total days?</h3>
+                    <p style="color: #424656; font-size: 0.95rem; margin: 0; line-height: 1.5;">Age in years measures
+                        completed annual calendar revolutions around the sun, while total days measures the absolute
+                        continuous number of 24-hour periods lived since your birth date.</p>
                 </div>
             </div>
         </section>
 
         <!-- Fun Facts / Age Trivia -->
-        <section style="background: linear-gradient(135deg, #eff6ff 0%, #f0fdf4 100%); border: 1px solid #bfdbfe; border-radius: 16px; padding: 32px; margin-bottom: 24px;">
-            <h2 style="font-family: 'Hanken Grotesk', sans-serif; font-size: 1.5rem; margin-top: 0; margin-bottom: 20px; color: #0b1c30; display: flex; align-items: center; gap: 10px;">
+        <section
+            style="background: linear-gradient(135deg, #eff6ff 0%, #f0fdf4 100%); border: 1px solid #bfdbfe; border-radius: 16px; padding: 32px; margin-bottom: 24px;">
+            <h2
+                style="font-family: 'Hanken Grotesk', sans-serif; font-size: 1.5rem; margin-top: 0; margin-bottom: 20px; color: #0b1c30; display: flex; align-items: center; gap: 10px;">
                 <i class="bi bi-lightbulb-fill" style="color: #f59e0b;"></i>
                 Fun Facts & Age Trivia
             </h2>
-            
+
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px;">
-                <div style="background: rgba(255,255,255,0.85); padding: 16px; border-radius: 12px; border: 1px solid #dbeafe;">
-                    <h3 style="font-size: 0.95rem; font-weight: 700; margin: 0 0 6px; color: #0b1c30;">Heartbeat Count</h3>
-                    <p style="font-size: 0.88rem; color: #424656; margin: 0;">Over an average 70-year lifetime, a human heart beats over 2.5 billion times without taking a single break!</p>
+                <div
+                    style="background: rgba(255,255,255,0.85); padding: 16px; border-radius: 12px; border: 1px solid #dbeafe;">
+                    <h3 style="font-size: 0.95rem; font-weight: 700; margin: 0 0 6px; color: #0b1c30;">Heartbeat Count
+                    </h3>
+                    <p style="font-size: 0.88rem; color: #424656; margin: 0;">Over an average 70-year lifetime, a human
+                        heart beats over 2.5 billion times without taking a single break!</p>
                 </div>
 
-                <div style="background: rgba(255,255,255,0.85); padding: 16px; border-radius: 12px; border: 1px solid #dbeafe;">
-                    <h3 style="font-size: 0.95rem; font-weight: 700; margin: 0 0 6px; color: #0b1c30;">Space Age Variance</h3>
-                    <p style="font-size: 0.88rem; color: #424656; margin: 0;">If you are 25 years old on Earth, you are over 100 years old on Mercury and only 13 years old on Mars due to orbital speeds!</p>
+                <div
+                    style="background: rgba(255,255,255,0.85); padding: 16px; border-radius: 12px; border: 1px solid #dbeafe;">
+                    <h3 style="font-size: 0.95rem; font-weight: 700; margin: 0 0 6px; color: #0b1c30;">Space Age
+                        Variance</h3>
+                    <p style="font-size: 0.88rem; color: #424656; margin: 0;">If you are 25 years old on Earth, you are
+                        over 100 years old on Mercury and only 13 years old on Mars due to orbital speeds!</p>
                 </div>
 
-                <div style="background: rgba(255,255,255,0.85); padding: 16px; border-radius: 12px; border: 1px solid #dbeafe;">
-                    <h3 style="font-size: 0.95rem; font-weight: 700; margin: 0 0 6px; color: #0b1c30;">Leap Year "Leaplings"</h3>
-                    <p style="font-size: 0.88rem; color: #424656; margin: 0;">People born on Feb 29th are called "leaplings" and technically celebrate an official calendar birthday once every four years.</p>
+                <div
+                    style="background: rgba(255,255,255,0.85); padding: 16px; border-radius: 12px; border: 1px solid #dbeafe;">
+                    <h3 style="font-size: 0.95rem; font-weight: 700; margin: 0 0 6px; color: #0b1c30;">Leap Year
+                        "Leaplings"</h3>
+                    <p style="font-size: 0.88rem; color: #424656; margin: 0;">People born on Feb 29th are called
+                        "leaplings" and technically celebrate an official calendar birthday once every four years.</p>
                 </div>
 
-                <div style="background: rgba(255,255,255,0.85); padding: 16px; border-radius: 12px; border: 1px solid #dbeafe;">
-                    <h3 style="font-size: 0.95rem; font-weight: 700; margin: 0 0 6px; color: #0b1c30;">Blinking Time</h3>
-                    <p style="font-size: 0.88rem; color: #424656; margin: 0;">You spend approximately 10% of your waking hours with your eyes closed due to blinking throughout your life!</p>
+                <div
+                    style="background: rgba(255,255,255,0.85); padding: 16px; border-radius: 12px; border: 1px solid #dbeafe;">
+                    <h3 style="font-size: 0.95rem; font-weight: 700; margin: 0 0 6px; color: #0b1c30;">Blinking Time
+                    </h3>
+                    <p style="font-size: 0.88rem; color: #424656; margin: 0;">You spend approximately 10% of your waking
+                        hours with your eyes closed due to blinking throughout your life!</p>
                 </div>
             </div>
         </section>
 
         <!-- Related Tools Grid -->
-        <section style="background: #fff; border: 1px solid #c2c6d9; border-radius: 16px; padding: 32px; margin-bottom: 24px; box-shadow: 0 4px 20px rgba(15, 23, 42, 0.04);">
-            <h2 style="font-family: 'Hanken Grotesk', sans-serif; font-size: 1.5rem; margin-top: 0; margin-bottom: 8px; color: #0b1c30; display: flex; align-items: center; gap: 10px;">
+        <section
+            style="background: #fff; border: 1px solid #c2c6d9; border-radius: 16px; padding: 32px; margin-bottom: 24px; box-shadow: 0 4px 20px rgba(15, 23, 42, 0.04);">
+            <h2
+                style="font-family: 'Hanken Grotesk', sans-serif; font-size: 1.5rem; margin-top: 0; margin-bottom: 8px; color: #0b1c30; display: flex; align-items: center; gap: 10px;">
                 <i class="bi bi-grid-3x3-gap-fill" style="color: #0062ff;"></i>
                 Explore More Pepstudio Utility Tools
             </h2>
-            <p style="color: #424656; margin-bottom: 20px; font-size: 0.95rem;">Check out our other fast, free, and accurate online calculation tools:</p>
+            <p style="color: #424656; margin-bottom: 20px; font-size: 0.95rem;">Check out our other fast, free, and
+                accurate online calculation tools:</p>
 
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 16px;">
-                <a href="../bmi-calculator/index.html" style="text-decoration: none; display: flex; flex-direction: column; align-items: center; gap: 8px; padding: 16px; border: 1px solid #e2e8f0; border-radius: 12px; background: #f8f9ff; color: #0b1c30; transition: all 0.2s ease;">
+                <a href="../bmi-calculator/index.html"
+                    style="text-decoration: none; display: flex; flex-direction: column; align-items: center; gap: 8px; padding: 16px; border: 1px solid #e2e8f0; border-radius: 12px; background: #f8f9ff; color: #0b1c30; transition: all 0.2s ease;">
                     <i class="bi bi-heart-pulse-fill" style="font-size: 1.5rem; color: #0062ff;"></i>
                     <span style="font-size: 0.88rem; font-weight: 600;">BMI Calculator</span>
                 </a>
 
-                <a href="../emi-calculator/index.html" style="text-decoration: none; display: flex; flex-direction: column; align-items: center; gap: 8px; padding: 16px; border: 1px solid #e2e8f0; border-radius: 12px; background: #f8f9ff; color: #0b1c30; transition: all 0.2s ease;">
+                <a href="../emi-calculator/index.html"
+                    style="text-decoration: none; display: flex; flex-direction: column; align-items: center; gap: 8px; padding: 16px; border: 1px solid #e2e8f0; border-radius: 12px; background: #f8f9ff; color: #0b1c30; transition: all 0.2s ease;">
                     <i class="bi bi-calculator-fill" style="font-size: 1.5rem; color: #0062ff;"></i>
                     <span style="font-size: 0.88rem; font-weight: 600;">EMI Calculator</span>
                 </a>
 
-                <a href="../love-calculator/index.html" style="text-decoration: none; display: flex; flex-direction: column; align-items: center; gap: 8px; padding: 16px; border: 1px solid #e2e8f0; border-radius: 12px; background: #f8f9ff; color: #0b1c30; transition: all 0.2s ease;">
+                <a href="../love-calculator/index.html"
+                    style="text-decoration: none; display: flex; flex-direction: column; align-items: center; gap: 8px; padding: 16px; border: 1px solid #e2e8f0; border-radius: 12px; background: #f8f9ff; color: #0b1c30; transition: all 0.2s ease;">
                     <i class="bi bi-suit-heart-fill" style="font-size: 1.5rem; color: #e11d48;"></i>
                     <span style="font-size: 0.88rem; font-weight: 600;">Love Calculator</span>
                 </a>
 
-                <a href="../percentage-calculator/index.html" style="text-decoration: none; display: flex; flex-direction: column; align-items: center; gap: 8px; padding: 16px; border: 1px solid #e2e8f0; border-radius: 12px; background: #f8f9ff; color: #0b1c30; transition: all 0.2s ease;">
+                <a href="../percentage-calculator/index.html"
+                    style="text-decoration: none; display: flex; flex-direction: column; align-items: center; gap: 8px; padding: 16px; border: 1px solid #e2e8f0; border-radius: 12px; background: #f8f9ff; color: #0b1c30; transition: all 0.2s ease;">
                     <i class="bi bi-percent" style="font-size: 1.5rem; color: #0062ff;"></i>
                     <span style="font-size: 0.88rem; font-weight: 600;">Percentage Calc</span>
                 </a>
 
-                <a href="../unit-converter/index.html" style="text-decoration: none; display: flex; flex-direction: column; align-items: center; gap: 8px; padding: 16px; border: 1px solid #e2e8f0; border-radius: 12px; background: #f8f9ff; color: #0b1c30; transition: all 0.2s ease;">
+                <a href="../unit-converter/index.html"
+                    style="text-decoration: none; display: flex; flex-direction: column; align-items: center; gap: 8px; padding: 16px; border: 1px solid #e2e8f0; border-radius: 12px; background: #f8f9ff; color: #0b1c30; transition: all 0.2s ease;">
                     <i class="bi bi-arrow-left-right" style="font-size: 1.5rem; color: #0062ff;"></i>
                     <span style="font-size: 0.88rem; font-weight: 600;">Unit Converter</span>
                 </a>
 
-                <a href="../world-time/index.html" style="text-decoration: none; display: flex; flex-direction: column; align-items: center; gap: 8px; padding: 16px; border: 1px solid #e2e8f0; border-radius: 12px; background: #f8f9ff; color: #0b1c30; transition: all 0.2s ease;">
+                <a href="../world-time/index.html"
+                    style="text-decoration: none; display: flex; flex-direction: column; align-items: center; gap: 8px; padding: 16px; border: 1px solid #e2e8f0; border-radius: 12px; background: #f8f9ff; color: #0b1c30; transition: all 0.2s ease;">
                     <i class="bi bi-globe" style="font-size: 1.5rem; color: #0062ff;"></i>
                     <span style="font-size: 0.88rem; font-weight: 600;">World Time</span>
                 </a>
@@ -560,26 +700,16 @@
         </section>
 
         <!-- Disclaimer -->
-        <section style="background: #f1f5f9; border: 1px solid #cbd5e1; border-radius: 12px; padding: 16px; text-align: center;">
+        <section
+            style="background: #f1f5f9; border: 1px solid #cbd5e1; border-radius: 12px; padding: 16px; text-align: center;">
             <p style="margin: 0; font-size: 0.85rem; color: #475569; line-height: 1.4;">
-                <strong style="color: #0f172a;">Accuracy Disclaimer:</strong> This Age Calculator is provided for general informational and calculation purposes. While designed for maximum calendar precision, official age verifications for legal documents should always refer to official birth certificates.
+                <strong style="color: #0f172a;">Accuracy Disclaimer:</strong> This Age Calculator is provided for
+                general informational and calculation purposes. While designed for maximum calendar precision, official
+                age verifications for legal documents should always refer to official birth certificates.
             </p>
         </section>
     </div>
 
-    <div class="ad-banner-728">
-        <!-----Ads-Adsterra-banner-728*9-->
-        <script>
-            atOptions = {
-                'key' : 'f05aa1f525135d3b34537d431fa55055',
-                'format' : 'iframe',
-                'height' : 90,
-                'width' : 728,
-                'params' : {}
-            };
-        </script>
-        <script src="https://www.highperformanceformat.com/f05aa1f525135d3b34537d431fa55055/invoke.js"></script>
-    </div> 
     </main>
 
     <div id="resultModal" class="modal">
@@ -589,7 +719,8 @@
         </div>
     </div>
 
-        <script async="async" data-cfasync="false" src="https://pl30906368.effectivecpmnetwork.com/8a2d1571ba90f6bbccb31ff901a105a7/invoke.js"></script>
+    <script async="async" data-cfasync="false"
+        src="https://pl30906368.effectivecpmnetwork.com/8a2d1571ba90f6bbccb31ff901a105a7/invoke.js"></script>
     <div id="container-8a2d1571ba90f6bbccb31ff901a105a7"></div>
     <footer class="site-footer">
         <div class="footer-container">
@@ -598,10 +729,13 @@
                     <a href="../index.html" class="footer-logo" title="pepstudio.xyz Home">
                         <img src="../images/pepstudio.png" alt="pepstudio.xyz logo">
                     </a>
-                    <p class="footer-tagline">Your all-in-one suite of 100% free online calculator & utility tools. Fast, accurate, and easy to use.</p>
+                    <p class="footer-tagline">Your all-in-one suite of 100% free online calculator & utility tools.
+                        Fast, accurate, and easy to use.</p>
                     <div class="footer-social">
-                        <a href="https://www.linkedin.com/in/sonu-murmu-60479a268/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
-                        <a href="https://www.instagram.com/sonu_murm_/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/sonu-murmu-60479a268/" target="_blank"
+                            rel="noopener noreferrer" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                        <a href="https://www.instagram.com/sonu_murm_/" target="_blank" rel="noopener noreferrer"
+                            aria-label="Instagram"><i class="bi bi-instagram"></i></a>
                     </div>
                 </div>
 
@@ -660,4 +794,5 @@
 
     <script src="../js/age-calculator.js"></script>
 </body>
+
 </html>

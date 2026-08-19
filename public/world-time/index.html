@@ -1,28 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Free online world time converter. Check current time in different time zones across the world. Fast, accurate, and easy to use.">
-    <meta name="keywords" content="world time, time zone converter, current time, international time, time zone, clock, world clock">
+    <meta name="description"
+        content="Free online world time converter. Check current time in different time zones across the world. Fast, accurate, and easy to use.">
+    <meta name="keywords"
+        content="world time, time zone converter, current time, international time, time zone, clock, world clock">
     <link rel="canonical" href="https://pepstudio.xyz/world-time/">
     <meta property="og:title" content="World Time – Check Current Time in Different Time Zones">
-    <meta property="og:description" content="Free online World Time Clock. View live local time for major global cities and convert time zones instantly for international meetings and travel.">
+    <meta property="og:description"
+        content="Free online World Time Clock. View live local time for major global cities and convert time zones instantly for international meetings and travel.">
     <meta property="og:type" content="website">
     <title>World Time – Check Current Time in Different Time Zones</title>
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@600;700&family=Inter:wght@400;500;600;700&display=swap">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@600;700&family=Inter:wght@400;500;600;700&display=swap">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="icon" href="../images/favicon.svg">
     <style>
-        html, body {
+        html,
+        body {
             background: #f8f9ff !important;
             background-color: #f8f9ff !important;
             background-image: none !important;
         }
-        main, main.world-time-page {
+
+        main,
+        main.world-time-page {
             background: #f8f9ff !important;
             background-color: #f8f9ff !important;
             background-image: none !important;
@@ -30,10 +39,12 @@
             font-family: Inter, Arial, sans-serif;
             color: #0b1c30;
         }
+
         .world-time-shell {
             max-width: 1280px;
             margin: 0 auto;
         }
+
         .time-slider {
             -webkit-appearance: none;
             width: 100%;
@@ -42,6 +53,7 @@
             background: #d3e4fe;
             outline: none;
         }
+
         .time-slider::-webkit-slider-thumb {
             -webkit-appearance: none;
             appearance: none;
@@ -53,6 +65,7 @@
             box-shadow: 0 2px 6px rgba(0, 98, 255, 0.3);
             border: 2px solid white;
         }
+
         .time-slider::-moz-range-thumb {
             width: 24px;
             height: 24px;
@@ -62,175 +75,179 @@
             box-shadow: 0 2px 6px rgba(0, 98, 255, 0.3);
             border: 2px solid white;
         }
+
         @media (max-width: 768px) {
-            main, main.world-time-page {
+
+            main,
+            main.world-time-page {
                 padding: 32px 16px 48px !important;
             }
         }
     </style>
     <script id="tailwind-config">
-      tailwind.config = {
-        darkMode: "class",
-        theme: {
-          extend: {
-            "colors": {
-                    "tertiary-fixed": "#e0e3e5",
-                    "surface-container-low": "#eff4ff",
-                    "secondary-container": "#d5e0f8",
-                    "secondary-fixed": "#d8e3fb",
-                    "surface-container-highest": "#d3e4fe",
-                    "on-error-container": "#93000a",
-                    "primary-fixed": "#dbe1ff",
-                    "on-tertiary": "#ffffff",
-                    "on-background": "#0b1c30",
-                    "error-container": "#ffdad6",
-                    "on-primary": "#ffffff",
-                    "warning-amber": "#F59E0B",
-                    "on-secondary-fixed-variant": "#3c475a",
-                    "error": "#ba1a1a",
-                    "on-tertiary-fixed": "#191c1e",
-                    "on-surface": "#0b1c30",
-                    "surface-container-high": "#dce9ff",
-                    "tertiary": "#54585a",
-                    "on-surface-variant": "#424656",
-                    "primary-container": "#0062ff",
-                    "inverse-on-surface": "#eaf1ff",
-                    "surface-bright": "#f8f9ff",
-                    "surface-dim": "#cbdbf5",
-                    "surface-tint": "#0053da",
-                    "tertiary-container": "#6d7072",
-                    "primary-fixed-dim": "#b4c5ff",
-                    "on-secondary": "#ffffff",
-                    "on-primary-fixed-variant": "#003ea8",
-                    "inverse-surface": "#213145",
-                    "surface-container": "#e5eeff",
-                    "surface-container-lowest": "#ffffff",
-                    "surface-variant": "#d3e4fe",
-                    "outline-variant": "#c2c6d9",
-                    "success-green": "#10B981",
-                    "secondary": "#545f73",
-                    "surface": "#f8f9ff",
-                    "surface-blue": "#F0F7FF",
-                    "on-tertiary-container": "#f3f5f7",
-                    "on-secondary-fixed": "#111c2d",
-                    "on-tertiary-fixed-variant": "#444749",
-                    "on-primary-container": "#f3f3ff",
-                    "inverse-primary": "#b4c5ff",
-                    "on-secondary-container": "#586377",
-                    "on-primary-fixed": "#00174b",
-                    "tertiary-fixed-dim": "#c4c7c9",
-                    "outline": "#737687",
-                    "on-error": "#ffffff",
-                    "background": "#f8f9ff",
-                    "primary": "#004cca",
-                    "secondary-fixed-dim": "#bcc7de"
-            },
-            "borderRadius": {
-                    "DEFAULT": "0.25rem",
-                    "lg": "0.5rem",
-                    "xl": "0.75rem",
-                    "full": "9999px"
-            },
-            "spacing": {
-                    "margin-desktop": "32px",
-                    "container-max": "1280px",
-                    "stack-sm": "8px",
-                    "stack-lg": "32px",
-                    "margin-mobile": "16px",
-                    "gutter": "24px",
-                    "stack-md": "16px"
-            },
-            "fontFamily": {
-                    "display-lg": [
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "tertiary-fixed": "#e0e3e5",
+                        "surface-container-low": "#eff4ff",
+                        "secondary-container": "#d5e0f8",
+                        "secondary-fixed": "#d8e3fb",
+                        "surface-container-highest": "#d3e4fe",
+                        "on-error-container": "#93000a",
+                        "primary-fixed": "#dbe1ff",
+                        "on-tertiary": "#ffffff",
+                        "on-background": "#0b1c30",
+                        "error-container": "#ffdad6",
+                        "on-primary": "#ffffff",
+                        "warning-amber": "#F59E0B",
+                        "on-secondary-fixed-variant": "#3c475a",
+                        "error": "#ba1a1a",
+                        "on-tertiary-fixed": "#191c1e",
+                        "on-surface": "#0b1c30",
+                        "surface-container-high": "#dce9ff",
+                        "tertiary": "#54585a",
+                        "on-surface-variant": "#424656",
+                        "primary-container": "#0062ff",
+                        "inverse-on-surface": "#eaf1ff",
+                        "surface-bright": "#f8f9ff",
+                        "surface-dim": "#cbdbf5",
+                        "surface-tint": "#0053da",
+                        "tertiary-container": "#6d7072",
+                        "primary-fixed-dim": "#b4c5ff",
+                        "on-secondary": "#ffffff",
+                        "on-primary-fixed-variant": "#003ea8",
+                        "inverse-surface": "#213145",
+                        "surface-container": "#e5eeff",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-variant": "#d3e4fe",
+                        "outline-variant": "#c2c6d9",
+                        "success-green": "#10B981",
+                        "secondary": "#545f73",
+                        "surface": "#f8f9ff",
+                        "surface-blue": "#F0F7FF",
+                        "on-tertiary-container": "#f3f5f7",
+                        "on-secondary-fixed": "#111c2d",
+                        "on-tertiary-fixed-variant": "#444749",
+                        "on-primary-container": "#f3f3ff",
+                        "inverse-primary": "#b4c5ff",
+                        "on-secondary-container": "#586377",
+                        "on-primary-fixed": "#00174b",
+                        "tertiary-fixed-dim": "#c4c7c9",
+                        "outline": "#737687",
+                        "on-error": "#ffffff",
+                        "background": "#f8f9ff",
+                        "primary": "#004cca",
+                        "secondary-fixed-dim": "#bcc7de"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-desktop": "32px",
+                        "container-max": "1280px",
+                        "stack-sm": "8px",
+                        "stack-lg": "32px",
+                        "margin-mobile": "16px",
+                        "gutter": "24px",
+                        "stack-md": "16px"
+                    },
+                    "fontFamily": {
+                        "display-lg": [
                             "Hanken Grotesk"
-                    ],
-                    "caption": [
+                        ],
+                        "caption": [
                             "Inter"
-                    ],
-                    "headline-lg": [
+                        ],
+                        "headline-lg": [
                             "Hanken Grotesk"
-                    ],
-                    "headline-md": [
+                        ],
+                        "headline-md": [
                             "Hanken Grotesk"
-                    ],
-                    "label-sm": [
+                        ],
+                        "label-sm": [
                             "Inter"
-                    ],
-                    "headline-lg-mobile": [
+                        ],
+                        "headline-lg-mobile": [
                             "Hanken Grotesk"
-                    ],
-                    "body-lg": [
+                        ],
+                        "body-lg": [
                             "Inter"
-                    ],
-                    "body-md": [
+                        ],
+                        "body-md": [
                             "Inter"
-                    ]
-            },
-            "fontSize": {
-                    "display-lg": [
+                        ]
+                    },
+                    "fontSize": {
+                        "display-lg": [
                             "48px",
                             {
-                                    "lineHeight": "56px",
-                                    "letterSpacing": "-0.02em",
-                                    "fontWeight": "700"
+                                "lineHeight": "56px",
+                                "letterSpacing": "-0.02em",
+                                "fontWeight": "700"
                             }
-                    ],
-                    "caption": [
+                        ],
+                        "caption": [
                             "12px",
                             {
-                                    "lineHeight": "16px",
-                                    "fontWeight": "400"
+                                "lineHeight": "16px",
+                                "fontWeight": "400"
                             }
-                    ],
-                    "headline-lg": [
+                        ],
+                        "headline-lg": [
                             "32px",
                             {
-                                    "lineHeight": "40px",
-                                    "fontWeight": "600"
+                                "lineHeight": "40px",
+                                "fontWeight": "600"
                             }
-                    ],
-                    "headline-md": [
+                        ],
+                        "headline-md": [
                             "20px",
                             {
-                                    "lineHeight": "28px",
-                                    "fontWeight": "600"
+                                "lineHeight": "28px",
+                                "fontWeight": "600"
                             }
-                    ],
-                    "label-sm": [
+                        ],
+                        "label-sm": [
                             "14px",
                             {
-                                    "lineHeight": "20px",
-                                    "letterSpacing": "0.01em",
-                                    "fontWeight": "600"
+                                "lineHeight": "20px",
+                                "letterSpacing": "0.01em",
+                                "fontWeight": "600"
                             }
-                    ],
-                    "headline-lg-mobile": [
+                        ],
+                        "headline-lg-mobile": [
                             "24px",
                             {
-                                    "lineHeight": "32px",
-                                    "fontWeight": "600"
+                                "lineHeight": "32px",
+                                "fontWeight": "600"
                             }
-                    ],
-                    "body-lg": [
+                        ],
+                        "body-lg": [
                             "18px",
                             {
-                                    "lineHeight": "28px",
-                                    "fontWeight": "400"
+                                "lineHeight": "28px",
+                                "fontWeight": "400"
                             }
-                    ],
-                    "body-md": [
+                        ],
+                        "body-md": [
                             "16px",
                             {
-                                    "lineHeight": "24px",
-                                    "fontWeight": "400"
+                                "lineHeight": "24px",
+                                "fontWeight": "400"
                             }
-                    ]
+                        ]
+                    }
+                }
             }
-          }
         }
-      }
     </script>
 </head>
+
 <body style="background: #f8f9ff !important; background-image: none !important;">
     <header>
         <a href="../index.html" title="Home">
@@ -246,47 +263,77 @@
         </div>
     </header>
 
-    <main class="world-time-page flex-grow w-full antialiased" style="background: #f8f9ff !important; background-image: none !important;">
+    <main class="world-time-page flex-grow w-full antialiased"
+        style="background: #f8f9ff !important; background-image: none !important;">
         <div class="world-time-shell flex flex-col gap-8">
             <!-- Hero Section -->
             <section class="flex flex-col items-center text-center space-y-4 pt-4 pb-6">
                 <h1 class="font-display-lg text-display-lg text-primary tracking-tight">World Time</h1>
-                <p class="font-body-lg text-body-lg text-secondary max-w-2xl">Coordinate global meetings and track time across different zones with absolute precision.</p>
-                
+                <p class="font-body-lg text-body-lg text-secondary max-w-2xl">Coordinate global meetings and track time
+                    across different zones with absolute precision.</p>
+
                 <!-- Local Time Banner Card -->
-                <div class="bg-surface-container-lowest shadow-[0_4px_20px_rgba(15,23,42,0.04)] hover:shadow-[0_8px_30px_rgba(15,23,42,0.08)] transition-shadow duration-300 rounded-[16px] p-8 md:p-10 w-full max-w-3xl mt-6 relative overflow-hidden border border-outline-variant/30">
-                    <div class="absolute top-0 right-0 w-64 h-64 bg-surface-container-high rounded-full blur-3xl opacity-50 -mr-20 -mt-20"></div>
-                    <div class="relative z-10 flex flex-col md:flex-row justify-between items-center md:items-end gap-6">
+                <div
+                    class="bg-surface-container-lowest shadow-[0_4px_20px_rgba(15,23,42,0.04)] hover:shadow-[0_8px_30px_rgba(15,23,42,0.08)] transition-shadow duration-300 rounded-[16px] p-8 md:p-10 w-full max-w-3xl mt-6 relative overflow-hidden border border-outline-variant/30">
+                    <div
+                        class="absolute top-0 right-0 w-64 h-64 bg-surface-container-high rounded-full blur-3xl opacity-50 -mr-20 -mt-20">
+                    </div>
+                    <div
+                        class="relative z-10 flex flex-col md:flex-row justify-between items-center md:items-end gap-6">
                         <div class="text-left flex flex-col gap-2">
-                            <span class="font-label-sm text-label-sm text-primary uppercase tracking-wider font-semibold flex items-center gap-2">
+                            <span
+                                class="font-label-sm text-label-sm text-primary uppercase tracking-wider font-semibold flex items-center gap-2">
                                 <span class="material-symbols-outlined text-primary text-[18px]">location_on</span>
                                 <span id="localTimezone">Local Time</span>
                             </span>
-                            <h2 class="font-headline-lg text-headline-lg md:text-[56px] leading-none font-bold text-on-background tracking-tighter" id="localTimeDisplay">10:42:00 AM</h2>
-                            <p class="font-body-lg text-body-lg text-secondary mt-2" id="localDateDisplay">Wednesday, Oct 25</p>
+                            <h2 class="font-headline-lg text-headline-lg md:text-[56px] leading-none font-bold text-on-background tracking-tighter"
+                                id="localTimeDisplay">10:42:00 AM</h2>
+                            <p class="font-body-lg text-body-lg text-secondary mt-2" id="localDateDisplay">Wednesday,
+                                Oct 25</p>
                         </div>
                         <div class="text-right flex flex-col items-end">
-                            <div class="bg-surface-blue px-4 py-2 rounded-lg border border-primary-fixed flex items-center gap-2">
+                            <div
+                                class="bg-surface-blue px-4 py-2 rounded-lg border border-primary-fixed flex items-center gap-2">
                                 <span class="w-2.5 h-2.5 rounded-full bg-success-green animate-pulse"></span>
-                                <span class="font-label-sm text-label-sm text-on-surface-variant">Live Sync Active</span>
+                                <span class="font-label-sm text-label-sm text-on-surface-variant">Live Sync
+                                    Active</span>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
 
+            <div class="ad-banner-728">
+                <!-----Ads-Adsterra-banner-728*9-->
+                <script>
+                    atOptions = {
+                        'key': 'a52b907f52996847430b5a5c211f2320',
+                        'format': 'iframe',
+                        'height': 90,
+                        'width': 728,
+                        'params': {}
+                    };
+                </script>
+                <script src="https://www.highperformanceformat.com/a52b907f52996847430b5a5c211f2320/invoke.js"></script>
+            </div>
+
             <!-- Search & Controls Section -->
-            <section class="flex flex-col md:flex-row justify-between items-center gap-6 bg-surface-container-lowest p-6 rounded-[16px] shadow-[0_4px_20px_rgba(15,23,42,0.04)] border border-outline-variant/30">
+            <section
+                class="flex flex-col md:flex-row justify-between items-center gap-6 bg-surface-container-lowest p-6 rounded-[16px] shadow-[0_4px_20px_rgba(15,23,42,0.04)] border border-outline-variant/30">
                 <div class="relative w-full md:w-96">
                     <span class="material-symbols-outlined absolute left-4 top-3.5 text-secondary">search</span>
-                    <input id="searchTimezone" class="w-full pl-12 pr-4 py-3 bg-surface border border-outline-variant rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all font-body-md text-on-surface" placeholder="Search city or timezone..." type="text"/>
+                    <input id="searchTimezone"
+                        class="w-full pl-12 pr-4 py-3 bg-surface border border-outline-variant rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all font-body-md text-on-surface"
+                        placeholder="Search city or timezone..." type="text" />
                 </div>
                 <div class="flex items-center gap-4 w-full md:w-auto">
-                    <span class="font-label-sm text-label-sm text-secondary whitespace-nowrap" id="sliderLabel">Compare Offset: +0h</span>
+                    <span class="font-label-sm text-label-sm text-secondary whitespace-nowrap" id="sliderLabel">Compare
+                        Offset: +0h</span>
                     <div class="flex-grow md:w-64 flex items-center">
-                        <input id="timeSlider" class="time-slider" max="12" min="-12" type="range" value="0"/>
+                        <input id="timeSlider" class="time-slider" max="12" min="-12" type="range" value="0" />
                     </div>
-                    <button id="resetSliderBtn" class="font-label-sm text-label-sm bg-surface-blue text-primary border border-primary/20 px-4 py-2 rounded-lg hover:bg-primary-container hover:text-on-primary transition-colors">Reset</button>
+                    <button id="resetSliderBtn"
+                        class="font-label-sm text-label-sm bg-surface-blue text-primary border border-primary/20 px-4 py-2 rounded-lg hover:bg-primary-container hover:text-on-primary transition-colors">Reset</button>
                 </div>
             </section>
 
@@ -295,137 +342,207 @@
                 <!-- Cities generated dynamically by JS -->
             </section>
 
-            <div style="max-width: 1100px; margin: 40px auto 20px; padding: 0 16px; font-family: Inter, Arial, sans-serif; color: #0b1c30;">
+            <div
+                style="max-width: 1100px; margin: 40px auto 20px; padding: 0 16px; font-family: Inter, Arial, sans-serif; color: #0b1c30;">
                 <!-- Intro Section -->
-                <section style="background: #fff; border: 1px solid #c2c6d9; border-radius: 16px; padding: 32px; margin-bottom: 24px; box-shadow: 0 4px 20px rgba(15, 23, 42, 0.04);">
-                    <h2 style="font-family: 'Hanken Grotesk', sans-serif; font-size: 1.5rem; margin-top: 0; margin-bottom: 16px; color: #0b1c30; display: flex; align-items: center; gap: 10px;">
+                <section
+                    style="background: #fff; border: 1px solid #c2c6d9; border-radius: 16px; padding: 32px; margin-bottom: 24px; box-shadow: 0 4px 20px rgba(15, 23, 42, 0.04);">
+                    <h2
+                        style="font-family: 'Hanken Grotesk', sans-serif; font-size: 1.5rem; margin-top: 0; margin-bottom: 16px; color: #0b1c30; display: flex; align-items: center; gap: 10px;">
                         <i class="bi bi-globe" style="color: #0054d8;"></i>
                         What is a World Time Clock & How Does It Work?
                     </h2>
                     <p style="color: #424656; font-size: 1.05rem; line-height: 1.6; margin: 0;">
-                        Welcome to the Pepstudio World Time Clock—a dynamic, real-time global clock and timezone converter designed for international business, remote teams, travelers, and global families! Tracking time across different continents and time zones can be confusing due to Coordinated Universal Time (UTC) offsets, Daylight Saving Time (DST) changes, and international date line boundaries. Our interactive World Time dashboard displays live local time alongside a curated grid of major global financial capitals including London, New York, Tokyo, Paris, Sydney, and Dubai. With our built-in time comparison slider, you can offset hours into the future or past to easily coordinate cross-border meetings, schedule international calls, or plan travel itineraries without time zone confusion.
+                        Welcome to the Pepstudio World Time Clock—a dynamic, real-time global clock and timezone
+                        converter designed for international business, remote teams, travelers, and global families!
+                        Tracking time across different continents and time zones can be confusing due to Coordinated
+                        Universal Time (UTC) offsets, Daylight Saving Time (DST) changes, and international date line
+                        boundaries. Our interactive World Time dashboard displays live local time alongside a curated
+                        grid of major global financial capitals including London, New York, Tokyo, Paris, Sydney, and
+                        Dubai. With our built-in time comparison slider, you can offset hours into the future or past to
+                        easily coordinate cross-border meetings, schedule international calls, or plan travel
+                        itineraries without time zone confusion.
                     </p>
                 </section>
 
                 <!-- How It Works Section -->
-                <section style="background: #fff; border: 1px solid #c2c6d9; border-radius: 16px; padding: 32px; margin-bottom: 24px; box-shadow: 0 4px 20px rgba(15, 23, 42, 0.04);">
-                    <h2 style="font-family: 'Hanken Grotesk', sans-serif; font-size: 1.5rem; margin-top: 0; margin-bottom: 12px; color: #0b1c30; display: flex; align-items: center; gap: 10px;">
+                <section
+                    style="background: #fff; border: 1px solid #c2c6d9; border-radius: 16px; padding: 32px; margin-bottom: 24px; box-shadow: 0 4px 20px rgba(15, 23, 42, 0.04);">
+                    <h2
+                        style="font-family: 'Hanken Grotesk', sans-serif; font-size: 1.5rem; margin-top: 0; margin-bottom: 12px; color: #0b1c30; display: flex; align-items: center; gap: 10px;">
                         <i class="bi bi-gear-fill" style="color: #0054d8;"></i>
                         How Our Global Timezone Engine Works
                     </h2>
-                    <p style="color: #424656; margin-bottom: 20px; font-size: 0.95rem;">Our world clock algorithm syncs with high-precision time standards across all global regions:</p>
-                    
+                    <p style="color: #424656; margin-bottom: 20px; font-size: 0.95rem;">Our world clock algorithm syncs
+                        with high-precision time standards across all global regions:</p>
+
                     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px;">
-                        <div style="background: #f0f7ff; border: 1px solid #c7dcff; border-radius: 12px; padding: 20px;">
-                            <div style="font-weight: 700; color: #0054d8; margin-bottom: 8px; font-size: 1.1rem;">1. UTC Master Clock</div>
-                            <p style="color: #424656; font-size: 0.9rem; margin: 0; line-height: 1.5;">Anchors all calculations to Coordinated Universal Time (UTC) using JavaScript's native Intl.DateTimeFormat API.</p>
+                        <div
+                            style="background: #f0f7ff; border: 1px solid #c7dcff; border-radius: 12px; padding: 20px;">
+                            <div style="font-weight: 700; color: #0054d8; margin-bottom: 8px; font-size: 1.1rem;">1. UTC
+                                Master Clock</div>
+                            <p style="color: #424656; font-size: 0.9rem; margin: 0; line-height: 1.5;">Anchors all
+                                calculations to Coordinated Universal Time (UTC) using JavaScript's native
+                                Intl.DateTimeFormat API.</p>
                         </div>
-                        <div style="background: #f0f7ff; border: 1px solid #c7dcff; border-radius: 12px; padding: 20px;">
-                            <div style="font-weight: 700; color: #0054d8; margin-bottom: 8px; font-size: 1.1rem;">2. Dynamic IANA Offsets</div>
-                            <p style="color: #424656; font-size: 0.9rem; margin: 0; line-height: 1.5;">Resolves exact regional time rules (e.g. America/New_York, Asia/Tokyo) and handles Daylight Saving Time automatically.</p>
+                        <div
+                            style="background: #f0f7ff; border: 1px solid #c7dcff; border-radius: 12px; padding: 20px;">
+                            <div style="font-weight: 700; color: #0054d8; margin-bottom: 8px; font-size: 1.1rem;">2.
+                                Dynamic IANA Offsets</div>
+                            <p style="color: #424656; font-size: 0.9rem; margin: 0; line-height: 1.5;">Resolves exact
+                                regional time rules (e.g. America/New_York, Asia/Tokyo) and handles Daylight Saving Time
+                                automatically.</p>
                         </div>
-                        <div style="background: #f0f7ff; border: 1px solid #c7dcff; border-radius: 12px; padding: 20px;">
-                            <div style="font-weight: 700; color: #0054d8; margin-bottom: 8px; font-size: 1.1rem;">3. Interactive Offset Slider</div>
-                            <p style="color: #424656; font-size: 0.9rem; margin: 0; line-height: 1.5;">Modifies the active timestamp by adding or subtracting hours to show future or past time across all city cards in real-time.</p>
+                        <div
+                            style="background: #f0f7ff; border: 1px solid #c7dcff; border-radius: 12px; padding: 20px;">
+                            <div style="font-weight: 700; color: #0054d8; margin-bottom: 8px; font-size: 1.1rem;">3.
+                                Interactive Offset Slider</div>
+                            <p style="color: #424656; font-size: 0.9rem; margin: 0; line-height: 1.5;">Modifies the
+                                active timestamp by adding or subtracting hours to show future or past time across all
+                                city cards in real-time.</p>
                         </div>
                     </div>
                 </section>
 
                 <!-- FAQ Section -->
-                <section style="background: #fff; border: 1px solid #c2c6d9; border-radius: 16px; padding: 32px; margin-bottom: 24px; box-shadow: 0 4px 20px rgba(15, 23, 42, 0.04);">
-                    <h2 style="font-family: 'Hanken Grotesk', sans-serif; font-size: 1.5rem; margin-top: 0; margin-bottom: 20px; color: #0b1c30; display: flex; align-items: center; gap: 10px;">
+                <section
+                    style="background: #fff; border: 1px solid #c2c6d9; border-radius: 16px; padding: 32px; margin-bottom: 24px; box-shadow: 0 4px 20px rgba(15, 23, 42, 0.04);">
+                    <h2
+                        style="font-family: 'Hanken Grotesk', sans-serif; font-size: 1.5rem; margin-top: 0; margin-bottom: 20px; color: #0b1c30; display: flex; align-items: center; gap: 10px;">
                         <i class="bi bi-question-circle-fill" style="color: #0054d8;"></i>
                         Frequently Asked Questions
                     </h2>
-                    
+
                     <div style="display: flex; flex-direction: column; gap: 16px;">
-                        <div style="border: 1px solid #e2e8f0; border-radius: 12px; padding: 20px; background: #f8f9ff;">
-                            <h3 style="font-size: 1.05rem; font-weight: 700; margin: 0 0 8px; color: #0b1c30;">What is the difference between UTC and GMT?</h3>
-                            <p style="color: #424656; font-size: 0.95rem; margin: 0; line-height: 1.5;">UTC (Coordinated Universal Time) is the atomic time standard used worldwide, while GMT (Greenwich Mean Time) is a time zone based on the prime meridian. In practice, both share the exact same time.</p>
+                        <div
+                            style="border: 1px solid #e2e8f0; border-radius: 12px; padding: 20px; background: #f8f9ff;">
+                            <h3 style="font-size: 1.05rem; font-weight: 700; margin: 0 0 8px; color: #0b1c30;">What is
+                                the difference between UTC and GMT?</h3>
+                            <p style="color: #424656; font-size: 0.95rem; margin: 0; line-height: 1.5;">UTC (Coordinated
+                                Universal Time) is the atomic time standard used worldwide, while GMT (Greenwich Mean
+                                Time) is a time zone based on the prime meridian. In practice, both share the exact same
+                                time.</p>
                         </div>
 
-                        <div style="border: 1px solid #e2e8f0; border-radius: 12px; padding: 20px; background: #f8f9ff;">
-                            <h3 style="font-size: 1.05rem; font-weight: 700; margin: 0 0 8px; color: #0b1c30;">How does this World Clock handle Daylight Saving Time (DST)?</h3>
-                            <p style="color: #424656; font-size: 0.95rem; margin: 0; line-height: 1.5;">Our clock automatically updates for Daylight Saving Time changes in real-time based on official IANA timezone database rules for each individual city.</p>
+                        <div
+                            style="border: 1px solid #e2e8f0; border-radius: 12px; padding: 20px; background: #f8f9ff;">
+                            <h3 style="font-size: 1.05rem; font-weight: 700; margin: 0 0 8px; color: #0b1c30;">How does
+                                this World Clock handle Daylight Saving Time (DST)?</h3>
+                            <p style="color: #424656; font-size: 0.95rem; margin: 0; line-height: 1.5;">Our clock
+                                automatically updates for Daylight Saving Time changes in real-time based on official
+                                IANA timezone database rules for each individual city.</p>
                         </div>
 
-                        <div style="border: 1px solid #e2e8f0; border-radius: 12px; padding: 20px; background: #f8f9ff;">
-                            <h3 style="font-size: 1.05rem; font-weight: 700; margin: 0 0 8px; color: #0b1c30;">How do I compare time zones for cross-border meetings?</h3>
-                            <p style="color: #424656; font-size: 0.95rem; margin: 0; line-height: 1.5;">Use our "Compare Offset" slider to shift time forward or backward by hours. All city cards will instantly update to show what time it will be in each location.</p>
+                        <div
+                            style="border: 1px solid #e2e8f0; border-radius: 12px; padding: 20px; background: #f8f9ff;">
+                            <h3 style="font-size: 1.05rem; font-weight: 700; margin: 0 0 8px; color: #0b1c30;">How do I
+                                compare time zones for cross-border meetings?</h3>
+                            <p style="color: #424656; font-size: 0.95rem; margin: 0; line-height: 1.5;">Use our "Compare
+                                Offset" slider to shift time forward or backward by hours. All city cards will instantly
+                                update to show what time it will be in each location.</p>
                         </div>
 
-                        <div style="border: 1px solid #e2e8f0; border-radius: 12px; padding: 20px; background: #f8f9ff;">
-                            <h3 style="font-size: 1.05rem; font-weight: 700; margin: 0 0 8px; color: #0b1c30;">What is the International Date Line?</h3>
-                            <p style="color: #424656; font-size: 0.95rem; margin: 0; line-height: 1.5;">The International Date Line is an imaginary line located near 180° longitude. Crossing it westwards adds 24 hours (one day forward), while crossing eastwards subtracts 24 hours (one day back).</p>
+                        <div
+                            style="border: 1px solid #e2e8f0; border-radius: 12px; padding: 20px; background: #f8f9ff;">
+                            <h3 style="font-size: 1.05rem; font-weight: 700; margin: 0 0 8px; color: #0b1c30;">What is
+                                the International Date Line?</h3>
+                            <p style="color: #424656; font-size: 0.95rem; margin: 0; line-height: 1.5;">The
+                                International Date Line is an imaginary line located near 180° longitude. Crossing it
+                                westwards adds 24 hours (one day forward), while crossing eastwards subtracts 24 hours
+                                (one day back).</p>
                         </div>
                     </div>
                 </section>
 
                 <!-- Fun Facts / World Time Trivia -->
-                <section style="background: linear-gradient(135deg, #eff6ff 0%, #f0fdf4 100%); border: 1px solid #bfdbfe; border-radius: 16px; padding: 32px; margin-bottom: 24px;">
-                    <h2 style="font-family: 'Hanken Grotesk', sans-serif; font-size: 1.5rem; margin-top: 0; margin-bottom: 20px; color: #0b1c30; display: flex; align-items: center; gap: 10px;">
+                <section
+                    style="background: linear-gradient(135deg, #eff6ff 0%, #f0fdf4 100%); border: 1px solid #bfdbfe; border-radius: 16px; padding: 32px; margin-bottom: 24px;">
+                    <h2
+                        style="font-family: 'Hanken Grotesk', sans-serif; font-size: 1.5rem; margin-top: 0; margin-bottom: 20px; color: #0b1c30; display: flex; align-items: center; gap: 10px;">
                         <i class="bi bi-lightbulb-fill" style="color: #f59e0b;"></i>
                         Fun Facts & World Time Trivia
                     </h2>
-                    
+
                     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px;">
-                        <div style="background: rgba(255,255,255,0.85); padding: 16px; border-radius: 12px; border: 1px solid #dbeafe;">
-                            <h3 style="font-size: 0.95rem; font-weight: 700; margin: 0 0 6px; color: #0b1c30;">First Nation in New Year</h3>
-                            <p style="font-size: 0.88rem; color: #424656; margin: 0;">The island nation of Kiribati sits in UTC+14, making it the very first country on Earth to welcome the New Year!</p>
+                        <div
+                            style="background: rgba(255,255,255,0.85); padding: 16px; border-radius: 12px; border: 1px solid #dbeafe;">
+                            <h3 style="font-size: 0.95rem; font-weight: 700; margin: 0 0 6px; color: #0b1c30;">First
+                                Nation in New Year</h3>
+                            <p style="font-size: 0.88rem; color: #424656; margin: 0;">The island nation of Kiribati sits
+                                in UTC+14, making it the very first country on Earth to welcome the New Year!</p>
                         </div>
 
-                        <div style="background: rgba(255,255,255,0.85); padding: 16px; border-radius: 12px; border: 1px solid #dbeafe;">
-                            <h3 style="font-size: 0.95rem; font-weight: 700; margin: 0 0 6px; color: #0b1c30;">45-Minute Time Zones</h3>
-                            <p style="font-size: 0.88rem; color: #424656; margin: 0;">Nepal uses UTC+5:45—one of only three places in the world with a 45-minute fractional timezone offset!</p>
+                        <div
+                            style="background: rgba(255,255,255,0.85); padding: 16px; border-radius: 12px; border: 1px solid #dbeafe;">
+                            <h3 style="font-size: 0.95rem; font-weight: 700; margin: 0 0 6px; color: #0b1c30;">45-Minute
+                                Time Zones</h3>
+                            <p style="font-size: 0.88rem; color: #424656; margin: 0;">Nepal uses UTC+5:45—one of only
+                                three places in the world with a 45-minute fractional timezone offset!</p>
                         </div>
 
-                        <div style="background: rgba(255,255,255,0.85); padding: 16px; border-radius: 12px; border: 1px solid #dbeafe;">
-                            <h3 style="font-size: 0.95rem; font-weight: 700; margin: 0 0 6px; color: #0b1c30;">China's Single Time Zone</h3>
-                            <p style="font-size: 0.88rem; color: #424656; margin: 0;">Despite spanning 5 geographical time zones, China officially operates on one single nationwide timezone: Beijing Time (UTC+8).</p>
+                        <div
+                            style="background: rgba(255,255,255,0.85); padding: 16px; border-radius: 12px; border: 1px solid #dbeafe;">
+                            <h3 style="font-size: 0.95rem; font-weight: 700; margin: 0 0 6px; color: #0b1c30;">China's
+                                Single Time Zone</h3>
+                            <p style="font-size: 0.88rem; color: #424656; margin: 0;">Despite spanning 5 geographical
+                                time zones, China officially operates on one single nationwide timezone: Beijing Time
+                                (UTC+8).</p>
                         </div>
 
-                        <div style="background: rgba(255,255,255,0.85); padding: 16px; border-radius: 12px; border: 1px solid #dbeafe;">
-                            <h3 style="font-size: 0.95rem; font-weight: 700; margin: 0 0 6px; color: #0b1c30;">Space Station Time</h3>
-                            <p style="font-size: 0.88rem; color: #424656; margin: 0;">Astronauts aboard the International Space Station see 16 sunrises a day and operate strictly on UTC time!</p>
+                        <div
+                            style="background: rgba(255,255,255,0.85); padding: 16px; border-radius: 12px; border: 1px solid #dbeafe;">
+                            <h3 style="font-size: 0.95rem; font-weight: 700; margin: 0 0 6px; color: #0b1c30;">Space
+                                Station Time</h3>
+                            <p style="font-size: 0.88rem; color: #424656; margin: 0;">Astronauts aboard the
+                                International Space Station see 16 sunrises a day and operate strictly on UTC time!</p>
                         </div>
                     </div>
                 </section>
 
                 <!-- Related Tools Grid -->
-                <section style="background: #fff; border: 1px solid #c2c6d9; border-radius: 16px; padding: 32px; margin-bottom: 24px; box-shadow: 0 4px 20px rgba(15, 23, 42, 0.04);">
-                    <h2 style="font-family: 'Hanken Grotesk', sans-serif; font-size: 1.5rem; margin-top: 0; margin-bottom: 8px; color: #0b1c30; display: flex; align-items: center; gap: 10px;">
+                <section
+                    style="background: #fff; border: 1px solid #c2c6d9; border-radius: 16px; padding: 32px; margin-bottom: 24px; box-shadow: 0 4px 20px rgba(15, 23, 42, 0.04);">
+                    <h2
+                        style="font-family: 'Hanken Grotesk', sans-serif; font-size: 1.5rem; margin-top: 0; margin-bottom: 8px; color: #0b1c30; display: flex; align-items: center; gap: 10px;">
                         <i class="bi bi-grid-3x3-gap-fill" style="color: #0054d8;"></i>
                         Explore More Pepstudio Utility Tools
                     </h2>
-                    <p style="color: #424656; margin-bottom: 20px; font-size: 0.95rem;">Check out our other fast, free, and accurate online calculation tools:</p>
+                    <p style="color: #424656; margin-bottom: 20px; font-size: 0.95rem;">Check out our other fast, free,
+                        and accurate online calculation tools:</p>
 
                     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 16px;">
-                        <a href="../age-calculator/index.html" style="text-decoration: none; display: flex; flex-direction: column; align-items: center; gap: 8px; padding: 16px; border: 1px solid #e2e8f0; border-radius: 12px; background: #f8f9ff; color: #0b1c30; transition: all 0.2s ease;">
+                        <a href="../age-calculator/index.html"
+                            style="text-decoration: none; display: flex; flex-direction: column; align-items: center; gap: 8px; padding: 16px; border: 1px solid #e2e8f0; border-radius: 12px; background: #f8f9ff; color: #0b1c30; transition: all 0.2s ease;">
                             <i class="bi bi-calendar3" style="font-size: 1.5rem; color: #0054d8;"></i>
                             <span style="font-size: 0.88rem; font-weight: 600;">Age Calculator</span>
                         </a>
 
-                        <a href="../bmi-calculator/index.html" style="text-decoration: none; display: flex; flex-direction: column; align-items: center; gap: 8px; padding: 16px; border: 1px solid #e2e8f0; border-radius: 12px; background: #f8f9ff; color: #0b1c30; transition: all 0.2s ease;">
+                        <a href="../bmi-calculator/index.html"
+                            style="text-decoration: none; display: flex; flex-direction: column; align-items: center; gap: 8px; padding: 16px; border: 1px solid #e2e8f0; border-radius: 12px; background: #f8f9ff; color: #0b1c30; transition: all 0.2s ease;">
                             <i class="bi bi-heart-pulse-fill" style="font-size: 1.5rem; color: #0054d8;"></i>
                             <span style="font-size: 0.88rem; font-weight: 600;">BMI Calculator</span>
                         </a>
 
-                        <a href="../emi-calculator/index.html" style="text-decoration: none; display: flex; flex-direction: column; align-items: center; gap: 8px; padding: 16px; border: 1px solid #e2e8f0; border-radius: 12px; background: #f8f9ff; color: #0b1c30; transition: all 0.2s ease;">
+                        <a href="../emi-calculator/index.html"
+                            style="text-decoration: none; display: flex; flex-direction: column; align-items: center; gap: 8px; padding: 16px; border: 1px solid #e2e8f0; border-radius: 12px; background: #f8f9ff; color: #0b1c30; transition: all 0.2s ease;">
                             <i class="bi bi-calculator-fill" style="font-size: 1.5rem; color: #0054d8;"></i>
                             <span style="font-size: 0.88rem; font-weight: 600;">EMI Calculator</span>
                         </a>
 
-                        <a href="../love-calculator/index.html" style="text-decoration: none; display: flex; flex-direction: column; align-items: center; gap: 8px; padding: 16px; border: 1px solid #e2e8f0; border-radius: 12px; background: #f8f9ff; color: #0b1c30; transition: all 0.2s ease;">
+                        <a href="../love-calculator/index.html"
+                            style="text-decoration: none; display: flex; flex-direction: column; align-items: center; gap: 8px; padding: 16px; border: 1px solid #e2e8f0; border-radius: 12px; background: #f8f9ff; color: #0b1c30; transition: all 0.2s ease;">
                             <i class="bi bi-suit-heart-fill" style="font-size: 1.5rem; color: #e11d48;"></i>
                             <span style="font-size: 0.88rem; font-weight: 600;">Love Calculator</span>
                         </a>
 
-                        <a href="../percentage-calculator/index.html" style="text-decoration: none; display: flex; flex-direction: column; align-items: center; gap: 8px; padding: 16px; border: 1px solid #e2e8f0; border-radius: 12px; background: #f8f9ff; color: #0b1c30; transition: all 0.2s ease;">
+                        <a href="../percentage-calculator/index.html"
+                            style="text-decoration: none; display: flex; flex-direction: column; align-items: center; gap: 8px; padding: 16px; border: 1px solid #e2e8f0; border-radius: 12px; background: #f8f9ff; color: #0b1c30; transition: all 0.2s ease;">
                             <i class="bi bi-percent" style="font-size: 1.5rem; color: #0054d8;"></i>
                             <span style="font-size: 0.88rem; font-weight: 600;">Percentage Calc</span>
                         </a>
 
-                        <a href="../unit-converter/index.html" style="text-decoration: none; display: flex; flex-direction: column; align-items: center; gap: 8px; padding: 16px; border: 1px solid #e2e8f0; border-radius: 12px; background: #f8f9ff; color: #0b1c30; transition: all 0.2s ease;">
+                        <a href="../unit-converter/index.html"
+                            style="text-decoration: none; display: flex; flex-direction: column; align-items: center; gap: 8px; padding: 16px; border: 1px solid #e2e8f0; border-radius: 12px; background: #f8f9ff; color: #0b1c30; transition: all 0.2s ease;">
                             <i class="bi bi-arrow-left-right" style="font-size: 1.5rem; color: #0054d8;"></i>
                             <span style="font-size: 0.88rem; font-weight: 600;">Unit Converter</span>
                         </a>
@@ -433,16 +550,21 @@
                 </section>
 
                 <!-- Disclaimer -->
-                <section style="background: #f1f5f9; border: 1px solid #cbd5e1; border-radius: 12px; padding: 16px; text-align: center;">
+                <section
+                    style="background: #f1f5f9; border: 1px solid #cbd5e1; border-radius: 12px; padding: 16px; text-align: center;">
                     <p style="margin: 0; font-size: 0.85rem; color: #475569; line-height: 1.4;">
-                        <strong style="color: #0f172a;">Accuracy Disclaimer:</strong> This World Time clock is updated continuously using standardized timezone algorithms. For flight scheduling, satellite coordination, or legal deadlines, always verify times with official regional transport authorities.
+                        <strong style="color: #0f172a;">Accuracy Disclaimer:</strong> This World Time clock is updated
+                        continuously using standardized timezone algorithms. For flight scheduling, satellite
+                        coordination, or legal deadlines, always verify times with official regional transport
+                        authorities.
                     </p>
                 </section>
             </div>
         </div>
     </main>
 
-        <script async="async" data-cfasync="false" src="https://pl30906368.effectivecpmnetwork.com/8a2d1571ba90f6bbccb31ff901a105a7/invoke.js"></script>
+    <script async="async" data-cfasync="false"
+        src="https://pl30906368.effectivecpmnetwork.com/8a2d1571ba90f6bbccb31ff901a105a7/invoke.js"></script>
     <div id="container-8a2d1571ba90f6bbccb31ff901a105a7"></div>
     <footer class="site-footer">
         <div class="footer-container">
@@ -451,10 +573,13 @@
                     <a href="../index.html" class="footer-logo" title="pepstudio.xyz Home">
                         <img src="../images/pepstudio.png" alt="pepstudio.xyz logo">
                     </a>
-                    <p class="footer-tagline">Your all-in-one suite of 100% free online calculator & utility tools. Fast, accurate, and easy to use.</p>
+                    <p class="footer-tagline">Your all-in-one suite of 100% free online calculator & utility tools.
+                        Fast, accurate, and easy to use.</p>
                     <div class="footer-social">
-                        <a href="https://www.linkedin.com/in/sonu-murmu-60479a268/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
-                        <a href="https://www.instagram.com/sonu_murm_/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/sonu-murmu-60479a268/" target="_blank"
+                            rel="noopener noreferrer" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                        <a href="https://www.instagram.com/sonu_murm_/" target="_blank" rel="noopener noreferrer"
+                            aria-label="Instagram"><i class="bi bi-instagram"></i></a>
                     </div>
                 </div>
 
@@ -513,4 +638,5 @@
 
     <script src="../js/world-time.js"></script>
 </body>
+
 </html>
