@@ -44,7 +44,15 @@
         </div>
 
         <section class="home-tools" aria-label="Calculator tools">
-            <div class="calculators-grid">
+            <!-- Search Box -->
+            <div class="home-search-container">
+                <div class="home-search-wrapper">
+                    <i class="bi bi-search home-search-icon"></i>
+                    <input type="text" id="toolSearchInput" class="home-search-input" placeholder="Search tools (e.g. Age, BMI, EMI, Unit)..." data-i18n="search_tools_placeholder" aria-label="Search tools">
+                </div>
+            </div>
+
+            <div class="calculators-grid" id="calculatorsGrid">
                 <a href="./age-calculator/index.html" class="calc-card"><span class="emoji"
                         aria-hidden="true">&#128197;</span>
                     <h2 data-i18n="age_calc_title">Age Calculator</h2>
@@ -80,14 +88,47 @@
                     <h2 data-i18n="love_calc_title">Love Calculator</h2>
                     <p data-i18n="love_calc_desc">Calculate love and compatibility percentage between two names</p>
                 </a>
+                <div id="noResultsMsg" class="no-results-msg" data-i18n="no_tools_found">No matching tools found.</div>
             </div>
         </section>
 
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                const searchInput = document.getElementById('toolSearchInput');
+                const cards = document.querySelectorAll('#calculatorsGrid .calc-card');
+                const noResultsMsg = document.getElementById('noResultsMsg');
+
+                if (searchInput) {
+                    searchInput.addEventListener('input', function () {
+                        const query = searchInput.value.toLowerCase().trim();
+                        let visibleCount = 0;
+
+                        cards.forEach(card => {
+                            const title = card.querySelector('h2') ? card.querySelector('h2').textContent.toLowerCase() : '';
+                            const desc = card.querySelector('p') ? card.querySelector('p').textContent.toLowerCase() : '';
+
+                            if (title.includes(query) || desc.includes(query)) {
+                                card.style.display = 'flex';
+                                visibleCount++;
+                            } else {
+                                card.style.display = 'none';
+                            }
+                        });
+
+                        if (noResultsMsg) {
+                            noResultsMsg.style.display = visibleCount === 0 ? 'block' : 'none';
+                        }
+                    });
+                }
+            });
+        </script>
+
     </main>
 
-    <script async="async" data-cfasync="false"
-        src="https://pl30906368.effectivecpmnetwork.com/8a2d1571ba90f6bbccb31ff901a105a7/invoke.js"></script>
-    <div id="container-8a2d1571ba90f6bbccb31ff901a105a7"></div>
+    <div class="native-ad-wrapper">
+        <script async="async" data-cfasync="false" src="https://pl30906368.effectivecpmnetwork.com/8a2d1571ba90f6bbccb31ff901a105a7/invoke.js"></script>
+        <div id="container-8a2d1571ba90f6bbccb31ff901a105a7"></div>
+    </div>
     <footer class="site-footer">
         <div class="footer-container">
             <div class="footer-grid">
