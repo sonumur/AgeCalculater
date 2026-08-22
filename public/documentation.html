@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Technical documentation and usage guide for pepstudio tools. Learn about our calculation formulas, privacy architecture, and zero-latency client-side engine.">
+    <title>Technical Documentation & System Guide | pepstudio</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@600;700&family=Inter:wght@400;500;600;700&display=swap">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="./images/favicon.svg">
+    <style>
+        html, body {
+            background: #f8f9ff !important;
+            background-color: #f8f9ff !important;
+            background-image: none !important;
+        }
+
+        main.doc-page {
+            background: #f8f9ff !important;
+            background-color: #f8f9ff !important;
+            background-image: none !important;
+            padding: 48px 16px !important;
+            font-family: Inter, Arial, sans-serif;
+            color: #0b1c30;
+        }
+
+        .doc-card {
+            background: #ffffff;
+            border: 1px solid #e0e6ed;
+            border-radius: 16px;
+            padding: 32px;
+            box-shadow: 0 4px 20px rgba(11, 28, 48, 0.04);
+            margin-bottom: 28px;
+        }
+
+        .doc-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 4px 12px;
+            background-color: #e0e8ff;
+            color: #004cca;
+            border-radius: 20px;
+            font-size: 0.82rem;
+            font-weight: 600;
+            margin-bottom: 16px;
+        }
+
+        .formula-box {
+            background: #0b1c30;
+            color: #e0e8ff;
+            padding: 16px 20px;
+            border-radius: 10px;
+            font-family: monospace;
+            font-size: 0.95rem;
+            margin: 16px 0;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <a href="./index.html" title="Home">
+            <img src="images/pepstudio.png" alt="pepstudio logo">
+        </a>
+    </header>
+
+    <main class="doc-page">
+        <div class="max-w-4xl mx-auto">
+            <!-- Page Title Header -->
+            <div class="text-center mb-12">
+                <span class="doc-badge" data-i18n="doc_system_badge">
+                    <span class="material-symbols-outlined text-sm">menu_book</span> User Guide & Specifications
+                </span>
+                <h1 class="text-3xl md:text-4xl font-bold text-[#0b1c30] mb-4" data-i18n="doc_main_title">
+                    Pepstudio Technical Documentation & System Guide
+                </h1>
+                <p class="text-slate-600 text-lg max-w-2xl mx-auto" data-i18n="doc_main_subtitle">
+                    A comprehensive guide to our precision calculation engine, mathematical models, client-side privacy architecture, and utility suite functionality.
+                </p>
+            </div>
+
+            <!-- Section 1: Architecture & Privacy -->
+            <section class="doc-card">
+                <h2 class="text-2xl font-bold text-[#0b1c30] mb-4 flex items-center gap-2" data-i18n="doc_sec1_title">
+                    <span class="material-symbols-outlined text-blue-600">memory</span> 1. System Architecture & Zero-Knowledge Privacy
+                </h2>
+                <p class="text-slate-700 leading-relaxed mb-4" data-i18n="doc_sec1_p1">
+                    Every tool across the pepstudio suite is engineered with a client-first paradigm. Unlike legacy web converters and financial utility sites that transmit form inputs to remote backend servers, pepstudio performs 100% of computational logic inside your local browser runtime.
+                </p>
+                <p class="text-slate-700 leading-relaxed mb-4" data-i18n="doc_sec1_p2">
+                    When you input your date of birth, loan principal, or personal metrics, no HTTP request contains your data. This architecture delivers two fundamental benefits:
+                </p>
+                <ul class="list-disc pl-6 text-slate-700 space-y-2 mb-4">
+                    <li data-i18n="doc_sec1_li1"><strong>Zero Latency:</strong> Output calculations are rendered instantly upon keypress, bound only by client CPU evaluation speed.</li>
+                    <li data-i18n="doc_sec1_li2"><strong>Cryptographic Privacy:</strong> Confidential financial figures and health indicators never leave your device.</li>
+                </ul>
+            </section>
+
+            <!-- Section 2: Mathematical Models & Formulas -->
+            <section class="doc-card">
+                <h2 class="text-2xl font-bold text-[#0b1c30] mb-6 flex items-center gap-2" data-i18n="doc_sec2_title">
+                    <span class="material-symbols-outlined text-blue-600">functions</span> 2. Calculation Models & Mathematical Specifications
+                </h2>
+
+                <!-- Age Calculator Guide -->
+                <div class="border-b border-slate-200 pb-6 mb-6">
+                    <h3 class="text-xl font-bold text-[#0b1c30] mb-2 flex items-center gap-2" data-i18n="doc_age_heading">
+                        🎂 Chronological Age & Anniversary Algorithm
+                    </h3>
+                    <p class="text-slate-700 leading-relaxed mb-3" data-i18n="doc_age_desc">
+                        Our age calculation algorithm calculates exact elapsed time between birth date $D_1$ and target date $D_2$, accounting for variable month lengths (28 to 31 days) and Gregorian leap year adjustments ($Y \bmod 4 = 0 \land (Y \bmod 100 \neq 0 \lor Y \bmod 400 = 0)$).
+                    </p>
+                    <div class="formula-box">
+                        Age(Y, M, D) = ElapsedYears(D_1, D_2) + ElapsedMonths(D_1, D_2) + ElapsedDays(D_1, D_2)
+                    </div>
+                </div>
+
+                <!-- BMI Calculator Guide -->
+                <div class="border-b border-slate-200 pb-6 mb-6">
+                    <h3 class="text-xl font-bold text-[#0b1c30] mb-2 flex items-center gap-2" data-i18n="doc_bmi_heading">
+                        ⚖️ Body Mass Index (BMI) & WHO Classification
+                    </h3>
+                    <p class="text-slate-700 leading-relaxed mb-3" data-i18n="doc_bmi_desc">
+                        Body Mass Index evaluates height-to-weight proportions according to World Health Organization (WHO) standards:
+                    </p>
+                    <div class="formula-box">
+                        BMI = \frac{\text{weight (kg)}}{\text{height (m)}^2}
+                    </div>
+                    <p class="text-slate-700 text-sm" data-i18n="doc_bmi_cats">
+                        Categories: Underweight (&lt; 18.5), Normal (18.5 – 24.9), Overweight (25 – 29.9), Obese (&ge; 30).
+                    </p>
+                </div>
+
+                <!-- EMI Calculator Guide -->
+                <div class="border-b border-slate-200 pb-6 mb-6">
+                    <h3 class="text-xl font-bold text-[#0b1c30] mb-2 flex items-center gap-2" data-i18n="doc_emi_heading">
+                        🏦 Equated Monthly Installment (EMI) Formula
+                    </h3>
+                    <p class="text-slate-700 leading-relaxed mb-3" data-i18n="doc_emi_desc">
+                        Loan payments utilize the standard actuarial monthly compounding annuity model:
+                    </p>
+                    <div class="formula-box">
+                        EMI = P \times r \times \frac{(1 + r)^n}{(1 + r)^n - 1}
+                    </div>
+                    <p class="text-slate-700 text-sm" data-i18n="doc_emi_params">
+                        Where $P$ is principal loan amount, $r$ is monthly interest rate ($\text{annual rate} / 12 / 100$), and $n$ is total months ($\text{tenure in years} \times 12$).
+                    </p>
+                </div>
+
+                <!-- Unit Converter Guide -->
+                <div class="border-b border-slate-200 pb-6 mb-6">
+                    <h3 class="text-xl font-bold text-[#0b1c30] mb-2 flex items-center gap-2" data-i18n="doc_unit_heading">
+                        📐 Unit Conversion & Arbitrary-Precision Scaling
+                    </h3>
+                    <p class="text-slate-700 leading-relaxed mb-3" data-i18n="doc_unit_desc">
+                        Unit conversions rely on standardized SI base unit conversion matrices (e.g. converting length through meters as intermediate standard), eliminating floating-point rounding inaccuracies.
+                    </p>
+                </div>
+
+                <!-- World Time Guide -->
+                <div>
+                    <h3 class="text-xl font-bold text-[#0b1c30] mb-2 flex items-center gap-2" data-i18n="doc_time_heading">
+                        🌐 World Time & IANA Time Zone Synchronization
+                    </h3>
+                    <p class="text-slate-700 leading-relaxed" data-i18n="doc_time_desc">
+                        World Time computations utilize the `Intl.DateTimeFormat` engine synced with official IANA Time Zone Database specifications, automatically adjusting for Daylight Saving Time (DST) transitions globally.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Section 3: Browser Compatibility & Offline Usage -->
+            <section class="doc-card">
+                <h2 class="text-2xl font-bold text-[#0b1c30] mb-4 flex items-center gap-2" data-i18n="doc_sec3_title">
+                    <span class="material-symbols-outlined text-blue-600">wifi_off</span> 3. Offline Mode & PWA Capabilities
+                </h2>
+                <p class="text-slate-700 leading-relaxed mb-4" data-i18n="doc_sec3_p">
+                    Pepstudio web tools are fully compatible with Progressive Web App (PWA) caching standards. Once you load a tool page, script logic is cached in your browser's local cache storage, enabling full offline operation when internet connectivity is unavailable.
+                </p>
+            </section>
+
+            <!-- Back to Tools Button -->
+            <div class="text-center mt-8">
+                <a href="./index.html" class="inline-flex items-center gap-2 px-8 py-3 bg-[#0062ff] text-white font-semibold rounded-lg hover:bg-[#004cca] transition-colors" data-i18n="doc_back_btn">
+                    <span class="material-symbols-outlined text-sm">arrow_back</span> Back to Pepstudio Utilities
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Ad Container -->
+    <div class="ad-container text-center my-6">
+        <script type="text/javascript">
+            atOptions = {
+                'key': '7783935ecfebe259f333333333333333',
+                'format': 'iframe',
+                'height': 90,
+                'width': 728,
+                'params': {}
+            };
+        </script>
+    </div>
+
+    <!-- Site Footer -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="./index.html" class="footer-logo">
+                        <img src="images/pepstudio.png" alt="pepstudio" data-i18n-alt="home">
+                    </a>
+                    <p class="footer-tagline" data-i18n="footer_tagline">Your all-in-one suite of 100% free online calculators and utility tools. Fast, accurate, and easy to use.</p>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-heading" data-i18n="footer_calc_suite">Calculators Suite</h4>
+                    <ul class="footer-links">
+                        <li><a href="./age-calculator/index.html" data-i18n="age_calc_title">Age Calculator</a></li>
+                        <li><a href="./bmi-calculator/index.html" data-i18n="bmi_calc_title">BMI Calculator</a></li>
+                        <li><a href="./emi-calculator/index.html" data-i18n="emi_calc_title">EMI Calculator</a></li>
+                        <li><a href="./unit-converter/index.html" data-i18n="unit_conv_title">Unit Converter</a></li>
+                        <li><a href="./percentage-calculator/index.html" data-i18n="perc_calc_title">Percentage Calculator</a></li>
+                        <li><a href="./world-time/index.html" data-i18n="world_time_title">World Time</a></li>
+                        <li><a href="./love-calculator/index.html" data-i18n="love_calc_title">Love Calculator</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-heading" data-i18n="footer_company_legal">Company & Legal</h4>
+                    <ul class="footer-links">
+                        <li><a href="./about-us.html" data-i18n="footer_about">About Us</a></li>
+                        <li><a href="./documentation.html" data-i18n="about_read_doc_btn">Documentation</a></li>
+                        <li><a href="./privacy-policy.html" data-i18n="footer_privacy">Privacy Policy</a></li>
+                        <li><a href="./terms-of-service.html" data-i18n="footer_terms">Terms of Service</a></li>
+                        <li><a href="./dmca.html" data-i18n="footer_dmca">DMCA</a></li>
+                        <li><a href="./site-map.html" data-i18n="footer_sitemap">Site-Map</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-heading" data-i18n="footer_why_pepstudio">Why Pepstudio?</h4>
+                    <div class="footer-badge-list">
+                        <div class="footer-badge-item">
+                            <i class="bi bi-shield-check"></i>
+                            <span data-i18n="footer_free_private">100% Free & Private</span>
+                        </div>
+                        <div class="footer-badge-item">
+                            <i class="bi bi-lightning-charge"></i>
+                            <span data-i18n="footer_instant">Instant Results</span>
+                        </div>
+                        <div class="footer-badge-item">
+                            <i class="bi bi-person-x"></i>
+                            <span data-i18n="footer_no_reg">No Registration</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 pepstudio.xyz. All rights reserved.</p>
+                <a href="#" class="back-to-top" data-i18n="footer_back_to_top">Back to top <i class="bi bi-arrow-up"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/i18n.js"></script>
+    <script type="text/javascript" src="//www.highperformanceformat.com/ef30eeec6a666e6c7104b2b64a27bc19/invoke.js"></script>
+</body>
+
+</html>

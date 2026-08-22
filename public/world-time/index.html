@@ -47,6 +47,7 @@
 
         .time-slider {
             -webkit-appearance: none;
+            appearance: none;
             width: 100%;
             height: 8px;
             border-radius: 4px;
@@ -268,8 +269,8 @@
         <div class="world-time-shell flex flex-col gap-8">
             <!-- Hero Section -->
             <section class="flex flex-col items-center text-center space-y-4 pt-4 pb-6">
-                <h1 class="font-display-lg text-display-lg text-primary tracking-tight">World Time</h1>
-                <p class="font-body-lg text-body-lg text-secondary max-w-2xl">Coordinate global meetings and track time
+                <h1 class="font-display-lg text-display-lg text-primary tracking-tight" data-i18n="world_time_title">World Time</h1>
+                <p class="font-body-lg text-body-lg text-secondary max-w-2xl" data-i18n="world_time_desc">Coordinate global meetings and track time
                     across different zones with absolute precision.</p>
 
                 <!-- Local Time Banner Card -->
@@ -584,43 +585,43 @@
                 </div>
 
                 <div class="footer-col">
-                    <h3 class="footer-heading">Calculator Suite</h3>
+                    <h3 class="footer-heading" data-i18n="footer_calc_suite">Calculator Suite</h3>
                     <ul class="footer-links">
-                        <li><a href="../age-calculator/index.html">Age Calculator</a></li>
-                        <li><a href="../bmi-calculator/index.html">BMI Calculator</a></li>
-                        <li><a href="../emi-calculator/index.html">EMI Calculator</a></li>
-                        <li><a href="../unit-converter/index.html">Unit Converter</a></li>
-                        <li><a href="../percentage-calculator/index.html">Percentage Calculator</a></li>
-                        <li><a href="../world-time/index.html">World Time</a></li>
-                        <li><a href="../love-calculator/index.html">Love Calculator</a></li>
+                        <li><a href="../age-calculator/index.html" data-i18n="age_calc_title">Age Calculator</a></li>
+                        <li><a href="../bmi-calculator/index.html" data-i18n="bmi_calc_title">BMI Calculator</a></li>
+                        <li><a href="../emi-calculator/index.html" data-i18n="emi_calc_title">EMI Calculator</a></li>
+                        <li><a href="../unit-converter/index.html" data-i18n="unit_conv_title">Unit Converter</a></li>
+                        <li><a href="../percentage-calculator/index.html" data-i18n="perc_calc_title">Percentage Calculator</a></li>
+                        <li><a href="../world-time/index.html" data-i18n="world_time_title">World Time</a></li>
+                        <li><a href="../love-calculator/index.html" data-i18n="love_calc_title">Love Calculator</a></li>
                     </ul>
                 </div>
 
                 <div class="footer-col">
-                    <h3 class="footer-heading">Company & Legal</h3>
+                    <h3 class="footer-heading" data-i18n="footer_company_legal">Company & Legal</h3>
                     <ul class="footer-links">
-                        <li><a href="../about-us.html">About Us</a></li>
-                        <li><a href="../privacy-policy.html">Privacy Policy</a></li>
-                        <li><a href="../terms-of-service.html">Terms of Service</a></li>
-                        <li><a href="../dmca.html">DMCA</a></li>
-                        <li><a href="../site-map.html">Site-Map</a></li>
+                        <li><a href="../about-us.html" data-i18n="footer_about">About Us</a></li>
+                        <li><a href="../privacy-policy.html" data-i18n="footer_privacy">Privacy Policy</a></li>
+                        <li><a href="../terms-of-service.html" data-i18n="footer_terms">Terms of Service</a></li>
+                        <li><a href="../dmca.html" data-i18n="footer_dmca">DMCA</a></li>
+                        <li><a href="../site-map.html" data-i18n="footer_sitemap">Site-Map</a></li>
                     </ul>
                 </div>
 
                 <div class="footer-col">
-                    <h3 class="footer-heading">Why Pepstudio?</h3>
+                    <h3 class="footer-heading" data-i18n="footer_why_pepstudio">Why Pepstudio?</h3>
                     <div class="footer-badge-list">
                         <div class="footer-badge-item">
                             <i class="bi bi-shield-check"></i>
-                            <span>100% Free & Private</span>
+                            <span data-i18n="footer_free_private">100% Free & Private</span>
                         </div>
                         <div class="footer-badge-item">
                             <i class="bi bi-lightning-charge-fill"></i>
-                            <span>Instant Results</span>
+                            <span data-i18n="footer_instant">Instant Results</span>
                         </div>
                         <div class="footer-badge-item">
                             <i class="bi bi-device-hdd-fill"></i>
-                            <span>No Registration</span>
+                            <span data-i18n="footer_no_reg">No Registration</span>
                         </div>
                     </div>
                 </div>
@@ -629,13 +630,14 @@
             <div class="footer-bottom">
                 <p>&copy; 2026 pepstudio <span class="heart">&hearts;</span>. All rights reserved.</p>
                 <a href="#top" class="back-to-top" aria-label="Back to top">
-                    <span>Back to top</span>
+                    <span data-i18n="footer_back_to_top">Back to top</span>
                     <i class="bi bi-arrow-up-short"></i>
                 </a>
             </div>
         </div>
     </footer>
 
+    <script src="../js/i18n.js"></script>
     <script src="../js/world-time.js"></script>
 </body>
 
