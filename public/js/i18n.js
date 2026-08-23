@@ -785,35 +785,27 @@
                         </div>
                         <nav class="pep-drawer-nav">
                             <a href="${getRelativePath('index.html')}" class="pep-drawer-link">
-                                <span class="pep-nav-icon">🏠</span>
                                 <span data-i18n="home">Home</span>
                             </a>
                             <a href="${getRelativePath('age-calculator/index.html')}" class="pep-drawer-link">
-                                <span class="pep-nav-icon">🎂</span>
                                 <span data-i18n="age_calc_title">Age Calculator</span>
                             </a>
                             <a href="${getRelativePath('bmi-calculator/index.html')}" class="pep-drawer-link">
-                                <span class="pep-nav-icon">⚖️</span>
                                 <span data-i18n="bmi_calc_title">BMI Calculator</span>
                             </a>
                             <a href="${getRelativePath('emi-calculator/index.html')}" class="pep-drawer-link">
-                                <span class="pep-nav-icon">🏦</span>
                                 <span data-i18n="emi_calc_title">EMI Calculator</span>
                             </a>
                             <a href="${getRelativePath('unit-converter/index.html')}" class="pep-drawer-link">
-                                <span class="pep-nav-icon">📐</span>
                                 <span data-i18n="unit_conv_title">Unit Converter</span>
                             </a>
                             <a href="${getRelativePath('percentage-calculator/index.html')}" class="pep-drawer-link">
-                                <span class="pep-nav-icon">📊</span>
                                 <span data-i18n="perc_calc_title">Percentage Calculator</span>
                             </a>
                             <a href="${getRelativePath('world-time/index.html')}" class="pep-drawer-link">
-                                <span class="pep-nav-icon">🌐</span>
                                 <span data-i18n="world_time_title">World Time</span>
                             </a>
                             <a href="${getRelativePath('love-calculator/index.html')}" class="pep-drawer-link">
-                                <span class="pep-nav-icon">❤️</span>
                                 <span data-i18n="love_calc_title">Love Calculator</span>
                             </a>
                             <div class="pep-drawer-divider"></div>
