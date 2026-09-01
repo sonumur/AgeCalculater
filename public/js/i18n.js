@@ -3,29 +3,33 @@
  * Supports: English (en), Spanish (es), French (fr), German (de), Hindi (hi), Chinese (zh)
  */
 (function () {
+
     const translations = {
         en: {
             "select_language": "Language",
             "home": "Home",
-            "hero_title": "Welcome to 100% Free Tools site",
-            "hero_subtitle": "Your all-in-one online calculator suite. Fast, reliable, and entirely free.",
+            "hero_title": "Welcome to 100% Free Tools | Free Online Calculators & Tools",
+            "hero_subtitle": "Your go-to free calculator website. Get instant results with our fast, accurate, and 100% free online calculator suite.",
             "search_tools_placeholder": "Search tools (e.g. Age, BMI, EMI, Unit)...",
             "no_tools_found": "No matching tools found.",
-            
-            "age_calc_title": "Age Calculator",
-            "age_calc_desc": "Calculate your exact age in years, months, and days",
-            "bmi_calc_title": "BMI Calculator",
-            "bmi_calc_desc": "Calculate your Body Mass Index and health status",
-            "emi_calc_title": "EMI Calculator",
-            "emi_calc_desc": "Calculate your monthly EMI for loans and mortgages",
-            "unit_conv_title": "Unit Converter",
-            "unit_conv_desc": "Convert between various units of measurement",
-            "perc_calc_title": "Percentage Calculator",
-            "perc_calc_desc": "Calculate percentages and percentage changes",
-            "world_time_title": "World Time",
-            "world_time_desc": "Check current time in different time zones worldwide",
-            "love_calc_title": "Love Calculator",
-            "love_calc_desc": "Calculate love and compatibility percentage between two names",
+
+            "age_calc_title": "Age Calculator | Free Online Age Calculator",
+            "age_calc_desc": "Calculate your exact age in years, months, and days instantly. Use our free online age calculator for accurate results in seconds — no sign-up required.",
+            "bmi_calc_title": "BMI Calculator | Free Online BMI Calculator",
+            "bmi_calc_desc": "Calculate your Body Mass Index instantly with our free online BMI calculator. A simple, judgment-free way to check in with your body — accurate results in seconds, no sign-up required.",
+            "bmi_intro_p": "Calculate your Body Mass Index instantly with our free online BMI calculator. A simple, judgment-free way to check in with your body — accurate results in seconds, no sign-up required.",
+            "emi_calc_title": "EMI Calculator | Free Online EMI Calculator",
+            "emi_calc_desc": "Calculate your loan EMI instantly with our free online EMI calculator. See exactly what your monthly payment will be and understand the full cost of borrowing — clear results without the jargon, no sign-up required.",
+            "emi_intro_p": "Calculate your loan EMI instantly with our free online EMI calculator. See exactly what your monthly payment will be and understand the full cost of borrowing — clear results without the jargon, no sign-up required.",
+            "unit_conv_title": "Unit Converter | Free Online Unit Converter",
+            "unit_conv_desc": "Convert between various units of measurement instantly with our free online unit converter. Fast, accurate, and easy unit conversions for length, weight, temperature, and more — no sign-up required.",
+            "perc_calc_title": "Percentage Calculator | Free Online Percentage Calculator",
+            "perc_calc_desc": "Calculate percentages and percentage changes instantly with our free online percentage calculator. Fast, accurate results for any percentage calculation — no sign-up required.",
+            "perc_intro_p": "Calculate percentages and percentage changes instantly with our free online percentage calculator. Fast, accurate results for any percentage calculation — no sign-up required.",
+            "world_time_title": "World Time | Free Online World Clock",
+            "world_time_desc": "Check the current time in different time zones worldwide instantly with our free online world clock. View accurate local times across countries and cities — no sign-up required.",
+            "love_calc_title": "Love Calculator ❤️ | Free Online Love Calculator",
+            "love_calc_desc": "Calculate love and compatibility percentage between two names instantly with our free online love calculator. Fun, quick results for any pair of names — no sign-up required.",
 
             "details": "Details",
             "calculate": "Calculate",
@@ -71,7 +75,7 @@
             "footer_back_to_top": "Back to top",
             "explore_more_tools": "Explore More Pepstudio Utility Tools",
             "accuracy_disclaimer": "Accuracy Disclaimer: This tool is provided for general informational and calculation purposes.",
-            
+
             "about_system_tag": "Precision Utility System",
             "about_hero_title": "Empowering Professionals with Precise Tools.",
             "about_hero_p": "pepstudio is a 100% free suite of calculators, converters, and engineering utilities designed for absolute accuracy and zero friction. No subscriptions, no clutter—just the answers you need, instantly.",
@@ -91,7 +95,6 @@
             "about_tech_li2": "Offline capability via progressive web app (PWA) standards.",
             "about_tech_li3": "Responsive design optimized for desktop, tablet, and mobile.",
 
-            "select_language": "Language",
             "doc_system_badge": "User Guide & Specifications",
             "doc_main_title": "Pepstudio Technical Documentation & System Guide",
             "doc_main_subtitle": "A comprehensive guide to our precision calculation engine, mathematical models, client-side privacy architecture, and utility suite functionality.",
@@ -188,14 +191,184 @@
             "dmca_agent_dept": "pepstudio Legal Department",
 
             "sitemap_title": "Site Map",
-            "sitemap_intro": "Welcome to the pepstudio site map. Use the links below to quickly access all available pages on this website."
+            "sitemap_intro": "Welcome to the pepstudio site map. Use the links below to quickly access all available pages on this website.",
+
+            "age_how_heading": "How Does the Age Calculator Work?",
+            "age_how_p1": "Our age calculator compares your date of birth with today's date to calculate the difference between the two dates. It automatically handles different month lengths and leap years to provide an accurate age calculation.",
+            "age_how_p2": "How to Calculate Your Age",
+            "age_how_li1": "Enter your date of birth.",
+            "age_how_li2": "Select or confirm the current date.",
+            "age_how_li3": "Click the Calculate Age button.",
+            "age_how_li4": "Your exact age will be displayed instantly.",
+            "age_how_p3": "The result can show your age in years, months, and days, making it easier to understand exactly how much time has passed since your birth date.",
+            "age_how_p4": "What Can You Calculate?",
+            "age_how_p5": "Our Age Calculator can help you find:",
+            "age_how_li5": "Your age in years, months, and days",
+            "age_how_li6": "Total number of months you have lived",
+            "age_how_li7": "Total number of days since your birth",
+            "age_how_li8": "Total hours, minutes, and seconds based on the calculated period",
+            "age_how_li9": "Your upcoming birthday information",
+            "age_how_p6": "Why Use an Online Age Calculator?",
+            "age_how_p7": "Calculating your exact age manually can be confusing because months have different numbers of days and leap years can affect the calculation. An online age calculator performs these calculations automatically and gives you the result in seconds.",
+            "age_how_p8": "Accurate Age Calculation",
+            "age_how_p9": "The calculator uses your date of birth and the selected current date to determine the difference between the two dates. Instead of manually counting months and days, you can get the result instantly with a simple date input.",
+            "age_how_p10": "Age Calculator for Different Purposes",
+            "age_how_p11": "An age calculator can be useful in many everyday situations, including:",
+            "age_how_li10": "Checking your current age",
+            "age_how_li11": "Preparing forms and applications",
+            "age_how_li12": "Planning birthday celebrations",
+            "age_how_li13": "Checking age requirements",
+            "age_how_li14": "Calculating the time between two dates",
+            "age_how_li15": "Educational and personal calculations",
+
+            "bday_heading": "Birthday Meaning and Celebration",
+            "bday_p1": "What is a Birthday?",
+            "bday_li1": "A birthday marks the day a person entered the world, celebrated every year as a special milestone",
+            "bday_li2": "One of life's most joyful occasions, bringing loved ones together in celebration",
+            "bday_li3": "A time to reflect on growth, achievements, and cherished memories from the past year",
+            "bday_p2": "How Birthdays Are Celebrated",
+            "bday_li4": "Cutting a birthday cake",
+            "bday_li5": "Giving and receiving thoughtful gifts",
+            "bday_li6": "Organizing birthday parties with family and friends",
+            "bday_li7": "Sending warm birthday wishes and messages",
+            "bday_p3": "Why Birthdays Are Special",
+            "bday_li8": "More than just a date — birthdays are meaningful milestones in life",
+            "bday_li9": "A reminder to be grateful for the past and hopeful for what's ahead",
+            "bday_li10": "Each birthday opens a new chapter filled with fresh goals, opportunities, and memorable experiences",
+            "bday_p4": "Explore Your Birth Date",
+            "bday_li11": "Curious minds love uncovering the story behind their birth date",
+            "bday_li12": "Every birth date connects to a zodiac sign, notable birthdays of famous personalities, historical milestones, and interesting trivia",
+            "bday_li13": "Learning these birth-date facts adds an extra layer of excitement to your special day",
+
+            "age_seo_intro_h": "What is an Age Calculator & How Does It Work?",
+            "age_seo_intro_p": "Welcome to the Pepstudio Age Calculator — a fast, free, and accurate tool designed to determine your exact chronological age down to the precise year, month, and day! Whether you are filling out official documents, planning an upcoming birthday milestone, or simply curious about how many total days, weeks, or months you have been alive, our calculator delivers instant results with mathematical precision.",
+            "age_algo_h": "How Our Age Calculation Algorithm Works",
+            "age_algo_p": "Calculating exact age involves more than simple subtraction because month lengths and leap years vary. Here is how our algorithm computes precision results:",
+            "age_algo_s1_h": "1. Calendar Date Math",
+            "age_algo_s1_p": "Computes the raw delta between year, month, and day components of your birth date and the reference date.",
+            "age_algo_s2_h": "2. Dynamic Month Lengths",
+            "age_algo_s2_p": "Automatically adjusts for 28, 29, 30, or 31-day months when borrowing days during subtraction.",
+            "age_algo_s3_h": "3. Leap Year Accuracy",
+            "age_algo_s3_p": "Factors in quadrennial leap years (February 29th) to ensure day count precision across decades.",
+            "age_faq_h": "Frequently Asked Questions",
+            "age_faq_q1": "How accurate is this online Age Calculator?",
+            "age_faq_a1": "Our Age Calculator is 100% accurate. It uses exact Gregorian calendar algorithms that correctly account for leap years, leap centuries, and varying month lengths.",
+            "age_faq_q2": "How does the calculator handle leap years?",
+            "age_faq_a2": "Leap years add an extra day (February 29) every four years. Our algorithm automatically factors in these leap days when calculating your total days and weeks lived.",
+            "age_faq_q3": "Can I calculate my age on a specific future or past date?",
+            "age_faq_a3": "Yes! Use the \"Age at Date\" optional field to select any historical or future date to find out how old you were or will be on that specific day.",
+            "age_faq_q4": "What is the difference between age in years vs total days?",
+            "age_faq_a4": "Age in years measures completed annual calendar revolutions around the sun, while total days measures the absolute continuous number of 24-hour periods lived since your birth date.",
+            "age_facts_h": "Fun Facts & Age Trivia",
+            "age_facts_f1_h": "Heartbeat Count",
+            "age_facts_f1_p": "Over an average 70-year lifetime, a human heart beats over 2.5 billion times without taking a single break!",
+            "age_facts_f2_h": "Space Age Variance",
+            "age_facts_f2_p": "If you are 25 years old on Earth, you are over 100 years old on Mercury and only 13 years old on Mars due to orbital speeds!",
+            "age_facts_f3_h": "Leap Year \"Leaplings\"",
+            "age_facts_f3_p": "People born on Feb 29th are called \"leaplings\" and technically celebrate an official calendar birthday once every four years.",
+            "age_facts_f4_h": "Blinking Time",
+            "age_facts_f4_p": "You spend approximately 10% of your waking hours with your eyes closed due to blinking throughout your life!",
+            "age_disclaimer_p": "Accuracy Disclaimer: This Age Calculator is provided for general informational and calculation purposes. While designed for maximum calendar precision, official age verifications for legal documents should always refer to official birth certificates.",
+
+            "bmi_intro_p": "Calculate your Body Mass Index instantly with our free online BMI calculator. A simple, judgment-free way to check in with your body — accurate results in seconds, no sign-up required.",
+            "bmi_score_caption": "YOUR BMI SCORE",
+            "bmi_health_status": "Health Status",
+            "bmi_healthy_range": "Healthy Weight Range",
+            "bmi_analysis_title": "Analysis",
+            "bmi_analysis_text": "Your BMI is within the healthy range. Maintaining a balanced diet and regular exercise will help you stay in this category.",
+            "bmi_seo_intro_h": "What is a BMI Calculator & How Does It Work?",
+            "bmi_seo_intro_p": "Welcome to the Pepstudio BMI Calculator — a fast, reliable, and user-friendly tool designed to evaluate your body mass relative to your height!",
+            "bmi_algo_h": "How Our BMI Calculation Algorithm Works",
+            "bmi_algo_p": "BMI calculations combine biometric formulas with standardized World Health Organization (WHO) health parameters:",
+            "bmi_disclaimer_p": "Medical Disclaimer: This BMI Calculator is designed strictly for general educational and wellness reference. Always consult a licensed healthcare professional for medical advice.",
+
+            "emi_intro_p": "Calculate your loan EMI instantly with our free online EMI calculator. See exactly what your monthly payment will be and understand the full cost of borrowing — clear results without the jargon, no sign-up required.",
+            "emi_loan_details": "Loan Details",
+            "emi_repayment_summary": "Repayment Summary",
+            "emi_monthly_emi": "Monthly EMI",
+            "emi_total_interest": "Total Interest Payable",
+            "emi_total_payment": "Total Payment (Prin + Int)",
+            "emi_principal_amount": "Principal Amount",
+            "emi_seo_intro_h": "What is an EMI Calculator & How Does It Work?",
+            "emi_seo_intro_p": "Welcome to the Pepstudio EMI Calculator — a powerful tool that calculates your monthly loan repayments instantly.",
+            "emi_algo_h": "How Our EMI Amortization Algorithm Works",
+            "emi_algo_p": "EMI calculation uses the standard reducing balance loan amortization formula:",
+            "emi_disclaimer_p": "Financial Disclaimer: This EMI Calculator is provided for illustrative and estimation purposes only. Consult your bank for official terms.",
+
+            "unit_intro_p": "Quickly and accurately convert length, weight, temperature, area, volume, speed, time, and data units.",
+            "unit_seo_intro_h": "What is a Unit Converter & How Does It Work?",
+            "unit_seo_intro_p": "Welcome to the Pepstudio Unit Converter — a fast, free, and precise tool for converting units across multiple categories.",
+            "unit_disclaimer_p": "Accuracy Disclaimer: This Unit Converter provides exact standard conversion factors for educational and professional utility.",
+
+            "perc_intro_p": "Calculate percentages and percentage changes instantly with our free online percentage calculator. Fast, accurate results for any percentage calculation — no sign-up required.",
+            "perc_seo_intro_h": "What is a Percentage Calculator & How Does It Work?",
+            "perc_seo_intro_p": "Welcome to the Pepstudio Percentage Calculator — your quick, accurate tool for all percentage calculations.",
+            "perc_disclaimer_p": "Accuracy Disclaimer: Percentage calculations are performed with mathematical precision for general calculation purposes.",
+
+            "time_intro_p": "Compare real-time clocks across global cities and time zones effortlessly.",
+            "time_seo_intro_h": "What is World Time & How Does It Work?",
+            "time_seo_intro_p": "Welcome to Pepstudio World Time — track live time zone offsets and local clocks worldwide.",
+            "time_disclaimer_p": "Accuracy Disclaimer: Time zone data is synced with standard international time servers.",
+
+            "love_intro_p": "Discover your fun love compatibility score and relationship metrics based on your names.",
+            "love_seo_intro_h": "What is a Love Calculator & How Does It Work?",
+            "love_seo_intro_p": "Welcome to the Pepstudio Love Calculator — a fun tool designed to calculate compatibility scores.",
+            "love_disclaimer_p": "Entertainment Disclaimer: The Love Calculator is designed purely for fun and entertainment purposes.",
+
+            "marquee_text": "Made with ❤️ for anyone who needs a quick calculation — Age, BMI, EMI, Percentage, Unit Conversion, World Time & even a Love Calculator. No ads blocking your screen, no forced signups. Just tools that work.",
+            "metric_units": "Metric (kg/cm)",
+            "imperial_units": "Imperial (lb/in)",
+            "bmi_underweight": "Underweight",
+            "bmi_normal": "Normal",
+            "bmi_overweight": "Overweight",
+            "bmi_obese": "Obese",
+            "bmi_underweight_msg": "Your BMI is below the healthy range. Consider speaking with a healthcare professional about a healthy plan for you.",
+            "bmi_normal_msg": "Your BMI is within the healthy range. Maintaining a balanced diet and regular exercise will help you stay in this category.",
+            "bmi_overweight_msg": "Your BMI is above the healthy range. Small, sustainable lifestyle changes can support your health goals.",
+            "bmi_obese_msg": "Your BMI is in the higher range. A healthcare professional can offer personalised guidance and support.",
+            "based_on_height": "Based on height",
+            "tenure_years": "Years",
+            "tenure_months": "Months",
+            "principal_label": "Principal",
+            "interest_label": "Interest",
+            "from_unit": "From",
+            "to_unit": "To",
+            "conversion_results": "Conversion Results",
+            "select_type": "Select Type",
+            "basic_pct": "Basic %",
+            "pct_change": "% Change",
+            "pct_diff": "% Diff",
+            "calculation_result": "Calculation Result",
+            "formula_steps": "Formula & Steps",
+            "live_sync_active": "Live Sync Active",
+            "search_tz_placeholder": "Search city or timezone...",
+            "compare_offset": "Compare Offset",
+            "love_check_compat": "Check Compatibility",
+            "love_enter_desc": "Enter both names to calculate the precision alignment metric.",
+            "love_your_name": "Your Name",
+            "love_partner_name": "Partner's Name",
+            "love_calc_btn": "Calculate Love",
+            "clear": "Clear",
+            "love_algo_prec": "Algorithm Precision",
+            "love_algo_prec_desc": "Our calculation utilizes an alphanumeric hashing algorithm based on historical name-matching matrices, delivering a consistent metric for any given pair of names.",
+            "love_awaiting_input": "Awaiting Input",
+            "love_awaiting_desc": "Enter both names in the calculator to generate your compatibility metric.",
+            "love_compat_index": "Compatibility Index",
+            "data_insights": "Data Insights",
+            "stat_norms": "Statistical Norms",
+            "string_variance": "String Length Variance",
+            "high_outliers": "High Margin Outliers",
+            "love_high_sym": "High structural symmetry detected.",
+            "love_mod_align": "Moderate alignment trajectory.",
+            "love_std_var": "Standard variance observed."
         },
+
         es: {
             "select_language": "Idioma",
             "home": "Inicio",
             "hero_title": "Bienvenido al sitio de herramientas 100% gratuitas",
             "hero_subtitle": "Su suite de calculadoras en línea todo en uno. Rápida, confiable y totalmente gratuita.",
-            
+
             "age_calc_title": "Calculadora de Edad",
             "age_calc_desc": "Calcule su edad exacta en años, meses y días",
             "bmi_calc_title": "Calculadora de IMC",
@@ -273,14 +446,184 @@
             "about_tech_p": "Nuestra plataforma está basada en estándares web modernos para garantizar una experiencia fluida.",
             "about_tech_li1": "Renderizado en el cliente para cargas instantáneas de página.",
             "about_tech_li2": "Capacidad fuera de línea mediante estándares PWA.",
-            "about_tech_li3": "Diseño responsivo optimizado para escritorio, tablet y móvil."
+            "about_tech_li3": "Diseño responsivo optimizado para escritorio, tablet y móvil.",
+
+            "age_how_heading": "¿Cómo funciona la calculadora de edad?",
+            "age_how_p1": "Nuestra calculadora de edad compara su fecha de nacimiento con la fecha actual para calcular la diferencia entre las dos fechas. Maneja automáticamente los diferentes largos de meses y los años bisiestos.",
+            "age_how_p2": "Cómo calcular su edad",
+            "age_how_li1": "Ingrese su fecha de nacimiento.",
+            "age_how_li2": "Seleccione o confirme la fecha actual.",
+            "age_how_li3": "Haga clic en el botón Calcular Edad.",
+            "age_how_li4": "Su edad exacta se mostrará al instante.",
+            "age_how_p3": "El resultado puede mostrar su edad en años, meses y días, facilitando la comprensión del tiempo transcurrido.",
+            "age_how_p4": "¿Qué puede calcular?",
+            "age_how_p5": "Nuestra calculadora de edad le puede ayudar a encontrar:",
+            "age_how_li5": "Su edad en años, meses y días",
+            "age_how_li6": "Número total de meses que ha vivido",
+            "age_how_li7": "Número total de días desde su nacimiento",
+            "age_how_li8": "Total de horas, minutos y segundos basado en el período calculado",
+            "age_how_li9": "Información sobre su próximo cumpleaños",
+            "age_how_p6": "¿Por qué usar una calculadora de edad en línea?",
+            "age_how_p7": "Calcular su edad exacta manualmente puede ser confuso. Una calculadora de edad en línea realiza estos cálculos automáticamente.",
+            "age_how_p8": "Cálculo de edad preciso",
+            "age_how_p9": "La calculadora usa su fecha de nacimiento y la fecha actual seleccionada para determinar la diferencia entre las dos fechas.",
+            "age_how_p10": "Calculadora de edad para diferentes propósitos",
+            "age_how_p11": "Una calculadora de edad puede ser útil en muchas situaciones cotidianas, incluyendo:",
+            "age_how_li10": "Verificar su edad actual",
+            "age_how_li11": "Preparar formularios y solicitudes",
+            "age_how_li12": "Planificar celebraciones de cumpleaños",
+            "age_how_li13": "Verificar requisitos de edad",
+            "age_how_li14": "Calcular el tiempo entre dos fechas",
+            "age_how_li15": "Cálculos educativos y personales",
+
+            "bday_heading": "Significado y Celebración del Cumpleaños",
+            "bday_p1": "¿Qué es un Cumpleaños?",
+            "bday_li1": "Un cumpleaños marca el día en que una persona llegó al mundo, celebrado cada año como un hito especial",
+            "bday_li2": "Una de las ocasiones más alegres de la vida, reuniendo a seres queridos en celebración",
+            "bday_li3": "Un momento para reflexionar sobre el crecimiento, los logros y los preciados recuerdos del año pasado",
+            "bday_p2": "Cómo se Celebran los Cumpleaños",
+            "bday_li4": "Cortar un pastel de cumpleaños",
+            "bday_li5": "Dar y recibir regalos pensativos",
+            "bday_li6": "Organizar fiestas de cumpleaños con familiares y amigos",
+            "bday_li7": "Enviar cálidos deseos y mensajes de cumpleaños",
+            "bday_p3": "Por Qué los Cumpleaños Son Especiales",
+            "bday_li8": "Más que solo una fecha — los cumpleaños son hitos significativos en la vida",
+            "bday_li9": "Un recordatorio de ser agradecido por el pasado y esperanzador por el futuro",
+            "bday_li10": "Cada cumpleaños abre un nuevo capítulo lleno de metas frescas, oportunidades y experiencias memorables",
+            "bday_p4": "Explore su Fecha de Nacimiento",
+            "bday_li11": "Las mentes curiosas aman descubrir la historia detrás de su fecha de nacimiento",
+            "bday_li12": "Cada fecha de nacimiento se conecta a un signo zodiacal, cumpleaños notables, hitos históricos y datos interesantes",
+            "bday_li13": "Aprender estos hechos sobre la fecha de nacimiento agrega una capa extra de emoción a su día especial",
+
+            "age_seo_intro_h": "¿Qué es una Calculadora de Edad y cómo funciona?",
+            "age_seo_intro_p": "Bienvenido a la Calculadora de Edad de Pepstudio — una herramienta rápida, gratuita y precisa diseñada para determinar su edad cronológica exacta hasta el año, mes y día precisos.",
+            "age_algo_h": "Cómo Funciona Nuestro Algoritmo de Cálculo de Edad",
+            "age_algo_p": "Calcular la edad exacta implica más que una simple resta porque los largos de los meses y los años bisiestos varían.",
+            "age_algo_s1_h": "1. Matemáticas de Fecha de Calendario",
+            "age_algo_s1_p": "Calcula el delta bruto entre los componentes de año, mes y día de su fecha de nacimiento y la fecha de referencia.",
+            "age_algo_s2_h": "2. Longitudes de Mes Dinámicas",
+            "age_algo_s2_p": "Se ajusta automáticamente a meses de 28, 29, 30 o 31 días al pedir prestados días durante la resta.",
+            "age_algo_s3_h": "3. Precisión de Año Bisiesto",
+            "age_algo_s3_p": "Tiene en cuenta los años bisiestos cuadrieniales (29 de febrero) para garantizar la precisión del recuento de días.",
+            "age_faq_h": "Preguntas Frecuentes",
+            "age_faq_q1": "¿Qué tan precisa es esta calculadora de edad en línea?",
+            "age_faq_a1": "Nuestra calculadora de edad es 100% precisa. Utiliza algoritmos exactos del calendario gregoriano.",
+            "age_faq_q2": "¿Cómo maneja la calculadora los años bisiestos?",
+            "age_faq_a2": "Los años bisiestos agregan un día extra (29 de febrero) cada cuatro años. Nuestro algoritmo factoriza estos días automáticamente.",
+            "age_faq_q3": "¿Puedo calcular mi edad en una fecha futura o pasada específica?",
+            "age_faq_a3": "¡Sí! Use el campo opcional \"Edad en Fecha\" para seleccionar cualquier fecha histórica o futura.",
+            "age_faq_q4": "¿Cuál es la diferencia entre edad en años vs días totales?",
+            "age_faq_a4": "La edad en años mide las revoluciones anuales completas alrededor del sol, mientras que los días totales miden el número continuo de períodos de 24 horas vividos.",
+            "age_facts_h": "Datos Curiosos y Trivia sobre la Edad",
+            "age_facts_f1_h": "Conteo de Latidos",
+            "age_facts_f1_p": "En una vida promedio de 70 años, el corazón humano late más de 2.500 millones de veces sin tomar un solo descanso.",
+            "age_facts_f2_h": "Variación de Edad Espacial",
+            "age_facts_f2_p": "Si tiene 25 años en la Tierra, tiene más de 100 años en Mercurio y solo 13 en Marte debido a las velocidades orbitales.",
+            "age_facts_f3_h": "\"Bisiestos\" del Año Bisiesto",
+            "age_facts_f3_p": "Las personas nacidas el 29 de febrero se llaman \"bisiestos\" y técnicamente celebran un cumpleaños oficial una vez cada cuatro años.",
+            "age_facts_f4_h": "Tiempo de Parpadeo",
+            "age_facts_f4_p": "Pasa aproximadamente el 10% de sus horas de vigilia con los ojos cerrados debido al parpadeo a lo largo de su vida.",
+            "age_disclaimer_p": "Aviso de Precisión: Esta Calculadora de Edad se proporciona con fines informativos y de cálculo general.",
+
+            "bmi_intro_p": "Una forma sencilla y sin juicios de evaluar su cuerpo, no un veredicto sobre su valor.",
+            "bmi_score_caption": "SU PUNTUACIÓN IMC",
+            "bmi_health_status": "Estado de Salud",
+            "bmi_healthy_range": "Rango de Peso Saludable",
+            "bmi_analysis_title": "Análisis",
+            "bmi_analysis_text": "Su IMC está dentro del rango saludable. Mantener una dieta equilibrada y ejercicio regular le ayudará a permanecer en esta categoría.",
+            "bmi_seo_intro_h": "¿Qué es una Calculadora de IMC y cómo funciona?",
+            "bmi_seo_intro_p": "¡Bienvenido a la Calculadora de IMC de Pepstudio: una herramienta rápida, confiable y fácil de usar!",
+            "bmi_algo_h": "Cómo Funciona Nuestro Algoritmo de Cálculo de IMC",
+            "bmi_algo_p": "Los cálculos de IMC combinan fórmulas biométricas con parámetros de salud de la Organización Mundial de la Salud (OMS):",
+            "bmi_disclaimer_p": "Aviso Médico: Esta calculadora de IMC está diseñada estrictamente para referencia educativa y de bienestar general.",
+
+            "emi_intro_p": "Vea exactamente cuál será su pago mensual y comprenda el costo total del préstamo sin jerga.",
+            "emi_loan_details": "Detalles del Préstamo",
+            "emi_repayment_summary": "Resumen de Pagos",
+            "emi_monthly_emi": "Cuota Mensual EMI",
+            "emi_total_interest": "Interés Total a Pagar",
+            "emi_total_payment": "Pago Total (Prin + Int)",
+            "emi_principal_amount": "Monto Principal",
+            "emi_seo_intro_h": "¿Qué es una Calculadora de EMI y cómo funciona?",
+            "emi_seo_intro_p": "Bienvenido a la Calculadora de EMI de Pepstudio: una potente herramienta que calcula sus cuotas mensuales al instante.",
+            "emi_algo_h": "Cómo Funciona Nuestro Algoritmo de Amortización EMI",
+            "emi_algo_p": "El cálculo de EMI utiliza la fórmula estándar de amortización de préstamos sobre saldo reductor:",
+            "emi_disclaimer_p": "Aviso Financiero: Esta Calculadora de EMI se proporciona solo con fines ilustrativos y de estimación.",
+
+            "unit_intro_p": "Convierta de manera rápida y precisa unidades de longitud, peso, temperatura, área, volumen, velocidad, tiempo y datos.",
+            "unit_seo_intro_h": "¿Qué es un Conversor de Unidades y cómo funciona?",
+            "unit_seo_intro_p": "Bienvenido al Conversor de Unidades de Pepstudio: una herramienta rápida, gratuita y precisa para convertir unidades entre múltiples categorías.",
+            "unit_disclaimer_p": "Aviso de Precisión: Este Conversor de Unidades proporciona factores de conversión estándar exactos.",
+
+            "perc_intro_p": "Calcule porcentajes, aumentos, disminuciones y diferencias porcentuales en segundos.",
+            "perc_seo_intro_h": "¿Qué es una Calculadora de Porcentajes y cómo funciona?",
+            "perc_seo_intro_p": "Bienvenido a la Calculadora de Porcentajes de Pepstudio: su herramienta rápida y precisa para todos los cálculos de porcentajes.",
+            "perc_disclaimer_p": "Aviso de Precisión: Los cálculos de porcentaje se realizan con precisión matemática.",
+
+            "time_intro_p": "Compare relojes en tiempo real entre ciudades globales y zonas horarias sin esfuerzo.",
+            "time_seo_intro_h": "¿Qué es Hora Mundial y cómo funciona?",
+            "time_seo_intro_p": "Bienvenido a Pepstudio Hora Mundial: rastree diferencias horarias y relojes locales en todo el mundo.",
+            "time_disclaimer_p": "Aviso de Precisión: Los datos de zona horaria se sincronizan con servidores de tiempo internacionales estándar.",
+
+            "love_intro_p": "Descubra su divertida puntuación de compatibilidad de amor y métricas de relación según sus nombres.",
+            "love_seo_intro_h": "¿Qué es una Calculadora del Amor y cómo funciona?",
+            "love_seo_intro_p": "Bienvenido a la Calculadora del Amor de Pepstudio: una divertida herramienta para calcular la compatibilidad.",
+            "love_disclaimer_p": "Aviso de Entretenimiento: La Calculadora del Amor está diseñada puramente con fines de diversión y entretenimiento.",
+
+            "marquee_text": "Hecho con ❤️ para cualquiera que necesite un cálculo rápido: edad, IMC, EMI, porcentaje, conversión de unidades, hora mundial e incluso una calculadora de amor. Sin anuncios bloqueando su pantalla. Solo herramientas que funcionan.",
+            "metric_units": "Métrico (kg/cm)",
+            "imperial_units": "Imperial (lb/in)",
+            "bmi_underweight": "Bajo peso",
+            "bmi_normal": "Normal",
+            "bmi_overweight": "Sobrepeso",
+            "bmi_obese": "Obesidad",
+            "bmi_underweight_msg": "Su IMC está por debajo del rango saludable. Considere hablar con un profesional de la salud.",
+            "bmi_normal_msg": "Su IMC está dentro del rango saludable. Mantener una dieta equilibrada y ejercicio regular le ayudará a mantenerse.",
+            "bmi_overweight_msg": "Su IMC está por encima del rango saludable. Pequeños cambios de estilo de vida pueden ayudarle.",
+            "bmi_obese_msg": "Su IMC está en la categoría superior. Un profesional de la salud puede ofrecer orientación personalizada.",
+            "based_on_height": "Basado en la altura",
+            "tenure_years": "Años",
+            "tenure_months": "Meses",
+            "principal_label": "Capital Principal",
+            "interest_label": "Interés",
+            "from_unit": "De",
+            "to_unit": "A",
+            "conversion_results": "Resultados de Conversión",
+            "select_type": "Seleccionar Tipo",
+            "basic_pct": "% Básico",
+            "pct_change": "% Cambio",
+            "pct_diff": "% Diferencia",
+            "calculation_result": "Resultado del Cálculo",
+            "formula_steps": "Fórmula y Pasos",
+            "live_sync_active": "Sincronización En Vivo Activa",
+            "search_tz_placeholder": "Buscar ciudad o zona horaria...",
+            "compare_offset": "Comparar Desfase",
+            "love_check_compat": "Verificar Compatibilidad",
+            "love_enter_desc": "Ingrese ambos nombres para calcular la métrica de compatibilidad.",
+            "love_your_name": "Su Nombre",
+            "love_partner_name": "Nombre de la Pareja",
+            "love_calc_btn": "Calcular Amor",
+            "clear": "Limpiar",
+            "love_algo_prec": "Precisión del Algoritmo",
+            "love_algo_prec_desc": "Nuestra cálculo utiliza un algoritmo de hash alfanumérico basado en matrices de nombres.",
+            "love_awaiting_input": "Esperando Entradas",
+            "love_awaiting_desc": "Ingrese ambos nombres en la calculadora para generar la compatibilidad.",
+            "love_compat_index": "Índice de Compatibilidad",
+            "data_insights": "Análisis de Datos",
+            "stat_norms": "Normas Estadísticas",
+            "string_variance": "Varianza de Longitud",
+            "high_outliers": "Valores Atípicos Altos",
+            "love_high_sym": "Alta simetría de compatibilidad detectada.",
+            "love_mod_align": "Alineación y compatibilidad moderada.",
+            "love_std_var": "Varianza estándar observada."
         },
+
         fr: {
             "select_language": "Langue",
             "home": "Accueil",
             "hero_title": "Bienvenue sur le site d'outils 100% gratuits",
             "hero_subtitle": "Votre suite de calculatrices en ligne tout-en-un. Rapide, fiable et entièrement gratuite.",
-            
+
             "age_calc_title": "Calculateur d'Âge",
             "age_calc_desc": "Calculez votre âge exact en années, mois et jours",
             "bmi_calc_title": "Calculateur d'IMC",
@@ -358,14 +701,184 @@
             "about_tech_p": "Notre plateforme repose sur des standards web modernes pour une expérience fluide.",
             "about_tech_li1": "Rendu côté client pour des chargements de page instantanés.",
             "about_tech_li2": "Fonctionnalité hors ligne via les standards PWA.",
-            "about_tech_li3": "Design réactif optimisé pour ordinateur, tablette et mobile."
+            "about_tech_li3": "Design réactif optimisé pour ordinateur, tablette et mobile.",
+
+            "age_how_heading": "Comment fonctionne la calculatrice d'âge?",
+            "age_how_p1": "Notre calculatrice d'âge compare votre date de naissance avec la date d'aujourd'hui pour calculer la différence. Elle gère automatiquement les différentes longueurs de mois et les années bissextiles.",
+            "age_how_p2": "Comment calculer votre âge",
+            "age_how_li1": "Entrez votre date de naissance.",
+            "age_how_li2": "Sélectionnez ou confirmez la date actuelle.",
+            "age_how_li3": "Cliquez sur le bouton Calculer l'Âge.",
+            "age_how_li4": "Votre âge exact s'affichera instantanément.",
+            "age_how_p3": "Le résultat peut afficher votre âge en années, mois et jours, ce qui facilite la compréhension du temps écoulé.",
+            "age_how_p4": "Que pouvez-vous calculer?",
+            "age_how_p5": "Notre calculatrice d'âge peut vous aider à trouver:",
+            "age_how_li5": "Votre âge en années, mois et jours",
+            "age_how_li6": "Nombre total de mois que vous avez vécu",
+            "age_how_li7": "Nombre total de jours depuis votre naissance",
+            "age_how_li8": "Total des heures, minutes et secondes basé sur la période calculée",
+            "age_how_li9": "Informations sur votre prochain anniversaire",
+            "age_how_p6": "Pourquoi utiliser une calculatrice d'âge en ligne?",
+            "age_how_p7": "Calculer votre âge exact manuellement peut être confus. Une calculatrice d'âge en ligne effectue ces calculs automatiquement.",
+            "age_how_p8": "Calcul d'âge précis",
+            "age_how_p9": "La calculatrice utilise votre date de naissance et la date actuelle sélectionnée pour déterminer la différence entre les deux dates.",
+            "age_how_p10": "Calculatrice d'âge pour différents objectifs",
+            "age_how_p11": "Une calculatrice d'âge peut être utile dans de nombreuses situations quotidiennes, notamment:",
+            "age_how_li10": "Vérifier votre âge actuel",
+            "age_how_li11": "Préparer des formulaires et des demandes",
+            "age_how_li12": "Planifier des célébrations d'anniversaire",
+            "age_how_li13": "Vérifier les conditions d'âge",
+            "age_how_li14": "Calculer le temps entre deux dates",
+            "age_how_li15": "Calculs éducatifs et personnels",
+
+            "bday_heading": "Signification et Célébration des Anniversaires",
+            "bday_p1": "Qu'est-ce qu'un Anniversaire?",
+            "bday_li1": "Un anniversaire marque le jour où une personne est entrée dans le monde, célébré chaque année comme une étape spéciale",
+            "bday_li2": "L'une des occasions les plus joyeuses de la vie, rassemblant les proches en célébration",
+            "bday_li3": "Un moment pour réfléchir sur la croissance, les réalisations et les précieux souvenirs de l'année passée",
+            "bday_p2": "Comment les Anniversaires Sont Célébrés",
+            "bday_li4": "Couper un gâteau d'anniversaire",
+            "bday_li5": "Donner et recevoir des cadeaux attentionnés",
+            "bday_li6": "Organiser des fêtes d'anniversaire avec famille et amis",
+            "bday_li7": "Envoyer des vœux et messages d'anniversaire chaleureux",
+            "bday_p3": "Pourquoi les Anniversaires Sont Spéciaux",
+            "bday_li8": "Plus qu'une simple date — les anniversaires sont des jalons significatifs dans la vie",
+            "bday_li9": "Un rappel d'être reconnaissant pour le passé et plein d'espoir pour l'avenir",
+            "bday_li10": "Chaque anniversaire ouvre un nouveau chapitre plein de nouveaux objectifs et d'expériences mémorables",
+            "bday_p4": "Explorez Votre Date de Naissance",
+            "bday_li11": "Les esprits curieux aiment découvrir l'histoire derrière leur date de naissance",
+            "bday_li12": "Chaque date de naissance est liée à un signe du zodiaque, des anniversaires notables et des faits historiques",
+            "bday_li13": "Apprendre ces faits ajoute une couche d'excitation supplémentaire à votre jour spécial",
+
+            "age_seo_intro_h": "Qu'est-ce qu'une Calculatrice d'Âge et comment fonctionne-t-elle?",
+            "age_seo_intro_p": "Bienvenue sur la Calculatrice d'Âge Pepstudio — un outil rapide, gratuit et précis conçu pour déterminer votre âge chronologique exact jusqu'à l'année, le mois et le jour précis.",
+            "age_algo_h": "Comment Fonctionne Notre Algorithme de Calcul d'Âge",
+            "age_algo_p": "Calculer l'âge exact implique plus qu'une simple soustraction car les longueurs des mois et les années bissextiles varient.",
+            "age_algo_s1_h": "1. Calcul de Date de Calendrier",
+            "age_algo_s1_p": "Calcule le delta brut entre les composantes année, mois et jour de votre date de naissance et la date de référence.",
+            "age_algo_s2_h": "2. Longueurs de Mois Dynamiques",
+            "age_algo_s2_p": "S'ajuste automatiquement pour les mois de 28, 29, 30 ou 31 jours lors des soustractions.",
+            "age_algo_s3_h": "3. Précision des Années Bissextiles",
+            "age_algo_s3_p": "Prend en compte les années bissextiles quadriennales (29 février) pour assurer la précision du comptage des jours.",
+            "age_faq_h": "Foire Aux Questions",
+            "age_faq_q1": "Quelle est la précision de cette calculatrice d'âge en ligne?",
+            "age_faq_a1": "Notre calculatrice d'âge est précise à 100%. Elle utilise des algorithmes exacts du calendrier grégorien.",
+            "age_faq_q2": "Comment la calculatrice gère-t-elle les années bissextiles?",
+            "age_faq_a2": "Les années bissextiles ajoutent un jour supplémentaire (29 février) tous les quatre ans. Notre algorithme en tient compte automatiquement.",
+            "age_faq_q3": "Puis-je calculer mon âge à une date future ou passée spécifique?",
+            "age_faq_a3": "Oui! Utilisez le champ optionnel \"Âge à la Date\" pour sélectionner n'importe quelle date historique ou future.",
+            "age_faq_q4": "Quelle est la différence entre l'âge en années et les jours totaux?",
+            "age_faq_a4": "L'âge en années mesure les révolutions annuelles complètes autour du soleil, tandis que les jours totaux mesurent le nombre absolu de périodes de 24 heures vécues.",
+            "age_facts_h": "Faits Amusants & Anecdotes sur l'Âge",
+            "age_facts_f1_h": "Nombre de Battements de Cœur",
+            "age_facts_f1_p": "Sur une vie moyenne de 70 ans, le cœur humain bat plus de 2,5 milliards de fois sans jamais s'arrêter!",
+            "age_facts_f2_h": "Variation d'Âge dans l'Espace",
+            "age_facts_f2_p": "Si vous avez 25 ans sur Terre, vous avez plus de 100 ans sur Mercure et seulement 13 ans sur Mars!",
+            "age_facts_f3_h": "Les \"Bissextins\" des Années Bissextiles",
+            "age_facts_f3_p": "Les personnes nées le 29 février s'appellent \"bissextins\" et célèbrent techniquement un anniversaire officiel une fois tous les quatre ans.",
+            "age_facts_f4_h": "Temps de Clignement",
+            "age_facts_f4_p": "Vous passez environ 10% de vos heures d'éveil les yeux fermés à cause du clignement tout au long de votre vie!",
+            "age_disclaimer_p": "Avis de Précision: Cette Calculatrice d'Âge est fournie à des fins d'information et de calcul général.",
+
+            "bmi_intro_p": "Un moyen simple et sans jugement d'évaluer votre corps — pas un verdict sur votre valeur.",
+            "bmi_score_caption": "VOTRE SCORE IMC",
+            "bmi_health_status": "État de Santé",
+            "bmi_healthy_range": "Plage de Poids Santé",
+            "bmi_analysis_title": "Analyse",
+            "bmi_analysis_text": "Votre IMC se situe dans la plage santé. Maintenir une alimentation équilibrée et un exercice régulier vous aidera à rester dans cette catégorie.",
+            "bmi_seo_intro_h": "Qu'est-ce qu'un Calculateur d'IMC et comment fonctionne-t-il ?",
+            "bmi_seo_intro_p": "Bienvenue sur le Calculateur d'IMC Pepstudio — un outil rapide, fiable et convivial !",
+            "bmi_algo_h": "Comment Fonctionne Notre Algorithme de Calcul de l'IMC",
+            "bmi_algo_p": "Les calculs d'IMC combinent des formules biométriques avec des paramètres de santé de l'OMS :",
+            "bmi_disclaimer_p": "Avis Médical: Ce calculateur d'IMC est conçu uniquement à des fins d'information éducative et de bien-être.",
+
+            "emi_intro_p": "Consultez exactement votre mensualité et comprenez le coût total de votre emprunt sans jargon.",
+            "emi_loan_details": "Détails du Prêt",
+            "emi_repayment_summary": "Résumé des Remboursements",
+            "emi_monthly_emi": "Mensualité EMI",
+            "emi_total_interest": "Intérêts Totaux",
+            "emi_total_payment": "Paiement Total (Prin + Int)",
+            "emi_principal_amount": "Montant du Capital",
+            "emi_seo_intro_h": "Qu'est-ce qu'un Calculateur d'EMI et comment fonctionne-t-il ?",
+            "emi_seo_intro_p": "Bienvenue sur le Calculateur d'EMI Pepstudio — un outil puissant qui calcule vos mensualités instantanément.",
+            "emi_algo_h": "Comment Fonctionne Notre Algorithme d'Amortissement EMI",
+            "emi_algo_p": "Le calcul d'EMI utilise la formule standard d'amortissement sur solde dégressif :",
+            "emi_disclaimer_p": "Avis Financier: Ce calculateur d'EMI est fourni uniquement à des fins d'illustration et d'estimation.",
+
+            "unit_intro_p": "Convertissez rapidement et avec précision des unités de longueur, poids, température, surface, volume, vitesse, temps et données.",
+            "unit_seo_intro_h": "Qu'est-ce qu'un Convertisseur d'Unités et comment fonctionne-t-il ?",
+            "unit_seo_intro_p": "Bienvenue sur le Convertisseur d'Unités Pepstudio — un outil rapide, gratuit et précis pour convertir des unités.",
+            "unit_disclaimer_p": "Avis de Précision: Ce convertisseur d'unités fournit des facteurs de conversion standard exacts.",
+
+            "perc_intro_p": "Calculez des pourcentages, augmentations, diminutions et différences en secondes.",
+            "perc_seo_intro_h": "Qu'est-ce qu'un Calculateur de Pourcentage et comment fonctionne-t-il ?",
+            "perc_seo_intro_p": "Bienvenue sur le Calculateur de Pourcentage Pepstudio — votre outil rapide et précis pour tous vos calculs.",
+            "perc_disclaimer_p": "Avis de Précision: Les calculs de pourcentage sont effectués avec une précision mathématique.",
+
+            "time_intro_p": "Comparez facilement les horloges en temps réel à travers les villes du monde et les fuseaux horaires.",
+            "time_seo_intro_h": "Qu'est-ce que l'Heure Mondiale et comment fonctionne-t-elle ?",
+            "time_seo_intro_p": "Bienvenue sur Pepstudio Heure Mondiale — suivez en direct les décalages horaires et horloges locales.",
+            "time_disclaimer_p": "Avis de Précision: Les données de fuseau horaire sont synchronisées avec des serveurs de temps internationaux.",
+
+            "love_intro_p": "Découvrez votre score de compatibilité amoureuse amusant et des métriques de relation basées sur vos prénoms.",
+            "love_seo_intro_h": "Qu'est-ce qu'un Calculateur d'Amour et comment fonctionne-t-il ?",
+            "love_seo_intro_p": "Bienvenue sur le Calculateur d'Amour Pepstudio — un outil ludique pour calculer la compatibilité.",
+            "love_disclaimer_p": "Avis de Divertissement: Le Calculateur d'Amour est conçu uniquement à des fins de divertissement.",
+
+            "marquee_text": "Fait avec ❤️ pour tous ceux qui ont besoin d'un calcul rapide : âge, IMC, EMI, pourcentage, conversion d'unités, heure mondiale et même une calculatrice d'amour. Pas de publicités bloquant votre écran. Juste des outils qui fonctionnent.",
+            "metric_units": "Métrique (kg/cm)",
+            "imperial_units": "Impérial (lb/in)",
+            "bmi_underweight": "Sous-poids",
+            "bmi_normal": "Normal",
+            "bmi_overweight": "Surpoids",
+            "bmi_obese": "Obésité",
+            "bmi_underweight_msg": "Votre IMC est inférieur à la plage santé. Pensez à consulter un professionnel de la santé.",
+            "bmi_normal_msg": "Votre IMC est dans la plage santé. Maintenir une alimentation équilibrée vous aidera à y rester.",
+            "bmi_overweight_msg": "Votre IMC est supérieur à la plage santé. De petits changements de mode de vie peuvent vous aider.",
+            "bmi_obese_msg": "Votre IMC est élevé. Un professionnel de la santé peut vous offrir des conseils personnalisés.",
+            "based_on_height": "Basé sur la taille",
+            "tenure_years": "Années",
+            "tenure_months": "Mois",
+            "principal_label": "Capital Principal",
+            "interest_label": "Intérêt",
+            "from_unit": "De",
+            "to_unit": "À",
+            "conversion_results": "Résultats de Conversion",
+            "select_type": "Sélectionner le Type",
+            "basic_pct": "% De base",
+            "pct_change": "% Variation",
+            "pct_diff": "% Différence",
+            "calculation_result": "Résultat du Calcul",
+            "formula_steps": "Formule et Étapes",
+            "live_sync_active": "Synchro En Direct Active",
+            "search_tz_placeholder": "Rechercher une ville ou un fuseau horaire...",
+            "compare_offset": "Comparer le Décalage",
+            "love_check_compat": "Vérifier la Compatibilité",
+            "love_enter_desc": "Entrez les deux prénoms pour calculer l'alignement.",
+            "love_your_name": "Votre Prénom",
+            "love_partner_name": "Prénom de la Partenaire",
+            "love_calc_btn": "Calculer l'Amour",
+            "clear": "Effacer",
+            "love_algo_prec": "Précision de l'Algorithme",
+            "love_algo_prec_desc": "Notre calcul utilise un algorithme de hachage alphanumérique basé sur des matrices de prénoms.",
+            "love_awaiting_input": "En Attente de Saisie",
+            "love_awaiting_desc": "Entrez les deux prénoms dans la calculatrice pour obtenir votre score.",
+            "love_compat_index": "Indice de Compatibilité",
+            "data_insights": "Analyses de Données",
+            "stat_norms": "Normes Statistiques",
+            "string_variance": "Variance de Longueur",
+            "high_outliers": "Valeurs Élevées Exceptionales",
+            "love_high_sym": "Haute symétrie de compatibilité détectée.",
+            "love_mod_align": "Alignement et compatibilité modérés.",
+            "love_std_var": "Variance standard observée."
         },
+
         de: {
             "select_language": "Sprache",
             "home": "Startseite",
             "hero_title": "Willkommen bei den 100% kostenlosen Werkzeugen",
             "hero_subtitle": "Ihre All-in-One Online-Rechner-Suite. Schnell, zuverlässig und komplett kostenlos.",
-            
+
             "age_calc_title": "Altersrechner",
             "age_calc_desc": "Berechnen Sie Ihr genaues Alter in Jahren, Monaten und Tagen",
             "bmi_calc_title": "BMI Rechner",
@@ -443,14 +956,184 @@
             "about_tech_p": "Unsere Plattform basiert auf modernen Webstandards für ein nahtloses Erlebnis.",
             "about_tech_li1": "Clientseitiges Rendering für sofortige Ladezeiten.",
             "about_tech_li2": "Offline-Funktionalität über PWA-Standards.",
-            "about_tech_li3": "Responsive Design optimiert für Desktop, Tablet und Mobilgeräte."
+            "about_tech_li3": "Responsive Design optimiert für Desktop, Tablet und Mobilgeräte.",
+
+            "age_how_heading": "Wie funktioniert der Altersrechner?",
+            "age_how_p1": "Unser Altersrechner vergleicht Ihr Geburtsdatum mit dem heutigen Datum, um die Differenz zu berechnen. Er berücksichtigt automatisch unterschiedliche Monatslängen und Schaltjahre.",
+            "age_how_p2": "So berechnen Sie Ihr Alter",
+            "age_how_li1": "Geben Sie Ihr Geburtsdatum ein.",
+            "age_how_li2": "Wählen oder bestätigen Sie das aktuelle Datum.",
+            "age_how_li3": "Klicken Sie auf die Schaltfläche Alter Berechnen.",
+            "age_how_li4": "Ihr genaues Alter wird sofort angezeigt.",
+            "age_how_p3": "Das Ergebnis kann Ihr Alter in Jahren, Monaten und Tagen anzeigen.",
+            "age_how_p4": "Was können Sie berechnen?",
+            "age_how_p5": "Unser Altersrechner kann Ihnen helfen zu finden:",
+            "age_how_li5": "Ihr Alter in Jahren, Monaten und Tagen",
+            "age_how_li6": "Gesamtanzahl der gelebten Monate",
+            "age_how_li7": "Gesamtanzahl der Tage seit Ihrer Geburt",
+            "age_how_li8": "Gesamtstunden, Minuten und Sekunden basierend auf dem berechneten Zeitraum",
+            "age_how_li9": "Informationen zu Ihrem nächsten Geburtstag",
+            "age_how_p6": "Warum einen Online-Altersrechner verwenden?",
+            "age_how_p7": "Die manuelle Berechnung Ihres genauen Alters kann verwirrend sein. Ein Online-Altersrechner führt diese Berechnungen automatisch durch.",
+            "age_how_p8": "Genaue Altersberechnung",
+            "age_how_p9": "Der Rechner verwendet Ihr Geburtsdatum und das ausgewählte aktuelle Datum, um die Differenz zu bestimmen.",
+            "age_how_p10": "Altersrechner für verschiedene Zwecke",
+            "age_how_p11": "Ein Altersrechner kann in vielen alltäglichen Situationen nützlich sein, darunter:",
+            "age_how_li10": "Überprüfung Ihres aktuellen Alters",
+            "age_how_li11": "Vorbereitung von Formularen und Anträgen",
+            "age_how_li12": "Planung von Geburtstagsfeierlichkeiten",
+            "age_how_li13": "Überprüfung von Altersanforderungen",
+            "age_how_li14": "Berechnung der Zeit zwischen zwei Daten",
+            "age_how_li15": "Bildungs- und persönliche Berechnungen",
+
+            "bday_heading": "Bedeutung und Feier des Geburtstags",
+            "bday_p1": "Was ist ein Geburtstag?",
+            "bday_li1": "Ein Geburtstag markiert den Tag, an dem eine Person die Welt betrat, jährlich als besonderer Meilenstein gefeiert",
+            "bday_li2": "Eines der freudigsten Ereignisse im Leben, das Liebste zusammenbringt",
+            "bday_li3": "Eine Zeit zum Nachdenken über Wachstum, Leistungen und wertvolle Erinnerungen des vergangenen Jahres",
+            "bday_p2": "Wie Geburtstage Gefeiert Werden",
+            "bday_li4": "Einen Geburtstagskuchen anschneiden",
+            "bday_li5": "Durchdachte Geschenke geben und empfangen",
+            "bday_li6": "Geburtstagsfeiern mit Familie und Freunden organisieren",
+            "bday_li7": "Herzliche Geburtstagsgrüße und Nachrichten senden",
+            "bday_p3": "Warum Geburtstage Besonders Sind",
+            "bday_li8": "Mehr als nur ein Datum — Geburtstage sind bedeutungsvolle Meilensteine im Leben",
+            "bday_li9": "Eine Erinnerung, dankbar für die Vergangenheit und hoffnungsvoll für die Zukunft zu sein",
+            "bday_li10": "Jeder Geburtstag öffnet ein neues Kapitel voller frischer Ziele und unvergesslicher Erfahrungen",
+            "bday_p4": "Erkunden Sie Ihr Geburtsdatum",
+            "bday_li11": "Neugierige Geister entdecken gerne die Geschichte hinter ihrem Geburtsdatum",
+            "bday_li12": "Jedes Geburtsdatum ist mit einem Tierkreiszeichen, bekannten Geburtstagen und historischen Meilensteinen verbunden",
+            "bday_li13": "Diese Fakten zu erfahren fügt Ihrem besonderen Tag eine zusätzliche Schicht Aufregung hinzu",
+
+            "age_seo_intro_h": "Was ist ein Altersrechner und wie funktioniert er?",
+            "age_seo_intro_p": "Willkommen beim Pepstudio Altersrechner — ein schnelles, kostenloses und genaues Tool zur Bestimmung Ihres genauen chronologischen Alters bis auf Jahr, Monat und Tag.",
+            "age_algo_h": "Wie Unser Altersberechnungsalgorithmus Funktioniert",
+            "age_algo_p": "Die genaue Altersberechnung beinhaltet mehr als eine einfache Subtraktion, da Monatslängen und Schaltjahre variieren.",
+            "age_algo_s1_h": "1. Kalender-Datums-Mathematik",
+            "age_algo_s1_p": "Berechnet das Rohdelta zwischen den Jahr-, Monats- und Tageskomponenten Ihres Geburtsdatums und des Referenzdatums.",
+            "age_algo_s2_h": "2. Dynamische Monatslängen",
+            "age_algo_s2_p": "Passt sich automatisch an Monate mit 28, 29, 30 oder 31 Tagen an.",
+            "age_algo_s3_h": "3. Schaltjahr-Genauigkeit",
+            "age_algo_s3_p": "Berücksichtigt vierjährige Schaltjahre (29. Februar), um die Tagesanzahl präzise zu halten.",
+            "age_faq_h": "Häufig Gestellte Fragen",
+            "age_faq_q1": "Wie genau ist dieser Online-Altersrechner?",
+            "age_faq_a1": "Unser Altersrechner ist zu 100% genau. Er verwendet exakte gregorianische Kalenderalgorithmen.",
+            "age_faq_q2": "Wie behandelt der Rechner Schaltjahre?",
+            "age_faq_a2": "Schaltjahre fügen alle vier Jahre einen extra Tag (29. Februar) hinzu. Unser Algorithmus berücksichtigt diese Tage automatisch.",
+            "age_faq_q3": "Kann ich mein Alter an einem zukünftigen oder vergangenen Datum berechnen?",
+            "age_faq_a3": "Ja! Verwenden Sie das optionale Feld \"Alter an Datum\", um ein historisches oder zukünftiges Datum auszuwählen.",
+            "age_faq_q4": "Was ist der Unterschied zwischen Alter in Jahren vs. Gesamttagen?",
+            "age_faq_a4": "Alter in Jahren misst abgeschlossene jährliche Revolutionen um die Sonne, während Gesamttage die absolute Anzahl der gelebten 24-Stunden-Perioden messen.",
+            "age_facts_h": "Lustige Fakten & Alters-Trivia",
+            "age_facts_f1_h": "Herzschlagzählung",
+            "age_facts_f1_p": "In einem durchschnittlichen Leben von 70 Jahren schlägt das menschliche Herz über 2,5 Milliarden Mal ohne eine einzige Pause!",
+            "age_facts_f2_h": "Weltraum-Altersvariation",
+            "age_facts_f2_p": "Wenn Sie 25 Jahre alt auf der Erde sind, sind Sie über 100 Jahre alt auf dem Merkur und nur 13 auf dem Mars!",
+            "age_facts_f3_h": "Schaltjahr-\"Schalttag-Kinder\"",
+            "age_facts_f3_p": "Menschen, die am 29. Februar geboren wurden, werden \"Schalttag-Kinder\" genannt und feiern technisch alle vier Jahre einen offiziellen Geburtstag.",
+            "age_facts_f4_h": "Blinzelzeit",
+            "age_facts_f4_p": "Sie verbringen etwa 10% Ihrer Wachstunden mit geschlossenen Augen durch das Blinzeln!",
+            "age_disclaimer_p": "Haftungsausschluss: Dieser Altersrechner dient zu Informations- und allgemeinen Berechnungszwecken.",
+
+            "bmi_intro_p": "Eine einfache, urteilsfreie Möglichkeit, Ihren Körper zu überprüfen — kein Urteil über Ihren Wert.",
+            "bmi_score_caption": "IHR BMI-WERT",
+            "bmi_health_status": "Gesundheitsstatus",
+            "bmi_healthy_range": "Gesunder Gewichtsbereich",
+            "bmi_analysis_title": "Analyse",
+            "bmi_analysis_text": "Ihr BMI liegt im gesunden Bereich. Eine ausgewogene Ernährung und regelmäßige Bewegung helfen Ihnen, in dieser Kategorie zu bleiben.",
+            "bmi_seo_intro_h": "Was ist ein BMI-Rechner & wie funktioniert er?",
+            "bmi_seo_intro_p": "Willkommen beim Pepstudio BMI-Rechner — einem schnellen, zuverlässigen und benutzerfreundlichen Werkzeug!",
+            "bmi_algo_h": "Wie unser BMI-Berechnungsalgorithmus funktioniert",
+            "bmi_algo_p": "BMI-Berechnungen kombinieren biometrische Formeln mit standardisierten Gesundheitsparametern der Weltgesundheitsorganisation (WHO):",
+            "bmi_disclaimer_p": "Medizinischer Hinweis: Dieser BMI-Rechner dient ausschließlich allgemeinen Bildungs- und Wellness-Referenzzwecken.",
+
+            "emi_intro_p": "Sehen Sie genau, wie hoch Ihre monatliche Rate sein wird — und verstehen Sie die Gesamtkosten der Kreditaufnahme.",
+            "emi_loan_details": "Kreditdetails",
+            "emi_repayment_summary": "Rückzahlungsübersicht",
+            "emi_monthly_emi": "Monatliche Rate (EMI)",
+            "emi_total_interest": "Gesamtzinsen",
+            "emi_total_payment": "Gesamtzahlung (Tilgung + Zinsen)",
+            "emi_principal_amount": "Kreditbetrag",
+            "emi_seo_intro_h": "Was ist ein EMI-Rechner & wie funktioniert er?",
+            "emi_seo_intro_p": "Willkommen beim Pepstudio EMI-Rechner — ein leistungsstarkes Tool zur sofortigen Berechnung Ihrer monatlichen Kreditraten.",
+            "emi_algo_h": "Wie unser EMI-Tilgungsalgorithmus funktioniert",
+            "emi_algo_p": "Die EMI-Berechnung verwendet die Standardformel für die Kredit-Tilgung bei fallendem Restbetrag:",
+            "emi_disclaimer_p": "Finanzieller Hinweis: Dieser EMI-Rechner dient nur zu Anschauungs- und Schätzungszwecken.",
+
+            "unit_intro_p": "Rechnen Sie Einheiten von Länge, Gewicht, Temperatur, Fläche, Volumen, Geschwindigkeit, Zeit und Daten schnell um.",
+            "unit_seo_intro_h": "Was ist ein Einheitenumrechner & wie funktioniert er?",
+            "unit_seo_intro_p": "Willkommen beim Pepstudio Einheitenumrechner — ein schnelles, kostenloses und präzises Tool.",
+            "unit_disclaimer_p": "Genauigkeitshinweis: Dieser Einheitenumrechner bietet exakte Standard-Umrechnungsfaktoren.",
+
+            "perc_intro_p": "Berechnen Sie Prozentsätze, Prozentsteigerungen, -senkungen und -differenzen in Sekunden.",
+            "perc_seo_intro_h": "Was ist ein Prozentrechner & wie funktioniert er?",
+            "perc_seo_intro_p": "Willkommen beim Pepstudio Prozentrechner — Ihr schnelles und genaustes Werkzeug für alle Prozentberechnungen.",
+            "perc_disclaimer_p": "Genauigkeitshinweis: Prozentberechnungen werden mit mathematischer Präzision durchgeführt.",
+
+            "time_intro_p": "Vergleichen Sie mühelos Echtzeit-Uhren in globalen Städten und Zeitzonen.",
+            "time_seo_intro_h": "Was ist die Weltzeit & wie funktioniert sie?",
+            "time_seo_intro_p": "Willkommen bei Pepstudio Weltzeit — verfolgen Sie Live-Zeitzonenversätze und lokale Uhren weltweit.",
+            "time_disclaimer_p": "Genauigkeitshinweis: Zeitzonendaten werden mit internationalen Standard-Zeitservern synchronisiert.",
+
+            "love_intro_p": "Entdecken Sie Ihren unterhaltsamen Liebes-Kompatibilitätswert und Beziehungsmetriken basierend auf Ihren Namen.",
+            "love_seo_intro_h": "Was ist ein Liebesrechner & wie funktioniert er?",
+            "love_seo_intro_p": "Willkommen beim Pepstudio Liebesrechner — ein unterhaltsames Tool zur Berechnung von Kompatibilitätswerten.",
+            "love_disclaimer_p": "Unterhaltungshinweis: Der Liebesrechner ist rein zu Unterhaltungszwecken gedacht.",
+
+            "marquee_text": "Mit ❤️ gemacht für alle, die eine schnelle Berechnung benötigen — Alter, BMI, EMI, Prozent, Einheitenumrechnung, Weltzeit & sogar ein Liebesrechner. Keine Werbung. Einfach Werkzeuge, die funktionieren.",
+            "metric_units": "Metrisch (kg/cm)",
+            "imperial_units": "Imperial (lb/in)",
+            "bmi_underweight": "Untergewicht",
+            "bmi_normal": "Normalgewicht",
+            "bmi_overweight": "Übergewicht",
+            "bmi_obese": "Adipositas",
+            "bmi_underweight_msg": "Ihr BMI liegt unter dem gesunden Bereich. Sprechen Sie mit einem Arzt.",
+            "bmi_normal_msg": "Ihr BMI liegt im gesunden Bereich. Ausgewogene Ernährung und Bewegung helfen Ihnen dabei.",
+            "bmi_overweight_msg": "Ihr BMI liegt über dem gesunden Bereich. Kleine Lebensstiländerungen können helfen.",
+            "bmi_obese_msg": "Ihr BMI liegt im höheren Bereich. Ein Arzt kann Sie persönlich beraten.",
+            "based_on_height": "Basierend auf der Höhe",
+            "tenure_years": "Jahre",
+            "tenure_months": "Monate",
+            "principal_label": "Hauptkapital",
+            "interest_label": "Zinsen",
+            "from_unit": "Von",
+            "to_unit": "Nach",
+            "conversion_results": "Umrechnungsergebnisse",
+            "select_type": "Typ Auswählen",
+            "basic_pct": "Basis %",
+            "pct_change": "% Änderung",
+            "pct_diff": "% Differenz",
+            "calculation_result": "Berechnungsergebnis",
+            "formula_steps": "Formel & Schritte",
+            "live_sync_active": "Live-Synchronisierung Aktiv",
+            "search_tz_placeholder": "Stadt oder Zeitzone suchen...",
+            "compare_offset": "Offset Vergleichen",
+            "love_check_compat": "Kompatibilität Prüfen",
+            "love_enter_desc": "Geben Sie beide Namen ein, um die Kompatibilität zu berechnen.",
+            "love_your_name": "Ihr Name",
+            "love_partner_name": "Name des Partners",
+            "love_calc_btn": "Liebe Berechnen",
+            "clear": "Löschen",
+            "love_algo_prec": "Algorithmus-Präzision",
+            "love_algo_prec_desc": "Unsere Berechnung nutzt einen alphanumerischen Hashing-Algorithmus.",
+            "love_awaiting_input": "Warte auf Eingabe",
+            "love_awaiting_desc": "Geben Sie beide Namen ein, um das Ergebnis zu generieren.",
+            "love_compat_index": "Kompatibilitätsindex",
+            "data_insights": "Daten-Einblicke",
+            "stat_norms": "Statistische Normen",
+            "string_variance": "Längenvarianz",
+            "high_outliers": "Hohe Abweichungen",
+            "love_high_sym": "Hohe Übereinstimmung erkannt.",
+            "love_mod_align": "Moderate Übereinstimmung.",
+            "love_std_var": "Standardabweichung beobachtet."
         },
+
         hi: {
             "select_language": "भाषा",
             "home": "मुख्य पृष्ठ",
             "hero_title": "100% मुफ़्त ऑनलाइन टूल साइट में आपका स्वागत है",
             "hero_subtitle": "आपकी ऑल-इन-वन ऑनलाइन कैलकुलेटर सुइट। तेज़, विश्वसनीय और पूरी तरह से मुफ़्त।",
-            
+
             "age_calc_title": "आयु कैलकुलेटर (Age Calculator)",
             "age_calc_desc": "वर्षों, महीनों और दिनों में अपनी सटीक उम्र की गणना करें",
             "bmi_calc_title": "बीएमआई कैलकुलेटर (BMI Calculator)",
@@ -528,14 +1211,184 @@
             "about_tech_p": "हमारा प्लेटफ़ॉर्म सभी उपकरणों पर सहज अनुभव सुनिश्चित करने के लिए आधुनिक वेब मानकों पर बना है।",
             "about_tech_li1": "त्वरित पृष्ठ लोड के लिए क्लाइंट-साइड रेंडरिंग।",
             "about_tech_li2": "PWA मानकों के माध्यम से ऑफ़लाइन क्षमता।",
-            "about_tech_li3": "डेस्कटॉप, टैबलेट और मोबाइल के लिए अनुकूलित रेस्पॉन्सिव डिज़ाइन।"
+            "about_tech_li3": "डेस्कटॉप, टैबलेट और मोबाइल के लिए अनुकूलित रेस्पॉन्सिव डिज़ाइन।",
+
+            "age_how_heading": "आयु कैलकुलेटर कैसे काम करता है?",
+            "age_how_p1": "हमारा आयु कैलकुलेटर आपकी जन्म तिथि की तुलना आज की तारीख से करता है और अंतर की गणना करता है। यह विभिन्न महीने की लंबाई और लीप वर्ष को स्वचालित रूप से संभालता है।",
+            "age_how_p2": "अपनी आयु कैसे गणना करें",
+            "age_how_li1": "अपनी जन्म तिथि दर्ज करें।",
+            "age_how_li2": "वर्तमान दिनांक का चयन करें या पुष्टि करें।",
+            "age_how_li3": "आयु गणना करें बटन पर क्लिक करें।",
+            "age_how_li4": "आपकी सटीक आयु तुरंत प्रदर्शित होगी।",
+            "age_how_p3": "परिणाम वर्षों, महीनों और दिनों में आपकी आयु दिखा सकता है।",
+            "age_how_p4": "आप क्या गणना कर सकते हैं?",
+            "age_how_p5": "हमारा आयु कैलकुलेटर इन्हें खोजने में मदद कर सकता है:",
+            "age_how_li5": "वर्षों, महीनों और दिनों में आपकी आयु",
+            "age_how_li6": "आपने जितने महीने जीए उनकी कुल संख्या",
+            "age_how_li7": "आपके जन्म से अब तक कुल दिनों की संख्या",
+            "age_how_li8": "गणना की गई अवधि के आधार पर कुल घंटे, मिनट और सेकंड",
+            "age_how_li9": "आपके अगले जन्मदिन की जानकारी",
+            "age_how_p6": "ऑनलाइन आयु कैलकुलेटर क्यों उपयोग करें?",
+            "age_how_p7": "अपनी सटीक आयु मैन्युअल रूप से गणना करना भ्रामक हो सकता है। एक ऑनलाइन आयु कैलकुलेटर इन गणनाओं को स्वचालित रूप से करता है।",
+            "age_how_p8": "सटीक आयु गणना",
+            "age_how_p9": "कैलकुलेटर आपकी जन्म तिथि और चयनित वर्तमान दिनांक का उपयोग करके दोनों तिथियों के बीच अंतर निर्धारित करता है।",
+            "age_how_p10": "विभिन्न उद्देश्यों के लिए आयु कैलकुलेटर",
+            "age_how_p11": "आयु कैलकुलेटर कई रोज़मर्रा की स्थितियों में उपयोगी हो सकता है, जिनमें शामिल हैं:",
+            "age_how_li10": "आपकी वर्तमान आयु की जांच",
+            "age_how_li11": "फॉर्म और आवेदन तैयार करना",
+            "age_how_li12": "जन्मदिन उत्सव की योजना बनाना",
+            "age_how_li13": "आयु आवश्यकताओं की जांच",
+            "age_how_li14": "दो तिथियों के बीच समय की गणना",
+            "age_how_li15": "शैक्षिक और व्यक्तिगत गणनाएं",
+
+            "bday_heading": "जन्मदिन का अर्थ और उत्सव",
+            "bday_p1": "जन्मदिन क्या है?",
+            "bday_li1": "जन्मदिन उस दिन को चिह्नित करता है जब एक व्यक्ति दुनिया में आया, हर साल एक विशेष मील के पत्थर के रूप में मनाया जाता है",
+            "bday_li2": "जीवन के सबसे खुशी के अवसरों में से एक, प्रियजनों को उत्सव में एक साथ लाता है",
+            "bday_li3": "पिछले साल की वृद्धि, उपलब्धियों और प्रिय यादों पर विचार करने का समय",
+            "bday_p2": "जन्मदिन कैसे मनाए जाते हैं",
+            "bday_li4": "जन्मदिन का केक काटना",
+            "bday_li5": "सोचे-समझे उपहार देना और प्राप्त करना",
+            "bday_li6": "परिवार और दोस्तों के साथ जन्मदिन पार्टी आयोजित करना",
+            "bday_li7": "गर्म जन्मदिन की शुभकामनाएं और संदेश भेजना",
+            "bday_p3": "जन्मदिन क्यों खास होते हैं",
+            "bday_li8": "सिर्फ एक तारीख से अधिक — जन्मदिन जीवन के सार्थक मील के पत्थर हैं",
+            "bday_li9": "अतीत के लिए कृतज्ञ और भविष्य के प्रति आशावादी रहने की याद",
+            "bday_li10": "प्रत्येक जन्मदिन नए लक्ष्यों, अवसरों और यादगार अनुभवों से भरा एक नया अध्याय खोलता है",
+            "bday_p4": "अपनी जन्म तिथि के बारे में जानें",
+            "bday_li11": "जिज्ञासु मन अपनी जन्म तिथि की कहानी उजागर करना पसंद करते हैं",
+            "bday_li12": "प्रत्येक जन्म तिथि राशि चक्र, प्रसिद्ध हस्तियों के उल्लेखनीय जन्मदिन और ऐतिहासिक तथ्यों से जुड़ी होती है",
+            "bday_li13": "इन जन्म-तिथि तथ्यों को जानने से आपके विशेष दिन में उत्साह की एक अतिरिक्त परत जुड़ जाती है",
+
+            "age_seo_intro_h": "आयु कैलकुलेटर क्या है और यह कैसे काम करता है?",
+            "age_seo_intro_p": "पेपस्टुडियो आयु कैलकुलेटर में आपका स्वागत है — एक तेज़, मुफ़्त और सटीक उपकरण जो आपकी सटीक कालानुक्रमिक आयु वर्ष, माह और दिन तक निर्धारित करने के लिए बनाया गया है।",
+            "age_algo_h": "हमारा आयु गणना एल्गोरिथम कैसे काम करता है",
+            "age_algo_p": "सटीक आयु की गणना में केवल सरल घटाव से अधिक शामिल है क्योंकि महीने की लंबाई और लीप वर्ष भिन्न होते हैं।",
+            "age_algo_s1_h": "1. कैलेंडर तिथि गणित",
+            "age_algo_s1_p": "आपकी जन्म तिथि और संदर्भ तिथि के वर्ष, माह और दिन घटकों के बीच कच्चे डेल्टा की गणना करता है।",
+            "age_algo_s2_h": "2. गतिशील महीने की लंबाई",
+            "age_algo_s2_p": "घटाव के दौरान दिन उधार लेते समय 28, 29, 30 या 31-दिन के महीनों के लिए स्वचालित रूप से समायोजित होता है।",
+            "age_algo_s3_h": "3. लीप वर्ष सटीकता",
+            "age_algo_s3_p": "दशकों में दिन गणना की सटीकता सुनिश्चित करने के लिए चतुर्वर्षीय लीप वर्षों (29 फरवरी) को ध्यान में रखता है।",
+            "age_faq_h": "अक्सर पूछे जाने वाले प्रश्न",
+            "age_faq_q1": "यह ऑनलाइन आयु कैलकुलेटर कितना सटीक है?",
+            "age_faq_a1": "हमारा आयु कैलकुलेटर 100% सटीक है। यह सटीक ग्रेगोरियन कैलेंडर एल्गोरिदम का उपयोग करता है।",
+            "age_faq_q2": "कैलकुलेटर लीप वर्षों को कैसे संभालता है?",
+            "age_faq_a2": "लीप वर्ष हर चार साल में एक अतिरिक्त दिन (29 फरवरी) जोड़ते हैं। हमारा एल्गोरिदम स्वचालित रूप से इन दिनों को ध्यान में रखता है।",
+            "age_faq_q3": "क्या मैं किसी विशिष्ट भविष्य या अतीत की तिथि पर अपनी आयु की गणना कर सकता हूं?",
+            "age_faq_a3": "हां! किसी ऐतिहासिक या भविष्य की तारीख का चयन करने के लिए वैकल्पिक फ़ील्ड \"दिनांक पर आयु\" का उपयोग करें।",
+            "age_faq_q4": "वर्षों में आयु और कुल दिनों के बीच क्या अंतर है?",
+            "age_faq_a4": "वर्षों में आयु सूर्य के चारों ओर पूर्ण वार्षिक परिक्रमाओं को मापती है, जबकि कुल दिन आपकी जन्म तिथि के बाद से जीए गए 24-घंटे के पीरियड की पूर्ण संख्या को मापते हैं।",
+            "age_facts_h": "मजेदार तथ्य और आयु ट्रिविया",
+            "age_facts_f1_h": "दिल की धड़कन की संख्या",
+            "age_facts_f1_p": "औसत 70 साल की जिंदगी में, मानव हृदय बिना एक भी विराम के 2.5 अरब से अधिक बार धड़कता है!",
+            "age_facts_f2_h": "अंतरिक्ष आयु भिन्नता",
+            "age_facts_f2_p": "यदि आप पृथ्वी पर 25 वर्ष के हैं, तो आप बुध पर 100 से अधिक वर्ष के हैं और मंगल पर केवल 13 वर्ष के हैं!",
+            "age_facts_f3_h": "लीप वर्ष के \"लीपलिंग\"",
+            "age_facts_f3_p": "29 फरवरी को पैदा हुए लोगों को \"लीपलिंग्स\" कहा जाता है और तकनीकी रूप से हर चार साल में एक बार आधिकारिक कैलेंडर जन्मदिन मनाते हैं।",
+            "age_facts_f4_h": "पलक झपकने का समय",
+            "age_facts_f4_p": "आप अपने पूरे जीवन में पलक झपकने के कारण अपने जागने के घंटों का लगभग 10% आंखें बंद रखते हैं!",
+            "age_disclaimer_p": "सटीकता अस्वीकरण: यह आयु कैलकुलेटर सामान्य सूचना और गणना उद्देश्यों के लिए प्रदान किया गया है।",
+
+            "bmi_intro_p": "अपने शरीर की जांच करने का एक सरल, निर्णय-मुक्त तरीका — आपकी योग्यता पर कोई फैसला नहीं।",
+            "bmi_score_caption": "आपका बीएमआई स्कोर",
+            "bmi_health_status": "स्वास्थ्य स्थिति",
+            "bmi_healthy_range": "स्वस्थ वजन सीमा",
+            "bmi_analysis_title": "विश्लेषण",
+            "bmi_analysis_text": "आपका बीएमआई स्वस्थ सीमा के भीतर है। संतुलित आहार और नियमित व्यायाम बनाए रखने से आपको इस श्रेणी में रहने में मदद मिलेगी।",
+            "bmi_seo_intro_h": "बीएमआई कैलकुलेटर क्या है और यह कैसे काम करता है?",
+            "bmi_seo_intro_p": "Pepstudio बीएमआई कैलकुलेटर में आपका स्वागत है — आपकी ऊंचाई के सापेक्ष आपके शरीर के द्रव्यमान का मूल्यांकन करने के लिए एक तेज़ और विश्वसनीय उपकरण!",
+            "bmi_algo_h": "हमारा बीएमआई गणना एल्गोरिदम कैसे काम करता है",
+            "bmi_algo_p": "बीएमआई गणना विश्व स्वास्थ्य संगठन (डब्ल्यूएचओ) के स्वास्थ्य मापदंडों के साथ बायोमेट्रिक सूत्रों को जोड़ती है:",
+            "bmi_disclaimer_p": "चिकित्सा अस्वीकरण: यह बीएमआई कैलकुलेटर सख्ती से सामान्य शैक्षिक और कल्याण संदर्भ के लिए डिज़ाइन किया गया है।",
+
+            "emi_intro_p": "देखें कि आपका मासिक भुगतान बिल्कुल क्या होगा — और बिना किसी कठिन शब्द के उधार की कुल लागत को समझें।",
+            "emi_loan_details": "ऋण विवरण",
+            "emi_repayment_summary": "पुनर्भुगतान सारांश",
+            "emi_monthly_emi": "मासिक ईएमआई",
+            "emi_total_interest": "कुल देय ब्याज",
+            "emi_total_payment": "कुल भुगतान (मूलधन + ब्याज)",
+            "emi_principal_amount": "मूलधन राशि",
+            "emi_seo_intro_h": "ईएमआई कैलकुलेटर क्या है और यह कैसे काम करता है?",
+            "emi_seo_intro_p": "Pepstudio ईएमआई कैलकुलेटर में आपका स्वागत है — एक शक्तिशाली उपकरण जो आपकी मासिक ऋण किस्तों की तुरंत गणना करता है।",
+            "emi_algo_h": "हमारा ईएमआई परिशोधन एल्गोरिदम कैसे काम करता है",
+            "emi_algo_p": "ईएमआई गणना मानक घटाने वाले शेष ऋण परिशोधन सूत्र का उपयोग करती है:",
+            "emi_disclaimer_p": "वित्तीय अस्वीकरण: यह ईएमआई कैलकुलेटर केवल उदाहरणात्मक और अनुमान के उद्देश्यों के लिए प्रदान किया गया है।",
+
+            "unit_intro_p": "लंबाई, वजन, तापमान, क्षेत्रफल, आयतन, गति, समय और डेटा इकाइयों को तुरंत और सटीक रूप से कनवर्ट करें।",
+            "unit_seo_intro_h": "यूनिट कनवर्टर क्या है और यह कैसे काम करता है?",
+            "unit_seo_intro_p": "Pepstudio यूनिट कनवर्टर में आपका स्वागत है — विभिन्न श्रेणियों में इकाइयों को कनवर्ट करने के लिए एक तेज़ और सटीक उपकरण।",
+            "unit_disclaimer_p": "सटीकता अस्वीकरण: यह यूनिट कनवर्टर सटीक मानक रूपांतरण कारक प्रदान करता है।",
+
+            "perc_intro_p": "सेकंड में प्रतिशत, प्रतिशत वृद्धि, कमी और अंतर की गणना करें।",
+            "perc_seo_intro_h": "प्रतिशत कैलकुलेटर क्या है और यह कैसे काम करता है?",
+            "perc_seo_intro_p": "Pepstudio प्रतिशत कैलकुलेटर में आपका स्वागत है — सभी प्रतिशत गणनाओं के लिए आपका तेज़ और सटीक उपकरण।",
+            "perc_disclaimer_p": "सटीकता अस्वीकरण: प्रतिशत गणना गणितीय सटीकता के साथ की जाती है।",
+
+            "time_intro_p": "वैश्विक शहरों और समय क्षेत्रों में वास्तविक समय की घड़ियों की तुलना आसानी से करें।",
+            "time_seo_intro_h": "विश्व समय क्या है और यह कैसे काम करता है?",
+            "time_seo_intro_p": "Pepstudio विश्व समय में आपका स्वागत है — दुनिया भर में लाइव समय क्षेत्र ऑफसेट और स्थानीय घड़ियों को ट्रैक करें।",
+            "time_disclaimer_p": "सटीकता अस्वीकरण: समय क्षेत्र डेटा मानक अंतर्राष्ट्रीय समय सर्वर के साथ समन्वयित है।",
+
+            "love_intro_p": "अपने नामों के आधार पर अपने मज़ेदार प्रेम संगतता स्कोर और रिश्ते के मेट्रिक्स खोजें।",
+            "love_seo_intro_h": "लव कैलकुलेटर क्या है और यह कैसे काम करता है?",
+            "love_seo_intro_p": "Pepstudio लव कैलकुलेटर में आपका स्वागत है — संगतता स्कोर की गणना के लिए डिज़ाइन किया गया एक मज़ेदार उपकरण।",
+            "love_disclaimer_p": "मनोरंजन अस्वीकरण: लव कैलकुलेटर विशुद्ध रूप से मज़े और मनोरंजन के उद्देश्यों के लिए डिज़ाइन किया गया है।",
+
+            "marquee_text": "❤️ के साथ बनाया गया किसी के लिए भी जिसे त्वरित गणना की आवश्यकता है — आयु, बीएमआई, ईएमआई, प्रतिशत, इकाई परिवर्तन, विश्व समय और लव कैलकुलेटर। आपकी स्क्रीन को अवरुद्ध करने वाला कोई विज्ञापन नहीं। केवल काम करने वाले उपकरण।",
+            "metric_units": "मीट्रिक (किग्रा/सेमी)",
+            "imperial_units": "इंपीरियल (पौंड/इंच)",
+            "bmi_underweight": "कम वजन",
+            "bmi_normal": "सामान्य",
+            "bmi_overweight": "अधिक वजन",
+            "bmi_obese": "मोटापा",
+            "bmi_underweight_msg": "आपका बीएमआई स्वस्थ सीमा से नीचे है। अपने स्वास्थ्य पेशेवर से परामर्श करें।",
+            "bmi_normal_msg": "आपका बीएमआई स्वस्थ सीमा के भीतर है। संतुलित आहार और व्यायाम बनाए रखें।",
+            "bmi_overweight_msg": "आपका बीएमआई स्वस्थ सीमा से ऊपर है। जीवनशैली में छोटे बदलाव आपकी मदद कर सकते हैं।",
+            "bmi_obese_msg": "आपका बीएमआई उच्च श्रेणी में है। स्वास्थ्य पेशेवर से व्यक्तिगत मार्गदर्शन लें।",
+            "based_on_height": "ऊंचाई के आधार पर",
+            "tenure_years": "वर्ष",
+            "tenure_months": "महीने",
+            "principal_label": "मूलधन",
+            "interest_label": "ब्याज",
+            "from_unit": "से",
+            "to_unit": "तक",
+            "conversion_results": "रूपांतरण परिणाम",
+            "select_type": "प्रकार चुनें",
+            "basic_pct": "मूल %",
+            "pct_change": "% परिवर्तन",
+            "pct_diff": "% अंतर",
+            "calculation_result": "गणना परिणाम",
+            "formula_steps": "सूत्र और चरण",
+            "live_sync_active": "लाइव सिंक सक्रिय",
+            "search_tz_placeholder": "शहर या समय क्षेत्र खोजें...",
+            "compare_offset": "ऑफ़सेट की तुलना करें",
+            "love_check_compat": "संगतता की जांच करें",
+            "love_enter_desc": "सटीकता मीट्रिक की गणना के लिए दोनों नाम दर्ज करें।",
+            "love_your_name": "आपका नाम",
+            "love_partner_name": "साथी का नाम",
+            "love_calc_btn": "प्रेम की गणना करें",
+            "clear": "साफ़ करें",
+            "love_algo_prec": "एल्गोरिदम सटीकता",
+            "love_algo_prec_desc": "हमारी गणना नामों के मिलान पर आधारित अल्फानुमेरिक हैशिंग एल्गोरिदम का उपयोग करती है।",
+            "love_awaiting_input": "इनपुट की प्रतीक्षा है",
+            "love_awaiting_desc": "अपनी संगतता मीट्रिक उत्पन्न करने के लिए कैलकुलेटर में दोनों नाम दर्ज करें।",
+            "love_compat_index": "संगतता सूचकांक",
+            "data_insights": "डेटा अंतर्दृष्टि",
+            "stat_norms": "सांख्यिकी मानदंड",
+            "string_variance": "लंबाई भिन्नता",
+            "high_outliers": "उच्च आउटलायर",
+            "love_high_sym": "उच्च संरचनात्मक समानता पाई गई।",
+            "love_mod_align": "मध्यम संरेखण।",
+            "love_std_var": "सामान्य भिन्नता देखी गई।"
         },
+
         zh: {
             "select_language": "语言",
             "home": "首页",
             "hero_title": "欢迎使用100%免费在线工具",
             "hero_subtitle": "您的一站式在线计算器套件。快速、可靠、完全免费。",
-            
+
             "age_calc_title": "年龄计算器",
             "age_calc_desc": "精确计算您的周岁年龄、月数和天数",
             "bmi_calc_title": "BMI身体质量指数计算器",
@@ -615,8 +1468,7 @@
             "about_tech_li2": "PWA compliant for full offline availability.",
             "about_tech_li3": "Fully responsive across desktop, tablet, and mobile displays.",
 
-            "select_language": "Select Language",
-            "doc_system_badge": "User Guide & Specifications",
+            "doc_system_badge": "用户指南与技术规格",
             "doc_main_title": "Pepstudio Technical Documentation & System Guide",
             "doc_main_subtitle": "A comprehensive guide to our precision calculation engine, mathematical models, client-side privacy architecture, and utility suite functionality.",
             "doc_sec1_title": "1. System Architecture & Zero-Knowledge Privacy",
@@ -639,7 +1491,176 @@
             "doc_time_desc": "World Time computations utilize the Intl.DateTimeFormat engine synced with official IANA Time Zone Database specifications.",
             "doc_sec3_title": "3. Offline Mode & PWA Capabilities",
             "doc_sec3_p": "Pepstudio web tools are fully compatible with Progressive Web App (PWA) caching standards. Once you load a tool page, script logic is cached in your browser's local cache storage, enabling full offline operation when internet connectivity is unavailable.",
-            "doc_back_btn": "Back to Pepstudio Utilities"
+            "doc_back_btn": "Back to Pepstudio Utilities",
+
+            "age_how_heading": "年龄计算器如何工作？",
+            "age_how_p1": "我们的年龄计算器将您的出生日期与今天的日期进行比较，以计算两个日期之间的差值。它自动处理不同的月份长度和闰年。",
+            "age_how_p2": "如何计算您的年龄",
+            "age_how_li1": "输入您的出生日期。",
+            "age_how_li2": "选择或确认当前日期。",
+            "age_how_li3": "点击计算年龄按钮。",
+            "age_how_li4": "您的确切年龄将立即显示。",
+            "age_how_p3": "结果可以以年、月和日显示您的年龄，让您更容易了解自出生以来经过了多少时间。",
+            "age_how_p4": "您可以计算什么？",
+            "age_how_p5": "我们的年龄计算器可以帮助您找到：",
+            "age_how_li5": "您以年、月、日计的年龄",
+            "age_how_li6": "您已经活过的总月数",
+            "age_how_li7": "自您出生以来的总天数",
+            "age_how_li8": "基于计算期间的总小时数、分钟数和秒数",
+            "age_how_li9": "您的下一个生日信息",
+            "age_how_p6": "为什么使用在线年龄计算器？",
+            "age_how_p7": "手动计算您的确切年龄可能会很混乱。在线年龄计算器会自动执行这些计算。",
+            "age_how_p8": "精确年龄计算",
+            "age_how_p9": "计算器使用您的出生日期和所选当前日期来确定两个日期之间的差值。",
+            "age_how_p10": "不同用途的年龄计算器",
+            "age_how_p11": "年龄计算器在许多日常情况下都很有用，包括：",
+            "age_how_li10": "检查您的当前年龄",
+            "age_how_li11": "准备表格和申请",
+            "age_how_li12": "规划生日庆祝活动",
+            "age_how_li13": "检查年龄要求",
+            "age_how_li14": "计算两个日期之间的时间",
+            "age_how_li15": "教育和个人计算",
+
+            "bday_heading": "生日的意义和庆祝",
+            "bday_p1": "什么是生日？",
+            "bday_li1": "生日标志着一个人来到这个世界的那一天，每年作为一个特殊的里程碑来庆祝",
+            "bday_li2": "生命中最快乐的时刻之一，将亲人聚集在一起共同庆祝",
+            "bday_li3": "反思过去一年的成长、成就和珍贵回忆的时刻",
+            "bday_p2": "如何庆祝生日",
+            "bday_li4": "切生日蛋糕",
+            "bday_li5": "赠送和接受体贴的礼物",
+            "bday_li6": "与家人和朋友举办生日派对",
+            "bday_li7": "送上温暖的生日祝福和消息",
+            "bday_p3": "为什么生日很特别",
+            "bday_li8": "不仅仅是一个日期——生日是生命中有意义的里程碑",
+            "bday_li9": "提醒我们对过去心存感激，对未来充满希望",
+            "bday_li10": "每个生日都开启了充满新目标、机遇和难忘经历的新篇章",
+            "bday_p4": "探索您的出生日期",
+            "bday_li11": "好奇的人喜欢发掘自己出生日期背后的故事",
+            "bday_li12": "每个出生日期都与星座、名人生日、历史里程碑和有趣的小知识相关联",
+            "bday_li13": "了解这些生日事实为您的特殊日子增添了额外的兴奋感",
+
+            "age_seo_intro_h": "什么是年龄计算器及其工作原理？",
+            "age_seo_intro_p": "欢迎使用Pepstudio年龄计算器——一款快速、免费且精确的工具，旨在精确到年、月、日地确定您的确切历法年龄。",
+            "age_algo_h": "我们的年龄计算算法如何工作",
+            "age_algo_p": "精确计算年龄不仅仅是简单的减法，因为月份长度和闰年各不相同。",
+            "age_algo_s1_h": "1. 日历日期数学",
+            "age_algo_s1_p": "计算您的出生日期和参考日期的年、月、日部分之间的原始差值。",
+            "age_algo_s2_h": "2. 动态月份长度",
+            "age_algo_s2_p": "在减法借位时自动调整28、29、30或31天的月份。",
+            "age_algo_s3_h": "3. 闰年精确度",
+            "age_algo_s3_p": "考虑四年一次的闰年（2月29日）以确保跨数十年的天数统计精确度。",
+            "age_faq_h": "常见问题",
+            "age_faq_q1": "这个在线年龄计算器有多准确？",
+            "age_faq_a1": "我们的年龄计算器100%准确。它使用精确的公历算法。",
+            "age_faq_q2": "计算器如何处理闰年？",
+            "age_faq_a2": "闰年每四年增加一天（2月29日）。我们的算法在计算时自动考虑这些天。",
+            "age_faq_q3": "我可以在特定的未来或过去日期计算我的年龄吗？",
+            "age_faq_a3": "可以！使用可选的\"年龄日期\"字段来选择任何历史或未来日期。",
+            "age_faq_q4": "年龄（以年计）与总天数有什么区别？",
+            "age_faq_a4": "以年计的年龄衡量围绕太阳完成的年度公转，而总天数衡量自您出生日期以来的绝对24小时周期数。",
+            "age_facts_h": "有趣的事实与年龄冷知识",
+            "age_facts_f1_h": "心跳计数",
+            "age_facts_f1_p": "在平均70年的生命中，人类心脏跳动超过25亿次而从不休息！",
+            "age_facts_f2_h": "太空年龄差异",
+            "age_facts_f2_p": "如果您在地球上25岁，由于轨道速度不同，您在水星上超过100岁，在火星上只有13岁！",
+            "age_facts_f3_h": "闰年的\"闰日宝宝\"",
+            "age_facts_f3_p": "出生在2月29日的人被称为\"闰日宝宝\"，技术上每四年才能在官方日历生日上庆祝一次。",
+            "age_facts_f4_h": "眨眼时间",
+            "age_facts_f4_p": "您一生中在眨眼上大约花费了10%的清醒时间——眼睛都是闭着的！",
+            "age_disclaimer_p": "准确性免责声明：本年龄计算器仅供一般信息和计算用途。对于法律文件的正式年龄核实，请始终参阅官方出生证明。",
+
+            "bmi_intro_p": "一种简单、毫无偏见的方式来了解您的身体——并非对您价值的裁决。",
+            "bmi_score_caption": "您的BMI分数",
+            "bmi_health_status": "健康状况",
+            "bmi_healthy_range": "健康体重范围",
+            "bmi_analysis_title": "分析",
+            "bmi_analysis_text": "您的BMI处于健康范围内。保持均衡饮食和定期运动将有助于您保持在该类别中。",
+            "bmi_seo_intro_h": "什么是BMI计算器及其工作原理？",
+            "bmi_seo_intro_p": "欢迎使用Pepstudio BMI计算器——一款快速、可靠且易于使用的评估身体质量的工具！",
+            "bmi_algo_h": "我们的BMI计算算法如何工作",
+            "bmi_algo_p": "BMI计算结合了生物识别公式与世界卫生组织（WHO）的标准健康参数：",
+            "bmi_disclaimer_p": "医学免责声明：本BMI计算器仅供一般教育和健康参考。请务必咨询专业医疗人员。",
+
+            "emi_intro_p": "准确查看您每月的还款额，轻松了解贷款的完整成本。",
+            "emi_loan_details": "贷款详细信息",
+            "emi_repayment_summary": "还款摘要",
+            "emi_monthly_emi": "每月EMI还款额",
+            "emi_total_interest": "总应付利息",
+            "emi_total_payment": "总还款额（本金 + 利息）",
+            "emi_principal_amount": "贷款本金",
+            "emi_seo_intro_h": "什么是EMI计算器及其工作原理？",
+            "emi_seo_intro_p": "欢迎使用Pepstudio EMI计算器——一款即时计算您每月贷款还款额的强大工具。",
+            "emi_algo_h": "我们的EMI摊还算法如何工作",
+            "emi_algo_p": "EMI计算采用标准的递减余额贷款摊还公式：",
+            "emi_disclaimer_p": "财务免责声明：本EMI计算器仅供说明和估计用途。请咨询您的银行了解官方条款。",
+
+            "unit_intro_p": "快速准确地转换长度、重量、温度、面积、体积、速度、时间和数据单位。",
+            "unit_seo_intro_h": "什么是单位转换器及其工作原理？",
+            "unit_seo_intro_p": "欢迎使用Pepstudio单位转换器——一款用于在多个类别之间转换单位的快速、免费且精确的工具。",
+            "unit_disclaimer_p": "准确性免责声明：本单位转换器为教育和专业用途提供精确的标准转换系数。",
+
+            "perc_intro_p": "在几秒钟内计算百分比、百分比增加、减少和差异。",
+            "perc_seo_intro_h": "什么是百分比计算器及其工作原理？",
+            "perc_seo_intro_p": "欢迎使用Pepstudio百分比计算器——您进行所有百分比计算的快捷精确工具。",
+            "perc_disclaimer_p": "准确性免责声明：百分比计算以数学精确度执行。",
+
+            "time_intro_p": "轻松比较全球城市和时区之间的实时时钟。",
+            "time_seo_intro_h": "什么是世界时间及其工作原理？",
+            "time_seo_intro_p": "欢迎使用Pepstudio世界时间——在全球范围内追踪实时时区偏移和当地时钟。",
+            "time_disclaimer_p": "准确性免责声明：时区数据与标准国际时间服务器同步。",
+
+            "love_intro_p": "根据您的名字发掘有趣的爱情匹配得分和关系指标。",
+            "love_seo_intro_h": "什么是爱情计算器及其工作原理？",
+            "love_seo_intro_p": "欢迎使用Pepstudio爱情计算器——一款用于计算匹配得分的有趣工具。",
+            "love_disclaimer_p": "娱乐免责声明：爱情计算器纯粹出于趣味和娱乐目的而设计。",
+
+            "marquee_text": "用 ❤️ 为需要快速计算的人打造 — 年龄、BMI、EMI、百分比、单位转换、世界时间，甚至爱情计算器。没有广告遮挡屏幕，无需强制注册。只有实用工具。",
+            "metric_units": "公制 (公斤/厘米)",
+            "imperial_units": "英制 (磅/英寸)",
+            "bmi_underweight": "体重过轻",
+            "bmi_normal": "正常",
+            "bmi_overweight": "超重",
+            "bmi_obese": "肥胖",
+            "bmi_underweight_msg": "您的 BMI 低于健康范围。建议咨询专业医疗人员。",
+            "bmi_normal_msg": "您的 BMI 在健康范围内。保持均衡饮食和规律运动。",
+            "bmi_overweight_msg": "您的 BMI 高于健康范围。小幅度的生活方式调整有助于健康 Goal。",
+            "bmi_obese_msg": "您的 BMI 处于较髙范围。建议向医生咨询个性化指导。",
+            "based_on_height": "基于身高",
+            "tenure_years": "年",
+            "tenure_months": "月",
+            "principal_label": "本金",
+            "interest_label": "利息",
+            "from_unit": "从",
+            "to_unit": "到",
+            "conversion_results": "转换结果",
+            "select_type": "选择类型",
+            "basic_pct": "基础 %",
+            "pct_change": "% 变化",
+            "pct_diff": "% 差异",
+            "calculation_result": "计算结果",
+            "formula_steps": "公式与步骤",
+            "live_sync_active": "实时同步已激活",
+            "search_tz_placeholder": "搜索城市或时区...",
+            "compare_offset": "比较偏移量",
+            "love_check_compat": "检查契合度",
+            "love_enter_desc": "输入双方姓名以计算匹配度指标。",
+            "love_your_name": "您的姓名",
+            "love_partner_name": "伴侣姓名",
+            "love_calc_btn": "计算爱情",
+            "clear": "清除",
+            "love_algo_prec": "算法精度",
+            "love_algo_prec_desc": "我们的计算采用基于姓名匹配矩阵的字母数字哈希算法。",
+            "love_awaiting_input": "等待输入",
+            "love_awaiting_desc": "在计算器中输入双方姓名以生成契合度指标。",
+            "love_compat_index": "契合度指数",
+            "data_insights": "数据分析",
+            "stat_norms": "统计基准",
+            "string_variance": "长度差异",
+            "high_outliers": "极高契合",
+            "love_high_sym": "检测到高度的契合对称性。",
+            "love_mod_align": "中等匹配度的契合轨迹。",
+            "love_std_var": "观察到标准方差。"
         }
     };
 
@@ -675,11 +1696,18 @@
                 if (el.tagName === "INPUT" && el.hasAttribute("placeholder")) {
                     el.setAttribute("placeholder", translatedText);
                 } else {
+                    // Find a direct text node with actual content
                     let textNode = Array.from(el.childNodes).find(node => node.nodeType === Node.TEXT_NODE && node.nodeValue.trim().length > 0);
                     if (textNode) {
-                        textNode.nodeValue = " " + translatedText;
+                        // Update the text node directly (works even if the element also has child elements like icons)
+                        textNode.nodeValue = translatedText;
                     } else if (el.children.length === 0) {
+                        // No child elements at all - safe to set textContent
                         el.textContent = translatedText;
+                    } else {
+                        // Element has child elements but no existing text node (e.g. button with only an icon).
+                        // Append the translated text as a new text node so child elements are preserved.
+                        el.appendChild(document.createTextNode(translatedText));
                     }
                 }
             }
@@ -694,7 +1722,7 @@
             currentLang = lang;
             localStorage.setItem("pepstudio_lang", lang);
             applyTranslations();
-            
+
             // Sync all selector dropdowns (header and drawer)
             document.querySelectorAll(".pep-lang-select, .pep-drawer-lang-select").forEach(sel => {
                 sel.value = lang;
@@ -719,19 +1747,20 @@
 
     function injectHeaderComponents() {
         const headers = document.querySelectorAll("header");
+
         headers.forEach(header => {
-            if (header.querySelector(".pep-mobile-menu-btn")) return;
+            // 1. Create 3-line Mobile Hamburger Button (only if missing)
+            if (!header.querySelector(".pep-mobile-menu-btn")) {
+                const menuBtn = document.createElement("button");
+                menuBtn.className = "pep-mobile-menu-btn";
+                menuBtn.ariaLabel = "Toggle Menu";
+                menuBtn.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>`;
 
-            // 1. Create 3-line Mobile Hamburger Button on Left
-            const menuBtn = document.createElement("button");
-            menuBtn.className = "pep-mobile-menu-btn";
-            menuBtn.ariaLabel = "Toggle Menu";
-            menuBtn.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>`;
+                // Prepend so it sits on the left
+                header.insertBefore(menuBtn, header.firstChild);
+            }
 
-            // Prepend 3-line button so it sits on the left
-            header.insertBefore(menuBtn, header.firstChild);
-
-            // 2. Create Language Switcher Dropdown on Right (for Desktop)
+            // 2. Create Language Switcher Dropdown on the right (independent check)
             if (!header.querySelector(".pep-lang-switcher")) {
                 const switcher = document.createElement("div");
                 switcher.className = "pep-lang-switcher";
@@ -755,92 +1784,96 @@
                 switcher.appendChild(select);
                 header.appendChild(switcher);
             }
-
-            // 3. Create Mobile Navigation Drawer (with Language Selector inside)
-            if (!document.querySelector(".pep-mobile-drawer")) {
-                const drawer = document.createElement("div");
-                drawer.className = "pep-mobile-drawer";
-
-                const langOptions = supportedLanguages.map(l => 
-                    `<option value="${l.code}" ${l.code === currentLang ? 'selected' : ''}>${l.name}</option>`
-                ).join('');
-
-                drawer.innerHTML = `
-                    <div class="pep-drawer-overlay"></div>
-                    <div class="pep-drawer-content">
-                        <div class="pep-drawer-header">
-                            <img src="${getRelativePath('images/pepstudio.png')}" alt="Pepstudio Logo" class="pep-drawer-logo">
-                            <button class="pep-drawer-close" aria-label="Close Menu">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
-                            </button>
-                        </div>
-                        <div class="pep-drawer-lang-box">
-                            <div class="pep-drawer-lang-title">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0062ff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
-                                <span data-i18n="select_language">Language</span>
-                            </div>
-                            <select class="pep-drawer-lang-select" aria-label="Select Language">
-                                ${langOptions}
-                            </select>
-                        </div>
-                        <nav class="pep-drawer-nav">
-                            <a href="${getRelativePath('index.html')}" class="pep-drawer-link">
-                                <span data-i18n="home">Home</span>
-                            </a>
-                            <a href="${getRelativePath('age-calculator/index.html')}" class="pep-drawer-link">
-                                <span data-i18n="age_calc_title">Age Calculator</span>
-                            </a>
-                            <a href="${getRelativePath('bmi-calculator/index.html')}" class="pep-drawer-link">
-                                <span data-i18n="bmi_calc_title">BMI Calculator</span>
-                            </a>
-                            <a href="${getRelativePath('emi-calculator/index.html')}" class="pep-drawer-link">
-                                <span data-i18n="emi_calc_title">EMI Calculator</span>
-                            </a>
-                            <a href="${getRelativePath('unit-converter/index.html')}" class="pep-drawer-link">
-                                <span data-i18n="unit_conv_title">Unit Converter</span>
-                            </a>
-                            <a href="${getRelativePath('percentage-calculator/index.html')}" class="pep-drawer-link">
-                                <span data-i18n="perc_calc_title">Percentage Calculator</span>
-                            </a>
-                            <a href="${getRelativePath('world-time/index.html')}" class="pep-drawer-link">
-                                <span data-i18n="world_time_title">World Time</span>
-                            </a>
-                            <a href="${getRelativePath('love-calculator/index.html')}" class="pep-drawer-link">
-                                <span data-i18n="love_calc_title">Love Calculator</span>
-                            </a>
-                            <div class="pep-drawer-divider"></div>
-                            <a href="${getRelativePath('about-us.html')}" class="pep-drawer-link">
-                                <span class="pep-nav-icon">ℹ️</span>
-                                <span data-i18n="footer_about">About Us</span>
-                            </a>
-                        </nav>
-                    </div>
-                `;
-                document.body.appendChild(drawer);
-
-                const overlay = drawer.querySelector(".pep-drawer-overlay");
-                const closeBtn = drawer.querySelector(".pep-drawer-close");
-                const drawerSelect = drawer.querySelector(".pep-drawer-lang-select");
-
-                drawerSelect.addEventListener("change", (e) => {
-                    setLanguage(e.target.value);
-                });
-
-                const toggleDrawer = (open) => {
-                    if (open) {
-                        drawer.classList.add("is-active");
-                        document.body.style.overflow = "hidden";
-                    } else {
-                        drawer.classList.remove("is-active");
-                        document.body.style.overflow = "";
-                    }
-                };
-
-                menuBtn.addEventListener("click", () => toggleDrawer(true));
-                overlay.addEventListener("click", () => toggleDrawer(false));
-                closeBtn.addEventListener("click", () => toggleDrawer(false));
-            }
         });
+
+        // 3. Create Mobile Navigation Drawer (only once globally)
+        if (!document.querySelector(".pep-mobile-drawer")) {
+            const drawer = document.createElement("div");
+            drawer.className = "pep-mobile-drawer";
+
+            const langOptions = supportedLanguages.map(l =>
+                `<option value="${l.code}" ${l.code === currentLang ? 'selected' : ''}>${l.name}</option>`
+            ).join('');
+
+            drawer.innerHTML = `
+                <div class="pep-drawer-overlay"></div>
+                <div class="pep-drawer-content">
+                    <div class="pep-drawer-header">
+                        <img src="${getRelativePath('images/pepstudio.png')}" alt="Pepstudio Logo" class="pep-drawer-logo">
+                        <button class="pep-drawer-close" aria-label="Close Menu">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+                        </button>
+                    </div>
+                    <div class="pep-drawer-lang-box">
+                        <div class="pep-drawer-lang-title">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0062ff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+                            <span data-i18n="select_language">Language</span>
+                        </div>
+                        <select class="pep-drawer-lang-select" aria-label="Select Language">
+                            ${langOptions}
+                        </select>
+                    </div>
+                    <nav class="pep-drawer-nav">
+                        <a href="${getRelativePath('index.html')}" class="pep-drawer-link">
+                            <span data-i18n="home">Home</span>
+                        </a>
+                        <a href="${getRelativePath('age-calculator/index.html')}" class="pep-drawer-link">
+                            <span data-i18n="age_calc_title">Age Calculator</span>
+                        </a>
+                        <a href="${getRelativePath('bmi-calculator/index.html')}" class="pep-drawer-link">
+                            <span data-i18n="bmi_calc_title">BMI Calculator</span>
+                        </a>
+                        <a href="${getRelativePath('emi-calculator/index.html')}" class="pep-drawer-link">
+                            <span data-i18n="emi_calc_title">EMI Calculator</span>
+                        </a>
+                        <a href="${getRelativePath('unit-converter/index.html')}" class="pep-drawer-link">
+                            <span data-i18n="unit_conv_title">Unit Converter</span>
+                        </a>
+                        <a href="${getRelativePath('percentage-calculator/index.html')}" class="pep-drawer-link">
+                            <span data-i18n="perc_calc_title">Percentage Calculator</span>
+                        </a>
+                        <a href="${getRelativePath('world-time/index.html')}" class="pep-drawer-link">
+                            <span data-i18n="world_time_title">World Time</span>
+                        </a>
+                        <a href="${getRelativePath('love-calculator/index.html')}" class="pep-drawer-link">
+                            <span data-i18n="love_calc_title">Love Calculator</span>
+                        </a>
+                        <div class="pep-drawer-divider"></div>
+                        <a href="${getRelativePath('about-us.html')}" class="pep-drawer-link">
+                            <span class="pep-nav-icon">ℹ️</span>
+                            <span data-i18n="footer_about">About Us</span>
+                        </a>
+                    </nav>
+                </div>
+            `;
+            document.body.appendChild(drawer);
+
+            const overlay = drawer.querySelector(".pep-drawer-overlay");
+            const closeBtn = drawer.querySelector(".pep-drawer-close");
+            const drawerSelect = drawer.querySelector(".pep-drawer-lang-select");
+
+            drawerSelect.addEventListener("change", (e) => {
+                setLanguage(e.target.value);
+            });
+
+            const toggleDrawer = (open) => {
+                if (open) {
+                    drawer.classList.add("is-active");
+                    document.body.style.overflow = "hidden";
+                } else {
+                    drawer.classList.remove("is-active");
+                    document.body.style.overflow = "";
+                }
+            };
+
+            // Attach click handlers to all existing mobile menu buttons
+            document.querySelectorAll(".pep-mobile-menu-btn").forEach(btn => {
+                btn.addEventListener("click", () => toggleDrawer(true));
+            });
+
+            overlay.addEventListener("click", () => toggleDrawer(false));
+            closeBtn.addEventListener("click", () => toggleDrawer(false));
+        }
     }
 
     document.addEventListener("DOMContentLoaded", function () {
@@ -855,4 +1888,5 @@
         getLanguage: () => currentLang,
         supportedLanguages: supportedLanguages
     };
+
 })();

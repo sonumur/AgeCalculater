@@ -3,7 +3,6 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="google-adsense-account" content="ca-pub-2207409421620882">
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-FFBNXM9JFR"></script>
     <script>
@@ -15,13 +14,11 @@
     </script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-        content="Free online BMI calculator. Calculate your Body Mass Index instantly. Check if you are underweight, normal weight, overweight, or obese using metric or imperial units.">
-    <meta name="keywords"
-        content="bmi, bmi calculator, bmi calculator pepstudio, bmi formula, bmi chart, bmi calculator for man, bmi calculator in kgs, bmi full form, bmi meaning, bmi claculator women">
+        content="Free BMI calculator. Enter height & weight (metric or imperial) to get your Body Mass Index, health category, and healthy weight range. No registration required.">
     <link rel="canonical" href="https://pepstudio.xyz/bmi-calculator/">
-    <meta property="og:title" content="BMI Calculator – Calculate Your Body Mass Index Online">
+    <meta property="og:title" content="BMI Calculator Online Free — Body Mass Index & Health Status | Pepstudio">
     <meta property="og:description"
-        content="Free online BMI calculator. Calculate your Body Mass Index instantly. Check if you are underweight, normal weight, overweight, or obese.">
+        content="Free BMI calculator. Enter height & weight (metric or imperial) to get your Body Mass Index, health category, and healthy weight range. No registration required.">
     <meta property="og:type" content="website">
     <title>BMI Calculator – Calculate Your Body Mass Index Online</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -33,11 +30,14 @@
     <link rel="stylesheet" href="../css/style.css">
     <link rel="icon" href="../images/favicon.svg">
 
-    <!-------script of adsens-->
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2207409421620882"
-     crossorigin="anonymous"></script>
-    <!-------script of adsens close-->
     <style>
+
+        body {
+            font-family: "Quicksand", sans-serif;
+            font-weight: 500;
+            font-style: normal;
+        }
+
         .bmi-page {
             background: #f8f9ff;
             padding: 48px 32px 64px;
@@ -402,6 +402,23 @@
             font-size: .78rem;
         }
 
+        .bmi-chat img {
+            width: 100%;
+            max-width: 1280px;
+            height: auto;
+
+            display: block;
+            margin: 0 auto 24px;
+
+            background: #fff;
+            border: 1px solid #c2c6d9;
+            border-radius: 16px;
+            padding: 32px;
+            box-shadow: 0 4px 20px rgba(15, 23, 42, 0.04);
+
+            box-sizing: border-box;
+        }
+
         @media (max-width:850px) {
             .bmi-page {
                 padding: 32px 20px 48px
@@ -466,12 +483,8 @@
     <main class="bmi-page">
         <div class="bmi-shell">
             <div class="bmi-intro">
-                <h1 data-i18n="bmi_calc_title">BMI Calculator</h1>
-                <p>A simple, judgment-free way to check in with your body — not a verdict on your worth.</p>
-            </div>
-
-            <div class="ad-banner-728">
-                <!-----Ads-Adsterra-banner-728*9-->
+                <h1 data-i18n="bmi_calc_title">BMI Calculator | Free Online BMI Calculator</h1>
+                <p data-i18n="bmi_intro_p">Calculate your Body Mass Index instantly with our free online BMI calculator. A simple, judgment-free way to check in with your body — accurate results in seconds, no sign-up required.</p>
             </div>
 
             <div class="bmi-layout">
@@ -499,13 +512,13 @@
                     <div class="bmi-score-card">
                         <div class="score-top">
                             <div>
-                                <p class="score-caption">YOUR BMI SCORE</p>
+                                <p class="score-caption" data-i18n="bmi_score_caption">YOUR BMI SCORE</p>
                                 <div id="bmiScore">22.9</div>
                             </div>
                             <div class="status-box">
                                 <div id="bmiStatus"><i class="bi bi-check-circle-fill"
                                         aria-hidden="true"></i><span>Normal</span></div>
-                                <p>Health Status</p>
+                                <p data-i18n="bmi_health_status">Health Status</p>
                             </div>
                         </div>
                         <div class="gauge">
@@ -520,7 +533,7 @@
                         <article class="bmi-info-card">
                             <div class="info-icon"><i class="bi bi-person-badge" aria-hidden="true"></i></div>
                             <div>
-                                <h2>Healthy Weight Range</h2>
+                                <h2 data-i18n="bmi_healthy_range">Healthy Weight Range</h2>
                                 <p><strong id="weightRange">56.7 kg - 76.3 kg</strong></p><small id="rangeBasis">Based
                                     on height 175 cm</small>
                             </div>
@@ -529,8 +542,8 @@
                             <div class="info-icon analysis"><i class="bi bi-graph-up-arrow" aria-hidden="true"></i>
                             </div>
                             <div>
-                                <h2>Analysis</h2>
-                                <p id="bmiAnalysis">Your BMI is within the healthy range. Maintaining a balanced diet
+                                <h2 data-i18n="bmi_analysis_title">Analysis</h2>
+                                <p id="bmiAnalysis" data-i18n="bmi_analysis_text">Your BMI is within the healthy range. Maintaining a balanced diet
                                     and regular exercise will help you stay in this category.</p>
                             </div>
                         </article>
@@ -546,9 +559,9 @@
                     <h2
                         style="font-family: 'Hanken Grotesk', sans-serif; font-size: 1.5rem; margin-top: 0; margin-bottom: 16px; color: #0b1c30; display: flex; align-items: center; gap: 10px;">
                         <i class="bi bi-heart-pulse-fill" style="color: #0054d8;"></i>
-                        What is a BMI Calculator & How Does It Work?
+                        <span data-i18n="bmi_seo_intro_h">What is a BMI Calculator & How Does It Work?</span>
                     </h2>
-                    <p style="color: #424656; font-size: 1.05rem; line-height: 1.6; margin: 0;">
+                    <p style="color: #424656; font-size: 1.05rem; line-height: 1.6; margin: 0;" data-i18n="bmi_seo_intro_p">
                         Welcome to the Pepstudio BMI Calculator—a fast, reliable, and user-friendly tool designed to
                         evaluate your body mass relative to your height! Body Mass Index (BMI) is just a quick snapshot
                         that compares your weight to your height. It doesn’t know about your muscle, your bones, your
@@ -563,9 +576,9 @@
                     <h2
                         style="font-family: 'Hanken Grotesk', sans-serif; font-size: 1.5rem; margin-top: 0; margin-bottom: 12px; color: #0b1c30; display: flex; align-items: center; gap: 10px;">
                         <i class="bi bi-gear-fill" style="color: #0054d8;"></i>
-                        How Our BMI Calculation Algorithm Works
+                        <span data-i18n="bmi_algo_h">How Our BMI Calculation Algorithm Works</span>
                     </h2>
-                    <p style="color: #424656; margin-bottom: 20px; font-size: 0.95rem;">BMI calculations combine
+                    <p style="color: #424656; margin-bottom: 20px; font-size: 0.95rem;" data-i18n="bmi_algo_p">BMI calculations combine
                         biometric formulas with standardized World Health Organization (WHO) health parameters:</p>
 
                     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px;">
@@ -594,6 +607,11 @@
                                 precise height.</p>
                         </div>
                     </div>
+                </section>
+
+                <!--BMI-Chat-Image-->
+                <section class="bmi-chat">
+                    <img src="../images/BMIChat.png">
                 </section>
 
                 <!-- FAQ Section -->
@@ -744,7 +762,7 @@
                 <!-- Disclaimer -->
                 <section
                     style="background: #f1f5f9; border: 1px solid #cbd5e1; border-radius: 12px; padding: 16px; text-align: center;">
-                    <p style="margin: 0; font-size: 0.85rem; color: #475569; line-height: 1.4;">
+                    <p style="margin: 0; font-size: 0.85rem; color: #475569; line-height: 1.4;" data-i18n="bmi_disclaimer_p">
                         <strong style="color: #0f172a;">Medical Disclaimer:</strong> This BMI Calculator is designed
                         strictly for general educational and wellness reference. BMI is a population-level screening
                         metric and does not constitute medical diagnosis. Always consult a licensed healthcare
@@ -775,14 +793,14 @@
                 <div class="footer-col">
                     <h3 class="footer-heading" data-i18n="footer_calc_suite">Calculator Suite</h3>
                     <ul class="footer-links">
-                        <li><a href="../age-calculator/index.html" data-i18n="age_calc_title">Age Calculator</a></li>
-                        <li><a href="../bmi-calculator/index.html" data-i18n="bmi_calc_title">BMI Calculator</a></li>
-                        <li><a href="../emi-calculator/index.html" data-i18n="emi_calc_title">EMI Calculator</a></li>
-                        <li><a href="../unit-converter/index.html" data-i18n="unit_conv_title">Unit Converter</a></li>
-                        <li><a href="../percentage-calculator/index.html" data-i18n="perc_calc_title">Percentage
+                        <li><a href="../age-calculator/index.html">Age Calculator</a></li>
+                        <li><a href="../bmi-calculator/index.html">BMI Calculator</a></li>
+                        <li><a href="../emi-calculator/index.html">EMI Calculator</a></li>
+                        <li><a href="../unit-converter/index.html">Unit Converter</a></li>
+                        <li><a href="../percentage-calculator/index.html">Percentage
                                 Calculator</a></li>
-                        <li><a href="../world-time/index.html" data-i18n="world_time_title">World Time</a></li>
-                        <li><a href="../love-calculator/index.html" data-i18n="love_calc_title">Love Calculator</a></li>
+                        <li><a href="../world-time/index.html">World Time</a></li>
+                        <li><a href="../love-calculator/index.html">Love Calculator</a></li>
                     </ul>
                 </div>
 

@@ -3,7 +3,6 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="google-adsense-account" content="ca-pub-2207409421620882">
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-FFBNXM9JFR"></script>
     <script>
@@ -15,13 +14,11 @@
     </script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-        content="Free online percentage calculator. Calculate percentages, percentage increase, percentage decrease, and percentage differences instantly with high precision.">
-    <meta name="keywords"
-        content="percentage calculator, percentage increase calculator, percentage decrease calculator, online calculator, percentage difference">
+        content="Free percentage calculator. Calculate X% of a number, percentage of one number to another, and percentage increase or decrease. Instant results, no signup.">
     <link rel="canonical" href="https://pepstudio.xyz/percentage-calculator/">
-    <meta property="og:title" content="Percentage Calculator – Calculate Percentages Online">
+    <meta property="og:title" content="Percentage Calculator Online Free — Find %, Increase & Decrease | Pepstudio">
     <meta property="og:description"
-        content="Free online percentage calculator. Calculate X% of Y, percentage increase, percentage decrease, and more instantly.">
+        content="Free percentage calculator. Calculate X% of a number, percentage of one number to another, and percentage increase or decrease. Instant results, no signup.">
     <meta property="og:type" content="website">
     <title>Percentage Calculator – Calculate Percentages Online</title>
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
@@ -33,11 +30,14 @@
     <link rel="stylesheet" href="../css/style.css">
     <link rel="icon" href="../images/favicon.svg">
 
-    <!-------script of adsens-->
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2207409421620882"
-     crossorigin="anonymous"></script>
-    <!-------script of adsens close-->
     <style>
+
+        body {
+            font-family: "Quicksand", sans-serif;
+            font-weight: 500;
+            font-style: normal;
+        }
+
         html,
         body {
             background: #f8f9ff !important;
@@ -244,13 +244,8 @@
         <div class="pct-calculator-shell">
             <!-- Page Header -->
             <div class="mb-8 text-center md:text-left">
-                <h1 class="font-display-lg text-display-lg text-primary mb-2" data-i18n="perc_calc_title">Percentage Calculator</h1>
-                <p class="font-body-lg text-body-lg text-secondary max-w-2xl" data-i18n="perc_calc_desc">Calculate percentages, percentage increase
-                    or decrease, and percentage differences instantly with precision.</p>
-            </div>
-
-            <div class="ad-banner-728">
-                <!-----Ads-Adsterra-banner-728*9-->
+                <h1 class="font-display-lg text-display-lg text-primary mb-2" data-i18n="perc_calc_title">Percentage Calculator | Free Online Percentage Calculator</h1>
+                <p class="font-body-lg text-body-lg text-secondary max-w-2xl" data-i18n="perc_calc_desc">Calculate percentages and percentage changes instantly with our free online percentage calculator. Fast, accurate results for any percentage calculation — no sign-up required.</p>
             </div>
 
             <!-- Main Layout Grid -->
@@ -267,24 +262,24 @@
 
                         <!-- Mode Selector Tabs -->
                         <div class="mb-6">
-                            <label class="block font-label-sm text-label-sm text-secondary mb-2">Select Type</label>
+                            <label class="block font-label-sm text-label-sm text-secondary mb-2" data-i18n="select_type">Select Type</label>
                             <div class="grid grid-cols-3 gap-2" id="pctModeTabs">
                                 <button type="button" data-mode="basic"
                                     class="pct-mode-btn flex flex-col items-center justify-center p-3 bg-surface-blue text-primary border border-primary/20 rounded-lg transition-colors active">
                                     <span class="material-symbols-outlined mb-1 text-[20px]" data-icon="pin">pin</span>
-                                    <span class="font-caption text-caption">Basic %</span>
+                                    <span class="font-caption text-caption" data-i18n="basic_pct">Basic %</span>
                                 </button>
                                 <button type="button" data-mode="change"
                                     class="pct-mode-btn flex flex-col items-center justify-center p-3 bg-surface text-secondary border border-outline-variant/50 rounded-lg hover:bg-surface-blue hover:text-primary transition-colors">
                                     <span class="material-symbols-outlined mb-1 text-[20px]"
                                         data-icon="trending_up">trending_up</span>
-                                    <span class="font-caption text-caption">% Change</span>
+                                    <span class="font-caption text-caption" data-i18n="pct_change">% Change</span>
                                 </button>
                                 <button type="button" data-mode="difference"
                                     class="pct-mode-btn flex flex-col items-center justify-center p-3 bg-surface text-secondary border border-outline-variant/50 rounded-lg hover:bg-surface-blue hover:text-primary transition-colors">
                                     <span class="material-symbols-outlined mb-1 text-[20px]"
                                         data-icon="difference">difference</span>
-                                    <span class="font-caption text-caption">% Diff</span>
+                                    <span class="font-caption text-caption" data-i18n="pct_diff">% Diff</span>
                                 </button>
                             </div>
                         </div>
@@ -333,7 +328,7 @@
                         <div class="flex items-center gap-3 mb-6">
                             <span class="material-symbols-outlined text-primary text-[24px]"
                                 data-icon="analytics">analytics</span>
-                            <h2 class="font-headline-md text-headline-md text-on-surface">Calculation Result</h2>
+                            <h2 class="font-headline-md text-headline-md text-on-surface" data-i18n="calculation_result">Calculation Result</h2>
                         </div>
 
                         <!-- Highlight Result Card -->
@@ -350,7 +345,7 @@
 
                         <!-- Calculation Formula & Breakdown -->
                         <div class="mb-6 p-4 bg-surface rounded-lg border border-outline-variant/30">
-                            <h3 class="font-label-sm text-label-sm text-secondary mb-2">Formula &amp; Steps</h3>
+                            <h3 class="font-label-sm text-label-sm text-secondary mb-2" data-i18n="formula_steps">Formula &amp; Steps</h3>
                             <p id="formulaStep"
                                 class="font-body-md text-body-md text-on-surface-variant font-mono text-sm leading-relaxed">
                                 (25 / 200) × 100 = 12.5%
@@ -377,17 +372,16 @@
                     <h2
                         style="font-family: 'Hanken Grotesk', sans-serif; font-size: 1.5rem; margin-top: 0; margin-bottom: 16px; color: #0b1c30; display: flex; align-items: center; gap: 10px;">
                         <i class="bi bi-percent" style="color: #0054d8;"></i>
-                        What is a Percentage Calculator & How Does It Work?
+                        <span data-i18n="perc_seo_intro_h">What is a Percentage Calculator & How Does It Work?</span>
                     </h2>
-                    <p style="color: #424656; font-size: 1.05rem; line-height: 1.6; margin: 0;">
+                    <p style="color: #424656; font-size: 1.05rem; line-height: 1.6; margin: 0;" data-i18n="perc_seo_intro_p">
                         Welcome to the Pepstudio Percentage Calculator—a comprehensive, multi-purpose math utility
                         designed to make percentage calculations effortless, accurate, and instant! Percentages are
                         fundamental to everyday life, whether you are calculating retail discounts, sales tax, tipping
                         at restaurants, financial returns, or academic grades. Our interactive calculator offers three
                         distinct modes in one sleek interface: calculate the percentage value of any number (X% of Y),
                         find what percentage one number is of another (X is what % of Y), or compute the exact
-                        percentage increase or decrease between two values. With automatic calculation as you type and a
-                        quick-reference ratio list, our tool eliminates manual formulas and arithmetic errors.
+                        percentage increase or decrease between two values.
                     </p>
                 </section>
 
@@ -397,9 +391,9 @@
                     <h2
                         style="font-family: 'Hanken Grotesk', sans-serif; font-size: 1.5rem; margin-top: 0; margin-bottom: 12px; color: #0b1c30; display: flex; align-items: center; gap: 10px;">
                         <i class="bi bi-gear-fill" style="color: #0054d8;"></i>
-                        How Our Percentage Algorithms Work
+                        <span data-i18n="perc_algo_h">How Our Percentage Algorithms Work</span>
                     </h2>
-                    <p style="color: #424656; margin-bottom: 20px; font-size: 0.95rem;">Our calculator supports three
+                    <p style="color: #424656; margin-bottom: 20px; font-size: 0.95rem;" data-i18n="perc_algo_p">Our calculator supports three
                         core mathematical formulas for instant resolution:</p>
 
                     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px;">
@@ -471,6 +465,18 @@
                             <p style="color: #424656; font-size: 0.95rem; margin: 0; line-height: 1.5;">Yes! Because
                                 multiplication is commutative, X% of Y is mathematically identical to Y% of X (e.g., 8%
                                 of 50 = 4, and 50% of 8 = 4).</p>
+                        </div>
+
+                        <div
+                            style="border: 1px solid #e2e8f0; border-radius: 12px; padding: 20px; background: #f8f9ff;">
+                            <h3 style="font-size: 1.05rem; font-weight: 700; margin: 0 0 8px; color: #0b1c30;">How do I calculate a discount percentage during a sale?</h3>
+                            <p style="color: #424656; font-size: 0.95rem; margin: 0; line-height: 1.5;">To find your savings on a discounted item, multiply the original price by the discount percentage and divide by 100. For example, a 20% discount on a $60 item is (60 × 20) / 100 = $12 saved, making the final price $48.</p>
+                        </div>
+
+                        <div
+                            style="border: 1px solid #e2e8f0; border-radius: 12px; padding: 20px; background: #f8f9ff;">
+                            <h3 style="font-size: 1.05rem; font-weight: 700; margin: 0 0 8px; color: #0b1c30;">How do I calculate percentage increase or decrease between two values?</h3>
+                            <p style="color: #424656; font-size: 0.95rem; margin: 0; line-height: 1.5;">Subtract the original value from the new value, divide the result by the original value, and multiply by 100: [(New − Original) / Original] × 100. A positive result indicates a percentage increase; a negative result indicates a decrease.</p>
                         </div>
                     </div>
                 </section>
@@ -573,7 +579,7 @@
                 <!-- Disclaimer -->
                 <section
                     style="background: #f1f5f9; border: 1px solid #cbd5e1; border-radius: 12px; padding: 16px; text-align: center;">
-                    <p style="margin: 0; font-size: 0.85rem; color: #475569; line-height: 1.4;">
+                    <p style="margin: 0; font-size: 0.85rem; color: #475569; line-height: 1.4;" data-i18n="perc_disclaimer_p">
                         <strong style="color: #0f172a;">Accuracy Disclaimer:</strong> This Percentage Calculator is
                         provided for general calculation and educational reference. Double-check results when applying
                         to financial transactions, official tax filings, or legal agreements.
@@ -603,13 +609,13 @@
                 <div class="footer-col">
                     <h3 class="footer-heading" data-i18n="footer_calc_suite">Calculator Suite</h3>
                     <ul class="footer-links">
-                        <li><a href="../age-calculator/index.html" data-i18n="age_calc_title">Age Calculator</a></li>
-                        <li><a href="../bmi-calculator/index.html" data-i18n="bmi_calc_title">BMI Calculator</a></li>
-                        <li><a href="../emi-calculator/index.html" data-i18n="emi_calc_title">EMI Calculator</a></li>
-                        <li><a href="../unit-converter/index.html" data-i18n="unit_conv_title">Unit Converter</a></li>
-                        <li><a href="../percentage-calculator/index.html" data-i18n="perc_calc_title">Percentage Calculator</a></li>
-                        <li><a href="../world-time/index.html" data-i18n="world_time_title">World Time</a></li>
-                        <li><a href="../love-calculator/index.html" data-i18n="love_calc_title">Love Calculator</a></li>
+                        <li><a href="../age-calculator/index.html">Age Calculator</a></li>
+                        <li><a href="../bmi-calculator/index.html">BMI Calculator</a></li>
+                        <li><a href="../emi-calculator/index.html">EMI Calculator</a></li>
+                        <li><a href="../unit-converter/index.html">Unit Converter</a></li>
+                        <li><a href="../percentage-calculator/index.html">Percentage Calculator</a></li>
+                        <li><a href="../world-time/index.html">World Time</a></li>
+                        <li><a href="../love-calculator/index.html">Love Calculator</a></li>
                     </ul>
                 </div>
 

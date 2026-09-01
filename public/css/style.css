@@ -6,11 +6,11 @@
 
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: Arial;
     line-height: 1.5;
     background-color: rgb(243, 243, 255);
     color: #333;
-    zoom: 80%;
+    zoom: 100%;
 }
 
 header {
@@ -25,6 +25,28 @@ header {
     top: 0;
     z-index: 100;
 }
+
+.pep-lang-switcher {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+}
+
+.pep-lang-select {
+    padding: 6px 10px;
+    border-radius: 6px;
+    border: 1px solid #d0d5dd;
+    background: #fff;
+    font-size: 14px;
+    cursor: pointer;
+    outline: none;
+}
+
+.pep-lang-select:focus {
+    border-color: #0062ff;
+    box-shadow: 0 0 0 3px rgba(0, 98, 255, 0.15);
+}
+
 
 /* Mobile 3-line Hamburger Menu Button */
 .pep-mobile-menu-btn {
@@ -308,7 +330,7 @@ header img {
 }
 
 main {
-    background-image: linear-gradient(45deg, rgb(205, 205, 255), white, rgb(205, 205, 255), white, rgb(205, 205, 255), white, rgb(205, 205, 255), white, rgb(205, 205, 255), white, rgb(205, 205, 255), white, rgb(205, 205, 255), white, rgb(205, 205, 255), white);
+    background-image: linear-gradient(45deg, rgb(205, 205, 255), white, rgb(205, 205, 255), white, rgb(205, 205, 255), white, rgb(205, 205, 255), white, rgb(205, 205, 255), white, rgb(205, 205, 255), white, rgb(205, 205, 255), white, rgb(205, 205, 255), white, rgb(205, 205, 255), white, rgb(205, 205, 255), white, rgb(205, 205, 255), white, rgb(205, 205, 255), white, rgb(205, 205, 255), white);
     padding: 20px;
 }
 
@@ -891,12 +913,6 @@ footer,
 .calc-card:hover {
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
     transform: none;
-}
-
-.calc-card h3 {
-    color: #007bff;
-    margin-top: 0;
-    font-size: 24px;
 }
 
 .calc-card p {

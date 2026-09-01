@@ -3,7 +3,6 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="google-adsense-account" content="ca-pub-2207409421620882">
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-FFBNXM9JFR"></script>
     <script>
@@ -15,13 +14,11 @@
     </script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-        content="Free online unit converter. Convert between length, weight, temperature, area, and more instantly with high precision.">
-    <meta name="keywords"
-        content="unit converter, online converter, measurement converter, length converter, weight converter, temperature converter, area converter">
+        content="Free online unit converter. Convert length, weight, volume, temperature, speed and more between metric and imperial units. Fast, accurate & no registration.">
     <link rel="canonical" href="https://pepstudio.xyz/unit-converter/">
-    <meta property="og:title" content="Unit Converter – Convert Units Online">
+    <meta property="og:title" content="Unit Converter Online Free — Length, Weight, Temperature & More | Pepstudio">
     <meta property="og:description"
-        content="Free online unit converter. Convert length, weight, temperature, area, volume, and digital storage units instantly with high precision.">
+        content="Free online unit converter. Convert length, weight, volume, temperature, speed and more between metric and imperial units. Fast, accurate & no registration.">
     <meta property="og:type" content="website">
     <title>Unit Converter – Convert Units Online</title>
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
@@ -33,11 +30,15 @@
     <link rel="stylesheet" href="../css/style.css">
     <link rel="icon" href="../images/favicon.svg">
 
-    <!-------script of adsens-->
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2207409421620882"
-     crossorigin="anonymous"></script>
-    <!-------script of adsens close-->
+
     <style>
+
+        body {
+            font-family: "Quicksand", sans-serif;
+            font-weight: 500;
+            font-style: normal;
+        }
+
         html,
         body {
             background: #f8f9ff !important;
@@ -244,13 +245,8 @@
         <div class="unit-converter-shell">
             <!-- Page Header -->
             <div class="mb-8 text-center md:text-left">
-                <h1 class="font-display-lg text-display-lg text-primary mb-2" data-i18n="unit_conv_title">Unit Converter</h1>
-                <p class="font-body-lg text-body-lg text-secondary max-w-2xl" data-i18n="unit_conv_desc">Quickly convert between length, weight,
-                    temperature, area, and more with precision.</p>
-            </div>
-
-            <div class="ad-banner-728">
-                <!-----Ads-Adsterra-banner-728*9-->
+                <h1 class="font-display-lg text-display-lg text-primary mb-2" data-i18n="unit_conv_title">Unit Converter | Free Online Unit Converter</h1>
+                <p class="font-body-lg text-body-lg text-secondary max-w-2xl" data-i18n="unit_conv_desc">Convert between various units of measurement instantly with our free online unit converter. Fast, accurate, and easy unit conversions for length, weight, temperature, and more — no sign-up required.</p>
             </div>
 
             <!-- Conversion Grid Layout -->
@@ -301,7 +297,7 @@
                             <!-- From Input -->
                             <div class="flex flex-col">
                                 <label class="font-label-sm text-label-sm text-secondary mb-1"
-                                    for="fromValue">From</label>
+                                    for="fromValue" data-i18n="from_unit">From</label>
                                 <div class="flex rounded-lg shadow-sm">
                                     <input id="fromValue"
                                         class="flex-grow rounded-l-lg border-outline-variant text-on-surface font-body-md focus:border-primary focus:ring-2 focus:ring-primary/20 p-3 border"
@@ -323,7 +319,7 @@
 
                             <!-- To Input -->
                             <div class="flex flex-col">
-                                <label class="font-label-sm text-label-sm text-secondary mb-1" for="toValue">To</label>
+                                <label class="font-label-sm text-label-sm text-secondary mb-1" for="toValue" data-i18n="to_unit">To</label>
                                 <div class="flex rounded-lg shadow-sm">
                                     <input id="toValue"
                                         class="flex-grow rounded-l-lg border-outline-variant bg-surface text-secondary font-body-md p-3 cursor-not-allowed border"
@@ -358,7 +354,7 @@
                         <div class="flex items-center gap-3 mb-6">
                             <span class="material-symbols-outlined text-primary text-[24px]"
                                 data-icon="analytics">analytics</span>
-                            <h2 class="font-headline-md text-headline-md text-on-surface">Conversion Results</h2>
+                            <h2 class="font-headline-md text-headline-md text-on-surface" data-i18n="conversion_results">Conversion Results</h2>
                         </div>
 
                         <!-- Main Result Area -->
@@ -395,18 +391,16 @@
                     <h2
                         style="font-family: 'Hanken Grotesk', sans-serif; font-size: 1.5rem; margin-top: 0; margin-bottom: 16px; color: #0b1c30; display: flex; align-items: center; gap: 10px;">
                         <i class="bi bi-arrow-left-right" style="color: #0054d8;"></i>
-                        What is a Multi-Unit Converter & How Does It Work?
+                        <span data-i18n="unit_seo_intro_h">What is a Multi-Unit Converter & How Does It Work?</span>
                     </h2>
-                    <p style="color: #424656; font-size: 1.05rem; line-height: 1.6; margin: 0;">
+                    <p style="color: #424656; font-size: 1.05rem; line-height: 1.6; margin: 0;" data-i18n="unit_seo_intro_p">
                         Welcome to the Pepstudio Unit Converter—an all-in-one, instant measurement conversion tool
                         designed for students, engineers, travelers, cooks, and professionals! Converting between
                         different measurement systems (such as metric and imperial) can be tedious and prone to
                         calculation mistakes. Our modern converter supports six essential measurement categories:
                         Length, Weight/Mass, Temperature, Area, Volume, and Digital Storage. Simply select your desired
                         category, pick your input and output units, and type any value to instantly see high-precision
-                        converted results. Featuring a two-way swap button, quick-reference conversion cards, and
-                        support for scientific metrics, our tool delivers fast, accurate conversions whenever you need
-                        them.
+                        converted results.
                     </p>
                 </section>
 
@@ -416,9 +410,9 @@
                     <h2
                         style="font-family: 'Hanken Grotesk', sans-serif; font-size: 1.5rem; margin-top: 0; margin-bottom: 12px; color: #0b1c30; display: flex; align-items: center; gap: 10px;">
                         <i class="bi bi-gear-fill" style="color: #0054d8;"></i>
-                        How Our Unit Conversion Engine Works
+                        <span data-i18n="unit_algo_h">How Our Unit Conversion Engine Works</span>
                     </h2>
-                    <p style="color: #424656; margin-bottom: 20px; font-size: 0.95rem;">Conversion algorithms convert
+                    <p style="color: #424656; margin-bottom: 20px; font-size: 0.95rem;" data-i18n="unit_algo_p">Conversion algorithms convert
                         input measurements to a universal SI base unit before outputting to target units:</p>
 
                     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px;">
@@ -493,6 +487,18 @@
                             <p style="color: #424656; font-size: 0.95rem; margin: 0; line-height: 1.5;">The metric
                                 system is built on base-10 powers of ten, making mathematical scaling and scientific
                                 calculations far simpler than imperial fractions.</p>
+                        </div>
+
+                        <div
+                            style="border: 1px solid #e2e8f0; border-radius: 12px; padding: 20px; background: #f8f9ff;">
+                            <h3 style="font-size: 1.05rem; font-weight: 700; margin: 0 0 8px; color: #0b1c30;">How do I convert kg to lbs quickly?</h3>
+                            <p style="color: #424656; font-size: 0.95rem; margin: 0; line-height: 1.5;">To convert kilograms to pounds, multiply the kg value by 2.20462. For example, 70 kg × 2.20462 = 154.32 lbs. Our Weight converter does this automatically with 6-decimal precision — just select kg → lbs and type your value.</p>
+                        </div>
+
+                        <div
+                            style="border: 1px solid #e2e8f0; border-radius: 12px; padding: 20px; background: #f8f9ff;">
+                            <h3 style="font-size: 1.05rem; font-weight: 700; margin: 0 0 8px; color: #0b1c30;">What is the difference between kilometers and miles?</h3>
+                            <p style="color: #424656; font-size: 0.95rem; margin: 0; line-height: 1.5;">1 kilometer equals 0.621371 miles. A mile is longer than a kilometer — 1 mile = 1.60934 km. Speed limits in the UK and USA are in mph while most of the world uses km/h. Use our Length converter to switch between them instantly.</p>
                         </div>
                     </div>
                 </section>
@@ -595,7 +601,7 @@
                 <!-- Disclaimer -->
                 <section
                     style="background: #f1f5f9; border: 1px solid #cbd5e1; border-radius: 12px; padding: 16px; text-align: center;">
-                    <p style="margin: 0; font-size: 0.85rem; color: #475569; line-height: 1.4;">
+                    <p style="margin: 0; font-size: 0.85rem; color: #475569; line-height: 1.4;" data-i18n="unit_disclaimer_p">
                         <strong style="color: #0f172a;">Accuracy Disclaimer:</strong> This Unit Converter is designed
                         for educational, commercial, and general engineering reference. For critical aerospace, medical,
                         or legal applications, verify conversions with official standards organizations (e.g., NIST,
@@ -626,13 +632,13 @@
                 <div class="footer-col">
                     <h3 class="footer-heading" data-i18n="footer_calc_suite">Calculator Suite</h3>
                     <ul class="footer-links">
-                        <li><a href="../age-calculator/index.html" data-i18n="age_calc_title">Age Calculator</a></li>
-                        <li><a href="../bmi-calculator/index.html" data-i18n="bmi_calc_title">BMI Calculator</a></li>
-                        <li><a href="../emi-calculator/index.html" data-i18n="emi_calc_title">EMI Calculator</a></li>
-                        <li><a href="../unit-converter/index.html" data-i18n="unit_conv_title">Unit Converter</a></li>
-                        <li><a href="../percentage-calculator/index.html" data-i18n="perc_calc_title">Percentage Calculator</a></li>
-                        <li><a href="../world-time/index.html" data-i18n="world_time_title">World Time</a></li>
-                        <li><a href="../love-calculator/index.html" data-i18n="love_calc_title">Love Calculator</a></li>
+                        <li><a href="../age-calculator/index.html">Age Calculator</a></li>
+                        <li><a href="../bmi-calculator/index.html">BMI Calculator</a></li>
+                        <li><a href="../emi-calculator/index.html">EMI Calculator</a></li>
+                        <li><a href="../unit-converter/index.html">Unit Converter</a></li>
+                        <li><a href="../percentage-calculator/index.html">Percentage Calculator</a></li>
+                        <li><a href="../world-time/index.html">World Time</a></li>
+                        <li><a href="../love-calculator/index.html">Love Calculator</a></li>
                     </ul>
                 </div>
 

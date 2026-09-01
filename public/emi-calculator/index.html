@@ -3,7 +3,6 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="google-adsense-account" content="ca-pub-2207409421620882">
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-FFBNXM9JFR"></script>
     <script>
@@ -15,13 +14,11 @@
     </script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-        content="Free online EMI calculator. Calculate your monthly EMI instantly with our easy-to-use EMI calculator. Plan home loans, car loans, and personal loans.">
-    <meta name="keywords"
-        content="emi calculator, emi calulator car, emi calculator for personal loan, emi calculator home loan, emi chestunnav, emi calculator car loan, emi calculator in months, emi calculator bike, emi calculator for personal loan in months, emi chestunnaru">
+        content="Free home loan EMI calculator. Calculate monthly EMI, total interest & total repayment instantly. Works for home, car & personal loans. No signup needed.">
     <link rel="canonical" href="https://pepstudio.xyz/emi-calculator/">
-    <meta property="og:title" content="EMI Calculator – Calculate Monthly EMI Online">
+    <meta property="og:title" content="Home Loan EMI Calculator — Free Online EMI Calculator | Pepstudio">
     <meta property="og:description"
-        content="Free online EMI calculator. Instantly calculate your monthly loan EMI, total interest, and repayment schedule for home, car, or personal loans.">
+        content="Free home loan EMI calculator. Calculate monthly EMI, total interest & total repayment instantly. Works for home, car & personal loans. No signup needed.">
     <meta property="og:type" content="website">
     <title>EMI Calculator – Calculate Monthly EMI Online</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.css">
@@ -31,11 +28,14 @@
     <link rel="icon" href="../images/favicon.svg">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
-    <!-------script of adsens-->
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2207409421620882"
-     crossorigin="anonymous"></script>
-    <!-------script of adsens close-->
     <style>
+
+        body {
+            font-family: "Quicksand", sans-serif;
+            font-weight: 500;
+            font-style: normal;
+        }
+
         .emi-container {
             max-width: 1200px;
             margin: 40px auto;
@@ -433,6 +433,23 @@
         .emi-design-chart-center strong {
             font-size: .875rem;
         }
+        
+        .emi-chat-image img {
+            width: 100%;
+            max-width: 1280px;
+            height: auto;
+
+            display: block;
+            margin: 0 auto 24px;
+
+            background: #fff;
+            border: 1px solid #c2c6d9;
+            border-radius: 16px;
+            padding: 32px;
+            box-shadow: 0 4px 20px rgba(15, 23, 42, 0.04);
+
+            box-sizing: border-box;
+        }
 
         @media (max-width: 768px) {
             .emi-page {
@@ -474,55 +491,48 @@
         <div class="emi-container">
             <section class="emi-design" aria-label="EMI calculator">
                 <div class="emi-intro">
-                    <h1 data-i18n="emi_calc_title">EMI Calculator</h1>
-                    <p>See exactly what your monthly payment will be — and understand the full cost of borrowing,
-                        without the jargon.</p>
-                </div>
-
-                <div class="ad-banner-728">
-                    <!-----Ads-Adsterra-banner-728*9-->
+                    <h1 data-i18n="emi_calc_title">EMI Calculator | Free Online EMI Calculator</h1>
+                    <p data-i18n="emi_intro_p">Calculate your loan EMI instantly with our free online EMI calculator. See exactly what your monthly payment will be and understand the full cost of borrowing — clear results without the jargon, no sign-up required.</p>
                 </div>
 
                 <div class="emi-design-grid">
                     <section class="emi-design-card">
-                        <h2 class="emi-design-title"><span class="emi-design-icon" aria-hidden="true">₹</span>Loan
-                            Details</h2>
+                        <h2 class="emi-design-title"><span class="emi-design-icon" aria-hidden="true">₹</span><span data-i18n="emi_loan_details">Loan Details</span></h2>
                         <form class="emi-design-form" id="emiDesignForm">
-                            <div class="emi-design-field"><label for="emiPrincipal">Loan Amount</label>
+                            <div class="emi-design-field"><label for="emiPrincipal" data-i18n="loan_amount">Loan Amount</label>
                                 <div class="emi-design-control"><span class="emi-design-prefix">₹</span><input
                                         class="has-prefix" id="emiPrincipal" type="number" min="1" step="1000"
                                         value="2500000" required></div>
                             </div>
-                            <div class="emi-design-field"><label for="emiRate">Interest Rate (p.a.)</label>
+                            <div class="emi-design-field"><label for="emiRate" data-i18n="interest_rate">Interest Rate (p.a.)</label>
                                 <div class="emi-design-control"><input class="has-suffix" id="emiRate" type="number"
                                         min="0" step="0.1" value="7.75" required><span
                                         class="emi-design-suffix">%</span></div>
                             </div>
                             <div class="emi-design-field">
                                 <div class="emi-design-tenure"><label class="emi-design-tenure-label"
-                                        for="emiTenure">Loan Tenure</label>
+                                        for="emiTenure" data-i18n="loan_tenure">Loan Tenure</label>
                                     <div class="emi-design-toggle"><button class="active" id="emiYears"
                                             type="button">Yr</button><button id="emiMonths" type="button">Mo</button>
                                     </div>
                                 </div><input id="emiTenure" type="number" min="1" step="1" value="20" required>
                             </div>
                             <div class="emi-design-actions"><button class="emi-design-button emi-design-reset"
-                                    id="emiReset" type="button">Reset</button><button class="emi-design-button"
-                                    type="submit">Calculate</button></div>
+                                    id="emiReset" type="button" data-i18n="reset">Reset</button><button class="emi-design-button"
+                                    type="submit" data-i18n="calculate">Calculate</button></div>
                         </form>
                     </section>
                     <section class="emi-design-card">
-                        <h2 class="emi-design-title"><span class="emi-design-icon" aria-hidden="true">◔</span>Repayment
-                            Summary</h2>
+                        <h2 class="emi-design-title"><span class="emi-design-icon" aria-hidden="true">◔</span><span data-i18n="emi_repayment_summary">Repayment Summary</span></h2>
                         <div class="emi-design-highlight">
-                            <p>Monthly EMI</p><strong id="emiDesignResult">₹17,910</strong>
+                            <p data-i18n="emi_monthly_emi">Monthly EMI</p><strong id="emiDesignResult">₹17,910</strong>
                         </div>
                         <div class="emi-design-results">
                             <div class="emi-design-result">
-                                <p>Total Interest Payable</p><strong id="emiDesignInterest">₹0</strong>
+                                <p data-i18n="emi_total_interest">Total Interest Payable</p><strong id="emiDesignInterest">₹0</strong>
                             </div>
                             <div class="emi-design-result">
-                                <p>Total Payment (Prin + Int)</p><strong id="emiDesignTotal">₹0</strong>
+                                <p data-i18n="emi_total_payment">Total Payment (Prin + Int)</p><strong id="emiDesignTotal">₹0</strong>
                             </div>
                         </div>
                         <div class="emi-design-chart"><canvas id="emiDesignChart"></canvas>
@@ -614,27 +624,27 @@
                     <h2
                         style="font-family: 'Hanken Grotesk', sans-serif; font-size: 1.5rem; margin-top: 0; margin-bottom: 16px; color: #0b1c30; display: flex; align-items: center; gap: 10px;">
                         <i class="bi bi-calculator-fill" style="color: #4f46e5;"></i>
-                        What is an EMI Calculator & How Does It Work?
+                        <span data-i18n="emi_seo_intro_h">What is an EMI Calculator & How Does It Work?</span>
                     </h2>
+                    <p style="color: #424656; font-size: 1.05rem; line-height: 1.6; margin: 0 0 14px;" data-i18n="emi_seo_intro_p">
+                        Welcome to the Pepstudio EMI Calculator — one of the fastest and most accurate free online loan EMI calculators available. Whether you are planning a home loan, a car loan, or a personal loan, our tool gives you a complete financial picture before you walk into the bank.
+                    </p>
+                    <p style="color: #424656; font-size: 1.05rem; line-height: 1.6; margin: 0 0 14px;">
+                        EMI stands for <strong>Equated Monthly Installment</strong> — the fixed amount you pay your lender every month until the loan is fully repaid. It consists of two components: a <em>principal</em> portion (reducing your outstanding debt) and an <em>interest</em> portion (the bank's charge for lending you the money). In the early months of a loan, a larger share goes toward interest. As the loan matures, more goes toward the principal.
+                    </p>
                     <p style="color: #424656; font-size: 1.05rem; line-height: 1.6; margin: 0;">
-                        Welcome to the Pepstudio EMI Calculator—a powerful. An EMI Calculator is a simple tool that
-                        tells
-                        you how much you will have to pay every month if you take a loan.
-                        EMI stands for Equated Monthly Installment — the fixed amount you repay each month until the
-                        loan
-                        is fully paid off. This amount includes both the money you borrowed (principal) and the interest
-                        charged by the bank or lender.
+                        Instead of calculating the complicated formula yourself, our EMI Calculator does the math instantly when you enter three basic details:
                     </p>
-                    <p>
-                        Instead of calculating the complicated formula yourself, an EMI calculator does the math
-                        instantly when you enter three basic details:
-                    </p>
-                    <ul>
+                    <ul style="color: #424656; font-size: 1rem; line-height: 1.8; margin: 10px 0 0 20px;">
                         <li>Loan amount (how much you want to borrow)</li>
-                        <li>Interest rate (yearly rate charged by the lender)</li>
-                        <li>Loan tenure (how many years or months you will take to repay)</li>
+                        <li>Interest rate (the annual percentage rate charged by the lender)</li>
+                        <li>Loan tenure (how many years or months you plan to repay over)</li>
                     </ul>
                 </section>
+
+                <div class="emi-chat-image">
+                    <img src="../images/emichat.png">
+                </div>
 
                 <!-- How It Works Section -->
                 <section
@@ -642,9 +652,9 @@
                     <h2
                         style="font-family: 'Hanken Grotesk', sans-serif; font-size: 1.5rem; margin-top: 0; margin-bottom: 12px; color: #0b1c30; display: flex; align-items: center; gap: 10px;">
                         <i class="bi bi-gear-fill" style="color: #4f46e5;"></i>
-                        How Our EMI Amortization Algorithm Works
+                        <span data-i18n="emi_algo_h">How Our EMI Amortization Algorithm Works</span>
                     </h2>
-                    <p style="color: #424656; margin-bottom: 20px; font-size: 0.95rem;">EMI calculation uses the
+                    <p style="color: #424656; margin-bottom: 20px; font-size: 0.95rem;" data-i18n="emi_algo_p">EMI calculation uses the
                         standard reducing balance loan amortization formula:</p>
 
                     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px;">
@@ -720,6 +730,18 @@
                             <p style="color: #424656; font-size: 0.95rem; margin: 0; line-height: 1.5;">Our calculator
                                 uses reducing balance interest, where interest is calculated only on the remaining
                                 unpaid principal balance each month rather than the initial loan amount.</p>
+                        </div>
+
+                        <div
+                            style="border: 1px solid #e2e8f0; border-radius: 12px; padding: 20px; background: #f8f9ff;">
+                            <h3 style="font-size: 1.05rem; font-weight: 700; margin: 0 0 8px; color: #0b1c30;">Does making a prepayment reduce my EMI or my loan tenure?</h3>
+                            <p style="color: #424656; font-size: 0.95rem; margin: 0; line-height: 1.5;">Most lenders offer you the choice. Paying a lump sum toward the principal can either reduce your monthly EMI amount (keeping the tenure the same) or reduce the remaining tenure (keeping the EMI the same). Reducing the tenure saves significantly more total interest over the loan's lifetime.</p>
+                        </div>
+
+                        <div
+                            style="border: 1px solid #e2e8f0; border-radius: 12px; padding: 20px; background: #f8f9ff;">
+                            <h3 style="font-size: 1.05rem; font-weight: 700; margin: 0 0 8px; color: #0b1c30;">What is the difference between a fixed interest rate and a floating interest rate?</h3>
+                            <p style="color: #424656; font-size: 0.95rem; margin: 0; line-height: 1.5;">A <strong>fixed interest rate</strong> stays constant throughout the loan tenure, meaning your EMI never changes. A <strong>floating rate</strong> (also called a variable rate) changes with market conditions — tied to benchmarks like MCLR or repo rate. Our EMI calculator works for any fixed-rate loan. For floating-rate loans, use it to estimate at your current rate.</p>
                         </div>
                     </div>
                 </section>
@@ -823,7 +845,7 @@
                 <!-- Disclaimer -->
                 <section
                     style="background: #f1f5f9; border: 1px solid #cbd5e1; border-radius: 12px; padding: 16px; text-align: center;">
-                    <p style="margin: 0; font-size: 0.85rem; color: #475569; line-height: 1.4;">
+                    <p style="margin: 0; font-size: 0.85rem; color: #475569; line-height: 1.4;" data-i18n="emi_disclaimer_p">
                         <strong style="color: #0f172a;">Financial Disclaimer:</strong> This EMI Calculator is provided
                         for illustrative and estimation purposes only. Actual loan EMIs, interest rates, and processing
                         fees may vary depending on lender policies, credit scores, and taxes. Consult your bank or
@@ -854,14 +876,14 @@
                 <div class="footer-col">
                     <h3 class="footer-heading" data-i18n="footer_calc_suite">Calculator Suite</h3>
                     <ul class="footer-links">
-                        <li><a href="../age-calculator/index.html" data-i18n="age_calc_title">Age Calculator</a></li>
-                        <li><a href="../bmi-calculator/index.html" data-i18n="bmi_calc_title">BMI Calculator</a></li>
-                        <li><a href="../emi-calculator/index.html" data-i18n="emi_calc_title">EMI Calculator</a></li>
-                        <li><a href="../unit-converter/index.html" data-i18n="unit_conv_title">Unit Converter</a></li>
-                        <li><a href="../percentage-calculator/index.html" data-i18n="perc_calc_title">Percentage
+                        <li><a href="../age-calculator/index.html">Age Calculator</a></li>
+                        <li><a href="../bmi-calculator/index.html">BMI Calculator</a></li>
+                        <li><a href="../emi-calculator/index.html">EMI Calculator</a></li>
+                        <li><a href="../unit-converter/index.html">Unit Converter</a></li>
+                        <li><a href="../percentage-calculator/index.html">Percentage
                                 Calculator</a></li>
-                        <li><a href="../world-time/index.html" data-i18n="world_time_title">World Time</a></li>
-                        <li><a href="../love-calculator/index.html" data-i18n="love_calc_title">Love Calculator</a></li>
+                        <li><a href="../world-time/index.html">World Time</a></li>
+                        <li><a href="../love-calculator/index.html">Love Calculator</a></li>
                     </ul>
                 </div>
 

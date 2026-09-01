@@ -137,9 +137,12 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function updateChart(principal, interest) {
         if (chartInstance) chartInstance.destroy();
+        const t = (key, fallback) => (window.i18n && window.i18n.t(key)) || fallback;
+        const pLabel = t('principal_label', 'Principal');
+        const iLabel = t('interest_label', 'Interest');
         chartInstance = new Chart(document.getElementById('emiDesignChart'), {
             type: 'doughnut',
-            data: { labels: ['Principal', 'Interest'], datasets: [{ data: [principal, interest], backgroundColor: ['#004cca', '#b4c5ff'], borderWidth: 0 }] },
+            data: { labels: [pLabel, iLabel], datasets: [{ data: [principal, interest], backgroundColor: ['#004cca', '#b4c5ff'], borderWidth: 0 }] },
             options: { responsive: true, maintainAspectRatio: false, cutout: '72%', plugins: { legend: { position: 'bottom', labels: { padding: 16, usePointStyle: true, font: { family: 'Inter', size: 12 } } } } }
         });
     }
@@ -188,5 +191,6 @@ document.addEventListener('DOMContentLoaded', function () {
         updateChart(0, 0);
     });
     calculate();
+    window.addEventListener('languageChanged', calculate);
 });
 

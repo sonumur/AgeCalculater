@@ -3,21 +3,37 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="google-adsense-account" content="ca-pub-2207409421620882">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-        content="Calculate - Your all-in-one online calculator suite. Age calculator, BMI calculator, EMI calculator, unit converter, and percentage calculator.">
-    <meta name="keywords"
-        content="calculator, age calculator, BMI calculator, EMI calculator, unit converter, percentage calculator, online calculator">
-    <title>pepstudio - Online 100% free tools Suite</title>
+        content="100% free online calculator suite. Age calculator by date of birth, BMI, EMI loan calculator, percentage calculator, unit converter, world time & love calculator. No signup, private, instant results.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <title>Free Online Calculators — Age, BMI, EMI, Unit Converter &amp; More | Pepstudio</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" href="./images/favicon.svg">
-    
-    <!-------script of adsens-->
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2207409421620882"
-     crossorigin="anonymous"></script>
-    <!-------script of adsens close-->
+    <!---google font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap" rel="stylesheet">
+
+    <style>
+
+    .calculators-grid .calc-card h2 {
+        font-family: "League Spartan", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: bold;
+        font-style: normal;
+        color: #314217;
+    }
+
+    body {
+        font-family: "Quicksand", sans-serif;
+        font-weight: 500;
+        font-style: normal;
+    }
+    </style>
 </head>
 
 <body>
@@ -30,59 +46,46 @@
     <main class="homepage">
         <section class="home-hero">
             <div class="home-hero__content">
-                <h1 data-i18n="hero_title">Welcome to 100% Free Tools site</h1>
-                <p data-i18n="hero_subtitle">Your all-in-one online calculator suite. Fast, reliable, and entirely free.</p>
+                <h1 data-i18n="hero_title">Welcome to 100% Free Tools | Free Online Calculators & Tools</h1>
+                <p data-i18n="hero_subtitle">Your go-to free calculator website. Get instant results with our fast, accurate, and 100% free online calculator suite.
+                </p>
             </div>
         </section>
-
-        <div class="ad-banner-728">
-            <!-----Ads-Adsterra-banner-728*9-->
-        </div>
 
         <section class="home-tools" aria-label="Calculator tools">
             <!-- Search Box -->
             <div class="home-search-container">
                 <div class="home-search-wrapper">
                     <i class="bi bi-search home-search-icon"></i>
-                    <input type="text" id="toolSearchInput" class="home-search-input" placeholder="Search tools (e.g. Age, BMI, EMI, Unit)..." data-i18n="search_tools_placeholder" aria-label="Search tools">
+                    <input type="text" id="toolSearchInput" class="home-search-input"
+                        placeholder="Search tools (e.g. Age, BMI, EMI, Unit)..." data-i18n="search_tools_placeholder"
+                        aria-label="Search tools">
                 </div>
             </div>
 
             <div class="calculators-grid" id="calculatorsGrid">
-                <a href="./age-calculator/index.html" class="calc-card"><span class="emoji"
-                        aria-hidden="true">📆</span>
-                    <h2 data-i18n="age_calc_title">Age Calculator</h2>
-                    <p data-i18n="age_calc_desc">Calculate your exact age in years, months, and days</p>
+                <a href="./age-calculator/index.html" class="calc-card" aria-label="Age Calculator"><span class="emoji" aria-hidden="true">📆</span>
+                    <h2>Age Calculator -></h2>
                 </a>
-                <a href="./bmi-calculator/index.html" class="calc-card"><span class="emoji"
-                        aria-hidden="true">⚖️</span>
-                    <h2 data-i18n="bmi_calc_title">BMI Calculator</h2>
-                    <p data-i18n="bmi_calc_desc">Calculate your Body Mass Index and health status</p>
+                <a href="./bmi-calculator/index.html" class="calc-card" aria-label="BMI Calculator"><span class="emoji" aria-hidden="true">⚖️</span>
+                    <h2>BMI Calculator -></h2>
                 </a>
-                <a href="./emi-calculator/index.html" class="calc-card"><span class="emoji"
-                        aria-hidden="true">💸</span>
-                    <h2 data-i18n="emi_calc_title">EMI Calculator</h2>
-                    <p data-i18n="emi_calc_desc">Calculate your monthly EMI for loans and mortgages</p>
+                <a href="./emi-calculator/index.html" class="calc-card" aria-label="EMI Calculator"><span class="emoji" aria-hidden="true">💸</span>
+                    <h2>EMI Calculator -></h2>
                 </a>
-                <a href="./unit-converter/index.html" class="calc-card"><span class="emoji"
-                        aria-hidden="true">📏</span>
-                    <h2 data-i18n="unit_conv_title">Unit Converter</h2>
-                    <p data-i18n="unit_conv_desc">Convert between various units of measurement</p>
+                <a href="./unit-converter/index.html" class="calc-card" aria-label="Unit Converter"><span class="emoji" aria-hidden="true">📏</span>
+                    <h2>Unit Converter -></h2>
                 </a>
-                <a href="./percentage-calculator/index.html" class="calc-card"><span class="emoji"
+                <a href="./percentage-calculator/index.html" class="calc-card" aria-label="Percentage Calculator"><span class="emoji"
                         aria-hidden="true">%</span>
-                    <h2 data-i18n="perc_calc_title">Percentage Calculator</h2>
-                    <p data-i18n="perc_calc_desc">Calculate percentages and percentage changes</p>
+                    <h2>Percentage Calculator -></h2>
                 </a>
-                <a href="./world-time/index.html" class="calc-card"><span class="emoji"
-                        aria-hidden="true">🕖</span>
-                    <h2 data-i18n="world_time_title">World Time</h2>
-                    <p data-i18n="world_time_desc">Check current time in different time zones worldwide</p>
+                <a href="./world-time/index.html" class="calc-card" aria-label="World Time"><span class="emoji" aria-hidden="true">🕖</span>
+                    <h2>World Time -></h2>
                 </a>
-                <a href="./love-calculator/index.html" class="calc-card"><span class="emoji"
+                <a href="./love-calculator/index.html" class="calc-card" aria-label="Love Calculator"><span class="emoji"
                         aria-hidden="true">❤️</span>
-                    <h2 data-i18n="love_calc_title">Love Calculator</h2>
-                    <p data-i18n="love_calc_desc">Calculate love and compatibility percentage between two names</p>
+                    <h2>Love Calculator -></h2>
                 </a>
                 <div id="noResultsMsg" class="no-results-msg" data-i18n="no_tools_found">No matching tools found.</div>
             </div>
@@ -121,6 +124,242 @@
 
     </main>
 
+    <!-- ===============================
+         SEO CONTENT SECTIONS — original
+         =============================== -->
+    <div
+        style="width: 100%; max-width: 1500px; margin: 12px auto 0; padding: 0 8px 24px; font-family: Inter, Arial, sans-serif; color: #0b1c30; display: flex; flex-direction: column; gap: 12px; box-sizing: border-box;">
+
+        <!-- SECTION 1 — Why Use Pepstudio -->
+        <section
+            style="background:#fff;border:1px solid #c2c6d9;border-radius:18px;padding:36px;box-shadow:0 4px 20px rgba(15,23,42,.05);">
+            <h2
+                style="font-size:1.55rem;font-weight:700;margin:0 0 10px;color:#0b1c30;display:flex;align-items:center;gap:10px;">
+                <i class="bi bi-shield-check" style="color:#0062ff;font-size:1.4rem;"></i>
+                Why Use Pepstudio Free Online Calculator Tools?
+            </h2>
+            <p style="color:#424656;font-size:1rem;line-height:1.7;margin:0 0 24px;">
+                There are thousands of calculator websites out there. So why do people keep coming back to Pepstudio?
+                Because we built these tools the way <em>we</em> always wanted them — no clutter, no walls, no nonsense.
+                Everything runs directly in your browser, which means your numbers never leave your device. No account
+                needed. No form to fill. Just open the tool, enter your values, and get your answer in under a second.
+            </p>
+            <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;">
+                <div style="background:#f0f7ff;border:1px solid #c7dcff;border-radius:13px;padding:22px;">
+                    <div style="font-weight:700;color:#0062ff;margin-bottom:8px;font-size:1rem;">🔒 100% Private by
+                        Design</div>
+                    <p style="color:#424656;font-size:.9rem;margin:0;line-height:1.6;">Every calculation runs entirely
+                        inside your browser. We do not collect, store, or transmit your personal data. Your birth date,
+                        weight, loan amount — none of it ever reaches our servers.</p>
+                </div>
+                <div style="background:#f0f7ff;border:1px solid #c7dcff;border-radius:13px;padding:22px;">
+                    <div style="font-weight:700;color:#0062ff;margin-bottom:8px;font-size:1rem;">⚡ Instant, Reliable
+                        Results</div>
+                    <p style="color:#424656;font-size:.9rem;margin:0;line-height:1.6;">Our calculators are engineered to
+                        give you accurate answers in milliseconds. No loading spinners, no waiting for server responses
+                        — the computation happens locally the moment you click Calculate.</p>
+                </div>
+                <div style="background:#f0f7ff;border:1px solid #c7dcff;border-radius:13px;padding:22px;">
+                    <div style="font-weight:700;color:#0062ff;margin-bottom:8px;font-size:1rem;">📱 Works on Any Device
+                    </div>
+                    <p style="color:#424656;font-size:.9rem;margin:0;line-height:1.6;">Whether you are on a phone during
+                        your commute, a tablet on your couch, or a desktop at work — every tool is fully responsive and
+                        touch-friendly. No app download required.</p>
+                </div>
+                <div style="background:#f0f7ff;border:1px solid #c7dcff;border-radius:13px;padding:22px;">
+                    <div style="font-weight:700;color:#0062ff;margin-bottom:8px;font-size:1rem;">🎯 Built for Real
+                        People</div>
+                    <p style="color:#424656;font-size:.9rem;margin:0;line-height:1.6;">We designed each tool to solve
+                        real everyday questions — "How old am I exactly?", "Am I at a healthy weight?", "What will my
+                        loan EMI be?" — not to just showcase complex math.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 2 — How Our Calculators Work -->
+        <section
+            style="background:#fff;border:1px solid #c2c6d9;border-radius:18px;padding:36px;box-shadow:0 4px 20px rgba(15,23,42,.05);">
+            <h2
+                style="font-size:1.55rem;font-weight:700;margin:0 0 10px;color:#0b1c30;display:flex;align-items:center;gap:10px;">
+                <i class="bi bi-gear-fill" style="color:#0062ff;font-size:1.4rem;"></i>
+                How Our Online Calculators Work — The Science Behind the Tools
+            </h2>
+            <p style="color:#424656;font-size:1rem;line-height:1.7;margin:0 0 20px;">
+                Every number you see on a Pepstudio result screen comes from a well-established mathematical or
+                scientific formula. We did not guess, round incorrectly, or cut corners. Here is a plain-English look at
+                what is happening under the hood for each tool:
+            </p>
+            <div style="display:flex;flex-direction:column;gap:16px;">
+                <div
+                    style="border-left:4px solid #0062ff;padding:14px 20px;background:#f8f9ff;border-radius:0 10px 10px 0;">
+                    <strong style="color:#0b1c30;">Age Calculator</strong>
+                    <p style="color:#424656;font-size:.93rem;margin:6px 0 0;line-height:1.6;">Uses Gregorian calendar
+                        subtraction — subtracting the day, month, and year of your birth date from today's date, then
+                        borrowing correctly from months that have 28, 29, 30, or 31 days. Leap years (divisible by 4,
+                        with century corrections) are handled precisely so February 29th birthdays are never miscounted.
+                    </p>
+                </div>
+                <div
+                    style="border-left:4px solid #0062ff;padding:14px 20px;background:#f8f9ff;border-radius:0 10px 10px 0;">
+                    <strong style="color:#0b1c30;">BMI Calculator</strong>
+                    <p style="color:#424656;font-size:.93rem;margin:6px 0 0;line-height:1.6;">Applies the World Health
+                        Organization formula: BMI = weight (kg) ÷ height (m)². For imperial users, the equivalent is
+                        [weight (lbs) × 703] ÷ height (in)². Results are classified into WHO categories — Underweight
+                        (&lt;18.5), Normal (18.5–24.9), Overweight (25–29.9), and Obese (30+).</p>
+                </div>
+                <div
+                    style="border-left:4px solid #0062ff;padding:14px 20px;background:#f8f9ff;border-radius:0 10px 10px 0;">
+                    <strong style="color:#0b1c30;">EMI Calculator</strong>
+                    <p style="color:#424656;font-size:.93rem;margin:6px 0 0;line-height:1.6;">Uses the standard
+                        amortization formula: EMI = [P × r × (1+r)^n] ÷ [(1+r)^n − 1], where P is the principal loan
+                        amount, r is the monthly interest rate, and n is the loan tenure in months. The same formula
+                        banks use.</p>
+                </div>
+                <div
+                    style="border-left:4px solid #0062ff;padding:14px 20px;background:#f8f9ff;border-radius:0 10px 10px 0;">
+                    <strong style="color:#0b1c30;">Percentage Calculator</strong>
+                    <p style="color:#424656;font-size:.93rem;margin:6px 0 0;line-height:1.6;">Handles three common
+                        percentage problems: finding X% of a number, finding what percentage one number is of another,
+                        and calculating percentage increase or decrease. All three formulas are standard arithmetic — no
+                        approximations.</p>
+                </div>
+                <div
+                    style="border-left:4px solid #0062ff;padding:14px 20px;background:#f8f9ff;border-radius:0 10px 10px 0;">
+                    <strong style="color:#0b1c30;">Unit Converter &amp; World Time</strong>
+                    <p style="color:#424656;font-size:.93rem;margin:6px 0 0;line-height:1.6;">Unit conversions use
+                        fixed, internationally recognised conversion factors (e.g., 1 inch = 2.54 cm exactly). World
+                        Time uses the browser's built-in Intl API with IANA timezone data to show accurate local times
+                        worldwide — including daylight saving adjustments.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 3 — Tool Suite Guide -->
+        <section
+            style="background:#fff;border:1px solid #c2c6d9;border-radius:18px;padding:36px;box-shadow:0 4px 20px rgba(15,23,42,.05);">
+            <h2
+                style="font-size:1.55rem;font-weight:700;margin:0 0 10px;color:#0b1c30;display:flex;align-items:center;gap:10px;">
+                <i class="bi bi-grid-3x3-gap-fill" style="color:#0062ff;font-size:1.4rem;"></i>
+                The Complete Pepstudio Tool Suite — What Can You Calculate?
+            </h2>
+            <p style="color:#424656;font-size:1rem;line-height:1.7;margin:0 0 22px;">
+                From everyday health checks to financial planning and time-zone curiosity, our seven tools cover the
+                calculations people search for most. Here is a practical guide to what each one does:
+            </p>
+            <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px;">
+                <article style="border:1px solid #e2e8f0;border-radius:13px;padding:20px;background:#f8faff;">
+                    <h3 style="font-size:1rem;font-weight:700;margin:0 0 8px;color:#0062ff;">📆 Age Calculator</h3>
+                    <p style="color:#424656;font-size:.9rem;margin:0;line-height:1.6;">Find your exact age in years,
+                        months, and days. Also shows your total days lived, total weeks, and a countdown to your next
+                        birthday. Perfect for filling out official forms, checking age eligibility, or simply satisfying
+                        curiosity.</p>
+                </article>
+                <article style="border:1px solid #e2e8f0;border-radius:13px;padding:20px;background:#f8faff;">
+                    <h3 style="font-size:1rem;font-weight:700;margin:0 0 8px;color:#0062ff;">⚖️ BMI Calculator</h3>
+                    <p style="color:#424656;font-size:.9rem;margin:0;line-height:1.6;">Enter your height and weight in
+                        metric (kg/cm) or imperial (lb/in) units and get your Body Mass Index instantly, along with your
+                        healthy weight range and a visual gauge. A useful first checkpoint before a doctor's visit.</p>
+                </article>
+                <article style="border:1px solid #e2e8f0;border-radius:13px;padding:20px;background:#f8faff;">
+                    <h3 style="font-size:1rem;font-weight:700;margin:0 0 8px;color:#0062ff;">💸 EMI Calculator</h3>
+                    <p style="color:#424656;font-size:.9rem;margin:0;line-height:1.6;">Planning a home loan, car loan,
+                        or personal loan? Enter the principal, annual interest rate, and tenure to see your exact
+                        monthly EMI, total interest payable, and total repayment amount — before you sign anything at
+                        the bank.</p>
+                </article>
+                <article style="border:1px solid #e2e8f0;border-radius:13px;padding:20px;background:#f8faff;">
+                    <h3 style="font-size:1rem;font-weight:700;margin:0 0 8px;color:#0062ff;">% Percentage Calculator
+                    </h3>
+                    <p style="color:#424656;font-size:.9rem;margin:0;line-height:1.6;">Whether you need to calculate a
+                        discount, work out exam scores, or figure out a tip at a restaurant, the percentage calculator
+                        handles it without mental math. Supports all three classic percentage problem types.</p>
+                </article>
+                <article style="border:1px solid #e2e8f0;border-radius:13px;padding:20px;background:#f8faff;">
+                    <h3 style="font-size:1rem;font-weight:700;margin:0 0 8px;color:#0062ff;">📏 Unit Converter</h3>
+                    <p style="color:#424656;font-size:.9rem;margin:0;line-height:1.6;">Convert between length, weight,
+                        volume, temperature, speed, and more. Ideal for students, engineers, travellers, and anyone
+                        switching between metric and imperial systems. Covers 50+ unit pairs across multiple categories.
+                    </p>
+                </article>
+                <article style="border:1px solid #e2e8f0;border-radius:13px;padding:20px;background:#f8faff;">
+                    <h3 style="font-size:1rem;font-weight:700;margin:0 0 8px;color:#0062ff;">🕖 World Time</h3>
+                    <p style="color:#424656;font-size:.9rem;margin:0;line-height:1.6;">Check the current local time in
+                        any city or timezone worldwide. Automatically adjusts for daylight saving time. Useful for
+                        scheduling international calls, meetings, or simply knowing what time it is where your family
+                        lives.</p>
+                </article>
+                <article style="border:1px solid #e2e8f0;border-radius:13px;padding:20px;background:#f8faff;">
+                    <h3 style="font-size:1rem;font-weight:700;margin:0 0 8px;color:#0062ff;">❤️ Love Calculator</h3>
+                    <p style="color:#424656;font-size:.9rem;margin:0;line-height:1.6;">A fun compatibility tool that
+                        generates a love percentage score from two names using a classic algorithmic formula. Share it
+                        with a friend, use it at a party, or just enjoy a smile. Results are for entertainment only —
+                        love is always more complex than math!</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- SECTION 4 — FAQ -->
+        <section
+            style="background:#fff;border:1px solid #c2c6d9;border-radius:18px;padding:36px;box-shadow:0 4px 20px rgba(15,23,42,.05);">
+            <h2
+                style="font-size:1.55rem;font-weight:700;margin:0 0 22px;color:#0b1c30;display:flex;align-items:center;gap:10px;">
+                <i class="bi bi-question-circle-fill" style="color:#0062ff;font-size:1.4rem;"></i>
+                Frequently Asked Questions About Pepstudio
+            </h2>
+            <div style="display:flex;flex-direction:column;gap:14px;">
+                <div style="border:1px solid #e2e8f0;border-radius:12px;padding:20px;background:#f8f9ff;">
+                    <h3 style="font-size:1rem;font-weight:700;margin:0 0 8px;color:#0b1c30;">Are all Pepstudio tools
+                        completely free to use?</h3>
+                    <p style="color:#424656;font-size:.93rem;margin:0;line-height:1.6;">Yes — every single tool on
+                        Pepstudio is 100% free, with no usage limits, no subscription tiers, and no hidden fees. We
+                        believe useful calculation tools should be accessible to everyone, everywhere, at no cost.</p>
+                </div>
+                <div style="border:1px solid #e2e8f0;border-radius:12px;padding:20px;background:#f8f9ff;">
+                    <h3 style="font-size:1rem;font-weight:700;margin:0 0 8px;color:#0b1c30;">Do I need to create an
+                        account or sign up?</h3>
+                    <p style="color:#424656;font-size:.93rem;margin:0;line-height:1.6;">No registration is required —
+                        ever. There is no login page, no email form, no personal profile. Just open a tool and start
+                        calculating. We will never ask for your information to access a calculator.</p>
+                </div>
+                <div style="border:1px solid #e2e8f0;border-radius:12px;padding:20px;background:#f8f9ff;">
+                    <h3 style="font-size:1rem;font-weight:700;margin:0 0 8px;color:#0b1c30;">Is the data I enter stored
+                        anywhere?</h3>
+                    <p style="color:#424656;font-size:.93rem;margin:0;line-height:1.6;">No. Every Pepstudio tool runs
+                        entirely inside your web browser using client-side JavaScript. The numbers you type into any
+                        calculator are never sent to a server. Nothing is logged, nothing is saved, and nothing leaves
+                        your device.</p>
+                </div>
+                <div style="border:1px solid #e2e8f0;border-radius:12px;padding:20px;background:#f8f9ff;">
+                    <h3 style="font-size:1rem;font-weight:700;margin:0 0 8px;color:#0b1c30;">How accurate are the
+                        calculator results?</h3>
+                    <p style="color:#424656;font-size:.93rem;margin:0;line-height:1.6;">Very accurate. Each calculator
+                        is built on the same formulas used by professionals — the WHO BMI formula, the standard bank
+                        amortization formula for EMIs, and the Gregorian calendar algorithm for age. Results are
+                        suitable for everyday planning, though we always recommend consulting a professional for medical
+                        or financial decisions.</p>
+                </div>
+                <div style="border:1px solid #e2e8f0;border-radius:12px;padding:20px;background:#f8f9ff;">
+                    <h3 style="font-size:1rem;font-weight:700;margin:0 0 8px;color:#0b1c30;">Do the tools work on mobile
+                        phones and tablets?</h3>
+                    <p style="color:#424656;font-size:.93rem;margin:0;line-height:1.6;">Absolutely. Every Pepstudio
+                        calculator is built with a mobile-first responsive design. Whether you are using an Android
+                        phone, an iPhone, or an iPad, the layout adapts automatically to your screen size, and all
+                        inputs are optimised for touch.</p>
+                </div>
+                <div style="border:1px solid #e2e8f0;border-radius:12px;padding:20px;background:#f8f9ff;">
+                    <h3 style="font-size:1rem;font-weight:700;margin:0 0 8px;color:#0b1c30;">Who built Pepstudio and
+                        why?</h3>
+                    <p style="color:#424656;font-size:.93rem;margin:0;line-height:1.6;">Pepstudio was built by Sonu
+                        Murmu, a developer who was tired of calculator websites that were slow, cluttered with pop-ups,
+                        or forced you to sign up before doing anything. The goal from day one has been simple: build the
+                        cleanest, fastest, most private calculation tools on the web and keep them free forever.</p>
+                </div>
+            </div>
+        </section>
+
+    </div>
+    <!-- END SEO CONTENT SECTIONS -->
+
     <footer class="site-footer">
         <div class="footer-container">
             <div class="footer-grid">
@@ -128,7 +367,8 @@
                     <a href="./index.html" class="footer-logo" title="pepstudio.xyz Home">
                         <img src="./images/pepstudio.png" alt="pepstudio.xyz logo">
                     </a>
-                    <p class="footer-tagline" data-i18n="footer_tagline">Your all-in-one suite of 100% free online calculator & utility tools.
+                    <p class="footer-tagline" data-i18n="footer_tagline">Your all-in-one suite of 100% free online
+                        calculator & utility tools.
                         Fast, accurate, and easy to use.</p>
                     <div class="footer-social">
                         <a href="https://www.linkedin.com/in/sonu-murmu-60479a268/" target="_blank"
@@ -141,13 +381,13 @@
                 <div class="footer-col">
                     <h3 class="footer-heading" data-i18n="footer_calc_suite">Calculator Suite</h3>
                     <ul class="footer-links">
-                        <li><a href="./age-calculator/index.html" data-i18n="age_calc_title">Age Calculator</a></li>
-                        <li><a href="./bmi-calculator/index.html" data-i18n="bmi_calc_title">BMI Calculator</a></li>
-                        <li><a href="./emi-calculator/index.html" data-i18n="emi_calc_title">EMI Calculator</a></li>
-                        <li><a href="./unit-converter/index.html" data-i18n="unit_conv_title">Unit Converter</a></li>
-                        <li><a href="./percentage-calculator/index.html" data-i18n="perc_calc_title">Percentage Calculator</a></li>
-                        <li><a href="./world-time/index.html" data-i18n="world_time_title">World Time</a></li>
-                        <li><a href="./love-calculator/index.html" data-i18n="love_calc_title">Love Calculator</a></li>
+                        <li><a href="./age-calculator/index.html">Age Calculator</a></li>
+                        <li><a href="./bmi-calculator/index.html">BMI Calculator</a></li>
+                        <li><a href="./emi-calculator/index.html">EMI Calculator</a></li>
+                        <li><a href="./unit-converter/index.html">Unit Converter</a></li>
+                        <li><a href="./percentage-calculator/index.html">Percentage Calculator</a></li>
+                        <li><a href="./world-time/index.html">World Time</a></li>
+                        <li><a href="./love-calculator/index.html">Love Calculator</a></li>
                     </ul>
                 </div>
 

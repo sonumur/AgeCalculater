@@ -3,7 +3,6 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="google-adsense-account" content="ca-pub-2207409421620882">
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-FFBNXM9JFR"></script>
     <script>
@@ -15,13 +14,11 @@
     </script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-        content="Calculate love and compatibility percentage between two names using our free, instant online Love Calculator.">
-    <meta name="keywords"
-        content="love calculator, love compatibility, name compatibility, love percentage, couple compatibility, love test">
+        content="Free love calculator. Enter two names and get a fun love compatibility percentage instantly. Purely for entertainment. No signup required.">
     <link rel="canonical" href="https://pepstudio.xyz/love-calculator/">
-    <meta property="og:title" content="Love Calculator – Calculate Love Compatibility by Name">
+    <meta property="og:title" content="Love Calculator by Name — Free Love Compatibility Percentage | Pepstudio">
     <meta property="og:description"
-        content="Calculate love and compatibility percentage between two names using our free, instant online Love Calculator. Fun and entertaining!">
+        content="Free love calculator. Enter two names and get a fun love compatibility percentage instantly. Purely for entertainment. No signup required.">
     <meta property="og:type" content="website">
     <title>Love Calculator | pepstudio</title>
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
@@ -32,12 +29,14 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="icon" href="../images/favicon.svg">
-
-    <!-------script of adsens-->
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2207409421620882"
-     crossorigin="anonymous"></script>
-    <!-------script of adsens close-->
     <style>
+
+        body {
+            font-family: "Quicksand", sans-serif;
+            font-weight: 500;
+            font-style: normal;
+        }
+
         html,
         body {
             background: #f8f9ff !important;
@@ -179,13 +178,9 @@
         <div class="col-span-1 md:col-span-12 mb-stack-md text-center">
             <h1 style="color: rgb(255, 113, 113);"
                 class="font-headline-lg-mobile md:font-display-lg text-headline-lg-mobile md:text-display-lg text-on-surface mb-stack-sm">
-                <span data-i18n="love_calc_title">Love Calculator</span> <span style="font-size: 35px;">❤️</span></h1>
-            <p class="font-body-lg text-body-lg text-secondary max-w-2xl mx-auto" data-i18n="love_calc_desc">Discover your compatibility percentage
-                based on the ancient numerical alignment of names. A precise utility for a complex metric.</p>
-
-                <div class="ad-banner-728">
-                <!-----Ads-Adsterra-banner-728*9-->
-                </div>
+                <span data-i18n="love_calc_title">Love Calculator ❤️ | Free Online Love Calculator</span>
+            </h1>
+            <p class="font-body-lg text-body-lg text-secondary max-w-2xl mx-auto" data-i18n="love_calc_desc">Calculate love and compatibility percentage between two names instantly with our free online love calculator. Fun, quick results for any pair of names — no sign-up required.</p>
         </div>
 
         
@@ -198,15 +193,15 @@
                 <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-pink-200 via-pink-400 to-pink-200">
                 </div>
                 <div class="flex flex-col items-center mb-8 text-center">
-                    <h2 class="font-headline-lg text-headline-lg text-on-surface mb-2">Check Compatibility</h2>
-                    <p class="font-body-md text-secondary">Enter both names to calculate the precision alignment metric.
+                    <h2 class="font-headline-lg text-headline-lg text-on-surface mb-2" data-i18n="love_check_compat">Check Compatibility</h2>
+                    <p class="font-body-md text-secondary" data-i18n="love_enter_desc">Enter both names to calculate the precision alignment metric.
                     </p>
                 </div>
                 <form class="flex flex-col items-center gap-10 w-full" id="love-form">
                     <div class="flex flex-col md:flex-row items-center justify-between w-full gap-6 md:gap-8">
                         <div class="flex flex-col gap-2 w-full flex-1">
                             <label class="font-label-sm text-label-sm text-on-surface-variant text-center"
-                                for="name1">Your Name</label>
+                                for="name1" data-i18n="love_your_name">Your Name</label>
                             <input
                                 class="font-headline-lg-mobile text-headline-lg-mobile text-center rounded-xl border-2 border-pink-100 px-4 py-4 bg-white text-on-surface focus:outline-none focus:border-pink-300 focus:ring-4 focus:ring-pink-50 transition-all w-full placeholder:text-outline-variant/50"
                                 id="name1" placeholder="e.g., Alex" required type="text" />
@@ -219,7 +214,7 @@
                         </div>
                         <div class="flex flex-col gap-2 w-full flex-1">
                             <label class="font-label-sm text-label-sm text-on-surface-variant text-center"
-                                for="name2">Partner's Name</label>
+                                for="name2" data-i18n="love_partner_name">Partner's Name</label>
                             <input
                                 class="font-headline-lg-mobile text-headline-lg-mobile text-center rounded-xl border-2 border-pink-100 px-4 py-4 bg-white text-on-surface focus:outline-none focus:border-pink-300 focus:ring-4 focus:ring-pink-50 transition-all w-full placeholder:text-outline-variant/50"
                                 id="name2" placeholder="e.g., Emma" required type="text" />
@@ -228,14 +223,14 @@
                     <div class="flex flex-col items-center gap-4 w-full mt-2">
                         <button
                             class="font-label-sm text-label-sm bg-primary-container text-on-primary rounded-full px-10 py-4 hover:opacity-90 hover:shadow-md transition-all flex justify-center items-center gap-2 text-lg"
-                            type="submit">
+                            type="submit" data-i18n="love_calc_btn">
                             Calculate Love
                             <span class="material-symbols-outlined text-[20px]"
                                 data-icon="arrow_forward">arrow_forward</span>
                         </button>
                         <button
                             class="font-label-sm text-label-sm text-secondary bg-transparent px-4 py-2 rounded-lg hover:bg-surface-container-low transition-colors"
-                            type="button" id="clear-btn">
+                            type="button" id="clear-btn" data-i18n="clear">
                             Clear
                         </button>
                     </div>
@@ -247,8 +242,8 @@
                 class="bg-surface-container-lowest rounded-xl shadow-level-1 p-6 border border-outline-variant/30 flex gap-4 items-start">
                 <span class="material-symbols-outlined text-tertiary mt-1" data-icon="info">info</span>
                 <div>
-                    <h3 class="font-label-sm text-label-sm text-on-surface mb-1">Algorithm Precision</h3>
-                    <p class="font-caption text-caption text-secondary">Our calculation utilizes an alphanumeric hashing
+                    <h3 class="font-label-sm text-label-sm text-on-surface mb-1" data-i18n="love_algo_prec">Algorithm Precision</h3>
+                    <p class="font-caption text-caption text-secondary" data-i18n="love_algo_prec_desc">Our calculation utilizes an alphanumeric hashing
                         algorithm based on historical name-matching matrices, delivering a consistent metric for any
                         given pair of names.</p>
                 </div>
@@ -266,14 +261,13 @@
                         class="w-16 h-16 rounded-full bg-surface-container-lowest flex items-center justify-center mb-4 shadow-sm">
                         <span class="material-symbols-outlined text-secondary" data-icon="bar_chart">bar_chart</span>
                     </div>
-                    <h3 class="font-headline-md text-headline-md text-on-surface mb-2">Awaiting Input</h3>
-                    <p class="font-body-md text-body-md text-secondary">Enter both names in the calculator to generate
+                    <h3 class="font-headline-md text-headline-md text-on-surface mb-2" data-i18n="love_awaiting_input">Awaiting Input</h3>
+                    <p class="font-body-md text-body-md text-secondary" data-i18n="love_awaiting_desc">Enter both names in the calculator to generate
                         your compatibility metric.</p>
                 </div>
                 <!-- Active State -->
                 <div class="hidden flex-col items-center w-full z-10" id="active-state">
-                    <p class="font-label-sm text-label-sm text-secondary uppercase tracking-wider mb-2">Compatibility
-                        Index</p>
+                    <p class="font-label-sm text-label-sm text-secondary uppercase tracking-wider mb-2" data-i18n="love_compat_index">Compatibility Index</p>
                     <div class="text-[72px] font-display-lg text-primary-container leading-none mb-4 tabular-nums"
                         id="percentage-display">
                         0%
@@ -299,25 +293,21 @@
             <div class="bg-surface-container-lowest rounded-xl shadow-level-1 p-6 border border-outline-variant/30">
                 <h3 class="font-headline-md text-headline-md text-on-surface mb-4 flex items-center gap-2">
                     <span class="material-symbols-outlined text-primary" data-icon="insights">insights</span>
-                    Data Insights
-                </h3>
+                    Data Insights</h3>
                 <ul class="flex flex-col gap-4">
                     <li class="flex gap-3 items-start">
                         <div class="w-2 h-2 rounded-full bg-primary mt-2 shrink-0"></div>
-                        <p class="font-body-md text-body-md text-secondary"><strong
-                                class="text-on-surface font-medium">Statistical Norms:</strong> The median compatibility
+                        <p class="font-body-md text-body-md text-secondary"><strong class="text-on-surface font-medium" data-i18n="stat_norms">Statistical Norms:</strong> The median compatibility
                             score globally hovers around 62%, indicating moderate alignment is standard.</p>
                     </li>
                     <li class="flex gap-3 items-start">
                         <div class="w-2 h-2 rounded-full bg-primary mt-2 shrink-0"></div>
-                        <p class="font-body-md text-body-md text-secondary"><strong
-                                class="text-on-surface font-medium">String Length Variance:</strong> Discrepancies in
+                        <p class="font-body-md text-body-md text-secondary"><strong class="text-on-surface font-medium" data-i18n="string_variance">String Length Variance:</strong> Discrepancies in
                             name length do not statistically diminish the underlying hash correlation.</p>
                     </li>
                     <li class="flex gap-3 items-start">
                         <div class="w-2 h-2 rounded-full bg-primary mt-2 shrink-0"></div>
-                        <p class="font-body-md text-body-md text-secondary"><strong
-                                class="text-on-surface font-medium">High Margin Outliers:</strong> Scores above 85%
+                        <p class="font-body-md text-body-md text-secondary"><strong class="text-on-surface font-medium" data-i18n="high_outliers">High Margin Outliers:</strong> Scores above 85%
                             denote exceptional alignment symmetry.</p>
                     </li>
                 </ul>
@@ -330,17 +320,15 @@
             <div class="max-w-4xl mx-auto">
                 <h2 class="font-headline-lg text-headline-lg text-on-surface mb-4 flex items-center gap-3">
                     <span class="material-symbols-outlined text-pink-500 text-3xl" data-icon="favorite">favorite</span>
-                    What is a Love Calculator & How Does It Work?
+                    <span data-i18n="love_seo_intro_h">What is a Love Calculator & How Does It Work?</span>
                 </h2>
-                <p class="font-body-lg text-body-lg text-secondary leading-relaxed">
+                <p class="font-body-lg text-body-lg text-secondary leading-relaxed" data-i18n="love_seo_intro_p">
                     Welcome to the ultimate Love Calculator—your go-to playful tool for exploring romantic chemistry,
                     crush compatibility, and name-based harmony! Whether you are testing out your latest crush, checking
                     long-term relationship vibes with your partner, or just having a laugh with friends, our love
                     calculator measures the special connection between any two names in seconds. By translating the
                     unique letters of each name into digital numerical frequencies, our tool analyzes name symmetry,
-                    phonetic resonance, and numerological balance to calculate a custom compatibility percentage. It is
-                    fast, free, interactive, and endlessly entertaining to use. Jump in, enter your names above, and
-                    discover what the digital stars reveal about your romantic connection today!
+                    phonetic resonance, and numerological balance to calculate a custom compatibility percentage.
                 </p>
             </div>
         </section>
@@ -352,9 +340,9 @@
                 <h2 class="font-headline-lg text-headline-lg text-on-surface mb-2 flex items-center gap-3">
                     <span class="material-symbols-outlined text-primary text-3xl"
                         data-icon="psychology">psychology</span>
-                    How Our Love Compatibility Algorithm Works
+                    <span data-i18n="love_algo_h">How Our Love Compatibility Algorithm Works</span>
                 </h2>
-                <p class="font-body-md text-secondary mb-8">While real love is built on shared experiences and mutual
+                <p class="font-body-md text-secondary mb-8" data-i18n="love_algo_p">While real love is built on shared experiences and mutual
                     respect, our algorithm translates name character metrics into a fun, deterministic compatibility
                     score. Here are the core factors analyzed in every test:</p>
 
@@ -458,6 +446,24 @@
                         <p class="font-body-md text-secondary leading-relaxed">You can test both! Many users enjoy
                             testing both official full names and everyday nicknames to compare how your formal and
                             informal compatibility metrics align.</p>
+                    </div>
+
+                    <div class="border border-outline-variant/30 rounded-xl p-6 bg-white shadow-sm">
+                        <h3 class="font-headline-md text-headline-md text-on-surface mb-2 flex items-center gap-2">
+                            <span class="material-symbols-outlined text-primary text-xl"
+                                data-icon="lock">lock</span>
+                            Is my name entry kept private when using the Love Calculator?
+                        </h3>
+                        <p class="font-body-md text-secondary leading-relaxed">Yes, 100%. The names you enter into our Love Calculator are processed locally inside your web browser. No names, scores, or personal data are ever sent to or stored on our servers.</p>
+                    </div>
+
+                    <div class="border border-outline-variant/30 rounded-xl p-6 bg-white shadow-sm">
+                        <h3 class="font-headline-md text-headline-md text-on-surface mb-2 flex items-center gap-2">
+                            <span class="material-symbols-outlined text-primary text-xl"
+                                data-icon="psychology">psychology</span>
+                            How does the name matching algorithm work?
+                        </h3>
+                        <p class="font-body-md text-secondary leading-relaxed">Our algorithm converts the characters in both names into their numerical ASCII character values, calculates a combined checksum value, and maps it to a normalized compatibility range between 40% and 99%.</p>
                     </div>
                 </div>
             </div>
@@ -582,7 +588,7 @@
             class="col-span-1 md:col-span-12 bg-surface-container-low rounded-xl p-5 border border-outline-variant/30 text-center">
             <div class="max-w-3xl mx-auto flex items-center justify-center gap-3">
                 <span class="material-symbols-outlined text-tertiary shrink-0" data-icon="info">info</span>
-                <p class="font-caption text-caption text-secondary text-left md:text-center">
+                <p class="font-caption text-caption text-secondary text-left md:text-center" data-i18n="love_disclaimer_p">
                     <strong class="text-on-surface font-medium">Entertainment Disclaimer:</strong> This Love Calculator
                     is provided strictly for entertainment and novelty purposes. Compatibility percentages are
                     calculated using name string algorithms and are not intended to replace professional relationship
@@ -612,13 +618,13 @@
                 <div class="footer-col">
                     <h3 class="footer-heading" data-i18n="footer_calc_suite">Calculator Suite</h3>
                     <ul class="footer-links">
-                        <li><a href="../age-calculator/index.html" data-i18n="age_calc_title">Age Calculator</a></li>
-                        <li><a href="../bmi-calculator/index.html" data-i18n="bmi_calc_title">BMI Calculator</a></li>
-                        <li><a href="../emi-calculator/index.html" data-i18n="emi_calc_title">EMI Calculator</a></li>
-                        <li><a href="../unit-converter/index.html" data-i18n="unit_conv_title">Unit Converter</a></li>
-                        <li><a href="../percentage-calculator/index.html" data-i18n="perc_calc_title">Percentage Calculator</a></li>
-                        <li><a href="../world-time/index.html" data-i18n="world_time_title">World Time</a></li>
-                        <li><a href="../love-calculator/index.html" data-i18n="love_calc_title">Love Calculator</a></li>
+                        <li><a href="../age-calculator/index.html">Age Calculator</a></li>
+                        <li><a href="../bmi-calculator/index.html">BMI Calculator</a></li>
+                        <li><a href="../emi-calculator/index.html">EMI Calculator</a></li>
+                        <li><a href="../unit-converter/index.html">Unit Converter</a></li>
+                        <li><a href="../percentage-calculator/index.html">Percentage Calculator</a></li>
+                        <li><a href="../world-time/index.html">World Time</a></li>
+                        <li><a href="../love-calculator/index.html">Love Calculator</a></li>
                     </ul>
                 </div>
 
@@ -706,9 +712,10 @@
                         current = percentage;
                         clearInterval(interval);
 
-                        if (percentage > 85) message.textContent = "High structural symmetry detected.";
-                        else if (percentage > 60) message.textContent = "Moderate alignment trajectory.";
-                        else message.textContent = "Standard variance observed.";
+                        const t = (k, f) => (window.i18n && window.i18n.t(k)) || f;
+                        if (percentage > 85) message.textContent = t("love_high_sym", "High structural symmetry detected.");
+                        else if (percentage > 60) message.textContent = t("love_mod_align", "Moderate alignment trajectory.");
+                        else message.textContent = t("love_std_var", "Standard variance observed.");
                     }
                     display.textContent = current + '%';
                 }, 20);
