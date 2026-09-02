@@ -933,6 +933,13 @@ footer,
     color: #0b1c30;
 }
 
+marquee {
+    background-color: rgb(177, 177, 177);
+    color: white;
+    padding: 8px;
+    font-weight: bold;
+}
+
 .home-hero {
     position: relative;
     display: grid;
@@ -958,7 +965,7 @@ footer,
     height: 240px;
     top: -100px;
     left: -45px;
-    background: #b4c5ff;
+    background: #ffb4f5;
 }
 
 .home-hero::after {
@@ -966,7 +973,7 @@ footer,
     height: 260px;
     right: -65px;
     bottom: -125px;
-    background: #d3e4fe;
+    background: #f6d7ff;
 }
 
 .home-hero__content {
